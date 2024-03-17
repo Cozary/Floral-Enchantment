@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "floralench:block/large_lily_of_the_valley_pot"
+    },
+    "facing=south": {
+      "model": "floralench:block/large_lily_of_the_valley_pot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "floralench:block/large_lily_of_the_valley_pot",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "floralench:block/large_lily_of_the_valley_pot",
+      "y": 90
+    }
+  }
+}

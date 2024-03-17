@@ -1,0 +1,6 @@
+{
+  "parent": "floralench:block/mossy_stone_bricks",
+  "textures": {
+    "all": "floralench:block/lily_of_the_valley_mossy_stone_brick"
+  }
+}

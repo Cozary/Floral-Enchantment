@@ -1,0 +1,6 @@
+{
+  "parent": "floralench:block/large_flower_pot_cross_double",
+  "textures": {
+    "plant": "minecraft:block/azure_bluet"
+  }
+}

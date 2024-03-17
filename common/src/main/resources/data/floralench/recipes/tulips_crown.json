@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cxz",
+    "m m",
+    "zxc"
+  ],
+  "key": {
+    "m": {
+      "item": "minecraft:orange_tulip"
+    },
+    "x": {
+      "item": "minecraft:red_tulip"
+    },
+    "z": {
+      "item": "minecraft:white_tulip"
+    },
+    "c": {
+      "item": "minecraft:pink_tulip"
+    }
+  },
+  "result": {
+    "item": "floralench:tulips_crown",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    " W "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cornflower"
+    },
+    "W": {
+      "item": "floralench:floral_basket"
+    }
+  },
+  "result": {
+    "item": "floralench:cornflower_basket",
+    "count": 1
+  }
+}

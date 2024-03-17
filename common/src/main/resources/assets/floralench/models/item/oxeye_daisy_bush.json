@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "floralench:block/oxeye_daisy_bush_stage3"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "floralench:block/pink_tulip_basket"
+    },
+    "facing=south": {
+      "model": "floralench:block/pink_tulip_basket",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "floralench:block/pink_tulip_basket",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "floralench:block/pink_tulip_basket",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralench:oxeye_daisy_basket"
+    }
+  ],
+  "result": {
+    "item": "minecraft:oxeye_daisy",
+    "count": 6
+  }
+}

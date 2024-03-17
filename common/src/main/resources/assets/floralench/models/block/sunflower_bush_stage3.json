@@ -1,0 +1,6 @@
+{
+  "parent": "floralench:block/bush_large",
+  "textures": {
+    "plant": "floralench:block/sunflower_bush_stage3"
+  }
+}

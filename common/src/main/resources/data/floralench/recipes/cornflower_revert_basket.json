@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralench:cornflower_basket"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cornflower",
+    "count": 6
+  }
+}

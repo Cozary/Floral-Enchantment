@@ -1,0 +1,6 @@
+{
+  "parent": "floralench:block/bush_large",
+  "textures": {
+    "plant": "floralench:block/white_tulip_bush_stage3"
+  }
+}

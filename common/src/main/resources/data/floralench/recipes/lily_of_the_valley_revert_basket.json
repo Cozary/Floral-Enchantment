@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralench:lily_of_the_valley_basket"
+    }
+  ],
+  "result": {
+    "item": "minecraft:lily_of_the_valley",
+    "count": 6
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "floralench:block/dancing_sunflower"
+    },
+    "facing=south": {
+      "model": "floralench:block/dancing_sunflower",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "floralench:block/dancing_sunflower",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "floralench:block/dancing_sunflower",
+      "y": 90
+    }
+  }
+}

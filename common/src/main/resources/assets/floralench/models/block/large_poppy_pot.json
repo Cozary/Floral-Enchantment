@@ -1,0 +1,6 @@
+{
+  "parent": "floralench:block/large_flower_pot_cross_single",
+  "textures": {
+    "plant": "minecraft:block/poppy"
+  }
+}

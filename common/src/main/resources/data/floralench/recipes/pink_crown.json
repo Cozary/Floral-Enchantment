@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " xz",
+    "m m",
+    "zx "
+  ],
+  "key": {
+    "m": {
+      "item": "minecraft:allium"
+    },
+    "x": {
+      "item": "minecraft:lilac"
+    },
+    "z": {
+      "item": "minecraft:peony"
+    }
+  },
+  "result": {
+    "item": "floralench:pink_crown",
+    "count": 1
+  }
+}

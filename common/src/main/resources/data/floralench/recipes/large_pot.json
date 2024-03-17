@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "m m",
+    "mmm"
+  ],
+  "key": {
+    "m": {
+      "item": "minecraft:brick"
+    }
+  },
+  "result": {
+    "item": "floralench:large_pot",
+    "count": 1
+  }
+}

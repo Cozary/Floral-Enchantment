@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    " W "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:white_tulip"
+    },
+    "W": {
+      "item": "floralench:floral_basket"
+    }
+  },
+  "result": {
+    "item": "floralench:white_tulip_basket",
+    "count": 1
+  }
+}

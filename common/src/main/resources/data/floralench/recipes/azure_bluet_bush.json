@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mmm",
+    "mxm",
+    "mmm"
+  ],
+  "key": {
+    "m": {
+      "item": "minecraft:vine"
+    },
+    "x": {
+      "item": "minecraft:azure_bluet"
+    }
+  },
+  "result": {
+    "item": "floralench:azure_bluet_bush",
+    "count": 1
+  }
+}

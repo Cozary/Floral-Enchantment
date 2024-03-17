@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mmm",
+    "mxm",
+    "mmm"
+  ],
+  "key": {
+    "m": {
+      "item": "minecraft:vine"
+    },
+    "x": {
+      "item": "minecraft:orange_tulip"
+    }
+  },
+  "result": {
+    "item": "floralench:orange_tulip_bush",
+    "count": 1
+  }
+}

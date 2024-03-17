@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralench:azure_bluet_basket"
+    }
+  ],
+  "result": {
+    "item": "minecraft:azure_bluet",
+    "count": 6
+  }
+}

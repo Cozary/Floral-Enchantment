@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    " W "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:allium"
+    },
+    "W": {
+      "item": "floralench:floral_basket"
+    }
+  },
+  "result": {
+    "item": "floralench:allium_basket",
+    "count": 1
+  }
+}

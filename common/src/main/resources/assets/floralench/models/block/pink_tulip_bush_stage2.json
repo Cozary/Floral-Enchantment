@@ -1,0 +1,6 @@
+{
+  "parent": "floralench:block/bush_small",
+  "textures": {
+    "plant": "floralench:block/pink_tulip_bush_stage2"
+  }
+}

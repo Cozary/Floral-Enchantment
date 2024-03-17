@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralench:dandelion_basket"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dandelion",
+    "count": 6
+  }
+}

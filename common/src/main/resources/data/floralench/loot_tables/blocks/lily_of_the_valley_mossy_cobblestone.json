@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "floralench:lily_of_the_valley_mossy_cobblestone"
+        }
+      ]
+    }
+  ]
+}

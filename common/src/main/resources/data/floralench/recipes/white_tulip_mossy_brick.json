@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralench:white_tulip_vine"
+    },
+    {
+      "item": "minecraft:stone_bricks"
+    }
+  ],
+  "result": {
+    "item": "floralench:white_tulip_mossy_stone_brick",
+    "count": 1
+  }
+}

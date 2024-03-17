@@ -1,0 +1,7 @@
+{
+  "render_type": "cutout",
+  "parent": "block/cross",
+  "textures": {
+    "cross": "floralench:block/poppy_bush_stage0"
+  }
+}

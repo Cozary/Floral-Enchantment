@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    " W "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:azure_bluet"
+    },
+    "W": {
+      "item": "floralench:floral_basket"
+    }
+  },
+  "result": {
+    "item": "floralench:azure_bluet_basket",
+    "count": 1
+  }
+}

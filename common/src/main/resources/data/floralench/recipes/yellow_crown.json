@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " x ",
+    "m m",
+    " x "
+  ],
+  "key": {
+    "m": {
+      "item": "minecraft:dandelion"
+    },
+    "x": {
+      "item": "minecraft:sunflower"
+    }
+  },
+  "result": {
+    "item": "floralench:yellow_crown",
+    "count": 1
+  }
+}

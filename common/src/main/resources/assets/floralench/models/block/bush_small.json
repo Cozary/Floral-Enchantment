@@ -1,0 +1,78 @@
+{
+  "credit": "mr_ch0c0late",
+  "render_type": "cutout",
+  "textures": {
+    "particle": "#plant"
+  },
+  "elements": [
+    {
+      "from": [
+        3,
+        0,
+        3
+      ],
+      "to": [
+        13,
+        10,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "texture": "#plant"
+        },
+        "east": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "texture": "#plant"
+        },
+        "south": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "texture": "#plant"
+        },
+        "west": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "texture": "#plant"
+        },
+        "up": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "texture": "#plant"
+        },
+        "down": {
+          "uv": [
+            3,
+            3,
+            13,
+            13
+          ],
+          "texture": "#plant",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

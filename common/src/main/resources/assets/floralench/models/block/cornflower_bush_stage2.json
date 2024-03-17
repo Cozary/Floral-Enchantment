@@ -1,0 +1,6 @@
+{
+  "parent": "floralench:block/bush_small",
+  "textures": {
+    "plant": "floralench:block/cornflower_bush_stage2"
+  }
+}

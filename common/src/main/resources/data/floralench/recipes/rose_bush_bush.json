@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mmm",
+    "mxm",
+    "mmm"
+  ],
+  "key": {
+    "m": {
+      "item": "minecraft:vine"
+    },
+    "x": {
+      "item": "minecraft:rose_bush"
+    }
+  },
+  "result": {
+    "item": "floralench:rose_bush_bush",
+    "count": 1
+  }
+}

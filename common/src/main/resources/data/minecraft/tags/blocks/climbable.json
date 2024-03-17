@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "floralench:allium_vine",
+    "floralench:azure_bluet_vine",
+    "floralench:blue_orchid_vine",
+    "floralench:cornflower_vine",
+    "floralench:dandelion_vine",
+    "floralench:lilac_vine",
+    "floralench:lily_of_the_valley_vine",
+    "floralench:orange_tulip_vine",
+    "floralench:oxeye_daisy_vine",
+    "floralench:peony_vine",
+    "floralench:pink_tulip_vine",
+    "floralench:poppy_vine",
+    "floralench:red_tulip_vine",
+    "floralench:rose_bush_vine",
+    "floralench:sunflower_vine",
+    "floralench:white_tulip_vine",
+    "floralench:wither_rose_vine"
+  ]
+}

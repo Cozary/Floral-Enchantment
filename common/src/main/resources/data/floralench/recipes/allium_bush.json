@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mmm",
+    "mxm",
+    "mmm"
+  ],
+  "key": {
+    "m": {
+      "item": "minecraft:vine"
+    },
+    "x": {
+      "item": "minecraft:allium"
+    }
+  },
+  "result": {
+    "item": "floralench:allium_bush",
+    "count": 1
+  }
+}

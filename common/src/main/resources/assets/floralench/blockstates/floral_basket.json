@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "floralench:block/floral_basket"
+    },
+    "facing=south": {
+      "model": "floralench:block/floral_basket",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "floralench:block/floral_basket",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "floralench:block/floral_basket",
+      "y": 90
+    }
+  }
+}

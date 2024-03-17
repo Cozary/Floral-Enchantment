@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "floralench:block/large_double_cornflower_pot"
+    },
+    "facing=south": {
+      "model": "floralench:block/large_double_cornflower_pot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "floralench:block/large_double_cornflower_pot",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "floralench:block/large_double_cornflower_pot",
+      "y": 90
+    }
+  }
+}
