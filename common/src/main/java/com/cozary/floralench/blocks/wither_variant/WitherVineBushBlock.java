@@ -61,10 +61,10 @@ public class WitherVineBushBlock extends VineBushBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         int i = state.getValue(AGE);
         boolean flag = i == 3;
-        if (!flag && player.getItemInHand(handIn).getItem() == Items.BONE_MEAL) {
+        if (!flag && player.getMainHandItem().getItem() == Items.BONE_MEAL) {
             return InteractionResult.PASS;
         } else if (i == 2) {
             int j = 1 + worldIn.random.nextInt(4);
@@ -79,7 +79,7 @@ public class WitherVineBushBlock extends VineBushBlock {
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(2)), 2);
             return InteractionResult.sidedSuccess(worldIn.isClientSide);
         } else {
-            return super.use(state, worldIn, pos, player, handIn, hit);
+            return super.useWithoutItem(state, worldIn, pos, player, hit);
         }
     }
 }

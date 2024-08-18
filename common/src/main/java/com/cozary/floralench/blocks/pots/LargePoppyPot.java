@@ -17,8 +17,8 @@ import net.minecraft.world.phys.BlockHitResult;
 public class LargePoppyPot extends LargePot {
 
     @Override
-    public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
-        ItemStack itemstack = player.getItemInHand(handIn);
+    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
+        ItemStack itemstack = player.getMainHandItem();
         Item item = itemstack.getItem();
         ItemStack item1 = Items.POPPY.getDefaultInstance();
         Direction direction1 = state.getValue(FACING);
@@ -26,7 +26,7 @@ public class LargePoppyPot extends LargePot {
             if (item == Items.AIR) {
 
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));
-                player.setItemInHand(handIn, item1);
+                player.setItemInHand(InteractionHand.MAIN_HAND, item1);
             }
             if (item == Items.POPPY) {
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_DOUBLE_POPPY_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));

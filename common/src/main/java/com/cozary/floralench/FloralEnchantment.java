@@ -1,5 +1,6 @@
 package com.cozary.floralench;
 
+import com.cozary.floralench.init.ModArmorMaterial;
 import com.cozary.floralench.init.ModBlocks;
 import com.cozary.floralench.init.ModItems;
 import org.slf4j.Logger;
@@ -14,6 +15,8 @@ public class FloralEnchantment {
     public static void init() {
 
         ModBlocks.loadClass();
+        ModArmorMaterial.loadClass();
         ModItems.loadClass();
     }
+
 }

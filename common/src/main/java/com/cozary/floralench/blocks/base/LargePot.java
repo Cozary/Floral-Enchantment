@@ -72,8 +72,8 @@ public class LargePot extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
-        ItemStack itemstack = player.getItemInHand(handIn);
+    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
+        ItemStack itemstack = player.getMainHandItem();
         Item item = itemstack.getItem();
         Direction direction1 = state.getValue(FACING);
         if (!worldIn.isClientSide) {
