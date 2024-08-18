@@ -2,7 +2,7 @@ plugins {
     id 'java'
     id 'idea'
     id 'maven-publish'
-    id 'fabric-loom' version '1.5-SNAPSHOT'
+    id 'fabric-loom' version '1.7-SNAPSHOT'
 }
 base {
     archivesName = "${mod_name}-fabric-${minecraft_version}-${version_fabric}"
@@ -62,7 +62,7 @@ publishing {
     }
     repositories {
         maven {
-            url "file://" + System.getenv("local_maven")
+            url System.getenv("local_maven_url")
         }
     }
 }
