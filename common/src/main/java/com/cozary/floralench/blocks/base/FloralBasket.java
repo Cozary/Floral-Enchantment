@@ -12,7 +12,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 
 public class FloralBasket extends Block {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
@@ -26,7 +25,6 @@ public class FloralBasket extends Block {
         );
     }
 
-    @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());

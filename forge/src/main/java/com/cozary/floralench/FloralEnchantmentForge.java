@@ -6,7 +6,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-@Mod(FloralEnchantment.MOD_ID)
+import static com.cozary.floralench.FloralEnchantment.MOD_ID;
+
+@Mod(MOD_ID)
+@Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class FloralEnchantmentForge {
 
     public FloralEnchantmentForge() {
@@ -18,4 +21,7 @@ public class FloralEnchantmentForge {
         MinecraftForge.EVENT_BUS.register(new EventHandler());
 
     }
+
+
+
 }

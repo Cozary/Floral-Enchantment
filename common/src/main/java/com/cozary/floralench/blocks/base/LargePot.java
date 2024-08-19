@@ -23,8 +23,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import javax.annotation.Nullable;
-
 public class LargePot extends Block {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     protected static final VoxelShape SHAPE = Shapes.or(box(0, 0, 4, 16, 1, 12), box(0, 1, 4, 16, 8, 5), box(0, 1, 11, 16, 8, 12), box(1, 5, 5, 15, 6, 11), box(0, 1, 5, 1, 8, 11), box(15, 1, 5, 16, 8, 11));
@@ -37,7 +35,6 @@ public class LargePot extends Block {
         );
     }
 
-    @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());

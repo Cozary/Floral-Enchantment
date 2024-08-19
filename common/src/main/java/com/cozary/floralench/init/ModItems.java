@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 public class ModItems {
 
-    private static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registries.ITEM, FloralEnchantment.MOD_ID);
+    public static final RegistrationProvider<Item> ITEMS = RegistrationProvider.get(Registries.ITEM, FloralEnchantment.MOD_ID);
 
     public static LinkedHashSet<RegistryObject<Item>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
     //Vines
@@ -72,13 +72,13 @@ public class ModItems {
     public static final RegistryObject<Item> WHITE_TULIP_BUSH_ITEM = registerWithTab("white_tulip_bush", () -> new BlockItemBase(ModBlocks.WHITE_TULIP_BUSH.get()));
     public static final RegistryObject<Item> WITHER_ROSE_BUSH_ITEM = registerWithTab("wither_rose_bush", () -> new BlockItemBase(ModBlocks.WITHER_ROSE_BUSH.get()));
     //Corona Flowers
-    public static final RegistryObject<Item> RED_CROWN = registerWithTab("red_crown", () -> new ArmorItem(ModArmorMaterial.RED_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> YELLOW_CROWN = registerWithTab("yellow_crown", () -> new ArmorItem(ModArmorMaterial.YELLOW_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> BLUE_CROWN = registerWithTab("blue_crown", () -> new ArmorItem(ModArmorMaterial.BLUE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> WHITE_CROWN = registerWithTab("white_crown", () -> new ArmorItem(ModArmorMaterial.WHITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> PINK_CROWN = registerWithTab("pink_crown", () -> new ArmorItem(ModArmorMaterial.PINK_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> BLACK_CROWN = registerWithTab("black_crown", () -> new ArmorItem(ModArmorMaterial.BLACK_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()));
-    public static final RegistryObject<Item> TULIPS_CROWN = registerWithTab("tulips_crown", () -> new ArmorItem(ModArmorMaterial.TULIP_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> RED_CROWN = registerWithTab("red_crown", () -> new ArmorItem(ModArmorMaterials.RED, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> YELLOW_CROWN = registerWithTab("yellow_crown", () -> new ArmorItem(ModArmorMaterials.YELLOW, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> BLUE_CROWN = registerWithTab("blue_crown", () -> new ArmorItem(ModArmorMaterials.BLUE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> WHITE_CROWN = registerWithTab("white_crown", () -> new ArmorItem(ModArmorMaterials.WHITE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> PINK_CROWN = registerWithTab("pink_crown", () -> new ArmorItem(ModArmorMaterials.PINK, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> BLACK_CROWN = registerWithTab("black_crown", () -> new ArmorItem(ModArmorMaterials.BLACK, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> TULIPS_CROWN = registerWithTab("tulips_crown", () -> new ArmorItem(ModArmorMaterials.TULIP, ArmorItem.Type.HELMET, new Item.Properties()));
     //Mossy Stone Brick
     public static final RegistryObject<Item> DANDELION_MOSSY_STONE_BRICK_ITEM = registerWithTab("dandelion_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.DANDELION_MOSSY_STONE_BRICK.get()));
     public static final RegistryObject<Item> POPPY_MOSSY_STONE_BRICK_ITEM = registerWithTab("poppy_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.POPPY_MOSSY_STONE_BRICK.get()));

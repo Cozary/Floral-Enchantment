@@ -16,7 +16,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class FloralEnchantmentFabric implements ModInitializer {
 
-    private static final ResourceKey<CreativeModeTab> ITEM_GROUP = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(FloralEnchantment.MOD_ID, "floralench_tab"));
+    private static final ResourceKey<CreativeModeTab> ITEM_GROUP = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "floralench_tab"));
 
     @Override
     public void onInitialize() {
