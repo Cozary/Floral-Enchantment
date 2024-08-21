@@ -33,47 +33,47 @@ public final class ModArmorMaterials {
             map.put(ArmorItem.Type.LEGGINGS, 4);
             map.put(ArmorItem.Type.CHESTPLATE, 5);
             map.put(ArmorItem.Type.HELMET, 2);
-        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.POPPY, Items.ROSE_BUSH), List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "red"))));
+        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.POPPY, Items.ROSE_BUSH), List.of(new ArmorMaterial.Layer(new ResourceLocation(FloralEnchantment.MOD_ID, "red"))));
         YELLOW = register("yellow", Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
             map.put(ArmorItem.Type.BOOTS, 1);
             map.put(ArmorItem.Type.LEGGINGS, 4);
             map.put(ArmorItem.Type.CHESTPLATE, 5);
             map.put(ArmorItem.Type.HELMET, 2);
-        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.DANDELION, Items.SUNFLOWER), List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "yellow"))));
+        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.DANDELION, Items.SUNFLOWER), List.of(new ArmorMaterial.Layer(new ResourceLocation(FloralEnchantment.MOD_ID, "yellow"))));
         BLUE = register("blue", Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
             map.put(ArmorItem.Type.BOOTS, 1);
             map.put(ArmorItem.Type.LEGGINGS, 4);
             map.put(ArmorItem.Type.CHESTPLATE, 5);
             map.put(ArmorItem.Type.HELMET, 2);
-        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.BLUE_ORCHID, Items.CORNFLOWER), List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "blue"))));
+        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.BLUE_ORCHID, Items.CORNFLOWER), List.of(new ArmorMaterial.Layer(new ResourceLocation(FloralEnchantment.MOD_ID, "blue"))));
         WHITE = register("white", Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
             map.put(ArmorItem.Type.BOOTS, 1);
             map.put(ArmorItem.Type.LEGGINGS, 4);
             map.put(ArmorItem.Type.CHESTPLATE, 5);
             map.put(ArmorItem.Type.HELMET, 2);
-        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.AZURE_BLUET, Items.OXEYE_DAISY, Items.LILY_OF_THE_VALLEY), List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "white"))));
+        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.AZURE_BLUET, Items.OXEYE_DAISY, Items.LILY_OF_THE_VALLEY), List.of(new ArmorMaterial.Layer(new ResourceLocation(FloralEnchantment.MOD_ID, "white"))));
         PINK = register("pink", Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
             map.put(ArmorItem.Type.BOOTS, 1);
             map.put(ArmorItem.Type.LEGGINGS, 4);
             map.put(ArmorItem.Type.CHESTPLATE, 5);
             map.put(ArmorItem.Type.HELMET, 2);
-        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.ALLIUM, Items.LILAC, Items.PEONY), List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "pink"))));
+        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.ALLIUM, Items.LILAC, Items.PEONY), List.of(new ArmorMaterial.Layer(new ResourceLocation(FloralEnchantment.MOD_ID, "pink"))));
         BLACK = register("black", Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
             map.put(ArmorItem.Type.BOOTS, 1);
             map.put(ArmorItem.Type.LEGGINGS, 4);
             map.put(ArmorItem.Type.CHESTPLATE, 5);
             map.put(ArmorItem.Type.HELMET, 2);
-        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.WITHER_ROSE), List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "black"))));
+        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.WITHER_ROSE), List.of(new ArmorMaterial.Layer(new ResourceLocation(FloralEnchantment.MOD_ID, "black"))));
         TULIP = register("tulip", Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
             map.put(ArmorItem.Type.BOOTS, 1);
             map.put(ArmorItem.Type.LEGGINGS, 4);
             map.put(ArmorItem.Type.CHESTPLATE, 5);
             map.put(ArmorItem.Type.HELMET, 2);
-        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.ORANGE_TULIP, Items.RED_TULIP, Items.PINK_TULIP, Items.WHITE_TULIP), List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "tulip"))));
+        }), 15, SoundEvents.ARMOR_EQUIP_GENERIC, 0.0F, 0.0F, () -> Ingredient.of(Items.ORANGE_TULIP, Items.RED_TULIP, Items.PINK_TULIP, Items.WHITE_TULIP), List.of(new ArmorMaterial.Layer(new ResourceLocation(FloralEnchantment.MOD_ID, "tulip"))));
     }
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> defense, int enchantmentValue, Holder<SoundEvent> equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient, List<ArmorMaterial.Layer> layers) {
-        ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name);
+        ResourceLocation loc = new ResourceLocation(FloralEnchantment.MOD_ID, name);
         return Registry.registerForHolder(BuiltInRegistries.ARMOR_MATERIAL, loc, new ArmorMaterial(defense, enchantmentValue, equipSound, repairIngredient, layers, toughness, knockbackResistance));
     }
 }
