@@ -82,8 +82,6 @@ processResources {
             "version_forge"                : version_forge,
             "version_fabric"               : version_fabric,
             "version_neoforge"             : version_neoforge,
-
-            'version'                      : version, //To Remove
             'group'                        : project.group,
             'minecraft_version'            : minecraft_version,
             'minecraft_version_range'      : minecraft_version_range,
