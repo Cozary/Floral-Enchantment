@@ -18,7 +18,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.RenderPlayerEvent;
 
-@EventBusSubscriber(modid = FloralEnchantment.MOD_ID)
+@EventBusSubscriber(modid = FloralEnchantment.MOD_ID, bus= EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
 public class EventHandler {
 
     @OnlyIn(Dist.CLIENT)
