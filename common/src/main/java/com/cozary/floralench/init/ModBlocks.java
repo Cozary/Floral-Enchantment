@@ -31,6 +31,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> LILAC_VINE = BLOCKS.register("lilac_vine", VineBaseBlock::new);
     public static final RegistryObject<Block> ROSE_BUSH_VINE = BLOCKS.register("rose_bush_vine", VineBaseBlock::new);
     public static final RegistryObject<Block> PEONY_VINE = BLOCKS.register("peony_vine", VineBaseBlock::new);
+    public static final RegistryObject<Block> TORCHFLOWER_VINE = BLOCKS.register("torchflower_vine", VineBaseBlock::new);
+    public static final RegistryObject<Block> PITCHER_PLANT_VINE = BLOCKS.register("pitcher_plant_vine", VineBaseBlock::new);
+    public static final RegistryObject<Block> CHORUS_FLOWER_VINE = BLOCKS.register("chorus_flower_vine", VineBaseBlock::new);
+    public static final RegistryObject<Block> AZALEA_VINE = BLOCKS.register("azalea_vine", VineBaseBlock::new);
+    public static final RegistryObject<Block> PINK_PETALS_VINE = BLOCKS.register("pink_petals_vine", VineBaseBlock::new);
+    public static final RegistryObject<Block> SPORE_BLOSSOM_VINE = BLOCKS.register("spore_blossom_vine", VineBaseBlock::new);
 
     //Mossy Cobblestone
     public static final RegistryObject<Block> DANDELION_MOSSY_COBBLESTONE = BLOCKS.register("dandelion_mossy_cobblestone", MossyBlock::new);
@@ -50,6 +56,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> LILAC_MOSSY_COBBLESTONE = BLOCKS.register("lilac_mossy_cobblestone", MossyBlock::new);
     public static final RegistryObject<Block> ROSE_BUSH_MOSSY_COBBLESTONE = BLOCKS.register("rose_bush_mossy_cobblestone", MossyBlock::new);
     public static final RegistryObject<Block> PEONY_MOSSY_COBBLESTONE = BLOCKS.register("peony_mossy_cobblestone", MossyBlock::new);
+    public static final RegistryObject<Block> TORCHFLOWER_MOSSY_COBBLESTONE = BLOCKS.register("torchflower_mossy_cobblestone", MossyBlock::new);
+    public static final RegistryObject<Block> PITCHER_PLANT_MOSSY_COBBLESTONE = BLOCKS.register("pitcher_plant_mossy_cobblestone", MossyBlock::new);
+    public static final RegistryObject<Block> CHORUS_FLOWER_MOSSY_COBBLESTONE = BLOCKS.register("chorus_flower_mossy_cobblestone", MossyBlock::new);
+    public static final RegistryObject<Block> AZALEA_MOSSY_COBBLESTONE = BLOCKS.register("azalea_mossy_cobblestone", MossyBlock::new);
+    public static final RegistryObject<Block> PINK_PETALS_MOSSY_COBBLESTONE = BLOCKS.register("pink_petals_mossy_cobblestone", MossyBlock::new);
+    public static final RegistryObject<Block> SPORE_BLOSSOM_MOSSY_COBBLESTONE = BLOCKS.register("spore_blossom_mossy_cobblestone", MossyBlock::new);
 
     //Bush
     public static final RegistryObject<AlliumVineBushBlock> ALLIUM_BUSH = BLOCKS.register("allium_bush", AlliumVineBushBlock::new);
@@ -69,6 +81,12 @@ public class ModBlocks {
     public static final RegistryObject<SunflowerVineBushBlock> SUNFLOWER_BUSH = BLOCKS.register("sunflower_bush", SunflowerVineBushBlock::new);
     public static final RegistryObject<WhiteTulipVineBushBlock> WHITE_TULIP_BUSH = BLOCKS.register("white_tulip_bush", WhiteTulipVineBushBlock::new);
     public static final RegistryObject<WitherVineBushBlock> WITHER_ROSE_BUSH = BLOCKS.register("wither_rose_bush", WitherVineBushBlock::new);
+    public static final RegistryObject<TorchflowerVineBushBlock> TORCHFLOWER_BUSH = BLOCKS.register("torchflower_bush", TorchflowerVineBushBlock::new);
+    public static final RegistryObject<PitcherPlantVineBushBlock> PITCHER_PLANT_BUSH = BLOCKS.register("pitcher_plant_bush", PitcherPlantVineBushBlock::new);
+    public static final RegistryObject<ChorusFlowerVineBushBlock> CHORUS_FLOWER_BUSH = BLOCKS.register("chorus_flower_bush", ChorusFlowerVineBushBlock::new);
+    public static final RegistryObject<AzaleaVineBushBlock> AZALEA_BUSH = BLOCKS.register("azalea_bush", AzaleaVineBushBlock::new);
+    public static final RegistryObject<PinkPetalsVineBushBlock> PINK_PETALS_BUSH = BLOCKS.register("pink_petals_bush", PinkPetalsVineBushBlock::new);
+    public static final RegistryObject<SporeBlossomVineBushBlock> SPORE_BLOSSOM_BUSH = BLOCKS.register("spore_blossom_bush", SporeBlossomVineBushBlock::new);
 
     //Mossy Stone Brick
     public static final RegistryObject<Block> DANDELION_MOSSY_STONE_BRICK = BLOCKS.register("dandelion_mossy_stone_brick", MossyStoneBrickBlock::new);
@@ -88,6 +106,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> LILAC_MOSSY_STONE_BRICK = BLOCKS.register("lilac_mossy_stone_brick", MossyStoneBrickBlock::new);
     public static final RegistryObject<Block> ROSE_BUSH_MOSSY_STONE_BRICK = BLOCKS.register("rose_bush_mossy_stone_brick", MossyStoneBrickBlock::new);
     public static final RegistryObject<Block> PEONY_MOSSY_STONE_BRICK = BLOCKS.register("peony_mossy_stone_brick", MossyStoneBrickBlock::new);
+    public static final RegistryObject<Block> TORCHFLOWER_MOSSY_STONE_BRICK = BLOCKS.register("torchflower_mossy_stone_brick", MossyStoneBrickBlock::new);
+    public static final RegistryObject<Block> PITCHER_PLANT_MOSSY_STONE_BRICK = BLOCKS.register("pitcher_plant_mossy_stone_brick", MossyStoneBrickBlock::new);
+    public static final RegistryObject<Block> CHORUS_FLOWER_MOSSY_STONE_BRICK = BLOCKS.register("chorus_flower_mossy_stone_brick", MossyStoneBrickBlock::new);
+    public static final RegistryObject<Block> AZALEA_MOSSY_STONE_BRICK = BLOCKS.register("azalea_mossy_stone_brick", MossyStoneBrickBlock::new);
+    public static final RegistryObject<Block> PINK_PETALS_MOSSY_STONE_BRICK = BLOCKS.register("pink_petals_mossy_stone_brick", MossyStoneBrickBlock::new);
+    public static final RegistryObject<Block> SPORE_BLOSSOM_MOSSY_STONE_BRICK = BLOCKS.register("spore_blossom_mossy_stone_brick", MossyStoneBrickBlock::new);
 
     //Large Pot
     public static final RegistryObject<Block> LARGE_POT = BLOCKS.register("large_pot", LargePot::new);
@@ -108,6 +132,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARGE_LILAC_POT = BLOCKS.register("large_lilac_pot", LargeLilacPot::new);
     public static final RegistryObject<Block> LARGE_ROSE_BUSH_POT = BLOCKS.register("large_rose_bush_pot", LargeRoseBushPot::new);
     public static final RegistryObject<Block> LARGE_PEONY_POT = BLOCKS.register("large_peony_pot", LargePeonyPot::new);
+    public static final RegistryObject<Block> LARGE_TORCHFLOWER_POT = BLOCKS.register("torchflower_pot", LargeTorchflowerPot::new);
+    public static final RegistryObject<Block> LARGE_PITCHER_PLANT_POT = BLOCKS.register("pitcher_plant_pot", LargePitcherPlantPot::new);
+    public static final RegistryObject<Block> LARGE_CHORUS_FLOWER_POT = BLOCKS.register("chorus_flower_pot", LargeChorusFlowerPot::new);
+    public static final RegistryObject<Block> LARGE_AZALEA_POT = BLOCKS.register("azalea_pot", LargeAzaleaPot::new);
+    public static final RegistryObject<Block> LARGE_PINK_PETALS_POT = BLOCKS.register("pink_petals_pot", LargePinkPetalsPot::new);
+    public static final RegistryObject<Block> LARGE_SPORE_BLOSSOM_POT = BLOCKS.register("spore_blossom_pot", LargeSporeBlossomPot::new);
 
     //Big Double Pot
     public static final RegistryObject<Block> LARGE_DOUBLE_DANDELION_POT = BLOCKS.register("large_double_dandelion_pot", LargeDoubleDandelionPot::new);
@@ -123,6 +153,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARGE_DOUBLE_CORNFLOWER_POT = BLOCKS.register("large_double_cornflower_pot", LargeDoubleCornflowerPot::new);
     public static final RegistryObject<Block> LARGE_DOUBLE_LILY_OF_THE_VALLEY_POT = BLOCKS.register("large_double_lily_of_the_valley_pot", LargeDoubleLilyOfTheValleyPot::new);
     public static final RegistryObject<Block> LARGE_DOUBLE_WITHER_ROSE_POT = BLOCKS.register("large_double_wither_rose_pot", LargeDoubleWitherRosePot::new);
+    public static final RegistryObject<Block> LARGE_DOUBLE_TORCHFLOWER_POT = BLOCKS.register("large_double_torchflower_pot", LargeDoubleTorchflowerPot::new);
+    public static final RegistryObject<Block> LARGE_DOUBLE_PITCHER_PLANT_POT = BLOCKS.register("large_double_pitcher_plant_pot", LargeDoublePitcherPlantPot::new);
+    public static final RegistryObject<Block> LARGE_DOUBLE_CHORUS_FLOWER_POT = BLOCKS.register("large_double_chorus_flower_pot", LargeDoubleChorusFlowerPot::new);
+    public static final RegistryObject<Block> LARGE_DOUBLE_AZALEA_POT = BLOCKS.register("large_double_azalea_pot", LargeDoubleAzaleaPot::new);
+    public static final RegistryObject<Block> LARGE_DOUBLE_PINK_PETALS_POT = BLOCKS.register("large_double_pink_petals_pot", LargeDoublePinkPetalsPot::new);
+    public static final RegistryObject<Block> LARGE_DOUBLE_SPORE_BLOSSOM_POT = BLOCKS.register("large_double_spore_blossom_pot", LargeDoubleSporeBlossomPot::new);
 
     //Special
     public static final RegistryObject<Block> DANCING_SUNFLOWER = BLOCKS.register("dancing_sunflower", DancingSunflower::new);
@@ -142,6 +178,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CORNFLOWER_BASKET = BLOCKS.register("cornflower_basket", FloralBasket::new);
     public static final RegistryObject<Block> LILY_OF_THE_VALLEY_BASKET = BLOCKS.register("lily_of_the_valley_basket", FloralBasket::new);
     public static final RegistryObject<Block> WITHER_ROSE_BASKET = BLOCKS.register("wither_rose_basket", WitherFloralBasket::new);
+    public static final RegistryObject<Block> TORCHFLOWER_BASKET = BLOCKS.register("torchflower_basket", FloralBasket::new);
+    public static final RegistryObject<Block> PITCHER_PLANT_BASKET = BLOCKS.register("pitcher_plant_basket", FloralBasket::new);
+    public static final RegistryObject<Block> CHORUS_FLOWER_BASKET = BLOCKS.register("chorus_flower_basket", FloralBasket::new);
+    public static final RegistryObject<Block> AZALEA_BASKET = BLOCKS.register("azalea_basket", FloralBasket::new);
+    public static final RegistryObject<Block> PINK_PETALS_BASKET = BLOCKS.register("pink_petals_basket", FloralBasket::new);
+    public static final RegistryObject<Block> SPORE_BLOSSOM_BASKET = BLOCKS.register("spore_blossom_basket", FloralBasket::new);
 
     public static void loadClass() {
     }

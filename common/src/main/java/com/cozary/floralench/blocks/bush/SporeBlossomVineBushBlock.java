@@ -1,0 +1,47 @@
+package com.cozary.floralench.blocks.bush;
+
+import com.cozary.floralench.blocks.base.VineBushBlock;
+import com.cozary.floralench.init.ModItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
+
+public class SporeBlossomVineBushBlock extends VineBushBlock {
+
+    @Override
+    public ItemStack getCloneItemStack(LevelReader worldIn, BlockPos pos, BlockState state) {
+        return new ItemStack(ModItems.SPORE_BLOSSOM_BUSH_ITEM.get());
+    }
+
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
+        int i = state.getValue(AGE);
+        boolean flag = i == 3;
+        if (!flag && player.getMainHandItem().getItem() == Items.BONE_MEAL) {
+            return InteractionResult.PASS;
+        } else if (i == 2) {
+            int j = 1 + worldIn.random.nextInt(4);
+            popResource(worldIn, pos, new ItemStack(Items.SPORE_BLOSSOM, j));
+            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
+            worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
+            return InteractionResult.sidedSuccess(worldIn.isClientSide);
+        } else if (i == 3) {
+            int j = 1 + worldIn.random.nextInt(3);
+            popResource(worldIn, pos, new ItemStack(ModItems.SPORE_BLOSSOM_VINE_ITEM.get(), j));
+            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
+            worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(2)), 2);
+            return InteractionResult.sidedSuccess(worldIn.isClientSide);
+        } else {
+            return super.useWithoutItem(state, worldIn, pos, player, hit);
+        }
+    }
+
+}
