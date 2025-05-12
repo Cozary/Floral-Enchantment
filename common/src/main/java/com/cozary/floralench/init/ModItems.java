@@ -143,9 +143,7 @@ public class ModItems {
     public static final RegistryObject<Item> LARGE_PEONY_POT = registerWithTab("large_peony_pot", () -> new BlockItemBase(ModBlocks.LARGE_PEONY_POT.get()));
     public static final RegistryObject<Item> LARGE_TORCHFLOWER_POT = registerWithTab("large_torchflower_pot", () -> new BlockItemBase(ModBlocks.LARGE_TORCHFLOWER_POT.get()));
     public static final RegistryObject<Item> LARGE_PITCHER_PLANT_POT = registerWithTab("large_pitcher_plant_pot", () -> new BlockItemBase(ModBlocks.LARGE_PITCHER_PLANT_POT.get()));
-    public static final RegistryObject<Item> LARGE_CHORUS_FLOWER_POT = registerWithTab("large_chorus_flower_pot", () -> new BlockItemBase(ModBlocks.LARGE_CHORUS_FLOWER_POT.get()));
     public static final RegistryObject<Item> LARGE_AZALEA_POT = registerWithTab("large_azalea_pot", () -> new BlockItemBase(ModBlocks.LARGE_AZALEA_POT.get()));
-    public static final RegistryObject<Item> LARGE_PINK_PETALS_POT = registerWithTab("large_pink_petals_pot", () -> new BlockItemBase(ModBlocks.LARGE_PINK_PETALS_POT.get()));
     public static final RegistryObject<Item> LARGE_SPORE_BLOSSOM_POT = registerWithTab("large_spore_blossom_pot", () -> new BlockItemBase(ModBlocks.LARGE_SPORE_BLOSSOM_POT.get()));
     //Large Double Pot
     public static final RegistryObject<Item> LARGE_DOUBLE_DANDELION_POT = registerWithTab("large_double_dandelion_pot", () -> new BlockItemBase(ModBlocks.LARGE_DOUBLE_DANDELION_POT.get()));
@@ -163,9 +161,7 @@ public class ModItems {
     public static final RegistryObject<Item> LARGE_DOUBLE_WITHER_ROSE_POT = registerWithTab("large_double_wither_rose_pot", () -> new BlockItemBase(ModBlocks.LARGE_DOUBLE_WITHER_ROSE_POT.get()));
     public static final RegistryObject<Item> LARGE_DOUBLE_TORCHFLOWER_POT = registerWithTab("large_double_torchflower_pot", () -> new BlockItemBase(ModBlocks.LARGE_DOUBLE_TORCHFLOWER_POT.get()));
     public static final RegistryObject<Item> LARGE_DOUBLE_PITCHER_PLANT_POT = registerWithTab("large_double_pitcher_plant_pot", () -> new BlockItemBase(ModBlocks.LARGE_DOUBLE_PITCHER_PLANT_POT.get()));
-    public static final RegistryObject<Item> LARGE_DOUBLE_CHORUS_FLOWER_POT = registerWithTab("large_double_chorus_flower_pot", () -> new BlockItemBase(ModBlocks.LARGE_DOUBLE_CHORUS_FLOWER_POT.get()));
     public static final RegistryObject<Item> LARGE_DOUBLE_AZALEA_POT = registerWithTab("large_double_azalea_pot", () -> new BlockItemBase(ModBlocks.LARGE_DOUBLE_AZALEA_POT.get()));
-    public static final RegistryObject<Item> LARGE_DOUBLE_PINK_PETALS_POT = registerWithTab("large_double_pink_petals_pot", () -> new BlockItemBase(ModBlocks.LARGE_DOUBLE_PINK_PETALS_POT.get()));
     public static final RegistryObject<Item> LARGE_DOUBLE_SPORE_BLOSSOM_POT = registerWithTab("large_double_spore_blossom_pot", () -> new BlockItemBase(ModBlocks.LARGE_DOUBLE_SPORE_BLOSSOM_POT.get()));
     //Special
     public static final RegistryObject<Item> DANCING_SUNFLOWER = registerWithTab("dancing_sunflower", () -> new BlockItemBase(ModBlocks.DANCING_SUNFLOWER.get()));
@@ -186,9 +182,7 @@ public class ModItems {
     public static final RegistryObject<Item> WITHER_ROSE_BASKET = registerWithTab("wither_rose_basket", () -> new BasketBase(ModBlocks.WITHER_ROSE_BASKET.get()));
     public static final RegistryObject<Item> TORCHFLOWER_BASKET = registerWithTab("torchflower_basket", () -> new BasketBase(ModBlocks.TORCHFLOWER_BASKET.get()));
     public static final RegistryObject<Item> PITCHER_PLANT_BASKET = registerWithTab("pitcher_plant_basket", () -> new BasketBase(ModBlocks.PITCHER_PLANT_BASKET.get()));
-    public static final RegistryObject<Item> CHORUS_FLOWER_BASKET = registerWithTab("chorus_flower_basket", () -> new BasketBase(ModBlocks.CHORUS_FLOWER_BASKET.get()));
     public static final RegistryObject<Item> AZALEA_BASKET = registerWithTab("azalea_basket", () -> new BasketBase(ModBlocks.AZALEA_BASKET.get()));
-    public static final RegistryObject<Item> PINK_PETALS_BASKET = registerWithTab("pink_petals_basket", () -> new BasketBase(ModBlocks.PINK_PETALS_BASKET.get()));
     public static final RegistryObject<Item> SPORE_BLOSSOM_BASKET = registerWithTab("spore_blossom_basket", () -> new BasketBase(ModBlocks.SPORE_BLOSSOM_BASKET.get()));
 
     public static RegistryObject<Item> registerWithTab(final String name, final Supplier<? extends Item> supplier) {

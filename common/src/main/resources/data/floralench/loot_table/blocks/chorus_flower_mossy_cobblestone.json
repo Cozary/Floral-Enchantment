@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "floralench:chorus_flower_mossy_cobblestone"
+        }
+      ]
+    }
+  ]
+}

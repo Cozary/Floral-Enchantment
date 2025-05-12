@@ -9,6 +9,9 @@ import com.cozary.floralench.blocks.pots.special.DancingSunflower;
 import com.cozary.floralench.blocks.wither_variant.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ChorusFlowerBlock;
+import net.minecraft.world.level.block.SporeBlossomBlock;
+import net.minecraft.world.level.block.TorchflowerCropBlock;
 
 public class ModBlocks {
     public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registries.BLOCK, FloralEnchantment.MOD_ID);
@@ -132,12 +135,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARGE_LILAC_POT = BLOCKS.register("large_lilac_pot", LargeLilacPot::new);
     public static final RegistryObject<Block> LARGE_ROSE_BUSH_POT = BLOCKS.register("large_rose_bush_pot", LargeRoseBushPot::new);
     public static final RegistryObject<Block> LARGE_PEONY_POT = BLOCKS.register("large_peony_pot", LargePeonyPot::new);
-    public static final RegistryObject<Block> LARGE_TORCHFLOWER_POT = BLOCKS.register("torchflower_pot", LargeTorchflowerPot::new);
-    public static final RegistryObject<Block> LARGE_PITCHER_PLANT_POT = BLOCKS.register("pitcher_plant_pot", LargePitcherPlantPot::new);
-    public static final RegistryObject<Block> LARGE_CHORUS_FLOWER_POT = BLOCKS.register("chorus_flower_pot", LargeChorusFlowerPot::new);
-    public static final RegistryObject<Block> LARGE_AZALEA_POT = BLOCKS.register("azalea_pot", LargeAzaleaPot::new);
-    public static final RegistryObject<Block> LARGE_PINK_PETALS_POT = BLOCKS.register("pink_petals_pot", LargePinkPetalsPot::new);
-    public static final RegistryObject<Block> LARGE_SPORE_BLOSSOM_POT = BLOCKS.register("spore_blossom_pot", LargeSporeBlossomPot::new);
+    public static final RegistryObject<Block> LARGE_TORCHFLOWER_POT = BLOCKS.register("large_torchflower_pot", LargeTorchflowerPot::new);
+    public static final RegistryObject<Block> LARGE_PITCHER_PLANT_POT = BLOCKS.register("large_pitcher_plant_pot", LargePitcherPlantPot::new);
+    public static final RegistryObject<Block> LARGE_AZALEA_POT = BLOCKS.register("large_azalea_pot", LargeAzaleaPot::new);
+    public static final RegistryObject<Block> LARGE_SPORE_BLOSSOM_POT = BLOCKS.register("large_spore_blossom_pot", LargeSporeBlossomPot::new);
 
     //Big Double Pot
     public static final RegistryObject<Block> LARGE_DOUBLE_DANDELION_POT = BLOCKS.register("large_double_dandelion_pot", LargeDoubleDandelionPot::new);
@@ -155,9 +156,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARGE_DOUBLE_WITHER_ROSE_POT = BLOCKS.register("large_double_wither_rose_pot", LargeDoubleWitherRosePot::new);
     public static final RegistryObject<Block> LARGE_DOUBLE_TORCHFLOWER_POT = BLOCKS.register("large_double_torchflower_pot", LargeDoubleTorchflowerPot::new);
     public static final RegistryObject<Block> LARGE_DOUBLE_PITCHER_PLANT_POT = BLOCKS.register("large_double_pitcher_plant_pot", LargeDoublePitcherPlantPot::new);
-    public static final RegistryObject<Block> LARGE_DOUBLE_CHORUS_FLOWER_POT = BLOCKS.register("large_double_chorus_flower_pot", LargeDoubleChorusFlowerPot::new);
     public static final RegistryObject<Block> LARGE_DOUBLE_AZALEA_POT = BLOCKS.register("large_double_azalea_pot", LargeDoubleAzaleaPot::new);
-    public static final RegistryObject<Block> LARGE_DOUBLE_PINK_PETALS_POT = BLOCKS.register("large_double_pink_petals_pot", LargeDoublePinkPetalsPot::new);
     public static final RegistryObject<Block> LARGE_DOUBLE_SPORE_BLOSSOM_POT = BLOCKS.register("large_double_spore_blossom_pot", LargeDoubleSporeBlossomPot::new);
 
     //Special
@@ -180,9 +179,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> WITHER_ROSE_BASKET = BLOCKS.register("wither_rose_basket", WitherFloralBasket::new);
     public static final RegistryObject<Block> TORCHFLOWER_BASKET = BLOCKS.register("torchflower_basket", FloralBasket::new);
     public static final RegistryObject<Block> PITCHER_PLANT_BASKET = BLOCKS.register("pitcher_plant_basket", FloralBasket::new);
-    public static final RegistryObject<Block> CHORUS_FLOWER_BASKET = BLOCKS.register("chorus_flower_basket", FloralBasket::new);
     public static final RegistryObject<Block> AZALEA_BASKET = BLOCKS.register("azalea_basket", FloralBasket::new);
-    public static final RegistryObject<Block> PINK_PETALS_BASKET = BLOCKS.register("pink_petals_basket", FloralBasket::new);
     public static final RegistryObject<Block> SPORE_BLOSSOM_BASKET = BLOCKS.register("spore_blossom_basket", FloralBasket::new);
 
     public static void loadClass() {
