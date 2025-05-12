@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralench:spore_blossom_basket"
+    }
+  ],
+  "result": {
+    "id": "minecraft:spore_blossom",
+    "count": 6
+  }
+}

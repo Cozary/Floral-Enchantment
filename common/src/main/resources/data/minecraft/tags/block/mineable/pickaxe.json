@@ -18,6 +18,12 @@
     "floralench:lilac_mossy_cobblestone",
     "floralench:rose_bush_mossy_cobblestone",
     "floralench:peony_mossy_cobblestone",
+    "floralench:torchflower_mossy_cobblestone",
+    "floralench:pitcher_plant_mossy_cobblestone",
+    "floralench:chorus_flower_mossy_cobblestone",
+    "floralench:azalea_mossy_cobblestone",
+    "floralench:pink_petals_mossy_cobblestone",
+    "floralench:spore_blossom_mossy_cobblestone",
     "floralench:dandelion_mossy_stone_brick",
     "floralench:poppy_mossy_stone_brick",
     "floralench:blue_orchid_mossy_stone_brick",
@@ -34,6 +40,12 @@
     "floralench:sunflower_mossy_stone_brick",
     "floralench:lilac_mossy_stone_brick",
     "floralench:rose_bush_mossy_stone_brick",
-    "floralench:peony_mossy_stone_brick"
+    "floralench:peony_mossy_stone_brick",
+    "floralench:torchflower_mossy_stone_brick",
+    "floralench:pitcher_plant_mossy_stone_brick",
+    "floralench:chorus_flower_mossy_stone_brick",
+    "floralench:azalea_mossy_stone_brick",
+    "floralench:pink_petals_mossy_stone_brick",
+    "floralench:spore_blossom_mossy_stone_brick"
   ]
 }

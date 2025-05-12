@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "floralench:torchflower_basket"
+    }
+  ],
+  "result": {
+    "id": "minecraft:torchflower",
+    "count": 6
+  }
+}
