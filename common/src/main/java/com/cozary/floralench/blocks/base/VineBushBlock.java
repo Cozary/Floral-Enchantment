@@ -8,8 +8,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.SweetBerryBushBlock;
@@ -20,7 +22,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class VineBushBlock extends SweetBerryBushBlock {
+public abstract class VineBushBlock extends SweetBerryBushBlock {
     private static final VoxelShape BUSHLING_SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 8.0D, 13.0D);
     private static final VoxelShape HALF_GROW_SHAPE = Block.box(3, 0, 3, 13, 10, 13);
     private static final VoxelShape GROW_SHAPE = Block.box(1, 0, 1, 15, 14, 15);
@@ -60,4 +62,5 @@ public class VineBushBlock extends SweetBerryBushBlock {
         }
     }
 
+    public abstract ItemStack getCloneItemStack(LevelReader worldIn, BlockPos pos, BlockState state);
 }

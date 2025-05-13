@@ -2,6 +2,7 @@ package com.cozary.floralench.init;
 
 import com.cozary.floralench.FloralEnchantment;
 import net.minecraft.core.Holder;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -9,6 +10,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.EquipmentAsset;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -27,7 +29,7 @@ public final class ModArmorMaterials {
             0.0F,
             0.0F,
             null,
-            ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "red")
+            ModEquipmentAssets.RED
     );
 
     public static final ArmorMaterial YELLOW = createArmorMaterial(
@@ -42,7 +44,7 @@ public final class ModArmorMaterials {
             0.0F,
             0.0F,
             null,
-            ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "yellow")
+            ModEquipmentAssets.YELLOW
     );
 
     public static final ArmorMaterial BLUE = createArmorMaterial(
@@ -57,7 +59,7 @@ public final class ModArmorMaterials {
             0.0F,
             0.0F,
             null,
-            ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "blue")
+            ModEquipmentAssets.BLUE
     );
 
     public static final ArmorMaterial WHITE = createArmorMaterial(
@@ -72,7 +74,7 @@ public final class ModArmorMaterials {
             0.0F,
             0.0F,
             null,
-            ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "white")
+            ModEquipmentAssets.WHITE
     );
 
     public static final ArmorMaterial PINK = createArmorMaterial(
@@ -87,7 +89,7 @@ public final class ModArmorMaterials {
             0.0F,
             0.0F,
             null,
-            ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "pink")
+            ModEquipmentAssets.PINK
     );
 
     public static final ArmorMaterial BLACK = createArmorMaterial(
@@ -102,7 +104,7 @@ public final class ModArmorMaterials {
             0.0F,
             0.0F,
             null,
-            ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "black")
+            ModEquipmentAssets.BLACK
     );
 
     public static final ArmorMaterial TULIP = createArmorMaterial(
@@ -117,7 +119,7 @@ public final class ModArmorMaterials {
             0.0F,
             0.0F,
             null,
-            ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "tulip")
+            ModEquipmentAssets.TULIP
     );
 
     private static ArmorMaterial createArmorMaterial(
@@ -127,7 +129,7 @@ public final class ModArmorMaterials {
             float toughness,
             float knockbackResistance,
             TagKey<Item> repairTag,
-            ResourceLocation modelId
+            ResourceKey<EquipmentAsset> modelId
     ) {
         EnumMap<ArmorType, Integer> armorMap = new EnumMap<>(ArmorType.class);
         armorMap.putAll(defense);
