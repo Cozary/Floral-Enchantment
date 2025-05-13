@@ -6,12 +6,10 @@
     " W "
   ],
   "key": {
-    "#": {
-      "item": "minecraft:spore_blossom"
-    },
-    "W": {
-      "item": "floralench:floral_basket"
-    }
+    "#":  "minecraft:spore_blossom"
+    ,
+    "W":  "floralench:floral_basket"
+
   },
   "result": {
     "id": "floralench:spore_blossom_basket",

@@ -6,12 +6,10 @@
     "mmm"
   ],
   "key": {
-    "m": {
-      "item": "minecraft:vine"
-    },
-    "x": {
-      "item": "minecraft:white_tulip"
-    }
+    "m":  "minecraft:vine"
+    ,
+    "x":  "minecraft:white_tulip"
+
   },
   "result": {
     "id": "floralench:white_tulip_bush",

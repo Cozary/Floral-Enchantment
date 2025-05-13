@@ -6,9 +6,8 @@
     " m "
   ],
   "key": {
-    "m": {
-      "item": "minecraft:wither_rose"
-    }
+    "m": "minecraft:wither_rose"
+
   },
   "result": {
     "id": "floralench:black_crown",

@@ -6,12 +6,10 @@
     " W "
   ],
   "key": {
-    "#": {
-      "item": "minecraft:blue_orchid"
-    },
-    "W": {
-      "item": "floralench:floral_basket"
-    }
+    "#": "minecraft:blue_orchid"
+    ,
+    "W": "floralench:floral_basket"
+
   },
   "result": {
     "id": "floralench:blue_orchid_basket",

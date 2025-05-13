@@ -6,12 +6,10 @@
     "mmm"
   ],
   "key": {
-    "m": {
-      "item": "minecraft:vine"
-    },
-    "x": {
-      "item": "minecraft:lily_of_the_valley"
-    }
+    "m": "minecraft:vine"
+    ,
+    "x":  "minecraft:lily_of_the_valley"
+
   },
   "result": {
     "id": "floralench:lily_of_the_valley_bush",

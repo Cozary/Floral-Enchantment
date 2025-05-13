@@ -6,12 +6,10 @@
     " W "
   ],
   "key": {
-    "#": {
-      "item": "minecraft:oxeye_daisy"
-    },
-    "W": {
-      "item": "floralench:floral_basket"
-    }
+    "#":  "minecraft:oxeye_daisy"
+    ,
+    "W":  "floralench:floral_basket"
+
   },
   "result": {
     "id": "floralench:oxeye_daisy_basket",

@@ -6,12 +6,10 @@
     " x "
   ],
   "key": {
-    "m": {
-      "item": "minecraft:dandelion"
-    },
-    "x": {
-      "item": "minecraft:sunflower"
-    }
+    "m":  "minecraft:dandelion"
+    ,
+    "x":  "minecraft:sunflower"
+
   },
   "result": {
     "id": "floralench:yellow_crown",

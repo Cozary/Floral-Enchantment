@@ -6,18 +6,14 @@
     "zxc"
   ],
   "key": {
-    "m": {
-      "item": "minecraft:orange_tulip"
-    },
-    "x": {
-      "item": "minecraft:red_tulip"
-    },
-    "z": {
-      "item": "minecraft:white_tulip"
-    },
-    "c": {
-      "item": "minecraft:pink_tulip"
-    }
+    "m":  "minecraft:orange_tulip"
+    ,
+    "x":  "minecraft:red_tulip"
+    ,
+    "z":  "minecraft:white_tulip"
+    ,
+    "c":  "minecraft:pink_tulip"
+
   },
   "result": {
     "id": "floralench:tulips_crown",

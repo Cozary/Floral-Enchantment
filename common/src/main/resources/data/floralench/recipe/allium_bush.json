@@ -6,12 +6,8 @@
     "mmm"
   ],
   "key": {
-    "m": {
-      "item": "minecraft:vine"
-    },
-    "x": {
-      "item": "minecraft:allium"
-    }
+    "m": "minecraft:vine",
+    "x": "minecraft:allium"
   },
   "result": {
     "id": "floralench:allium_bush",

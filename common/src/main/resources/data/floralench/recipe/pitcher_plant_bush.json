@@ -6,12 +6,10 @@
     "mmm"
   ],
   "key": {
-    "m": {
-      "item": "minecraft:vine"
-    },
-    "x": {
-      "item": "minecraft:pitcher_plant"
-    }
+    "m":  "minecraft:vine"
+    ,
+    "x":  "minecraft:pitcher_plant"
+
   },
   "result": {
     "id": "floralench:pitcher_plant_bush",

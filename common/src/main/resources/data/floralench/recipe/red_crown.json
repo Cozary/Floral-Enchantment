@@ -6,12 +6,10 @@
     " x "
   ],
   "key": {
-    "m": {
-      "item": "minecraft:poppy"
-    },
-    "x": {
-      "item": "minecraft:rose_bush"
-    }
+    "m":  "minecraft:poppy"
+    ,
+    "x":  "minecraft:rose_bush"
+
   },
   "result": {
     "id": "floralench:red_crown",

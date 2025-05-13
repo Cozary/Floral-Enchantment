@@ -6,12 +6,10 @@
     "mmm"
   ],
   "key": {
-    "m": {
-      "item": "minecraft:vine"
-    },
-    "x": {
-      "item": "minecraft:oxeye_daisy"
-    }
+    "m":  "minecraft:vine"
+    ,
+    "x":  "minecraft:oxeye_daisy"
+
   },
   "result": {
     "id": "floralench:oxeye_daisy_bush",

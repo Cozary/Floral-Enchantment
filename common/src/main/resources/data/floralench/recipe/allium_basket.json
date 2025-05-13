@@ -6,12 +6,8 @@
     " W "
   ],
   "key": {
-    "#": {
-      "item": "minecraft:allium"
-    },
-    "W": {
-      "item": "floralench:floral_basket"
-    }
+    "#": "minecraft:allium",
+    "W": "floralench:floral_basket"
   },
   "result": {
     "id": "floralench:allium_basket",

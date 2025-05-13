@@ -6,12 +6,10 @@
     "mmm"
   ],
   "key": {
-    "m": {
-      "item": "minecraft:vine"
-    },
-    "x": {
-      "item": "minecraft:blue_orchid"
-    }
+    "m": "minecraft:vine"
+    ,
+    "x": "minecraft:blue_orchid"
+
   },
   "result": {
     "id": "floralench:blue_orchid_bush",

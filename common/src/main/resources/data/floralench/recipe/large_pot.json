@@ -6,9 +6,8 @@
     "mmm"
   ],
   "key": {
-    "m": {
-      "item": "minecraft:brick"
-    }
+    "m": "minecraft:brick"
+
   },
   "result": {
     "id": "floralench:large_pot",

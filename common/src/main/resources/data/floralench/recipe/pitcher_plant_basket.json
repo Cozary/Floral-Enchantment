@@ -6,12 +6,10 @@
     " W "
   ],
   "key": {
-    "#": {
-      "item": "minecraft:pitcher_plant"
-    },
-    "W": {
-      "item": "floralench:floral_basket"
-    }
+    "#":  "minecraft:pitcher_plant"
+    ,
+    "W": "floralench:floral_basket"
+
   },
   "result": {
     "id": "floralench:pitcher_plant_basket",

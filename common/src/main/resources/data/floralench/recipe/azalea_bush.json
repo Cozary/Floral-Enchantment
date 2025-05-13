@@ -6,12 +6,8 @@
     "mmm"
   ],
   "key": {
-    "m": {
-      "item": "minecraft:vine"
-    },
-    "x": {
-      "item": "minecraft:azalea"
-    }
+    "m": "minecraft:vine",
+    "x": "minecraft:azalea"
   },
   "result": {
     "id": "floralench:azalea_bush",

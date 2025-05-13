@@ -6,12 +6,8 @@
     " W "
   ],
   "key": {
-    "#": {
-      "item": "minecraft:azalea"
-    },
-    "W": {
-      "item": "floralench:floral_basket"
-    }
+    "#": "minecraft:azalea",
+    "W": "floralench:floral_basket"
   },
   "result": {
     "id": "floralench:azalea_basket",
