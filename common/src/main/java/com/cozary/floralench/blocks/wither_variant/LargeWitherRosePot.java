@@ -1,6 +1,7 @@
 package com.cozary.floralench.blocks.wither_variant;
 
-import com.cozary.floralench.blocks.base.LargePot;
+import com.cozary.floralench.blocks.base.LargePotBase;
+import com.cozary.floralench.blocks.pots.special.LargePot;
 import com.cozary.floralench.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -25,7 +26,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class LargeWitherRosePot extends LargePot {
+public class LargeWitherRosePot extends LargePotBase {
 
     public LargeWitherRosePot() {
         super("large_wither_rose_pot");

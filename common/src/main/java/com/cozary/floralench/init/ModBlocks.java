@@ -1,7 +1,7 @@
 package com.cozary.floralench.init;
 
 import com.cozary.floralench.FloralEnchantment;
-import com.cozary.floralench.blocks.base.LargePot;
+import com.cozary.floralench.blocks.pots.special.LargePot;
 import com.cozary.floralench.blocks.bush.*;
 import com.cozary.floralench.blocks.factory.FloralBasketFactory;
 import com.cozary.floralench.blocks.factory.MossyBlockFactory;
@@ -121,7 +121,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> SPORE_BLOSSOM_MOSSY_STONE_BRICK = BLOCKS.register("spore_blossom_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.create("spore_blossom_mossy_stone_brick"));
 
     //Large Pot
-    public static final RegistryObject<Block> LARGE_POT = BLOCKS.register("large_pot", () -> new LargePot("large_pot"));
+    public static final RegistryObject<Block> LARGE_POT = BLOCKS.register("large_pot", LargePot::new);
     public static final RegistryObject<Block> LARGE_DANDELION_POT = BLOCKS.register("large_dandelion_pot", LargeDandelionPot::new);
     public static final RegistryObject<Block> LARGE_POPPY_POT = BLOCKS.register("large_poppy_pot", LargePoppyPot::new);
     public static final RegistryObject<Block> LARGE_BLUE_ORCHID_POT = BLOCKS.register("large_blue_orchid_pot", LargeBlueOrchidPot::new);

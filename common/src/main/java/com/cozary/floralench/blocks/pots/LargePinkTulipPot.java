@@ -1,6 +1,7 @@
 package com.cozary.floralench.blocks.pots;
 
-import com.cozary.floralench.blocks.base.LargePot;
+import com.cozary.floralench.blocks.base.LargePotBase;
+import com.cozary.floralench.blocks.pots.special.LargePot;
 import com.cozary.floralench.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -14,7 +15,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class LargePinkTulipPot extends LargePot {
+public class LargePinkTulipPot extends LargePotBase {
 
     public LargePinkTulipPot() {
         super("large_pink_tulip_pot");
