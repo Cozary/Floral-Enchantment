@@ -25,7 +25,7 @@ public class LargeDoubleAzaleaPot extends LargePotBase {
     public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         ItemStack itemstack = player.getMainHandItem();
         Item item = itemstack.getItem();
-        ItemStack item1 = Items.AZALEA.getDefaultInstance();
+        ItemStack item1 = Items.FLOWERING_AZALEA.getDefaultInstance();
         Direction direction1 = state.getValue(FACING);
         if (!worldIn.isClientSide) {
             if (item == Items.AIR) {

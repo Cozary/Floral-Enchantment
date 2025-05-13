@@ -25,14 +25,14 @@ public class LargeAzaleaPot extends LargePotBase {
     public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         ItemStack itemstack = player.getMainHandItem();
         Item item = itemstack.getItem();
-        ItemStack item1 = Items.AZALEA.getDefaultInstance();
+        ItemStack item1 = Items.FLOWERING_AZALEA.getDefaultInstance();
         Direction direction1 = state.getValue(FACING);
         if (!worldIn.isClientSide) {
             if (item == Items.AIR) {
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));
                 player.setItemInHand(InteractionHand.MAIN_HAND, item1);
             }
-            if (item == Items.AZALEA) {
+            if (item == Items.FLOWERING_AZALEA) {
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_DOUBLE_AZALEA_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));
                 if (!player.getAbilities().instabuild) {
                     itemstack.shrink(1);
