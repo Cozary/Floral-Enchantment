@@ -156,5 +156,6 @@
   "block.floralench.pitcher_plant_basket": "Pitcher Plant Basket",
   "block.floralench.azalea_basket": "Azalea Basket",
   "block.floralench.spore_blossom_basket": "Spore Blossom Basket",
-  "itemGroup.floralench": "Floral Enchantment"
+  "itemGroup.floralench": "Floral Enchantment",
+  "jei.floralench.vine_info": "It is obtained by right-clicking on a fully grown %s."
 }
