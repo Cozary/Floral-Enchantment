@@ -6,10 +6,8 @@
     "mmm"
   ],
   "key": {
-    "m":  "minecraft:vine"
-    ,
-    "x":  "minecraft:sunflower"
-
+    "m": "minecraft:vine",
+    "x": "minecraft:sunflower"
   },
   "result": {
     "id": "floralench:sunflower_bush",

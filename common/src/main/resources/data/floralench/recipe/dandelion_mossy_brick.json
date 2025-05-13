@@ -1,10 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "floralench:dandelion_vine"
-    ,
+    "floralench:dandelion_vine",
     "minecraft:stone_bricks"
-
   ],
   "result": {
     "id": "floralench:dandelion_mossy_stone_brick",

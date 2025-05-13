@@ -149,7 +149,6 @@
   "block.floralench.pitcher_plant_basket": "Cesta de plantas odre",
   "block.floralench.azalea_basket": "Cesta de azaleas",
   "block.floralench.spore_blossom_basket": "Cesta de flores de esporas",
-
   "item.floralench.dandelion_vine": "Enredadera de diente de león",
   "item.floralench.poppy_vine": "Enredadera de amapola",
   "item.floralench.blue_orchid_vine": "Enredadera de orquídea azul",
@@ -300,7 +299,6 @@
   "item.floralench.pitcher_plant_basket": "Cesta de plantas odre",
   "item.floralench.azalea_basket": "Cesta de azaleas",
   "item.floralench.spore_blossom_basket": "Cesta de flores de esporas",
-
   "item.floralench.red_crown": "Corona roja",
   "item.floralench.yellow_crown": "Corona amarilla",
   "item.floralench.blue_crown": "Corona azul",
@@ -308,7 +306,6 @@
   "item.floralench.pink_crown": "Corona rosa",
   "item.floralench.black_crown": "Corona negra",
   "item.floralench.tulips_crown": "Corona de tulipanes",
-
   "itemGroup.floralench": "Floral Enchantment"
 }
 

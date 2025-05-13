@@ -2,7 +2,6 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     "floralench:dandelion_basket"
-
   ],
   "result": {
     "id": "minecraft:dandelion",

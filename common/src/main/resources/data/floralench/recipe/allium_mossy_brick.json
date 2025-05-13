@@ -1,10 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-  "floralench:allium_vine"
-  ,
-  "minecraft:stone_bricks"
-
+    "floralench:allium_vine",
+    "minecraft:stone_bricks"
   ],
   "result": {
     "id": "floralench:allium_mossy_stone_brick",

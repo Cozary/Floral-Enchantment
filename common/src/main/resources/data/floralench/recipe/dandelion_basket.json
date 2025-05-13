@@ -6,10 +6,8 @@
     " W "
   ],
   "key": {
-    "#":  "minecraft:dandelion"
-    ,
+    "#": "minecraft:dandelion",
     "W": "floralench:floral_basket"
-
   },
   "result": {
     "id": "floralench:dandelion_basket",

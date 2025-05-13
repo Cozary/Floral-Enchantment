@@ -1,8 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "floralench:dandelion_vine"
-    ,
+    "floralench:dandelion_vine",
     "minecraft:cobblestone"
   ],
   "result": {

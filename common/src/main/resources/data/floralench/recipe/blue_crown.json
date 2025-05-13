@@ -6,10 +6,8 @@
     " x "
   ],
   "key": {
-    "m":"minecraft:blue_orchid"
-    ,
+    "m": "minecraft:blue_orchid",
     "x": "minecraft:cornflower"
-
   },
   "result": {
     "id": "floralench:blue_crown",

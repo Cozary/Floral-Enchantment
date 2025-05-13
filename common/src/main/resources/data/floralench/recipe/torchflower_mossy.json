@@ -1,10 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "floralench:torchflower_vine"
-    ,
+    "floralench:torchflower_vine",
     "minecraft:cobblestone"
-
   ],
   "result": {
     "id": "floralench:torchflower_mossy_cobblestone",

@@ -6,10 +6,8 @@
     "mmm"
   ],
   "key": {
-    "m": "minecraft:vine"
-    ,
+    "m": "minecraft:vine",
     "x": "minecraft:azure_bluet"
-
   },
   "result": {
     "id": "floralench:azure_bluet_bush",

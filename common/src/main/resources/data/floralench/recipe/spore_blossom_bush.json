@@ -6,10 +6,8 @@
     "mmm"
   ],
   "key": {
-    "m":  "minecraft:vine"
-    ,
-    "x":  "minecraft:spore_blossom"
-
+    "m": "minecraft:vine",
+    "x": "minecraft:spore_blossom"
   },
   "result": {
     "id": "floralench:spore_blossom_bush",

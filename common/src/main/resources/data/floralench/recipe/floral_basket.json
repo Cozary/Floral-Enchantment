@@ -5,8 +5,7 @@
     "###"
   ],
   "key": {
-    "#":  "minecraft:wheat"
-
+    "#": "minecraft:wheat"
   },
   "result": {
     "id": "floralench:floral_basket",

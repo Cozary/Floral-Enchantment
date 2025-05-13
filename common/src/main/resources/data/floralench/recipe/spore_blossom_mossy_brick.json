@@ -1,10 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "floralench:spore_blossom_vine"
-    ,
+    "floralench:spore_blossom_vine",
     "minecraft:stone_bricks"
-
   ],
   "result": {
     "id": "floralench:spore_blossom_mossy_stone_brick",

@@ -6,10 +6,8 @@
     " W "
   ],
   "key": {
-    "#": "minecraft:azure_bluet"
-    ,
+    "#": "minecraft:azure_bluet",
     "W": "floralench:floral_basket"
-
   },
   "result": {
     "id": "floralench:azure_bluet_basket",

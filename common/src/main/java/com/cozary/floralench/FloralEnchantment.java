@@ -1,6 +1,5 @@
 package com.cozary.floralench;
 
-import com.cozary.floralench.init.ModArmorMaterials;
 import com.cozary.floralench.init.ModBlocks;
 import com.cozary.floralench.init.ModItems;
 import org.slf4j.Logger;

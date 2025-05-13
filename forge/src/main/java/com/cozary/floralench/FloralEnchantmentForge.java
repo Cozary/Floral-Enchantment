@@ -1,7 +1,6 @@
 package com.cozary.floralench;
 
 import com.cozary.floralench.init.ModTabs;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -19,7 +18,6 @@ public class FloralEnchantmentForge {
         FloralEnchantment.init();
         ModTabs.CREATIVE_MODE_TABS.register(eventBus);
     }
-
 
 
 }

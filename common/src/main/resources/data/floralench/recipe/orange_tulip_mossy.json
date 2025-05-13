@@ -1,10 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "floralench:orange_tulip_vine"
-    ,
+    "floralench:orange_tulip_vine",
     "minecraft:cobblestone"
-
   ],
   "result": {
     "id": "floralench:orange_tulip_mossy_cobblestone",

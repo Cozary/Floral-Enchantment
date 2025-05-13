@@ -2,7 +2,6 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     "floralench:white_tulip_basket"
-
   ],
   "result": {
     "id": "minecraft:white_tulip",

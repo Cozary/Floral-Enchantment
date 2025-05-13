@@ -1,10 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "floralench:pitcher_plant_vine"
-    ,
+    "floralench:pitcher_plant_vine",
     "minecraft:stone_bricks"
-
   ],
   "result": {
     "id": "floralench:pitcher_plant_mossy_stone_brick",

@@ -6,10 +6,8 @@
     " W "
   ],
   "key": {
-    "#":  "minecraft:wither_rose"
-    ,
-    "W":  "floralench:floral_basket"
-
+    "#": "minecraft:wither_rose",
+    "W": "floralench:floral_basket"
   },
   "result": {
     "id": "floralench:wither_rose_basket",

@@ -1,6 +1,6 @@
-# Changelog
+# Changelog 1.21.3 Port
 
-### Added 
+### Added
 
 - Publish plugin (happy).
 - [Vines]: Torchflower, Chorus Flower, Azalea, Pink Petals, Spore Blossom.
@@ -11,6 +11,10 @@
 - [Large Double Pot]: Torchflower, Azalea, Spore Blossom.
 - Some blocks added to **Tags**: Bee Attactive, Bee Growables, Flower Pots and Flowers.
 - Spanish Lang.
+
+### Removed
+
+- Custom animation when holding Large Pots.
 
 ### Fixed
 

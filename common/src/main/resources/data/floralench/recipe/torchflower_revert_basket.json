@@ -2,7 +2,6 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     "floralench:torchflower_basket"
-
   ],
   "result": {
     "id": "minecraft:torchflower",

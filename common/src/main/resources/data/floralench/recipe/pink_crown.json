@@ -6,12 +6,9 @@
     "zx "
   ],
   "key": {
-    "m":  "minecraft:allium"
-    ,
-    "x":  "minecraft:lilac"
-    ,
-    "z":  "minecraft:peony"
-
+    "m": "minecraft:allium",
+    "x": "minecraft:lilac",
+    "z": "minecraft:peony"
   },
   "result": {
     "id": "floralench:pink_crown",

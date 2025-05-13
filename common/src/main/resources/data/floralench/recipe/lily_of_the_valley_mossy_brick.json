@@ -1,10 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    "floralench:lily_of_the_valley_vine"
-    ,
+    "floralench:lily_of_the_valley_vine",
     "minecraft:stone_bricks"
-
   ],
   "result": {
     "id": "floralench:lily_of_the_valley_mossy_stone_brick",

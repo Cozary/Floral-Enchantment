@@ -6,10 +6,8 @@
     " W "
   ],
   "key": {
-    "#":  "minecraft:white_tulip"
-    ,
-    "W":  "floralench:floral_basket"
-
+    "#": "minecraft:white_tulip",
+    "W": "floralench:floral_basket"
   },
   "result": {
     "id": "floralench:white_tulip_basket",

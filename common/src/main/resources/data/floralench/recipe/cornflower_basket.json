@@ -6,10 +6,8 @@
     " W "
   ],
   "key": {
-    "#": "minecraft:cornflower"
-    ,
+    "#": "minecraft:cornflower",
     "W": "floralench:floral_basket"
-
   },
   "result": {
     "id": "floralench:cornflower_basket",

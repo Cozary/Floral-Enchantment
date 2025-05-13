@@ -6,10 +6,8 @@
     " W "
   ],
   "key": {
-    "#":  "minecraft:lily_of_the_valley"
-    ,
-    "W":  "floralench:floral_basket"
-
+    "#": "minecraft:lily_of_the_valley",
+    "W": "floralench:floral_basket"
   },
   "result": {
     "id": "floralench:lily_of_the_valley_basket",

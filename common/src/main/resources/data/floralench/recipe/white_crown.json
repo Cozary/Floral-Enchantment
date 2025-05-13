@@ -6,12 +6,9 @@
     "zx "
   ],
   "key": {
-    "m":  "minecraft:azure_bluet"
-    ,
-    "x":  "minecraft:oxeye_daisy"
-    ,
-    "z":  "minecraft:lily_of_the_valley"
-
+    "m": "minecraft:azure_bluet",
+    "x": "minecraft:oxeye_daisy",
+    "z": "minecraft:lily_of_the_valley"
   },
   "result": {
     "id": "floralench:white_crown",
