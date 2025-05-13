@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:cornflower_basket"
-    }
+    "floralench:cornflower_basket"
+
   ],
   "result": {
     "id": "minecraft:cornflower",

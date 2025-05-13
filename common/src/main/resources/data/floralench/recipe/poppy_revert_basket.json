@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:poppy_basket"
-    }
+    "floralench:poppy_basket"
+
   ],
   "result": {
     "id": "minecraft:poppy",

@@ -1,12 +1,10 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:sunflower_vine"
-    },
-    {
-      "item": "minecraft:stone_bricks"
-    }
+    "floralench:sunflower_vine"
+    ,
+    "minecraft:stone_bricks"
+
   ],
   "result": {
     "id": "floralench:sunflower_mossy_stone_brick",

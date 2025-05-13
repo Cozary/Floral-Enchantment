@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:red_tulip_basket"
-    }
+    "floralench:red_tulip_basket"
+
   ],
   "result": {
     "id": "minecraft:red_tulip",

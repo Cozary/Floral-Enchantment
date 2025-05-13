@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:oxeye_daisy_basket"
-    }
+    "floralench:oxeye_daisy_basket"
+
   ],
   "result": {
     "id": "minecraft:oxeye_daisy",

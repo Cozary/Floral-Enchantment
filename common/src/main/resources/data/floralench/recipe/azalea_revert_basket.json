@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:azalea_basket"
-    }
+    "floralench:azalea_basket"
+
   ],
   "result": {
     "id": "minecraft:azalea",

@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:azure_bluet_basket"
-    }
+    "floralench:azure_bluet_basket"
+
   ],
   "result": {
     "id": "minecraft:azure_bluet",

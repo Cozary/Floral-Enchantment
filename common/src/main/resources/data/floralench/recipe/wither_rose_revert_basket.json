@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:wither_rose_basket"
-    }
+    "floralench:wither_rose_basket"
+
   ],
   "result": {
     "id": "minecraft:wither_rose",

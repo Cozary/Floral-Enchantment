@@ -1,12 +1,11 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:allium_vine"
-    },
-    {
-      "item": "minecraft:cobblestone"
-    }
+
+"floralench:allium_vine",
+
+"minecraft:cobblestone"
+
   ],
   "result": {
     "id": "floralench:allium_mossy_cobblestone",

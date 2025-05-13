@@ -1,9 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "floralench:pitcher_plant_basket"
-    }
+    "floralench:pitcher_plant_basket"
+
   ],
   "result": {
     "id": "minecraft:pitcher_plant",
