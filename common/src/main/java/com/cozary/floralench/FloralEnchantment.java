@@ -16,21 +16,6 @@ public class FloralEnchantment {
 
         ModBlocks.loadClass();
         ModItems.loadClass();
-
-        if (!isForgeEnvironment()) {
-            //ModArmorMaterials.loadClass();
-        }
     }
-
-    //Sigh...
-    public static boolean isForgeEnvironment() {
-        try {
-            Class.forName("net.minecraftforge.fml.common.Mod");
-            return true;
-        } catch (ClassNotFoundException e) {
-            return false;
-        }
-    }
-
 
 }

@@ -18,8 +18,6 @@ public class FloralEnchantmentForge {
         FloralEnchantment.LOG.info("Hello Forge world!");
         FloralEnchantment.init();
         ModTabs.CREATIVE_MODE_TABS.register(eventBus);
-        MinecraftForge.EVENT_BUS.register(new EventHandler());
-
     }
 
 
