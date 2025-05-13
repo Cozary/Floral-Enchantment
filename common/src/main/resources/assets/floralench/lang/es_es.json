@@ -161,6 +161,7 @@
   "block.floralench.pitcher_plant_basket": "Cesta de plantas odre",
   "block.floralench.azalea_basket": "Cesta de azaleas",
   "block.floralench.spore_blossom_basket": "Cesta de flores de esporas",
-  "itemGroup.floralench": "Floral Enchantment"
+  "itemGroup.floralench": "Floral Enchantment",
+  "jei.floralench.vine_info": "Se obtiene haciendo clic derecho sobre un %s completamente crecido."
 }
 
