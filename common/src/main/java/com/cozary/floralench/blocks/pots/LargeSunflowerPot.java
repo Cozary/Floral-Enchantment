@@ -1,6 +1,7 @@
 package com.cozary.floralench.blocks.pots;
 
-import com.cozary.floralench.blocks.base.LargePot;
+import com.cozary.floralench.blocks.base.LargePotBase;
+import com.cozary.floralench.blocks.pots.special.LargePot;
 import com.cozary.floralench.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -22,7 +23,7 @@ import java.util.Optional;
 import static net.minecraft.world.level.block.JukeboxBlock.HAS_RECORD;
 
 
-public class LargeSunflowerPot extends LargePot {
+public class LargeSunflowerPot extends LargePotBase {
     Optional<BlockPos> jukeboxPosition;
     BlockState jukebox;
 

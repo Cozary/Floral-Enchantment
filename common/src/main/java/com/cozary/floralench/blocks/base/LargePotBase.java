@@ -26,21 +26,22 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class LargePot extends Block {
+public class LargePotBase extends Block {
     public static final EnumProperty<Direction> FACING = HorizontalDirectionalBlock.FACING;
     protected static final VoxelShape SHAPE = Shapes.or(box(0, 0, 4, 16, 1, 12), box(0, 1, 4, 16, 8, 5), box(0, 1, 11, 16, 8, 12), box(1, 5, 5, 15, 6, 11), box(0, 1, 5, 1, 8, 11), box(15, 1, 5, 16, 8, 11));
     protected static final VoxelShape SHAPE_0 = Shapes.or(box(4, 0, 0, 12, 1, 16), box(11, 1, 0, 12, 8, 16), box(4, 1, 0, 5, 8, 16), box(5, 1, 15, 11, 8, 16), box(5, 1, 0, 11, 8, 1), box(5, 5, 1, 11, 6, 15));
 
-    public LargePot(String name) {
+    public LargePotBase(String name) {
         super(Properties.of()
                 .setId(ResourceKey.create(
                         Registries.BLOCK,
-                        ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "large_pot")
+                        ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
                 ))
                 .instabreak()
                 .noOcclusion()
         );
     }
+
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
