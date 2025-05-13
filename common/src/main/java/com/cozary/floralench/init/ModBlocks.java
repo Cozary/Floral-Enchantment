@@ -1,7 +1,6 @@
 package com.cozary.floralench.init;
 
 import com.cozary.floralench.FloralEnchantment;
-import com.cozary.floralench.blocks.pots.special.LargePot;
 import com.cozary.floralench.blocks.bush.*;
 import com.cozary.floralench.blocks.factory.FloralBasketFactory;
 import com.cozary.floralench.blocks.factory.MossyBlockFactory;
@@ -10,6 +9,7 @@ import com.cozary.floralench.blocks.factory.VineBlockFactory;
 import com.cozary.floralench.blocks.pots.*;
 import com.cozary.floralench.blocks.pots.double_pots.*;
 import com.cozary.floralench.blocks.pots.special.DancingSunflower;
+import com.cozary.floralench.blocks.pots.special.LargePot;
 import com.cozary.floralench.blocks.wither_variant.LargeDoubleWitherRosePot;
 import com.cozary.floralench.blocks.wither_variant.LargeWitherRosePot;
 import com.cozary.floralench.blocks.wither_variant.WitherVineBushBlock;

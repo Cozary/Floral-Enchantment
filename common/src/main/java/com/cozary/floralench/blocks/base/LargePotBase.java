@@ -167,26 +167,22 @@ public class LargePotBase extends Block {
                     itemstack.shrink(1);
                 }
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_WITHER_ROSE_POT.get().defaultBlockState().setValue(LargeWitherRosePot.FACING, direction1));
-            }
-            else if (item == Items.TORCHFLOWER) {
+            } else if (item == Items.TORCHFLOWER) {
                 if (!player.getAbilities().instabuild) {
                     itemstack.shrink(1);
                 }
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_TORCHFLOWER_POT.get().defaultBlockState().setValue(LargeWitherRosePot.FACING, direction1));
-            }
-            else if (item == Items.PITCHER_PLANT) {
+            } else if (item == Items.PITCHER_PLANT) {
                 if (!player.getAbilities().instabuild) {
                     itemstack.shrink(1);
                 }
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_PITCHER_PLANT_POT.get().defaultBlockState().setValue(LargeWitherRosePot.FACING, direction1));
-            }
-            else if (item == Items.FLOWERING_AZALEA) {
+            } else if (item == Items.FLOWERING_AZALEA) {
                 if (!player.getAbilities().instabuild) {
                     itemstack.shrink(1);
                 }
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_AZALEA_POT.get().defaultBlockState().setValue(LargeWitherRosePot.FACING, direction1));
-            }
-            else if (item == Items.SPORE_BLOSSOM) {
+            } else if (item == Items.SPORE_BLOSSOM) {
                 if (!player.getAbilities().instabuild) {
                     itemstack.shrink(1);
                 }
