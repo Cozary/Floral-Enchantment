@@ -33,7 +33,7 @@ public class AzaleaVineBushBlock extends VineBushBlock {
             return InteractionResult.PASS;
         } else if (i == 2) {
             int j = 1 + worldIn.random.nextInt(4);
-            popResource(worldIn, pos, new ItemStack(Items.AZALEA, j));
+            popResource(worldIn, pos, new ItemStack(Items.FLOWERING_AZALEA, j));
             worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
             return InteractionResult.SUCCESS.withoutItem();
