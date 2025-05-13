@@ -22,7 +22,6 @@
   "block.floralench.azalea_vine": "Enredadera de azalea",
   "block.floralench.pink_petals_vine": "Enredadera de pétalos rosas",
   "block.floralench.spore_blossom_vine": "Enredadera de flor de esporas",
-
   "block.floralench.dandelion_mossy_cobblestone": "Roca musgosa de diente de león",
   "block.floralench.poppy_mossy_cobblestone": "Roca musgosa de amapola",
   "block.floralench.blue_orchid_mossy_cobblestone": "Roca musgosa de orquídea azul",
@@ -46,7 +45,6 @@
   "block.floralench.azalea_mossy_cobblestone": "Roca musgosa de azalea",
   "block.floralench.pink_petals_mossy_cobblestone": "Roca musgosa de pétalos rosas",
   "block.floralench.spore_blossom_mossy_cobblestone": "Roca musgosa de flor de esporas",
-
   "block.floralench.dandelion_mossy_stone_brick": "Ladrillos de piedra musgosa de diente de león",
   "block.floralench.poppy_mossy_stone_brick": "Ladrillos de piedra musgosa de amapola",
   "block.floralench.blue_orchid_mossy_stone_brick": "Ladrillos de piedra musgosa de orquídea azul",
@@ -70,7 +68,6 @@
   "block.floralench.azalea_mossy_stone_brick": "Ladrillos de piedra musgosa de azalea",
   "block.floralench.pink_petals_mossy_stone_brick": "Ladrillos de piedra musgosa de pétalos rosas",
   "block.floralench.spore_blossom_mossy_stone_brick": "Ladrillos de piedra musgosa de flor de esporas",
-
   "block.floralench.allium_bush": "Arbusto de allium",
   "block.floralench.azure_bluet_bush": "Arbusto de azure bluet",
   "block.floralench.blue_orchid_bush": "Arbusto de orquídea azul",
@@ -94,7 +91,6 @@
   "block.floralench.azalea_bush": "Arbusto de azalea",
   "block.floralench.pink_petals_bush": "Arbusto de pétalos rosas",
   "block.floralench.spore_blossom_bush": "Arbusto de flor de esporas",
-
   "item.floralench.red_crown": "Corona roja",
   "item.floralench.yellow_crown": "Corona amarilla",
   "item.floralench.blue_crown": "Corona azul",
@@ -102,7 +98,6 @@
   "item.floralench.pink_crown": "Corona rosa",
   "item.floralench.black_crown": "Corona negra",
   "item.floralench.tulips_crown": "Corona de tulipanes",
-
   "block.floralench.large_pot": "Maceta grande",
   "block.floralench.large_dandelion_pot": "Maceta grande de diente de león",
   "block.floralench.large_poppy_pot": "Maceta grande de amapola",
