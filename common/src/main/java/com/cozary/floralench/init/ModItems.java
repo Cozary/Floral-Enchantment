@@ -4,7 +4,6 @@ import com.cozary.floralench.FloralEnchantment;
 import com.cozary.floralench.blocks.base.BasketBase;
 import com.cozary.floralench.blocks.base.BlockItemBase;
 import com.google.common.collect.Sets;
-import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;

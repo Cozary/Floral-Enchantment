@@ -17,12 +17,6 @@ import java.util.Map;
 @JeiPlugin
 public class FloralenchJeiPlugin implements IModPlugin {
     private static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "jei_plugin");
-
-    @Override
-    public ResourceLocation getPluginUid() {
-        return ID;
-    }
-
     private static final Map<RegistryObject<Item>, String> VINE_BUSH_TRANSLATION_KEYS = Map.ofEntries(
             Map.entry(ModItems.DANDELION_VINE_ITEM, "dandelion_bush"),
             Map.entry(ModItems.POPPY_VINE_ITEM, "poppy_bush"),
@@ -48,6 +42,11 @@ public class FloralenchJeiPlugin implements IModPlugin {
             Map.entry(ModItems.PINK_PETALS_VINE_ITEM, "pink_petals_bush"),
             Map.entry(ModItems.SPORE_BLOSSOM_VINE_ITEM, "spore_blossom_bush")
     );
+
+    @Override
+    public ResourceLocation getPluginUid() {
+        return ID;
+    }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {

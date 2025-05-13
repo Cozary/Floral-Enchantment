@@ -1,6 +1,6 @@
 # Changelog
 
-### Added 
+### Added
 
 - The following was added in the previous version but forgotten to put in the Changelog:
 - [Vines]: Pitcher Plant.
@@ -12,4 +12,5 @@
 
 ### Fixed
 
-- Now right-clicking creates the corresponding Large Pot block with Torchflower, Azalea, Spore Blossom and Pitcher Plant.
+- Now right-clicking creates the corresponding Large Pot block with Torchflower, Azalea, Spore Blossom and Pitcher
+  Plant.

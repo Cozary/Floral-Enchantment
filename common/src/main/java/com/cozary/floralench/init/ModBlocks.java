@@ -9,9 +9,6 @@ import com.cozary.floralench.blocks.pots.special.DancingSunflower;
 import com.cozary.floralench.blocks.wither_variant.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.ChorusFlowerBlock;
-import net.minecraft.world.level.block.SporeBlossomBlock;
-import net.minecraft.world.level.block.TorchflowerCropBlock;
 
 public class ModBlocks {
     public static final RegistrationProvider<Block> BLOCKS = RegistrationProvider.get(Registries.BLOCK, FloralEnchantment.MOD_ID);
