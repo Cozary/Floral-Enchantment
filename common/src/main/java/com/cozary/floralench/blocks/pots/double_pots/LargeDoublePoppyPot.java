@@ -16,6 +16,10 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public class LargeDoublePoppyPot extends LargePot {
 
+    public LargeDoublePoppyPot() {
+        super("large_double_poppy_pot");
+    }
+
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         ItemStack itemstack = player.getMainHandItem();

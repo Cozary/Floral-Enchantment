@@ -3,6 +3,7 @@ package com.cozary.floralench.blocks.wither_variant;
 import com.cozary.floralench.blocks.base.VineBaseBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -17,6 +18,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 
 public class WitherVineBaseBlock extends VineBaseBlock {
+
+    public WitherVineBaseBlock(String name) {
+        super(name);
+    }
 
     @Override
     public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
@@ -36,7 +41,7 @@ public class WitherVineBaseBlock extends VineBaseBlock {
     public void entityInside(BlockState state, Level worldIn, BlockPos pos, Entity entityIn) {
         if (!worldIn.isClientSide && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
             if (entityIn instanceof LivingEntity livingentity) {
-                if (!livingentity.isInvulnerableTo(worldIn.damageSources().wither())) {
+                if (!livingentity.isInvulnerableTo((ServerLevel) worldIn, worldIn.damageSources().wither())) {
                     livingentity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40));
                 }
             }

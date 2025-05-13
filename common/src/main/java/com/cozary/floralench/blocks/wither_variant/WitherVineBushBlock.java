@@ -4,6 +4,7 @@ import com.cozary.floralench.blocks.base.VineBushBlock;
 import com.cozary.floralench.init.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
@@ -29,6 +30,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class WitherVineBushBlock extends VineBushBlock {
 
+    public WitherVineBushBlock() {
+        super("wither_rose_bush");
+    }
+
     @Override
     public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
         VoxelShape voxelshape = this.getShape(stateIn, worldIn, pos, CollisionContext.empty());
@@ -47,7 +52,7 @@ public class WitherVineBushBlock extends VineBushBlock {
     public void entityInside(BlockState state, Level worldIn, BlockPos pos, Entity entityIn) {
         if (!worldIn.isClientSide && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
             if (entityIn instanceof LivingEntity livingentity) {
-                if (!livingentity.isInvulnerableTo(worldIn.damageSources().wither())) {
+                if (!livingentity.isInvulnerableTo((ServerLevel) worldIn, worldIn.damageSources().wither())) {
                     livingentity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40));
                 }
             }
@@ -71,13 +76,13 @@ public class WitherVineBushBlock extends VineBushBlock {
             popResource(worldIn, pos, new ItemStack(Items.WITHER_ROSE, j));
             worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
-            return InteractionResult.sidedSuccess(worldIn.isClientSide);
+            return InteractionResult.SUCCESS.withoutItem();
         } else if (i == 3) {
             int j = 1 + worldIn.random.nextInt(3);
             popResource(worldIn, pos, new ItemStack(ModItems.WITHER_ROSE_VINE_ITEM.get(), j));
             worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(2)), 2);
-            return InteractionResult.sidedSuccess(worldIn.isClientSide);
+            return InteractionResult.SUCCESS.withoutItem();
         } else {
             return super.useWithoutItem(state, worldIn, pos, player, hit);
         }

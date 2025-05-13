@@ -3,6 +3,7 @@ package com.cozary.floralench;
 import com.cozary.floralench.init.ModItems;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
@@ -15,7 +16,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.event.RenderPlayerEvent;
 
 @EventBusSubscriber(modid = FloralEnchantment.MOD_ID, bus= EventBusSubscriber.Bus.GAME, value = Dist.CLIENT)
@@ -24,10 +24,11 @@ public class EventHandler {
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void renderHeldPot(RenderPlayerEvent.Pre event) {
-        Player player = event.getEntity();
+        Player player = Minecraft.getInstance().player;
         PlayerRenderer render = event.getRenderer();
-        PlayerModel<AbstractClientPlayer> model = render.getModel();
+        PlayerModel model = render.getModel();
         Pose pose = player.getPose();
+
         if (!ModList.get().isLoaded("obfuscate")) {
             if (pose != Pose.SWIMMING && pose != Pose.FALL_FLYING && pose != Pose.SLEEPING && player != null && player.getMainHandItem().getItem().toString().contains("large") && player.getMainHandItem().getItem().toString().contains("pot") || player.getMainHandItem().getItem() == ModItems.DANCING_SUNFLOWER.get()) {
 
@@ -42,8 +43,8 @@ public class EventHandler {
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void holdPotPost(RenderPlayerEvent.Post event) {
-        Player player = event.getEntity();
-        PlayerModel<AbstractClientPlayer> model = event.getRenderer().getModel();
+        Player player = Minecraft.getInstance().player;
+        PlayerModel model = event.getRenderer().getModel();
 
         if (player != null && player.getMainHandItem().getItem().toString().contains("large") && player.getMainHandItem().getItem().toString().contains("pot") || player.getMainHandItem().getItem() == ModItems.DANCING_SUNFLOWER.get()) {
 
@@ -53,7 +54,7 @@ public class EventHandler {
     }
 
     @OnlyIn(Dist.CLIENT)
-    private static void renderArmModelHoldingPot(PlayerModel<AbstractClientPlayer> model, Player player, RenderPlayerEvent event) {
+    private static void renderArmModelHoldingPot(PlayerModel model, Player player, RenderPlayerEvent event) {
         PoseStack matrix = event.getPoseStack();
         VertexConsumer buffer = event.getMultiBufferSource().getBuffer(model.renderType(((AbstractClientPlayer) player).getSkin().texture()));
         int light = event.getPackedLight();

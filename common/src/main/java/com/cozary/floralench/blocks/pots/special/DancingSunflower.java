@@ -26,6 +26,10 @@ public class DancingSunflower extends LargePot {
     Optional<BlockPos> jukeboxPosition;
     BlockState jukebox;
 
+    public DancingSunflower() {
+        super("dancing_sunflower");
+    }
+
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         ItemStack itemstack = player.getMainHandItem();

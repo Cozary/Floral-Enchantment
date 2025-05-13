@@ -16,6 +16,10 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public class LargeDoubleBlueOrchidPot extends LargePot {
 
+    public LargeDoubleBlueOrchidPot() {
+        super("large_double_blue_orchid_pot");
+    }
+
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         ItemStack itemstack = player.getMainHandItem();

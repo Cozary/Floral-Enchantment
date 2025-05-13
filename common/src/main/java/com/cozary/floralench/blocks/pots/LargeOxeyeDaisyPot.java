@@ -16,6 +16,10 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public class LargeOxeyeDaisyPot extends LargePot {
 
+    public LargeOxeyeDaisyPot() {
+        super("large_oxeye_daisy_pot");
+    }
+
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         ItemStack itemstack = player.getMainHandItem();

@@ -16,6 +16,10 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public class LargeSporeBlossomPot extends LargePot {
 
+    public LargeSporeBlossomPot() {
+        super("large_spore_blossom_pot");
+    }
+
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         ItemStack itemstack = player.getMainHandItem();

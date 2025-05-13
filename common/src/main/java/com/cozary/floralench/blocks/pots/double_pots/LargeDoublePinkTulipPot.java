@@ -16,6 +16,10 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public class LargeDoublePinkTulipPot extends LargePot {
 
+    public LargeDoublePinkTulipPot() {
+        super("large_double_pink_tulip_pot");
+    }
+
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         ItemStack itemstack = player.getMainHandItem();

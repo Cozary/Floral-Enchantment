@@ -18,6 +18,10 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public class RoseBushVineBushBlock extends VineBushBlock {
 
+    public RoseBushVineBushBlock() {
+        super("rose_bush_bush");
+    }
+
     @Override
     public ItemStack getCloneItemStack(LevelReader worldIn, BlockPos pos, BlockState state) {
         return new ItemStack(ModItems.ROSE_BUSH_BUSH_ITEM.get());
@@ -34,13 +38,13 @@ public class RoseBushVineBushBlock extends VineBushBlock {
             popResource(worldIn, pos, new ItemStack(Items.ROSE_BUSH, j));
             worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
-            return InteractionResult.sidedSuccess(worldIn.isClientSide);
+            return InteractionResult.SUCCESS.withoutItem();
         } else if (i == 3) {
             int j = 1 + worldIn.random.nextInt(3);
             popResource(worldIn, pos, new ItemStack(ModItems.ROSE_BUSH_VINE_ITEM.get(), j));
             worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(2)), 2);
-            return InteractionResult.sidedSuccess(worldIn.isClientSide);
+            return InteractionResult.SUCCESS.withoutItem();
         } else {
             return super.useWithoutItem(state, worldIn, pos, player, hit);
         }

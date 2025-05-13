@@ -1,6 +1,10 @@
 package com.cozary.floralench.blocks.base;
 
+import com.cozary.floralench.FloralEnchantment;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -21,8 +25,12 @@ public class VineBushBlock extends SweetBerryBushBlock {
     private static final VoxelShape HALF_GROW_SHAPE = Block.box(3, 0, 3, 13, 10, 13);
     private static final VoxelShape GROW_SHAPE = Block.box(1, 0, 1, 15, 14, 15);
 
-    public VineBushBlock() {
+    public VineBushBlock(String name) {
         super(Properties.of()
+                .setId(ResourceKey.create(
+                        Registries.BLOCK,
+                        ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
+                ))
                 .noCollission()
                 .randomTicks()
                 .strength(0.2F)

@@ -3,6 +3,7 @@ package com.cozary.floralench.blocks.wither_variant;
 import com.cozary.floralench.blocks.base.FloralBasket;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -16,6 +17,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class WitherFloralBasket extends FloralBasket {
+
+    public WitherFloralBasket(String name) {
+        super(name);
+    }
 
     @Override
     public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
@@ -35,7 +40,7 @@ public class WitherFloralBasket extends FloralBasket {
     public void stepOn(Level worldIn, BlockPos pos, BlockState blockState, Entity entityIn) {
         if (!worldIn.isClientSide && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
             if (entityIn instanceof LivingEntity livingentity) {
-                if (!livingentity.isInvulnerableTo(worldIn.damageSources().wither())) {
+                if (!livingentity.isInvulnerableTo((ServerLevel) worldIn, worldIn.damageSources().wither())) {
                     livingentity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40));
                 }
             }

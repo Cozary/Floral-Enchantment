@@ -1,0 +1,17 @@
+package com.cozary.floralench.blocks.factory;
+
+import com.cozary.floralench.blocks.base.VineBaseBlock;
+import com.cozary.floralench.blocks.wither_variant.WitherMossyStoneBrickBlock;
+import com.cozary.floralench.blocks.wither_variant.WitherVineBaseBlock;
+
+public class VineBlockFactory {
+
+    public static VineBaseBlock create(String name) {
+        return new VineBaseBlock(name);
+    }
+
+    public static WitherVineBaseBlock createWither(String name) {
+        return new WitherVineBaseBlock(name);
+    }
+
+}
