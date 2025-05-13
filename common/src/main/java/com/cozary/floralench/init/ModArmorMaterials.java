@@ -1,9 +1,7 @@
 package com.cozary.floralench.init;
 
-import com.cozary.floralench.FloralEnchantment;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.TagKey;
