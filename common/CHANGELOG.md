@@ -2,16 +2,14 @@
 
 ### Added 
 
-- Publish plugin (happy).
-- [Vines]: Torchflower, Chorus Flower, Azalea, Pink Petals, Spore Blossom.
-- [Mossy Cobblestone]: Torchflower, Chorus Flower, Azalea, Pink Petals, Spore Blossom.
-- [Bush]: Torchflower, Chorus Flower, Azalea, Pink Petals, Spore Blossom.
-- [Mossy Stone Brick]: Torchflower, Chorus Flower, Azalea, Pink Petals, Spore Blossom.
-- [Large Pot]: Torchflower, Azalea, Spore Blossom.
-- [Large Double Pot]: Torchflower, Azalea, Spore Blossom.
-- Some blocks added to **Tags**: Bee Attactive, Bee Growables, Flower Pots and Flowers.
-- Spanish Lang.
+- The following was added in the previous version but forgotten to put in the Changelog:
+- [Vines]: Pitcher Plant.
+- [Mossy Cobblestone]: Pitcher Plant.
+- [Bush]: Pitcher Plant.
+- [Mossy Stone Brick]: Pitcher Plant.
+- [Large Pot]: Pitcher Plant.
+- [Large Double Pot]: Pitcher Plant.
 
 ### Fixed
 
-- Breaking a block doesnt drop anything.
+- Now right-clicking creates the corresponding Large Pot block with Torchflower, Azalea, Spore Blossom and Pitcher Plant.
