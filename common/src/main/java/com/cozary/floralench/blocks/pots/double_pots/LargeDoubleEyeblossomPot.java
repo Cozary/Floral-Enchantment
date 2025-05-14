@@ -44,10 +44,6 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
 
     private final LargeDoubleEyeblossomPot.Type type;
 
-    public MapCodec<? extends LargeDoubleEyeblossomPot> codec_() {
-        return CODEC;
-    }
-
     public LargeDoubleEyeblossomPot(LargeDoubleEyeblossomPot.Type type) {
         super("large_double_closed_eyeblossom_pot");
         this.type = type;
@@ -59,13 +55,16 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
         this.type = LargeDoubleEyeblossomPot.Type.fromBoolean(open);
     }
 
+    public MapCodec<? extends LargeDoubleEyeblossomPot> codec_() {
+        return CODEC;
+    }
 
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (this.type.emitSounds() && random.nextInt(700) == 0) {
             BlockState blockState = level.getBlockState(pos.below());
             if (blockState.is(Blocks.PALE_MOSS_BLOCK)) {
-                level.playLocalSound((double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), SoundEvents.EYEBLOSSOM_IDLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                level.playLocalSound((double) pos.getX(), (double) pos.getY(), (double) pos.getZ(), SoundEvents.EYEBLOSSOM_IDLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
             }
         }
 
@@ -74,7 +73,7 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
     @Override
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (this.tryChangingState(state, level, pos, random)) {
-            level.playSound((Player)null, pos, this.type.transform().longSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.playSound((Player) null, pos, this.type.transform().longSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
 
         super.randomTick(state, level, pos, random);
@@ -83,7 +82,7 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (this.tryChangingState(state, level, pos, random)) {
-            level.playSound((Player)null, pos, this.type.transform().shortSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.playSound((Player) null, pos, this.type.transform().shortSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
 
         super.tick(state, level, pos, random);
@@ -110,7 +109,7 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
                 BlockState blockState2 = level.getBlockState(blockPos2);
                 if (blockState2 == state) {
                     double d = Math.sqrt(pos.distSqr(blockPos2));
-                    int i = random.nextIntBetweenInclusive((int)(d * 5.0), (int)(d * 10.0));
+                    int i = random.nextIntBetweenInclusive((int) (d * 5.0), (int) (d * 10.0));
                     level.scheduleTick(blockPos2, state.getBlock(), i);
                 }
 
@@ -133,6 +132,23 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
         return new MobEffectInstance(MobEffects.POISON, 25);
     }
 
+    @Override
+    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
+        ItemStack itemstack = player.getMainHandItem();
+        Item item = itemstack.getItem();
+        ItemStack item1 = this.type.open ? Items.OPEN_EYEBLOSSOM.getDefaultInstance() : Items.CLOSED_EYEBLOSSOM.getDefaultInstance();
+        Direction direction1 = state.getValue(FACING);
+        if (!worldIn.isClientSide) {
+            if (item == Items.AIR) {
+
+                worldIn.setBlockAndUpdate(pos, (this.type.open ? ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get()).defaultBlockState().setValue(LargePot.FACING, direction1));
+                player.setItemInHand(InteractionHand.MAIN_HAND, item1);
+            }
+        }
+        return InteractionResult.CONSUME;
+    }
+
+
     public static enum Type {
         OPEN(true, SoundEvents.EYEBLOSSOM_OPEN_LONG, SoundEvents.EYEBLOSSOM_OPEN, 16545810),
         CLOSED(false, SoundEvents.EYEBLOSSOM_CLOSE_LONG, SoundEvents.EYEBLOSSOM_CLOSE, 6250335);
@@ -147,6 +163,10 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
             this.longSwitchSound = longSwitchSound;
             this.shortSwitchSound = shortSwitchSound;
             this.particleColor = particleColor;
+        }
+
+        public static LargeDoubleEyeblossomPot.Type fromBoolean(boolean open) {
+            return open ? OPEN : CLOSED;
         }
 
         public Block block() {
@@ -165,34 +185,13 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
             return this.open;
         }
 
-        public static LargeDoubleEyeblossomPot.Type fromBoolean(boolean open) {
-            return open ? OPEN : CLOSED;
-        }
-
         public void spawnTransformParticle(ServerLevel level, BlockPos pos, RandomSource random) {
             Vec3 vec3 = pos.getCenter();
             double d = 0.5 + random.nextDouble();
             Vec3 vec32 = new Vec3(random.nextDouble() - 0.5, random.nextDouble() + 1.0, random.nextDouble() - 0.5);
             Vec3 vec33 = vec3.add(vec32.scale(d));
-            TrailParticleOption trailParticleOption = new TrailParticleOption(vec33, this.particleColor, (int)(20.0 * d));
+            TrailParticleOption trailParticleOption = new TrailParticleOption(vec33, this.particleColor, (int) (20.0 * d));
             level.sendParticles(trailParticleOption, vec3.x, vec3.y, vec3.z, 1, 0.0, 0.0, 0.0, 0.0);
         }
-    }
-
-
-    @Override
-    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
-        ItemStack itemstack = player.getMainHandItem();
-        Item item = itemstack.getItem();
-        ItemStack item1 = this.type.open ? Items.OPEN_EYEBLOSSOM.getDefaultInstance() : Items.CLOSED_EYEBLOSSOM.getDefaultInstance();
-        Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide) {
-            if (item == Items.AIR) {
-
-                worldIn.setBlockAndUpdate(pos, (this.type.open ? ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get()).defaultBlockState().setValue(LargePot.FACING, direction1));
-                player.setItemInHand(InteractionHand.MAIN_HAND, item1);
-            }
-        }
-        return InteractionResult.CONSUME;
     }
 }

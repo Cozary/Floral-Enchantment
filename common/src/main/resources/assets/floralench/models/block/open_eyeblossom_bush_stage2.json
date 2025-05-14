@@ -77,17 +77,37 @@
       }
     },
     {
-      "from": [3, 0, 3],
-      "to": [13, 10, 13],
+      "from": [
+        3,
+        0,
+        3
+      ],
+      "to": [
+        13,
+        10,
+        13
+      ],
       "shade": false,
       "light_emission": 15,
       "faces": {
-        "north": { "texture": "#emission" },
-        "east": { "texture": "#emission" },
-        "south": { "texture": "#emission" },
-        "west": { "texture": "#emission" },
-        "up": { "texture": "#emission" },
-        "down": { "texture": "#emission" }
+        "north": {
+          "texture": "#emission"
+        },
+        "east": {
+          "texture": "#emission"
+        },
+        "south": {
+          "texture": "#emission"
+        },
+        "west": {
+          "texture": "#emission"
+        },
+        "up": {
+          "texture": "#emission"
+        },
+        "down": {
+          "texture": "#emission"
+        }
       }
     }
   ]

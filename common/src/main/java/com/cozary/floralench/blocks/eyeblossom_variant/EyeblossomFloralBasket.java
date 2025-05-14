@@ -6,7 +6,6 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.TrailParticleOption;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -17,19 +16,15 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.EyeblossomBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class EyeblossomFloralBasket extends FloralBasket {
 
@@ -41,10 +36,6 @@ public class EyeblossomFloralBasket extends FloralBasket {
 
     private final Type type;
 
-    public MapCodec<? extends EyeblossomFloralBasket> codec_() {
-        return CODEC;
-    }
-
     public EyeblossomFloralBasket(String name, Type type) {
         super(name);
         this.type = type;
@@ -55,12 +46,16 @@ public class EyeblossomFloralBasket extends FloralBasket {
         this.type = Type.fromBoolean(open);
     }
 
+    public MapCodec<? extends EyeblossomFloralBasket> codec_() {
+        return CODEC;
+    }
+
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (this.type.emitSounds() && random.nextInt(700) == 0) {
             BlockState blockState = level.getBlockState(pos.below());
             if (blockState.is(Blocks.PALE_MOSS_BLOCK)) {
-                level.playLocalSound((double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), SoundEvents.EYEBLOSSOM_IDLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                level.playLocalSound((double) pos.getX(), (double) pos.getY(), (double) pos.getZ(), SoundEvents.EYEBLOSSOM_IDLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
             }
         }
 
@@ -69,7 +64,7 @@ public class EyeblossomFloralBasket extends FloralBasket {
     @Override
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (this.tryChangingState(state, level, pos, random)) {
-            level.playSound((Player)null, pos, this.type.transform().longSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.playSound((Player) null, pos, this.type.transform().longSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
 
         super.randomTick(state, level, pos, random);
@@ -78,7 +73,7 @@ public class EyeblossomFloralBasket extends FloralBasket {
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (this.tryChangingState(state, level, pos, random)) {
-            level.playSound((Player)null, pos, this.type.transform().shortSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.playSound((Player) null, pos, this.type.transform().shortSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
 
         super.tick(state, level, pos, random);
@@ -105,7 +100,7 @@ public class EyeblossomFloralBasket extends FloralBasket {
                 BlockState blockState2 = level.getBlockState(blockPos2);
                 if (blockState2 == state) {
                     double d = Math.sqrt(pos.distSqr(blockPos2));
-                    int i = random.nextIntBetweenInclusive((int)(d * 5.0), (int)(d * 10.0));
+                    int i = random.nextIntBetweenInclusive((int) (d * 5.0), (int) (d * 10.0));
                     level.scheduleTick(blockPos2, state.getBlock(), i);
                 }
 
@@ -144,6 +139,10 @@ public class EyeblossomFloralBasket extends FloralBasket {
             this.particleColor = particleColor;
         }
 
+        public static Type fromBoolean(boolean open) {
+            return open ? OPEN : CLOSED;
+        }
+
         public Block block() {
             return this.open ? ModBlocks.OPEN_EYEBLOSSOM_BASKET.get() : ModBlocks.CLOSED_EYEBLOSSOM_BASKET.get();
         }
@@ -160,16 +159,12 @@ public class EyeblossomFloralBasket extends FloralBasket {
             return this.open;
         }
 
-        public static Type fromBoolean(boolean open) {
-            return open ? OPEN : CLOSED;
-        }
-
         public void spawnTransformParticle(ServerLevel level, BlockPos pos, RandomSource random) {
             Vec3 vec3 = pos.getCenter();
             double d = 0.5 + random.nextDouble();
             Vec3 vec32 = new Vec3(random.nextDouble() - 0.5, random.nextDouble() + 1.0, random.nextDouble() - 0.5);
             Vec3 vec33 = vec3.add(vec32.scale(d));
-            TrailParticleOption trailParticleOption = new TrailParticleOption(vec33, this.particleColor, (int)(20.0 * d));
+            TrailParticleOption trailParticleOption = new TrailParticleOption(vec33, this.particleColor, (int) (20.0 * d));
             level.sendParticles(trailParticleOption, vec3.x, vec3.y, vec3.z, 1, 0.0, 0.0, 0.0, 0.0);
         }
     }

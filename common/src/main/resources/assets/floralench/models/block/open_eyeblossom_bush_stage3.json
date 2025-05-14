@@ -5,7 +5,6 @@
     "emission": "floralench:block/open_eyeblossom_bush_stage3_emissive",
     "plant": "floralench:block/open_eyeblossom_bush_stage3",
     "particle": "floralench:block/open_eyeblossom_bush_stage3"
-
   },
   "elements": [
     {
@@ -78,17 +77,37 @@
       }
     },
     {
-      "from": [1, 0, 1],
-      "to": [15, 14, 15],
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        14,
+        15
+      ],
       "shade": false,
       "light_emission": 15,
       "faces": {
-        "north": { "texture": "#emission" },
-        "east": { "texture": "#emission" },
-        "south": { "texture": "#emission" },
-        "west": { "texture": "#emission" },
-        "up": { "texture": "#emission" },
-        "down": { "texture": "#emission" }
+        "north": {
+          "texture": "#emission"
+        },
+        "east": {
+          "texture": "#emission"
+        },
+        "south": {
+          "texture": "#emission"
+        },
+        "west": {
+          "texture": "#emission"
+        },
+        "up": {
+          "texture": "#emission"
+        },
+        "down": {
+          "texture": "#emission"
+        }
       }
     }
   ]

@@ -5,7 +5,6 @@
     "particle": "floralench:block/open_eyeblossom_vine",
     "vine": "floralench:block/open_eyeblossom_vine",
     "emission": "floralench:block/open_eyeblossom_bush_stage2_emissive"
-
   },
   "elements": [
     {
@@ -127,30 +126,58 @@
       "shade": false,
       "light_emission": 15,
       "faces": {
-        "north": { "texture": "#emission" },
-        "east": { "texture": "#emission" },
-        "south": { "texture": "#emission" },
-        "west": { "texture": "#emission" },
-        "up": { "texture": "#emission" },
-        "down": { "texture": "#emission" }
+        "north": {
+          "texture": "#emission"
+        },
+        "east": {
+          "texture": "#emission"
+        },
+        "south": {
+          "texture": "#emission"
+        },
+        "west": {
+          "texture": "#emission"
+        },
+        "up": {
+          "texture": "#emission"
+        },
+        "down": {
+          "texture": "#emission"
+        }
       }
     },
     {
-      "from": [15.2,
+      "from": [
+        15.2,
         0,
-        0],
-      "to": [15.2,
+        0
+      ],
+      "to": [
+        15.2,
         16,
-        16],
+        16
+      ],
       "shade": false,
       "light_emission": 15,
       "faces": {
-        "north": { "texture": "#emission" },
-        "east": { "texture": "#emission" },
-        "south": { "texture": "#emission" },
-        "west": { "texture": "#emission" },
-        "up": { "texture": "#emission" },
-        "down": { "texture": "#emission" }
+        "north": {
+          "texture": "#emission"
+        },
+        "east": {
+          "texture": "#emission"
+        },
+        "south": {
+          "texture": "#emission"
+        },
+        "west": {
+          "texture": "#emission"
+        },
+        "up": {
+          "texture": "#emission"
+        },
+        "down": {
+          "texture": "#emission"
+        }
       }
     },
     {
@@ -167,12 +194,24 @@
       "shade": false,
       "light_emission": 15,
       "faces": {
-        "north": { "texture": "#emission" },
-        "east": { "texture": "#emission" },
-        "south": { "texture": "#emission" },
-        "west": { "texture": "#emission" },
-        "up": { "texture": "#emission" },
-        "down": { "texture": "#emission" }
+        "north": {
+          "texture": "#emission"
+        },
+        "east": {
+          "texture": "#emission"
+        },
+        "south": {
+          "texture": "#emission"
+        },
+        "west": {
+          "texture": "#emission"
+        },
+        "up": {
+          "texture": "#emission"
+        },
+        "down": {
+          "texture": "#emission"
+        }
       }
     }
   ]

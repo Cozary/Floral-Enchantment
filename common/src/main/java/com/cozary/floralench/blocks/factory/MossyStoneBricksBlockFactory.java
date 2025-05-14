@@ -1,7 +1,6 @@
 package com.cozary.floralench.blocks.factory;
 
 import com.cozary.floralench.blocks.base.MossyStoneBrickBlock;
-import com.cozary.floralench.blocks.eyeblossom_variant.EyeblossomMossyBlock;
 import com.cozary.floralench.blocks.eyeblossom_variant.EyeblossomMossyStoneBrickBlock;
 import com.cozary.floralench.blocks.wither_variant.WitherMossyStoneBrickBlock;
 

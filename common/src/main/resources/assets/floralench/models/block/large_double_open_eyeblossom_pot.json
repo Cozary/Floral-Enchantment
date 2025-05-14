@@ -30,7 +30,8 @@
           8
         ],
         "rescale": true
-      },      "shade": false,
+      },
+      "shade": false,
       "light_emission": 15,
       "faces": {
         "east": {
@@ -73,7 +74,8 @@
           8
         ],
         "rescale": true
-      },      "shade": false,
+      },
+      "shade": false,
       "light_emission": 15,
       "faces": {
         "north": {
@@ -116,7 +118,8 @@
           8
         ],
         "rescale": true
-      },      "shade": false,
+      },
+      "shade": false,
       "light_emission": 15,
       "faces": {
         "east": {
@@ -159,7 +162,8 @@
           8
         ],
         "rescale": true
-      },      "shade": false,
+      },
+      "shade": false,
       "light_emission": 15,
       "faces": {
         "north": {

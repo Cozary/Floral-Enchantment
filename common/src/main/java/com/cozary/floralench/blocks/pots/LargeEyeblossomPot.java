@@ -44,10 +44,6 @@ public class LargeEyeblossomPot extends LargePotBase {
 
     private final LargeEyeblossomPot.Type type;
 
-    public MapCodec<? extends LargeEyeblossomPot> codec_() {
-        return CODEC;
-    }
-
     public LargeEyeblossomPot(LargeEyeblossomPot.Type type) {
         super("large_closed_eyeblossom_pot");
         this.type = type;
@@ -58,13 +54,16 @@ public class LargeEyeblossomPot extends LargePotBase {
         this.type = LargeEyeblossomPot.Type.fromBoolean(open);
     }
 
+    public MapCodec<? extends LargeEyeblossomPot> codec_() {
+        return CODEC;
+    }
 
     @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (this.type.emitSounds() && random.nextInt(700) == 0) {
             BlockState blockState = level.getBlockState(pos.below());
             if (blockState.is(Blocks.PALE_MOSS_BLOCK)) {
-                level.playLocalSound((double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), SoundEvents.EYEBLOSSOM_IDLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                level.playLocalSound((double) pos.getX(), (double) pos.getY(), (double) pos.getZ(), SoundEvents.EYEBLOSSOM_IDLE, SoundSource.BLOCKS, 1.0F, 1.0F, false);
             }
         }
 
@@ -73,7 +72,7 @@ public class LargeEyeblossomPot extends LargePotBase {
     @Override
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (this.tryChangingState(state, level, pos, random)) {
-            level.playSound((Player)null, pos, this.type.transform().longSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.playSound((Player) null, pos, this.type.transform().longSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
 
         super.randomTick(state, level, pos, random);
@@ -82,7 +81,7 @@ public class LargeEyeblossomPot extends LargePotBase {
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (this.tryChangingState(state, level, pos, random)) {
-            level.playSound((Player)null, pos, this.type.transform().shortSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.playSound((Player) null, pos, this.type.transform().shortSwitchSound, SoundSource.BLOCKS, 1.0F, 1.0F);
         }
 
         super.tick(state, level, pos, random);
@@ -109,7 +108,7 @@ public class LargeEyeblossomPot extends LargePotBase {
                 BlockState blockState2 = level.getBlockState(blockPos2);
                 if (blockState2 == state) {
                     double d = Math.sqrt(pos.distSqr(blockPos2));
-                    int i = random.nextIntBetweenInclusive((int)(d * 5.0), (int)(d * 10.0));
+                    int i = random.nextIntBetweenInclusive((int) (d * 5.0), (int) (d * 10.0));
                     level.scheduleTick(blockPos2, state.getBlock(), i);
                 }
 
@@ -132,52 +131,6 @@ public class LargeEyeblossomPot extends LargePotBase {
         return new MobEffectInstance(MobEffects.POISON, 25);
     }
 
-    public static enum Type {
-        OPEN(true, SoundEvents.EYEBLOSSOM_OPEN_LONG, SoundEvents.EYEBLOSSOM_OPEN, 16545810),
-        CLOSED(false, SoundEvents.EYEBLOSSOM_CLOSE_LONG, SoundEvents.EYEBLOSSOM_CLOSE, 6250335);
-
-        final boolean open;
-        final SoundEvent longSwitchSound;
-        final SoundEvent shortSwitchSound;
-        private final int particleColor;
-
-        private Type(final boolean open, final SoundEvent longSwitchSound, final SoundEvent shortSwitchSound, final int particleColor) {
-            this.open = open;
-            this.longSwitchSound = longSwitchSound;
-            this.shortSwitchSound = shortSwitchSound;
-            this.particleColor = particleColor;
-        }
-
-        public Block block() {
-            return this.open ? ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get();
-        }
-
-        public BlockState state() {
-            return this.block().defaultBlockState();
-        }
-
-        public LargeEyeblossomPot.Type transform() {
-            return fromBoolean(!this.open);
-        }
-
-        public boolean emitSounds() {
-            return this.open;
-        }
-
-        public static LargeEyeblossomPot.Type fromBoolean(boolean open) {
-            return open ? OPEN : CLOSED;
-        }
-
-        public void spawnTransformParticle(ServerLevel level, BlockPos pos, RandomSource random) {
-            Vec3 vec3 = pos.getCenter();
-            double d = 0.5 + random.nextDouble();
-            Vec3 vec32 = new Vec3(random.nextDouble() - 0.5, random.nextDouble() + 1.0, random.nextDouble() - 0.5);
-            Vec3 vec33 = vec3.add(vec32.scale(d));
-            TrailParticleOption trailParticleOption = new TrailParticleOption(vec33, this.particleColor, (int)(20.0 * d));
-            level.sendParticles(trailParticleOption, vec3.x, vec3.y, vec3.z, 1, 0.0, 0.0, 0.0, 0.0);
-        }
-    }
-
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
         ItemStack itemstack = player.getMainHandItem();
@@ -197,5 +150,51 @@ public class LargeEyeblossomPot extends LargePotBase {
             }
         }
         return InteractionResult.CONSUME;
+    }
+
+    public static enum Type {
+        OPEN(true, SoundEvents.EYEBLOSSOM_OPEN_LONG, SoundEvents.EYEBLOSSOM_OPEN, 16545810),
+        CLOSED(false, SoundEvents.EYEBLOSSOM_CLOSE_LONG, SoundEvents.EYEBLOSSOM_CLOSE, 6250335);
+
+        final boolean open;
+        final SoundEvent longSwitchSound;
+        final SoundEvent shortSwitchSound;
+        private final int particleColor;
+
+        private Type(final boolean open, final SoundEvent longSwitchSound, final SoundEvent shortSwitchSound, final int particleColor) {
+            this.open = open;
+            this.longSwitchSound = longSwitchSound;
+            this.shortSwitchSound = shortSwitchSound;
+            this.particleColor = particleColor;
+        }
+
+        public static LargeEyeblossomPot.Type fromBoolean(boolean open) {
+            return open ? OPEN : CLOSED;
+        }
+
+        public Block block() {
+            return this.open ? ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get();
+        }
+
+        public BlockState state() {
+            return this.block().defaultBlockState();
+        }
+
+        public LargeEyeblossomPot.Type transform() {
+            return fromBoolean(!this.open);
+        }
+
+        public boolean emitSounds() {
+            return this.open;
+        }
+
+        public void spawnTransformParticle(ServerLevel level, BlockPos pos, RandomSource random) {
+            Vec3 vec3 = pos.getCenter();
+            double d = 0.5 + random.nextDouble();
+            Vec3 vec32 = new Vec3(random.nextDouble() - 0.5, random.nextDouble() + 1.0, random.nextDouble() - 0.5);
+            Vec3 vec33 = vec3.add(vec32.scale(d));
+            TrailParticleOption trailParticleOption = new TrailParticleOption(vec33, this.particleColor, (int) (20.0 * d));
+            level.sendParticles(trailParticleOption, vec3.x, vec3.y, vec3.z, 1, 0.0, 0.0, 0.0, 0.0);
+        }
     }
 }
