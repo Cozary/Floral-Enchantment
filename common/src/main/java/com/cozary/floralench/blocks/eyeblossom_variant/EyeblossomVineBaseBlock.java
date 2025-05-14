@@ -6,6 +6,7 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.particles.TrailParticleOption;
 import net.minecraft.server.level.ServerLevel;
@@ -23,11 +24,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.VineBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.Map;
 
 
 public class EyeblossomVineBaseBlock extends VineBaseBlock {
@@ -87,6 +93,11 @@ public class EyeblossomVineBaseBlock extends VineBaseBlock {
         super.tick(state, level, pos, random);
     }
 
+    @Override
+    protected boolean isRandomlyTicking(BlockState state) {
+        return true;
+    }
+
     private boolean tryChangingState(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!level.dimensionType().natural()) {
             return false;
@@ -94,7 +105,16 @@ public class EyeblossomVineBaseBlock extends VineBaseBlock {
             return false;
         } else {
             EyeblossomVineBaseBlock.Type type = this.type.transform();
-            level.setBlock(pos, type.state(), 3);
+            BlockState newState = type.state();
+
+            for (Map.Entry<Direction, BooleanProperty> entry : PROPERTY_BY_DIRECTION.entrySet()) {
+                BooleanProperty property = entry.getValue();
+                if (state.hasProperty(property) && newState.hasProperty(property)) {
+                    newState = newState.setValue(property, state.getValue(property));
+                }
+            }
+
+            level.setBlock(pos, newState, 3);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
             type.spawnTransformParticle(level, pos, random);
             BlockPos.betweenClosed(pos.offset(-3, -2, -3), pos.offset(3, 2, 3)).forEach((blockPos2) -> {

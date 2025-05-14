@@ -23,6 +23,9 @@
     "floralench:chorus_flower_vine",
     "floralench:azalea_vine",
     "floralench:pink_petals_vine",
-    "floralench:spore_blossom_vine"
+    "floralench:spore_blossom_vine",
+    "floralench:open_eyeblossom_vine",
+    "floralench:closed_eyeblossom_vine"
+
   ]
 }

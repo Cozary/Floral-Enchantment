@@ -34,6 +34,8 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AZALEA_MOSSY_STONE_BRICK.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_PETALS_MOSSY_STONE_BRICK.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPORE_BLOSSOM_MOSSY_STONE_BRICK.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DANDELION_MOSSY_COBBLESTONE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ALLIUM_MOSSY_COBBLESTONE.get(), RenderType.cutout());
@@ -59,6 +61,8 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AZALEA_MOSSY_COBBLESTONE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_PETALS_MOSSY_COBBLESTONE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPORE_BLOSSOM_MOSSY_COBBLESTONE.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DANDELION_VINE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ALLIUM_VINE.get(), RenderType.cutout());
@@ -84,6 +88,8 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AZALEA_VINE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_PETALS_VINE.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPORE_BLOSSOM_VINE.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OPEN_EYEBLOSSOM_VINE.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOSED_EYEBLOSSOM_VINE.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DANDELION_BUSH.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POPPY_BUSH.get(), RenderType.cutout());
@@ -108,6 +114,8 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CHORUS_FLOWER_BUSH.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AZALEA_BUSH.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_PETALS_BUSH.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OPEN_EYEBLOSSOM_BUSH.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DANDELION_POT.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_POPPY_POT.get(), RenderType.cutout());
@@ -130,6 +138,8 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_PITCHER_PLANT_POT.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_AZALEA_POT.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_SPORE_BLOSSOM_POT.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DOUBLE_DANDELION_POT.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DOUBLE_POPPY_POT.get(), RenderType.cutout());
@@ -148,6 +158,8 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DOUBLE_PITCHER_PLANT_POT.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DOUBLE_AZALEA_POT.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DOUBLE_SPORE_BLOSSOM_POT.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DOUBLE_OPEN_EYEBLOSSOM_POT.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT.get(), RenderType.cutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DANCING_SUNFLOWER.get(), RenderType.cutout());
 
@@ -169,6 +181,8 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PITCHER_PLANT_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AZALEA_BASKET.get(), RenderType.cutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPORE_BLOSSOM_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OPEN_EYEBLOSSOM_BASKET.get(), RenderType.cutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CLOSED_EYEBLOSSOM_BASKET.get(), RenderType.cutout());
 
 
     }

@@ -23,6 +23,8 @@
     "floralench:chorus_flower_bush",
     "floralench:azalea_bush",
     "floralench:pink_petals_bush",
-    "floralench:spore_blossom_bush"
+    "floralench:spore_blossom_bush",
+    "floralench:open_eyeblossom_bush",
+    "floralench:closed_eyeblossom_bush"
   ]
 }

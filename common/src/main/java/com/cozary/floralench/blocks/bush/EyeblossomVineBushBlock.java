@@ -21,6 +21,8 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -30,6 +32,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -92,6 +95,11 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
         super.tick(state, level, pos, random);
     }
 
+    @Override
+    protected boolean isRandomlyTicking(BlockState state) {
+        return true;
+    }
+
     private boolean tryChangingState(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!level.dimensionType().natural()) {
             return false;
@@ -99,7 +107,9 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
             return false;
         } else {
             Type type = this.type.transform();
-            level.setBlock(pos, type.state(), 3);
+            BlockState newState = type.state();
+            newState = newState.setValue(AGE, state.getValue(AGE));
+            level.setBlock(pos, newState, 3);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
             type.spawnTransformParticle(level, pos, random);
             BlockPos.betweenClosed(pos.offset(-3, -2, -3), pos.offset(3, 2, 3)).forEach((blockPos2) -> {
@@ -122,7 +132,9 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
                 bee.addEffect(this.getBeeInteractionEffect());
             }
         }
-
+        if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
+            entity.makeStuckInBlock(state, new Vec3(0.9F, 0.85D, 0.9F));
+        }
     }
 
     public MobEffectInstance getBeeInteractionEffect() {
@@ -190,13 +202,13 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
             return InteractionResult.PASS;
         } else if (i == 2) {
             int j = 1 + worldIn.random.nextInt(4);
-            popResource(worldIn, pos, new ItemStack(this.type.open ? ModItems.OPEN_EYEBLOSSOM_BUSH_ITEM.get() : ModItems.CLOSED_EYEBLOSSOM_BUSH_ITEM.get(), j));
+            popResource(worldIn, pos, new ItemStack(this.type.open ? Items.OPEN_EYEBLOSSOM : Items.CLOSED_EYEBLOSSOM, j));
             worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
             return InteractionResult.SUCCESS.withoutItem();
         } else if (i == 3) {
             int j = 1 + worldIn.random.nextInt(3);
-            popResource(worldIn, pos, new ItemStack(this.type.open ? ModItems.OPEN_EYEBLOSSOM_BUSH_ITEM.get() : ModItems.CLOSED_EYEBLOSSOM_BUSH_ITEM.get(), j));
+            popResource(worldIn, pos, new ItemStack(this.type.open ? ModItems.OPEN_EYEBLOSSOM_VINE_ITEM.get() : ModItems.CLOSED_EYEBLOSSOM_VINE_ITEM.get(), j));
             worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(2)), 2);
             return InteractionResult.SUCCESS.withoutItem();

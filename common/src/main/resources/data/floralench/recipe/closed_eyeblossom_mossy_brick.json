@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "floralench:closed_eyeblossom_vine",
+    "minecraft:stone_bricks"
+  ],
+  "result": {
+    "id": "floralench:closed_eyeblossom_mossy_stone_brick",
+    "count": 1
+  }
+}

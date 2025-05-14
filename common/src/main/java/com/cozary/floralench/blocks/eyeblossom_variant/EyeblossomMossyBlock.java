@@ -85,6 +85,11 @@ public class EyeblossomMossyBlock extends MossyBlock {
         super.tick(state, level, pos, random);
     }
 
+    @Override
+    protected boolean isRandomlyTicking(BlockState state) {
+        return true;
+    }
+
     private boolean tryChangingState(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!level.dimensionType().natural()) {
             return false;

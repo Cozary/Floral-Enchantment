@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mmm",
+    "mxm",
+    "mmm"
+  ],
+  "key": {
+    "m": "minecraft:vine",
+    "x": "minecraft:closed_eyeblossom"
+  },
+  "result": {
+    "id": "floralench:closed_eyeblossom_bush",
+    "count": 1
+  }
+}

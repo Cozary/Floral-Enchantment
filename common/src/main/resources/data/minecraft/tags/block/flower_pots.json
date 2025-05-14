@@ -18,6 +18,8 @@
     "floralench:large_pitcher_plant_pot",
     "floralench:large_azalea_pot",
     "floralench:large_spore_blossom_pot",
+    "floralench:large_open_eyeblossom_pot",
+    "floralench:large_closed_eyeblossom_pot",
     "floralench:large_double_allium_pot",
     "floralench:large_double_azure_bluet_pot",
     "floralench:large_double_blue_orchid_pot",
@@ -34,6 +36,8 @@
     "floralench:large_double_torchflower_pot",
     "floralench:large_double_pitcher_plant_pot",
     "floralench:large_double_azalea_pot",
-    "floralench:large_double_spore_blossom_pot"
+    "floralench:large_double_spore_blossom_pot",
+    "floralench:large_double_open_eyeblossom_pot",
+    "floralench:large_double_closed_eyeblossom_pot"
   ]
 }

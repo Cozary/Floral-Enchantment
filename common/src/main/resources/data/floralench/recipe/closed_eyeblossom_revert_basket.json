@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "floralench:closed_eyeblossom_basket"
+  ],
+  "result": {
+    "id": "minecraft:closed_eyeblossom",
+    "count": 6
+  }
+}

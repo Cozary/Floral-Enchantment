@@ -1,0 +1,95 @@
+{
+  "credit": "mr_ch0c0late",
+  "render_type": "cutout",
+  "textures": {
+    "emission": "floralench:block/open_eyeblossom_bush_stage3_emissive",
+    "plant": "floralench:block/open_eyeblossom_bush_stage3",
+    "particle": "floralench:block/open_eyeblossom_bush_stage3"
+
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        14,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#plant"
+        },
+        "east": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#plant"
+        },
+        "south": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#plant"
+        },
+        "west": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#plant"
+        },
+        "up": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#plant"
+        },
+        "down": {
+          "uv": [
+            1,
+            1,
+            15,
+            15
+          ],
+          "texture": "#plant",
+          "cullface": "down"
+        }
+      }
+    },
+    {
+      "from": [1, 0, 1],
+      "to": [15, 14, 15],
+      "shade": false,
+      "light_emission": 15,
+      "faces": {
+        "north": { "texture": "#emission" },
+        "east": { "texture": "#emission" },
+        "south": { "texture": "#emission" },
+        "west": { "texture": "#emission" },
+        "up": { "texture": "#emission" },
+        "down": { "texture": "#emission" }
+      }
+    }
+  ]
+}

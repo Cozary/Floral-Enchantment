@@ -28,6 +28,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
@@ -48,12 +49,12 @@ public class LargeEyeblossomPot extends LargePotBase {
     }
 
     public LargeEyeblossomPot(LargeEyeblossomPot.Type type) {
-        super("large_eyeblossom_pot");
+        super("large_closed_eyeblossom_pot");
         this.type = type;
     }
 
     public LargeEyeblossomPot(Boolean open) {
-        super("large_eyeblossom_pot");
+        super("large_closed_eyeblossom_pot");
         this.type = LargeEyeblossomPot.Type.fromBoolean(open);
     }
 
@@ -87,6 +88,11 @@ public class LargeEyeblossomPot extends LargePotBase {
         super.tick(state, level, pos, random);
     }
 
+    @Override
+    protected boolean isRandomlyTicking(BlockState state) {
+        return true;
+    }
+
     private boolean tryChangingState(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!level.dimensionType().natural()) {
             return false;
@@ -94,7 +100,9 @@ public class LargeEyeblossomPot extends LargePotBase {
             return false;
         } else {
             LargeEyeblossomPot.Type type = this.type.transform();
-            level.setBlock(pos, type.state(), 3);
+            BlockState newState = type.state();
+            newState = newState.setValue(HorizontalDirectionalBlock.FACING, state.getValue(HorizontalDirectionalBlock.FACING));
+            level.setBlock(pos, newState, 3);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
             type.spawnTransformParticle(level, pos, random);
             BlockPos.betweenClosed(pos.offset(-3, -2, -3), pos.offset(3, 2, 3)).forEach((blockPos2) -> {
