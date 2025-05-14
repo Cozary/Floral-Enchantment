@@ -1,6 +1,10 @@
 package com.cozary.floralench.init;
 
 import com.cozary.floralench.FloralEnchantment;
+import com.cozary.floralench.blocks.eyeblossom_variant.EyeblossomFloralBasket;
+import com.cozary.floralench.blocks.eyeblossom_variant.EyeblossomMossyBlock;
+import com.cozary.floralench.blocks.eyeblossom_variant.EyeblossomMossyStoneBrickBlock;
+import com.cozary.floralench.blocks.eyeblossom_variant.EyeblossomVineBaseBlock;
 import com.cozary.floralench.blocks.pots.special.LargePot;
 import com.cozary.floralench.blocks.bush.*;
 import com.cozary.floralench.blocks.factory.FloralBasketFactory;
@@ -43,6 +47,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> AZALEA_VINE = BLOCKS.register("azalea_vine", () -> VineBlockFactory.create("azalea_vine"));
     public static final RegistryObject<Block> PINK_PETALS_VINE = BLOCKS.register("pink_petals_vine", () -> VineBlockFactory.create("pink_petals_vine"));
     public static final RegistryObject<Block> SPORE_BLOSSOM_VINE = BLOCKS.register("spore_blossom_vine", () -> VineBlockFactory.create("spore_blossom_vine"));
+    public static final RegistryObject<Block> OPEN_EYEBLOSSOM_VINE = BLOCKS.register("open_eyeblossom_vine", () -> VineBlockFactory.createEyeblossom("open_eyeblossom_vine", EyeblossomVineBaseBlock.Type.OPEN));
+    public static final RegistryObject<Block> CLOSED_EYEBLOSSOM_VINE = BLOCKS.register("closed_eyeblossom_vine", () -> VineBlockFactory.createEyeblossom("closed_eyeblossom_vine", EyeblossomVineBaseBlock.Type.CLOSED));
 
 
     //Mossy Cobblestone
@@ -69,6 +75,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> AZALEA_MOSSY_COBBLESTONE = BLOCKS.register("azalea_mossy_cobblestone", () -> MossyBlockFactory.create("azalea_mossy_cobblestone"));
     public static final RegistryObject<Block> PINK_PETALS_MOSSY_COBBLESTONE = BLOCKS.register("pink_petals_mossy_cobblestone", () -> MossyBlockFactory.create("pink_petals_mossy_cobblestone"));
     public static final RegistryObject<Block> SPORE_BLOSSOM_MOSSY_COBBLESTONE = BLOCKS.register("spore_blossom_mossy_cobblestone", () -> MossyBlockFactory.create("spore_blossom_mossy_cobblestone"));
+    public static final RegistryObject<Block> OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE = BLOCKS.register("open_eyeblossom_mossy_cobblestone", () -> MossyBlockFactory.createEyeblossom("open_eyeblossom_mossy_cobblestone", EyeblossomMossyBlock.Type.OPEN));
+    public static final RegistryObject<Block> CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE = BLOCKS.register("closed_eyeblossom_mossy_cobblestone", () -> MossyBlockFactory.createEyeblossom("closed_eyeblossom_mossy_cobblestone", EyeblossomMossyBlock.Type.CLOSED));
 
     //Bush
     public static final RegistryObject<AlliumVineBushBlock> ALLIUM_BUSH = BLOCKS.register("allium_bush", AlliumVineBushBlock::new);
@@ -94,6 +102,8 @@ public class ModBlocks {
     public static final RegistryObject<AzaleaVineBushBlock> AZALEA_BUSH = BLOCKS.register("azalea_bush", AzaleaVineBushBlock::new);
     public static final RegistryObject<PinkPetalsVineBushBlock> PINK_PETALS_BUSH = BLOCKS.register("pink_petals_bush", PinkPetalsVineBushBlock::new);
     public static final RegistryObject<SporeBlossomVineBushBlock> SPORE_BLOSSOM_BUSH = BLOCKS.register("spore_blossom_bush", SporeBlossomVineBushBlock::new);
+    public static final RegistryObject<EyeblossomVineBushBlock> OPEN_EYEBLOSSOM_BUSH = BLOCKS.register("open_eyeblossom_bush", () -> new EyeblossomVineBushBlock(EyeblossomVineBushBlock.Type.OPEN));
+    public static final RegistryObject<EyeblossomVineBushBlock> CLOSED_EYEBLOSSOM_BUSH = BLOCKS.register("closed_eyeblossom_bush", () -> new EyeblossomVineBushBlock(EyeblossomVineBushBlock.Type.CLOSED));
 
     //Mossy Stone Brick
     public static final RegistryObject<Block> DANDELION_MOSSY_STONE_BRICK = BLOCKS.register("dandelion_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.create("dandelion_mossy_stone_brick"));
@@ -119,6 +129,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> AZALEA_MOSSY_STONE_BRICK = BLOCKS.register("azalea_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.create("azalea_mossy_stone_brick"));
     public static final RegistryObject<Block> PINK_PETALS_MOSSY_STONE_BRICK = BLOCKS.register("pink_petals_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.create("pink_petals_mossy_stone_brick"));
     public static final RegistryObject<Block> SPORE_BLOSSOM_MOSSY_STONE_BRICK = BLOCKS.register("spore_blossom_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.create("spore_blossom_mossy_stone_brick"));
+    public static final RegistryObject<Block> OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK = BLOCKS.register("open_eyeblossom_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.createEyeblossom("open_eyeblossom_mossy_stone_brick", EyeblossomMossyStoneBrickBlock.Type.OPEN));
+    public static final RegistryObject<Block> CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK = BLOCKS.register("closed_eyeblossom_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.createEyeblossom("closed_eyeblossom_mossy_stone_brick", EyeblossomMossyStoneBrickBlock.Type.CLOSED));
 
     //Large Pot
     public static final RegistryObject<Block> LARGE_POT = BLOCKS.register("large_pot", LargePot::new);
@@ -143,6 +155,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARGE_PITCHER_PLANT_POT = BLOCKS.register("large_pitcher_plant_pot", LargePitcherPlantPot::new);
     public static final RegistryObject<Block> LARGE_AZALEA_POT = BLOCKS.register("large_azalea_pot", LargeAzaleaPot::new);
     public static final RegistryObject<Block> LARGE_SPORE_BLOSSOM_POT = BLOCKS.register("large_spore_blossom_pot", LargeSporeBlossomPot::new);
+    public static final RegistryObject<Block> LARGE_OPEN_EYEBLOSSOM_POT = BLOCKS.register("large_open_eyeblossom_pot", () -> new LargeEyeblossomPot(LargeEyeblossomPot.Type.OPEN));
+    public static final RegistryObject<Block> LARGE_CLOSED_EYEBLOSSOM_POT = BLOCKS.register("large_closed_eyeblossom_pot", () -> new LargeEyeblossomPot(LargeEyeblossomPot.Type.CLOSED));
 
     //Big Double Pot
     public static final RegistryObject<Block> LARGE_DOUBLE_DANDELION_POT = BLOCKS.register("large_double_dandelion_pot", LargeDoubleDandelionPot::new);
@@ -162,6 +176,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARGE_DOUBLE_PITCHER_PLANT_POT = BLOCKS.register("large_double_pitcher_plant_pot", LargeDoublePitcherPlantPot::new);
     public static final RegistryObject<Block> LARGE_DOUBLE_AZALEA_POT = BLOCKS.register("large_double_azalea_pot", LargeDoubleAzaleaPot::new);
     public static final RegistryObject<Block> LARGE_DOUBLE_SPORE_BLOSSOM_POT = BLOCKS.register("large_double_spore_blossom_pot", LargeDoubleSporeBlossomPot::new);
+    public static final RegistryObject<Block> LARGE_DOUBLE_OPEN_EYEBLOSSOM_POT = BLOCKS.register("large_double_open_eyeblossom_pot", () -> new LargeDoubleEyeblossomPot(LargeDoubleEyeblossomPot.Type.OPEN));
+    public static final RegistryObject<Block> LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT = BLOCKS.register("large_double_closed_eyeblossom_pot", () -> new LargeDoubleEyeblossomPot(LargeDoubleEyeblossomPot.Type.CLOSED));
 
     //Special
     public static final RegistryObject<Block> DANCING_SUNFLOWER = BLOCKS.register("dancing_sunflower", DancingSunflower::new);
@@ -185,6 +201,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> PITCHER_PLANT_BASKET = BLOCKS.register("pitcher_plant_basket", () -> FloralBasketFactory.create("pitcher_plant_basket"));
     public static final RegistryObject<Block> AZALEA_BASKET = BLOCKS.register("azalea_basket", () -> FloralBasketFactory.create("azalea_basket"));
     public static final RegistryObject<Block> SPORE_BLOSSOM_BASKET = BLOCKS.register("spore_blossom_basket", () -> FloralBasketFactory.create("spore_blossom_basket"));
+    public static final RegistryObject<Block> OPEN_EYEBLOSSOM_BASKET = BLOCKS.register("open_eyeblossom_basket", () -> FloralBasketFactory.createEyeblossom("open_eyeblossom_basket", EyeblossomFloralBasket.Type.OPEN));
+    public static final RegistryObject<Block> CLOSED_EYEBLOSSOM_BASKET = BLOCKS.register("closed_eyeblossom_basket", () -> FloralBasketFactory.createEyeblossom("closed_eyeblossom_basket", EyeblossomFloralBasket.Type.CLOSED));
 
     public static void loadClass() {
     }
