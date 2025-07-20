@@ -7,8 +7,10 @@ import com.google.common.collect.Sets;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.equipment.ArmorMaterials;
 import net.minecraft.world.item.equipment.ArmorType;
 
 import java.util.LinkedHashSet;
@@ -104,13 +106,13 @@ public class ModItems {
     public static final RegistryObject<Item> OPEN_EYEBLOSSOM_BUSH_ITEM = registerWithTab("open_eyeblossom_bush", () -> new BlockItemBase(ModBlocks.OPEN_EYEBLOSSOM_BUSH.get(), "open_eyeblossom_bush"));
     public static final RegistryObject<Item> CLOSED_EYEBLOSSOM_BUSH_ITEM = registerWithTab("closed_eyeblossom_bush", () -> new BlockItemBase(ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(), "closed_eyeblossom_bush"));
     //Corona Flowers
-    public static final RegistryObject<Item> RED_CROWN = registerWithTab("red_crown", () -> new ArmorItem(ModArmorMaterials.RED, ArmorType.HELMET, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "red_crown")))));
-    public static final RegistryObject<Item> YELLOW_CROWN = registerWithTab("yellow_crown", () -> new ArmorItem(ModArmorMaterials.YELLOW, ArmorType.HELMET, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "yellow_crown")))));
-    public static final RegistryObject<Item> BLUE_CROWN = registerWithTab("blue_crown", () -> new ArmorItem(ModArmorMaterials.BLUE, ArmorType.HELMET, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "blue_crown")))));
-    public static final RegistryObject<Item> WHITE_CROWN = registerWithTab("white_crown", () -> new ArmorItem(ModArmorMaterials.WHITE, ArmorType.HELMET, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "white_crown")))));
-    public static final RegistryObject<Item> PINK_CROWN = registerWithTab("pink_crown", () -> new ArmorItem(ModArmorMaterials.PINK, ArmorType.HELMET, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "pink_crown")))));
-    public static final RegistryObject<Item> BLACK_CROWN = registerWithTab("black_crown", () -> new ArmorItem(ModArmorMaterials.BLACK, ArmorType.HELMET, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "black_crown")))));
-    public static final RegistryObject<Item> TULIPS_CROWN = registerWithTab("tulips_crown", () -> new ArmorItem(ModArmorMaterials.TULIP, ArmorType.HELMET, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "tulips_crown")))));
+    public static final RegistryObject<Item> RED_CROWN = registerWithTab("red_crown", () -> new Item(new Item.Properties().humanoidArmor(ModArmorMaterials.RED, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "red_crown")))));
+    public static final RegistryObject<Item> YELLOW_CROWN = registerWithTab("yellow_crown", () -> new Item(new Item.Properties().humanoidArmor(ModArmorMaterials.YELLOW, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "yellow_crown")))));
+    public static final RegistryObject<Item> BLUE_CROWN = registerWithTab("blue_crown", () -> new Item(new Item.Properties().humanoidArmor(ModArmorMaterials.BLUE, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "blue_crown")))));
+    public static final RegistryObject<Item> WHITE_CROWN = registerWithTab("white_crown", () -> new Item(new Item.Properties().humanoidArmor(ModArmorMaterials.WHITE, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "white_crown")))));
+    public static final RegistryObject<Item> PINK_CROWN = registerWithTab("pink_crown", () -> new Item(new Item.Properties().humanoidArmor(ModArmorMaterials.PINK, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "pink_crown")))));
+    public static final RegistryObject<Item> BLACK_CROWN = registerWithTab("black_crown", () -> new Item(new Item.Properties().humanoidArmor(ModArmorMaterials.BLACK, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "black_crown")))));
+    public static final RegistryObject<Item> TULIPS_CROWN = registerWithTab("tulips_crown", () -> new Item(new Item.Properties().humanoidArmor(ModArmorMaterials.TULIP, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "tulips_crown")))));
     //Mossy Stone Brick
     public static final RegistryObject<Item> DANDELION_MOSSY_STONE_BRICK_ITEM = registerWithTab("dandelion_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.DANDELION_MOSSY_STONE_BRICK.get(), "dandelion_mossy_stone_brick"));
     public static final RegistryObject<Item> POPPY_MOSSY_STONE_BRICK_ITEM = registerWithTab("poppy_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.POPPY_MOSSY_STONE_BRICK.get(), "poppy_mossy_stone_brick"));

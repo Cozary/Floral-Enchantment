@@ -13,6 +13,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -33,24 +34,24 @@ public class WitherVineBushBlock extends VineBushBlock {
     }
 
     @Override
-    public void animateTick(BlockState stateIn, Level worldIn, BlockPos pos, RandomSource rand) {
-        VoxelShape voxelshape = this.getShape(stateIn, worldIn, pos, CollisionContext.empty());
+    public void animateTick(BlockState stateIn, Level level, BlockPos pos, RandomSource rand) {
+        VoxelShape voxelshape = this.getShape(stateIn, level, pos, CollisionContext.empty());
         Vec3 vector3d = voxelshape.bounds().getCenter();
         double d0 = (double) pos.getX() + vector3d.x;
 
         for (int i = 0; i < 4; ++i) {
             if (rand.nextBoolean()) {
-                worldIn.addParticle(ParticleTypes.SMOKE, d0 + rand.nextDouble() / 5.0D, (double) pos.getY() + rand.nextDouble(), (double) pos.getZ() + rand.nextDouble(), 0.0D, 0.0D, 0.0D);
+                level.addParticle(ParticleTypes.SMOKE, d0 + rand.nextDouble() / 5.0D, (double) pos.getY() + rand.nextDouble(), (double) pos.getZ() + rand.nextDouble(), 0.0D, 0.0D, 0.0D);
             }
         }
 
     }
 
     @Override
-    public void entityInside(BlockState state, Level worldIn, BlockPos pos, Entity entityIn) {
-        if (!worldIn.isClientSide && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
-            if (entityIn instanceof LivingEntity livingentity) {
-                if (!livingentity.isInvulnerableTo((ServerLevel) worldIn, worldIn.damageSources().wither())) {
+    protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier p_405414_) {
+        if (!level.isClientSide && level.getDifficulty() != Difficulty.PEACEFUL) {
+            if (entity instanceof LivingEntity livingentity) {
+                if (!livingentity.isInvulnerableTo((ServerLevel) level, level.damageSources().wither())) {
                     livingentity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40));
                 }
             }
@@ -59,30 +60,30 @@ public class WitherVineBushBlock extends VineBushBlock {
     }
 
     @Override
-    public ItemStack getCloneItemStack(LevelReader worldIn, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
         return new ItemStack(ModItems.WITHER_ROSE_BUSH_ITEM.get());
     }
 
     @Override
-    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         int i = state.getValue(AGE);
         boolean flag = i == 3;
         if (!flag && player.getMainHandItem().getItem() == Items.BONE_MEAL) {
             return InteractionResult.PASS;
         } else if (i == 2) {
-            int j = 1 + worldIn.random.nextInt(4);
-            popResource(worldIn, pos, new ItemStack(Items.WITHER_ROSE, j));
-            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
-            worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
+            int j = 1 + level.random.nextInt(4);
+            popResource(level, pos, new ItemStack(Items.WITHER_ROSE, j));
+            level.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+            level.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
             return InteractionResult.SUCCESS.withoutItem();
         } else if (i == 3) {
-            int j = 1 + worldIn.random.nextInt(3);
-            popResource(worldIn, pos, new ItemStack(ModItems.WITHER_ROSE_VINE_ITEM.get(), j));
-            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
-            worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(2)), 2);
+            int j = 1 + level.random.nextInt(3);
+            popResource(level, pos, new ItemStack(ModItems.WITHER_ROSE_VINE_ITEM.get(), j));
+            level.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+            level.setBlock(pos, state.setValue(AGE, Integer.valueOf(2)), 2);
             return InteractionResult.SUCCESS.withoutItem();
         } else {
-            return super.useWithoutItem(state, worldIn, pos, player, hit);
+            return super.useWithoutItem(state, level, pos, player, hit);
         }
     }
 }

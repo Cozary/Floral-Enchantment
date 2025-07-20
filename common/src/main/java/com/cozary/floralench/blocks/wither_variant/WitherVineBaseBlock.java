@@ -9,6 +9,7 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -38,10 +39,10 @@ public class WitherVineBaseBlock extends VineBaseBlock {
     }
 
     @Override
-    public void entityInside(BlockState state, Level worldIn, BlockPos pos, Entity entityIn) {
-        if (!worldIn.isClientSide && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
-            if (entityIn instanceof LivingEntity livingentity) {
-                if (!livingentity.isInvulnerableTo((ServerLevel) worldIn, worldIn.damageSources().wither())) {
+    protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier p_405414_) {
+        if (!level.isClientSide && level.getDifficulty() != Difficulty.PEACEFUL) {
+            if (entity instanceof LivingEntity livingentity) {
+                if (!livingentity.isInvulnerableTo((ServerLevel) level, level.damageSources().wither())) {
                     livingentity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40));
                 }
             }

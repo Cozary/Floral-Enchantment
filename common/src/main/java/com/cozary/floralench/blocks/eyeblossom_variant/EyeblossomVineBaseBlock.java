@@ -17,6 +17,7 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -94,7 +95,7 @@ public class EyeblossomVineBaseBlock extends VineBaseBlock {
     private boolean tryChangingState(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!level.dimensionType().natural()) {
             return false;
-        } else if (level.isDay() != this.type.open) {
+        } else if (level.isBrightOutside() != this.type.open) {
             return false;
         } else {
             EyeblossomVineBaseBlock.Type type = this.type.transform();
@@ -124,7 +125,7 @@ public class EyeblossomVineBaseBlock extends VineBaseBlock {
     }
 
     @Override
-    public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
+    protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier effectApplier) {
         if (!level.isClientSide() && level.getDifficulty() != Difficulty.PEACEFUL && entity instanceof Bee bee) {
             if (Bee.attractsBees(state) && !bee.hasEffect(MobEffects.POISON)) {
                 bee.addEffect(this.getBeeInteractionEffect());
