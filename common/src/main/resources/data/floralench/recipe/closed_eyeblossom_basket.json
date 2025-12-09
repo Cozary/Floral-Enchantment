@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:closed_eyeblossom",
+    "W": "floralench:floral_basket"
+  },
+  "pattern": [
+    "###",
+    "###",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:closed_eyeblossom_basket"
+  }
+}

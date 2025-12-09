@@ -1,0 +1,6 @@
+{
+  "parent": "floralench:block/stone_bricks",
+  "textures": {
+    "all": "floralench:block/azalea_mossy_stone_brick"
+  }
+}

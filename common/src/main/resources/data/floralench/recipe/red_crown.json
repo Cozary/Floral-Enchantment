@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "m": "minecraft:poppy",
+    "x": "minecraft:rose_bush"
+  },
+  "pattern": [
+    " x ",
+    "m m",
+    " x "
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:red_crown"
+  }
+}

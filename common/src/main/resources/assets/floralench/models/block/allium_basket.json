@@ -1,0 +1,6 @@
+{
+  "parent": "floralench:block/floral_basket_cross",
+  "textures": {
+    "plant": "minecraft:block/allium"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:torchflower",
+    "W": "floralench:floral_basket"
+  },
+  "pattern": [
+    "###",
+    "###",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:torchflower_basket"
+  }
+}

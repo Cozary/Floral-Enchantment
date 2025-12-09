@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "m": "minecraft:vine",
+    "x": "minecraft:spore_blossom"
+  },
+  "pattern": [
+    "mmm",
+    "mxm",
+    "mmm"
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:spore_blossom_bush"
+  }
+}

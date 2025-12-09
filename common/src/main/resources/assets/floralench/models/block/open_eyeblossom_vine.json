@@ -1,0 +1,74 @@
+{
+  "ambientocclusion": false,
+  "elements": [
+    {
+      "faces": {
+        "north": {
+          "texture": "#texture",
+          "tintindex": 0,
+          "uv": [
+            16.0,
+            0.0,
+            0.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#texture",
+          "tintindex": 0
+        }
+      },
+      "from": [
+        0,
+        0,
+        0.8
+      ],
+      "shade": false,
+      "to": [
+        16,
+        16,
+        0.8
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#cross_emissive"
+        },
+        "east": {
+          "texture": "#cross_emissive"
+        },
+        "north": {
+          "texture": "#cross_emissive"
+        },
+        "south": {
+          "texture": "#cross_emissive"
+        },
+        "up": {
+          "texture": "#cross_emissive"
+        },
+        "west": {
+          "texture": "#cross_emissive"
+        }
+      },
+      "from": [
+        0,
+        0,
+        0.8
+      ],
+      "light_emission": 15,
+      "shade": false,
+      "to": [
+        16,
+        16,
+        0.8
+      ]
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross_emissive": "floralench:block/open_eyeblossom_bush_stage2_emissive",
+    "particle": "floralench:block/open_eyeblossom_vine",
+    "texture": "floralench:block/open_eyeblossom_vine"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "m": "minecraft:vine",
+    "x": "minecraft:chorus_flower"
+  },
+  "pattern": [
+    "mmm",
+    "mxm",
+    "mmm"
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:chorus_flower_bush"
+  }
+}

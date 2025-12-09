@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "floralench:tulip_crown"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "floralench:tulip_crown"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "floralench:block/large_double_white_tulip_pot"
+      },
+      "when": {
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "floralench:block/large_double_white_tulip_pot",
+        "y": 180
+      },
+      "when": {
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "floralench:block/large_double_white_tulip_pot",
+        "y": 270
+      },
+      "when": {
+        "facing": "west"
+      }
+    },
+    {
+      "apply": {
+        "model": "floralench:block/large_double_white_tulip_pot",
+        "y": 90
+      },
+      "when": {
+        "facing": "east"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "floralench:wither_rose_basket"
+  ],
+  "result": {
+    "count": 6,
+    "id": "minecraft:wither_rose"
+  }
+}

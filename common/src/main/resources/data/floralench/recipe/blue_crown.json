@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "m": "minecraft:blue_orchid",
+    "x": "minecraft:cornflower"
+  },
+  "pattern": [
+    " x ",
+    "m m",
+    " x "
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:blue_crown"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "floralench:pitcher_plant_vine",
+    "minecraft:cobblestone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:pitcher_plant_mossy_cobblestone"
+  }
+}

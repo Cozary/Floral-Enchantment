@@ -1,0 +1,102 @@
+{
+  "parent": "minecraft:item/generated",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#plant"
+        },
+        "east": {
+          "texture": "#plant",
+          "uv": [
+            1.0,
+            1.0,
+            15.0,
+            15.0
+          ]
+        },
+        "north": {
+          "texture": "#plant",
+          "uv": [
+            1.0,
+            1.0,
+            15.0,
+            15.0
+          ]
+        },
+        "south": {
+          "texture": "#plant",
+          "uv": [
+            1.0,
+            1.0,
+            15.0,
+            15.0
+          ]
+        },
+        "up": {
+          "texture": "#plant"
+        },
+        "west": {
+          "texture": "#plant",
+          "uv": [
+            1.0,
+            1.0,
+            15.0,
+            15.0
+          ]
+        }
+      },
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        14,
+        15
+      ]
+    },
+    {
+      "faces": {
+        "down": {
+          "texture": "#cross_emissive"
+        },
+        "east": {
+          "texture": "#cross_emissive"
+        },
+        "north": {
+          "texture": "#cross_emissive"
+        },
+        "south": {
+          "texture": "#cross_emissive"
+        },
+        "up": {
+          "texture": "#cross_emissive"
+        },
+        "west": {
+          "texture": "#cross_emissive"
+        }
+      },
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "light_emission": 15,
+      "shade": false,
+      "to": [
+        15,
+        14,
+        15
+      ]
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross_emissive": "floralench:block/open_eyeblossom_bush_stage3_emissive",
+    "particle": "floralench:block/open_eyeblossom_bush_stage3",
+    "plant": "floralench:block/open_eyeblossom_bush_stage3"
+  }
+}

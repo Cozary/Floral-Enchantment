@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:poppy",
+    "W": "floralench:floral_basket"
+  },
+  "pattern": [
+    "###",
+    "###",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:poppy_basket"
+  }
+}

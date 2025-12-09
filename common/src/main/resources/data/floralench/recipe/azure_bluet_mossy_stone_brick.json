@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "floralench:azure_bluet_vine",
+    "minecraft:cobblestone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:azure_bluet_mossy_stone_brick"
+  }
+}

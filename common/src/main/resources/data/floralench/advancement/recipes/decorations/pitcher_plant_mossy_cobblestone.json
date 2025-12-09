@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_floral_vine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "floralench:pitcher_plant_vine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "floralench:pitcher_plant_mossy_cobblestone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_floral_vine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralench:pitcher_plant_mossy_cobblestone"
+    ]
+  }
+}

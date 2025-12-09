@@ -1,0 +1,7 @@
+{
+  "parent": "floralench:block/bush_small",
+  "textures": {
+    "particle": "floralench:block/torchflower_bush_stage2",
+    "plant": "floralench:block/torchflower_bush_stage2"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "floralench:oxeye_daisy_vine",
+    "minecraft:cobblestone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:oxeye_daisy_mossy_cobblestone"
+  }
+}

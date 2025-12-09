@@ -1,0 +1,7 @@
+{
+  "parent": "floralench:block/bush_small",
+  "textures": {
+    "particle": "floralench:block/azalea_bush_stage1",
+    "plant": "floralench:block/azalea_bush_stage1"
+  }
+}

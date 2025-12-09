@@ -1,0 +1,39 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "floralench:block/floral_basket"
+      },
+      "when": {
+        "facing": "north"
+      }
+    },
+    {
+      "apply": {
+        "model": "floralench:block/floral_basket",
+        "y": 90
+      },
+      "when": {
+        "facing": "east"
+      }
+    },
+    {
+      "apply": {
+        "model": "floralench:block/floral_basket",
+        "y": 180
+      },
+      "when": {
+        "facing": "south"
+      }
+    },
+    {
+      "apply": {
+        "model": "floralench:block/floral_basket",
+        "y": 270
+      },
+      "when": {
+        "facing": "west"
+      }
+    }
+  ]
+}

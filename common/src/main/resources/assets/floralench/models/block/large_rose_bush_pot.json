@@ -1,0 +1,7 @@
+{
+  "parent": "floralench:block/large_flower_pot_cross_tall",
+  "textures": {
+    "bottom": "minecraft:block/rose_bush_bottom",
+    "top": "minecraft:block/rose_bush_top"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "ambientocclusion": false,
+  "elements": [
+    {
+      "faces": {
+        "north": {
+          "texture": "#texture",
+          "tintindex": 0,
+          "uv": [
+            16.0,
+            0.0,
+            0.0,
+            16.0
+          ]
+        },
+        "south": {
+          "texture": "#texture",
+          "tintindex": 0
+        }
+      },
+      "from": [
+        0,
+        0,
+        0.8
+      ],
+      "shade": false,
+      "to": [
+        16,
+        16,
+        0.8
+      ]
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "floralench:block/peony_vine",
+    "texture": "floralench:block/peony_vine"
+  }
+}

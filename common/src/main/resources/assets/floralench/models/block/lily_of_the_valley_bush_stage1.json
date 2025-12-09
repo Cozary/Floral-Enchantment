@@ -1,0 +1,7 @@
+{
+  "parent": "floralench:block/bush_small",
+  "textures": {
+    "particle": "floralench:block/lily_of_the_valley_bush_stage1",
+    "plant": "floralench:block/lily_of_the_valley_bush_stage1"
+  }
+}

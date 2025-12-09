@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:oxeye_daisy",
+    "W": "floralench:floral_basket"
+  },
+  "pattern": [
+    "###",
+    "###",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:oxeye_daisy_basket"
+  }
+}

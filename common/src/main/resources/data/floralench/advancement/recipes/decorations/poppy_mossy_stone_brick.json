@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_floral_vine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "floralench:poppy_vine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "floralench:poppy_mossy_stone_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_floral_vine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralench:poppy_mossy_stone_brick"
+    ]
+  }
+}

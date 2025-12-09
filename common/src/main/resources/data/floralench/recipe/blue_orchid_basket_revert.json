@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "floralench:blue_orchid_basket"
+  ],
+  "result": {
+    "count": 6,
+    "id": "minecraft:blue_orchid"
+  }
+}

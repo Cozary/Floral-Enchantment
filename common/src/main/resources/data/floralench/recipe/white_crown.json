@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "m": "minecraft:azure_bluet",
+    "x": "minecraft:oxeye_daisy",
+    "z": "minecraft:lily_of_the_valley"
+  },
+  "pattern": [
+    " xz",
+    "m m",
+    "zx "
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralench:white_crown"
+  }
+}

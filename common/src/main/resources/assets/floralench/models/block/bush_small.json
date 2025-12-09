@@ -1,0 +1,67 @@
+{
+  "parent": "minecraft:item/generated",
+  "elements": [
+    {
+      "faces": {
+        "down": {
+          "cullface": "down",
+          "texture": "#plant"
+        },
+        "east": {
+          "texture": "#plant",
+          "uv": [
+            3.0,
+            3.0,
+            13.0,
+            13.0
+          ]
+        },
+        "north": {
+          "texture": "#plant",
+          "uv": [
+            3.0,
+            3.0,
+            13.0,
+            13.0
+          ]
+        },
+        "south": {
+          "texture": "#plant",
+          "uv": [
+            3.0,
+            3.0,
+            13.0,
+            13.0
+          ]
+        },
+        "up": {
+          "texture": "#plant"
+        },
+        "west": {
+          "texture": "#plant",
+          "uv": [
+            3.0,
+            3.0,
+            13.0,
+            13.0
+          ]
+        }
+      },
+      "from": [
+        3,
+        0,
+        3
+      ],
+      "to": [
+        13,
+        10,
+        13
+      ]
+    }
+  ],
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "floralench:block/bush_small",
+    "plant": "floralench:block/bush_small"
+  }
+}

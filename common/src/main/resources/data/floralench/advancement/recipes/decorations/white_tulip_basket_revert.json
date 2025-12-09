@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_floral_vine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "floralench:white_tulip_basket"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "floralench:white_tulip_basket_revert"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_floral_vine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralench:white_tulip_basket_revert"
+    ]
+  }
+}

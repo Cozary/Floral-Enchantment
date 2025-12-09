@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "floralench:pink_crown"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "floralench:pink_crown"
+      }
+    ]
+  }
+}
