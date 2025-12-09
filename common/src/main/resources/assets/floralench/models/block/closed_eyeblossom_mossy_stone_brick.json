@@ -1,6 +1,0 @@
-{
-  "parent": "floralench:block/mossy_stone_bricks",
-  "textures": {
-    "all": "floralench:block/closed_eyeblossom_mossy_stone_brick"
-  }
-}

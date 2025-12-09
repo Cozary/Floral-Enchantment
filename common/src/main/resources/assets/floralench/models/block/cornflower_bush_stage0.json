@@ -1,7 +1,0 @@
-{
-  "render_type": "cutout",
-  "parent": "block/cross",
-  "textures": {
-    "cross": "floralench:block/cornflower_bush_stage0"
-  }
-}

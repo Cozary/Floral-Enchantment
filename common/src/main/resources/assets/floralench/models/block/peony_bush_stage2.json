@@ -1,6 +1,0 @@
-{
-  "parent": "floralench:block/bush_small",
-  "textures": {
-    "plant": "floralench:block/peony_bush_stage2"
-  }
-}

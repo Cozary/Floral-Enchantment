@@ -1,6 +1,0 @@
-{
-  "parent": "floralench:block/mossy_cobblestone",
-  "textures": {
-    "all": "floralench:block/torchflower_mossy_cobblestone"
-  }
-}

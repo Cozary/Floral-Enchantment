@@ -1,6 +1,0 @@
-{
-  "parent": "floralench:block/bush_large",
-  "textures": {
-    "plant": "floralench:block/azure_bluet_bush_stage3"
-  }
-}

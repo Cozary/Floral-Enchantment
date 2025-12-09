@@ -1,6 +1,0 @@
-{
-  "parent": "floralench:block/bush_small",
-  "textures": {
-    "plant": "floralench:block/closed_eyeblossom_bush_stage1"
-  }
-}

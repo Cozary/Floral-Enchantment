@@ -1,7 +1,0 @@
-{
-  "render_type": "cutout",
-  "parent": "block/cross",
-  "textures": {
-    "cross": "floralench:block/oxeye_daisy_bush_stage0"
-  }
-}
