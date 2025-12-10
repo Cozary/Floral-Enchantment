@@ -49,6 +49,7 @@ public class ModItems {
     public static final RegistryObject<Item> SPORE_BLOSSOM_VINE_ITEM = registerWithTab("spore_blossom_vine", () -> new BlockItemBase(ModBlocks.SPORE_BLOSSOM_VINE.get(), "spore_blossom_vine"));
     public static final RegistryObject<Item> OPEN_EYEBLOSSOM_VINE_ITEM = registerWithTab("open_eyeblossom_vine", () -> new BlockItemBase(ModBlocks.OPEN_EYEBLOSSOM_VINE.get(), "open_eyeblossom_vine"));
     public static final RegistryObject<Item> CLOSED_EYEBLOSSOM_VINE_ITEM = registerWithTab("closed_eyeblossom_vine", () -> new BlockItemBase(ModBlocks.CLOSED_EYEBLOSSOM_VINE.get(), "closed_eyeblossom_vine"));
+    public static final RegistryObject<Item> WILDFLOWERS_VINE_ITEM = registerWithTab("wildflowers_vine", () -> new BlockItemBase(ModBlocks.WILDFLOWERS_VINE.get(), "wildflowers_vine"));
     //Mossy Cobblestone
     public static final RegistryObject<Item> DANDELION_MOSSY_COBBLESTONE_ITEM = registerWithTab("dandelion_mossy_cobblestone", () -> new BlockItemBase(ModBlocks.DANDELION_MOSSY_COBBLESTONE.get(), "dandelion_mossy_cobblestone"));
     public static final RegistryObject<Item> POPPY_MOSSY_COBBLESTONE_ITEM = registerWithTab("poppy_mossy_cobblestone", () -> new BlockItemBase(ModBlocks.POPPY_MOSSY_COBBLESTONE.get(), "poppy_mossy_cobblestone"));
@@ -75,6 +76,7 @@ public class ModItems {
     public static final RegistryObject<Item> SPORE_BLOSSOM_MOSSY_COBBLESTONE_ITEM = registerWithTab("spore_blossom_mossy_cobblestone", () -> new BlockItemBase(ModBlocks.SPORE_BLOSSOM_MOSSY_COBBLESTONE.get(), "spore_blossom_mossy_cobblestone"));
     public static final RegistryObject<Item> OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE_ITEM = registerWithTab("open_eyeblossom_mossy_cobblestone", () -> new BlockItemBase(ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get(), "open_eyeblossom_mossy_cobblestone"));
     public static final RegistryObject<Item> CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE_ITEM = registerWithTab("closed_eyeblossom_mossy_cobblestone", () -> new BlockItemBase(ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get(), "closed_eyeblossom_mossy_cobblestone"));
+    public static final RegistryObject<Item> WILDFLOWERS_MOSSY_COBBLESTONE_ITEM = registerWithTab("wildflowers_mossy_cobblestone", () -> new BlockItemBase(ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get(), "wildflowers_mossy_cobblestone"));
 
     //Bush
     public static final RegistryObject<Item> ALLIUM_BUSH_ITEM = registerWithTab("allium_bush", () -> new BlockItemBase(ModBlocks.ALLIUM_BUSH.get(), "allium_bush"));
@@ -102,6 +104,8 @@ public class ModItems {
     public static final RegistryObject<Item> SPORE_BLOSSOM_BUSH_ITEM = registerWithTab("spore_blossom_bush", () -> new BlockItemBase(ModBlocks.SPORE_BLOSSOM_BUSH.get(), "spore_blossom_bush"));
     public static final RegistryObject<Item> OPEN_EYEBLOSSOM_BUSH_ITEM = registerWithTab("open_eyeblossom_bush", () -> new BlockItemBase(ModBlocks.OPEN_EYEBLOSSOM_BUSH.get(), "open_eyeblossom_bush"));
     public static final RegistryObject<Item> CLOSED_EYEBLOSSOM_BUSH_ITEM = registerWithTab("closed_eyeblossom_bush", () -> new BlockItemBase(ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(), "closed_eyeblossom_bush"));
+    public static final RegistryObject<Item> WILDFLOWERS_BUSH_ITEM = registerWithTab("wildflowers_bush", () -> new BlockItemBase(ModBlocks.WILDFLOWERS_BUSH.get(), "wildflowers_bush"));
+
     //Corona Flowers
     public static final RegistryObject<Item> RED_CROWN = registerWithTab("red_crown", () -> new Item(new Item.Properties()
             .component(DataComponents.EQUIPPABLE,
@@ -170,6 +174,8 @@ public class ModItems {
     public static final RegistryObject<Item> SPORE_BLOSSOM_MOSSY_STONE_BRICK_ITEM = registerWithTab("spore_blossom_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.SPORE_BLOSSOM_MOSSY_STONE_BRICK.get(), "spore_blossom_mossy_stone_brick"));
     public static final RegistryObject<Item> OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK_ITEM = registerWithTab("open_eyeblossom_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get(), "open_eyeblossom_mossy_stone_brick"));
     public static final RegistryObject<Item> CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK_ITEM = registerWithTab("closed_eyeblossom_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get(), "closed_eyeblossom_mossy_stone_brick"));
+    public static final RegistryObject<Item> WILDFLOWERS_MOSSY_STONE_BRICK_ITEM = registerWithTab("wildflowers_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get(), "wildflowers_mossy_stone_brick"));
+
     //Large Pots
     public static final RegistryObject<Item> LARGE_POT = registerWithTab("large_pot", () -> new BlockItemBase(ModBlocks.LARGE_POT.get(), "large_pot"));
     public static final RegistryObject<Item> LARGE_DANDELION_POT = registerWithTab("large_dandelion_pot", () -> new BlockItemBase(ModBlocks.LARGE_DANDELION_POT.get(), "large_dandelion_pot"));

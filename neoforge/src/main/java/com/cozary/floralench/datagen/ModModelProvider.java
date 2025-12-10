@@ -73,6 +73,7 @@ public class ModModelProvider extends ModelProvider {
         createBush(blockModels, itemModels, ModBlocks.SPORE_BLOSSOM_BUSH.get(), ModItems.SPORE_BLOSSOM_BUSH_ITEM.get());
         createBushEmissive(blockModels, itemModels, ModBlocks.OPEN_EYEBLOSSOM_BUSH.get(), ModItems.OPEN_EYEBLOSSOM_BUSH_ITEM.get());
         createBush(blockModels, itemModels, ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(), ModItems.CLOSED_EYEBLOSSOM_BUSH_ITEM.get());
+        createBush(blockModels, itemModels, ModBlocks.WILDFLOWERS_BUSH.get(), ModItems.WILDFLOWERS_BUSH_ITEM.get());
 
 // Mossy Cobblestone
         createMossyCobblestoneParent(blockModels);
@@ -102,6 +103,7 @@ public class ModModelProvider extends ModelProvider {
         createMossyCobblestone(blockModels, ModBlocks.SPORE_BLOSSOM_MOSSY_COBBLESTONE.get());
         createMossyCobblestoneEmissive(blockModels, ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get());
         createMossyCobblestone(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get());
+        createMossyCobblestone(blockModels, ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get());
 
 // Mossy Stone Brick
         createMossyStoneBrickParent(blockModels);
@@ -131,6 +133,7 @@ public class ModModelProvider extends ModelProvider {
         createMossyStoneBrick(blockModels, ModBlocks.SPORE_BLOSSOM_MOSSY_STONE_BRICK.get());
         createMossyStoneBrickEmissive(blockModels, ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get());
         createMossyStoneBrick(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get());
+        createMossyStoneBrick(blockModels, ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get());
 
 // Vines
         createVine(blockModels, ModBlocks.ALLIUM_VINE.get(), ModItems.ALLIUM_VINE_ITEM.get());
@@ -158,6 +161,7 @@ public class ModModelProvider extends ModelProvider {
         createVine(blockModels, ModBlocks.SPORE_BLOSSOM_VINE.get(), ModItems.SPORE_BLOSSOM_VINE_ITEM.get());
         createVineEmissive(blockModels, ModBlocks.OPEN_EYEBLOSSOM_VINE.get(), ModItems.OPEN_EYEBLOSSOM_VINE_ITEM.get());
         createVine(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_VINE.get(), ModItems.CLOSED_EYEBLOSSOM_VINE_ITEM.get());
+        createVine(blockModels, ModBlocks.WILDFLOWERS_VINE.get(), ModItems.WILDFLOWERS_VINE_ITEM.get());
 
 // Large pots
         createLargePot(blockModels, ModBlocks.LARGE_POT.get());
@@ -2174,7 +2178,15 @@ public class ModModelProvider extends ModelProvider {
             e.rotation(rot -> rot.origin(8, 32, 8).axis(Direction.Axis.X).angle(22.5f));
             e.face(Direction.NORTH, f -> f.uvs(4, 12, 12, 4).rotation(Quadrant.R180).texture(TextureSlot.FRONT));
             e.face(Direction.SOUTH, f -> f.uvs(4, 4, 12, 12).texture(TextureSlot.BACK));
-        });
+        })
+                .transform(ItemDisplayContext.GUI, t -> t.rotation(34.75F, -43F, 0F).translation(0, 1, 0).scale(0.75F, 0.75F, 0.75F))
+                .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
+                .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
+                .transform(ItemDisplayContext.HEAD, t -> t.translation(0, 10.5F, 0))
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0))
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0));
 
         ModelTemplate template = builder.build();
 

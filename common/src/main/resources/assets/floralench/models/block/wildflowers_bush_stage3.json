@@ -1,0 +1,7 @@
+{
+  "parent": "floralench:block/bush_large",
+  "textures": {
+    "particle": "floralench:block/wildflowers_bush_stage3",
+    "plant": "floralench:block/wildflowers_bush_stage3"
+  }
+}

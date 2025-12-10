@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "floralench:open_eyeblossom_bush"
+          "name": "floralench:wildflowers_mossy_cobblestone"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "floralench:blocks/eyeblossom_bush"
+  "random_sequence": "floralench:blocks/wildflowers_mossy_cobblestone"
 }

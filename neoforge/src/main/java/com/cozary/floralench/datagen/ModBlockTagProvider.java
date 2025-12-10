@@ -45,6 +45,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.SPORE_BLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
+                        ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get(),
 
                         ModBlocks.DANDELION_MOSSY_STONE_BRICK.get(),
                         ModBlocks.POPPY_MOSSY_STONE_BRICK.get(),
@@ -70,7 +71,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.PINK_PETALS_MOSSY_STONE_BRICK.get(),
                         ModBlocks.SPORE_BLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
-                        ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get()
+                        ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
+                        ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get()
                 );
 
         tag(Tags.Blocks.NEEDS_WOOD_TOOL)
@@ -100,6 +102,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.SPORE_BLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
+                        ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get(),
 
                         ModBlocks.DANDELION_MOSSY_STONE_BRICK.get(),
                         ModBlocks.POPPY_MOSSY_STONE_BRICK.get(),
@@ -125,7 +128,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.PINK_PETALS_MOSSY_STONE_BRICK.get(),
                         ModBlocks.SPORE_BLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
-                        ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get()
+                        ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
+                        ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get()
                 );
 
         tag(BlockTags.BEE_ATTRACTIVE)
@@ -155,8 +159,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.SPORE_BLOSSOM_BUSH.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_BUSH.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(),
-                        ModBlocks.ALLIUM_VINE.get(),
+                        ModBlocks.WILDFLOWERS_BUSH.get(),
 
+                        ModBlocks.ALLIUM_VINE.get(),
                         ModBlocks.AZURE_BLUET_VINE.get(),
                         ModBlocks.BLUE_ORCHID_VINE.get(),
                         ModBlocks.CORNFLOWER_VINE.get(),
@@ -181,6 +186,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.SPORE_BLOSSOM_VINE.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_VINE.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_VINE.get(),
+                        ModBlocks.WILDFLOWERS_VINE.get(),
 
                         ModBlocks.ALLIUM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.AZURE_BLUET_MOSSY_COBBLESTONE.get(),
@@ -207,6 +213,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.SPORE_BLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
+                        ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get(),
 
                         ModBlocks.ALLIUM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.AZURE_BLUET_MOSSY_STONE_BRICK.get(),
@@ -233,6 +240,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.SPORE_BLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
+                        ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get(),
 
                         ModBlocks.LARGE_ALLIUM_POT.get(),
                         ModBlocks.LARGE_AZURE_BLUET_POT.get(),
