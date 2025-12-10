@@ -1296,7 +1296,7 @@ public class ModModelProvider extends ModelProvider {
                 new TextureMapping()
                         .put(TextureSlot.TEXTURE, texturePot)
                         .put(TextureSlot.DIRT, textureDirt)
-                        .put(TextureSlot.PARTICLE, modelLocation)
+                        .put(TextureSlot.PARTICLE, texturePot)
                         .put(TextureSlot.BOTTOM, texturePlantBottom)
                         .put(TextureSlot.TOP, texturePlantTop),
                 blockModels.modelOutput

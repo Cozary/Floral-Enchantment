@@ -550,7 +550,7 @@
   "textures": {
     "bottom": "floralench:block/large_pot",
     "dirt": "minecraft:block/dirt",
-    "particle": "floralench:block/large_flower_pot_cross_tall",
+    "particle": "floralench:block/large_pot",
     "texture": "floralench:block/large_pot",
     "top": "floralench:block/large_pot"
   }
