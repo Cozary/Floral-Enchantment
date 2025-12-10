@@ -334,7 +334,6 @@
   "item.floralench.pink_crown": "Corona rosa",
   "item.floralench.black_crown": "Corona negra",
   "item.floralench.tulips_crown": "Corona de tulipanes",
-
   "item.floralench.wildflowers_vine": "Enredadera de florecillas silvestres",
   "item.floralench.wildflowers_mossy_cobblestone": "Roca musgosa de florecillas silvestres",
   "item.floralench.wildflowers_mossy_stone_brick": "Ladrillos de piedra musgosa de florecillas silvestres",
@@ -342,7 +341,6 @@
   "item.floralench.large_wildflowers_pot": "Maceta grande de florecillas silvestres",
   "item.floralench.large_double_wildflowers_pot": "Maceta grande de florecillas silvestres doble",
   "item.floralench.wildflowers_basket": "Cesta de florecillas silvestres",
-
   "block.floralench.wildflowers_vine": "Enredadera de florecillas silvestres",
   "block.floralench.wildflowers_mossy_cobblestone": "Roca musgosa de florecillas silvestres",
   "block.floralench.wildflowers_mossy_stone_brick": "Ladrillos de piedra musgosa de florecillas silvestres",
@@ -350,7 +348,6 @@
   "block.floralench.large_wildflowers_pot": "Maceta grande de florecillas silvestres",
   "block.floralench.large_double_wildflowers_pot": "Maceta grande de florecillas silvestres doble",
   "block.floralench.wildflowers_basket": "Cesta de florecillas silvestres",
-
   "item.floralench.cactus_flower_vine": "Enredadera de flor de cactus",
   "item.floralench.cactus_flower_mossy_cobblestone": "Roca musgosa de flor de cactus",
   "item.floralench.cactus_flower_mossy_stone_brick": "Ladrillos de piedra musgosa de flor de cactus",
@@ -358,7 +355,6 @@
   "item.floralench.large_cactus_flower_pot": "Maceta grande de flor de cactus",
   "item.floralench.large_double_cactus_flower_pot": "Maceta grande de flor de cactus doble",
   "item.floralench.cactus_flower_basket": "Cesta de flor de cactus",
-
   "block.floralench.cactus_flower_vine": "Enredadera de flor de cactus",
   "block.floralench.cactus_flower_mossy_cobblestone": "Roca musgosa de flor de cactus",
   "block.floralench.cactus_flower_mossy_stone_brick": "Ladrillos de piedra musgosa de flor de cactus",
@@ -366,7 +362,5 @@
   "block.floralench.large_cactus_flower_pot": "Maceta grande de flor de cactus",
   "block.floralench.large_double_cactus_flower_pot": "Maceta grande de flor de cactus doble",
   "block.floralench.cactus_flower_basket": "Cesta de flor de cactus",
-
-
   "itemGroup.floralench": "Floral Enchantment"
 }

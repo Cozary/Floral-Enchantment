@@ -2181,12 +2181,12 @@ public class ModModelProvider extends ModelProvider {
         });
 
         builder.element(e -> {
-            e.from(4.75f, 22.75f, 8.5f).to(11.75f, 30.75f, 8.5f);
-            e.shade(false);
-            e.rotation(rot -> rot.origin(8, 32, 8).axis(Direction.Axis.X).angle(22.5f));
-            e.face(Direction.NORTH, f -> f.uvs(4, 12, 12, 4).rotation(Quadrant.R180).texture(TextureSlot.FRONT));
-            e.face(Direction.SOUTH, f -> f.uvs(4, 4, 12, 12).texture(TextureSlot.BACK));
-        })
+                    e.from(4.75f, 22.75f, 8.5f).to(11.75f, 30.75f, 8.5f);
+                    e.shade(false);
+                    e.rotation(rot -> rot.origin(8, 32, 8).axis(Direction.Axis.X).angle(22.5f));
+                    e.face(Direction.NORTH, f -> f.uvs(4, 12, 12, 4).rotation(Quadrant.R180).texture(TextureSlot.FRONT));
+                    e.face(Direction.SOUTH, f -> f.uvs(4, 4, 12, 12).texture(TextureSlot.BACK));
+                })
                 .transform(ItemDisplayContext.GUI, t -> t.rotation(34.75F, -43F, 0F).translation(0, 1, 0).scale(0.75F, 0.75F, 0.75F))
                 .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
                 .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
