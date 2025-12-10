@@ -49,6 +49,7 @@
   "block.floralench.spore_blossom_mossy_cobblestone": "Spore Blossom Mossy Cobblestone",
   "block.floralench.open_eyeblossom_mossy_cobblestone": "Open Eyeblossom Mossy Cobblestone",
   "block.floralench.closed_eyeblossom_mossy_cobblestone": "Closed Eyeblossom Mossy Cobblestone",
+
   "block.floralench.dandelion_mossy_stone_brick": "Dandelion Mossy Stone Brick",
   "block.floralench.poppy_mossy_stone_brick": "Poppy Mossy Stone Brick",
   "block.floralench.blue_orchid_mossy_stone_brick": "Blue Orchid Mossy Stone Brick",
@@ -74,6 +75,7 @@
   "block.floralench.spore_blossom_mossy_stone_brick": "Spore Blossom Mossy Stone Brick",
   "block.floralench.open_eyeblossom_mossy_stone_brick": "Open Eyeblossom Mossy Stone Brick",
   "block.floralench.closed_eyeblossom_mossy_stone_brick": "Closed Eyeblossom Mossy Stone Brick",
+
   "block.floralench.allium_bush": "Allium Bush",
   "block.floralench.azure_bluet_bush": "Azure Bluet Bush",
   "block.floralench.blue_orchid_bush": "Blue Orchid Bush",
@@ -100,6 +102,8 @@
   "block.floralench.open_eyeblossom_bush": "Open Eyeblossom Bush",
   "block.floralench.closed_eyeblossom_bush": "Closed Eyeblossom Bush",
   "block.floralench.large_pot": "Large Pot",
+
+
   "block.floralench.large_dandelion_pot": "Large Dandelion Pot",
   "block.floralench.large_poppy_pot": "Large Poppy Pot",
   "block.floralench.large_blue_orchid_pot": "Large Blue Orchid Pot",
@@ -123,6 +127,8 @@
   "block.floralench.large_spore_blossom_pot": "Large Spore Blossom Pot",
   "block.floralench.large_open_eyeblossom_pot": "Large Open Eyeblossom Pot",
   "block.floralench.large_closed_eyeblossom_pot": "Large  Eyeblossom Pot",
+
+
   "block.floralench.large_double_dandelion_pot": "Large Double Dandelion Pot",
   "block.floralench.large_double_poppy_pot": "Large Double Poppy Pot",
   "block.floralench.large_double_blue_orchid_pot": "Large Double Blue Orchid Pot",
@@ -144,6 +150,8 @@
   "block.floralench.large_double_closed_eyeblossom_pot": "Large Double  Eyeblossom Pot",
   "block.floralench.dancing_sunflower": "Dancing Sunflower",
   "block.floralench.floral_basket": "Floral Basket",
+
+
   "block.floralench.dandelion_basket": "Dandelion Basket",
   "block.floralench.poppy_basket": "Poppy Basket",
   "block.floralench.blue_orchid_basket": "Blue Orchid Basket",
@@ -334,5 +342,40 @@
   "item.floralench.pink_crown": "Pink Crown",
   "item.floralench.black_crown": "Black Crown",
   "item.floralench.tulips_crown": "Tulips Crown",
+
+
+  "block.floralench.wildflowers_vine": "Wildflowers Vine",
+  "block.floralench.wildflowers_mossy_cobblestone": "Wildflowers Mossy Cobblestone",
+  "block.floralench.wildflowers_mossy_stone_brick": "Wildflowers Mossy Stone Brick",
+  "block.floralench.wildflowers_bush": "Wildflowers Bush",
+  "block.floralench.large_wildflowers_pot": "Large Wildflowers Pot",
+  "block.floralench.large_double_wildflowers_pot": "Large Double Wildflowers Pot",
+  "block.floralench.wildflowers_basket": "Wildflowers Basket",
+
+  "item.floralench.wildflowers_vine": "Wildflowers Vine",
+  "item.floralench.wildflowers_mossy_cobblestone": "Wildflowers Mossy Cobblestone",
+  "item.floralench.wildflowers_mossy_stone_brick": "Wildflowers Mossy Stone Brick",
+  "item.floralench.wildflowers_bush": "Wildflowers Bush",
+  "item.floralench.large_wildflowers_pot": "Large Wildflowers Pot",
+  "item.floralench.large_double_wildflowers_pot": "Large Double Wildflowers Pot",
+  "item.floralench.wildflowers_basket": "Wildflowers Basket",
+
+  "block.floralench.cactus_flower_vine": "Cactus Flower Vine",
+  "block.floralench.cactus_flower_mossy_cobblestone": "Cactus Flower Mossy Cobblestone",
+  "block.floralench.cactus_flower_mossy_stone_brick": "Cactus Flower Mossy Stone Brick",
+  "block.floralench.cactus_flower_bush": "Cactus Flower Bush",
+  "block.floralench.large_cactus_flower_pot": "Large Cactus Flower Pot",
+  "block.floralench.large_double_cactus_flower_pot": "Large Double Cactus Flower Pot",
+  "block.floralench.cactus_flower_basket": "Cactus Flower Basket",
+
+  "item.floralench.cactus_flower_vine": "Cactus Flower Vine",
+  "item.floralench.cactus_flower_mossy_cobblestone": "Cactus Flower Mossy Cobblestone",
+  "item.floralench.cactus_flower_mossy_stone_brick": "Cactus Flower Mossy Stone Brick",
+  "item.floralench.cactus_flower_bush": "Cactus Flower Bush",
+  "item.floralench.large_cactus_flower_pot": "Large Cactus Flower Pot",
+  "item.floralench.large_double_cactus_flower_pot": "Large Double Cactus Flower Pot",
+  "item.floralench.cactus_flower_basket": "Cactus Flower Basket",
+
+
   "itemGroup.floralench": "Floral Enchantment"
 }

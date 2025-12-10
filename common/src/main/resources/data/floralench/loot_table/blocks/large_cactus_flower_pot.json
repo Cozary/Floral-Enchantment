@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "floralench:large_closed_eyeblossom_pot"
+          "name": "floralench:large_cactus_flower_pot"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "floralench:blocks/large_closed_eyeblossom_pot"
+  "random_sequence": "floralench:blocks/large_cactus_flower_pot"
 }

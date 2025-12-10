@@ -46,6 +46,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get(),
+                        ModBlocks.CACTUS_FLOWER_MOSSY_COBBLESTONE.get(),
 
                         ModBlocks.DANDELION_MOSSY_STONE_BRICK.get(),
                         ModBlocks.POPPY_MOSSY_STONE_BRICK.get(),
@@ -72,7 +73,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.SPORE_BLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
-                        ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get()
+                        ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get(),
+                        ModBlocks.CACTUS_FLOWER_MOSSY_STONE_BRICK.get()
                 );
 
         tag(Tags.Blocks.NEEDS_WOOD_TOOL)
@@ -103,6 +105,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get(),
+                        ModBlocks.CACTUS_FLOWER_MOSSY_COBBLESTONE.get(),
 
                         ModBlocks.DANDELION_MOSSY_STONE_BRICK.get(),
                         ModBlocks.POPPY_MOSSY_STONE_BRICK.get(),
@@ -129,7 +132,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.SPORE_BLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
-                        ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get()
+                        ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get(),
+                        ModBlocks.CACTUS_FLOWER_MOSSY_STONE_BRICK.get()
                 );
 
         tag(BlockTags.BEE_ATTRACTIVE)
@@ -160,6 +164,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.OPEN_EYEBLOSSOM_BUSH.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(),
                         ModBlocks.WILDFLOWERS_BUSH.get(),
+                        ModBlocks.CACTUS_FLOWER_BUSH.get(),
 
                         ModBlocks.ALLIUM_VINE.get(),
                         ModBlocks.AZURE_BLUET_VINE.get(),
@@ -187,6 +192,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.OPEN_EYEBLOSSOM_VINE.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_VINE.get(),
                         ModBlocks.WILDFLOWERS_VINE.get(),
+                        ModBlocks.CACTUS_FLOWER_VINE.get(),
 
                         ModBlocks.ALLIUM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.AZURE_BLUET_MOSSY_COBBLESTONE.get(),
@@ -214,6 +220,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get(),
                         ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get(),
+                        ModBlocks.CACTUS_FLOWER_MOSSY_COBBLESTONE.get(),
 
                         ModBlocks.ALLIUM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.AZURE_BLUET_MOSSY_STONE_BRICK.get(),
@@ -241,6 +248,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get(),
                         ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get(),
+                        ModBlocks.CACTUS_FLOWER_MOSSY_STONE_BRICK.get(),
 
                         ModBlocks.LARGE_ALLIUM_POT.get(),
                         ModBlocks.LARGE_AZURE_BLUET_POT.get(),
@@ -265,6 +273,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.LARGE_SPORE_BLOSSOM_POT.get(),
                         ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get(),
                         ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get(),
+                        ModBlocks.LARGE_CACTUS_FLOWER_POT.get(),
 
                         ModBlocks.LARGE_DOUBLE_ALLIUM_POT.get(),
                         ModBlocks.LARGE_DOUBLE_AZURE_BLUET_POT.get(),
@@ -285,6 +294,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.LARGE_DOUBLE_SPORE_BLOSSOM_POT.get(),
                         ModBlocks.LARGE_DOUBLE_OPEN_EYEBLOSSOM_POT.get(),
                         ModBlocks.LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT.get(),
+                        ModBlocks.LARGE_DOUBLE_CACTUS_FLOWER_POT.get(),
 
                         ModBlocks.ALLIUM_BASKET.get(),
                         ModBlocks.AZURE_BLUET_BASKET.get(),
@@ -304,7 +314,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.AZALEA_BASKET.get(),
                         ModBlocks.SPORE_BLOSSOM_BASKET.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_BASKET.get(),
-                        ModBlocks.CLOSED_EYEBLOSSOM_BASKET.get()
+                        ModBlocks.CLOSED_EYEBLOSSOM_BASKET.get(),
+                        ModBlocks.CACTUS_FLOWER_BASKET.get()
                 );
 
         tag(BlockTags.BEE_GROWABLES)
@@ -333,7 +344,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.PINK_PETALS_BUSH.get(),
                         ModBlocks.SPORE_BLOSSOM_BUSH.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_BUSH.get(),
-                        ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get()
+                        ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(),
+                        ModBlocks.WILDFLOWERS_BUSH.get(),
+                        ModBlocks.CACTUS_FLOWER_BUSH.get()
                 );
 
         tag(BlockTags.CLIMBABLE)
@@ -361,7 +374,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.PINK_PETALS_VINE.get(),
                         ModBlocks.SPORE_BLOSSOM_VINE.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_VINE.get(),
-                        ModBlocks.CLOSED_EYEBLOSSOM_VINE.get()
+                        ModBlocks.CLOSED_EYEBLOSSOM_VINE.get(),
+                        ModBlocks.WILDFLOWERS_VINE.get(),
+                        ModBlocks.CACTUS_FLOWER_VINE.get()
                 );
 
 
@@ -390,6 +405,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.LARGE_SPORE_BLOSSOM_POT.get(),
                         ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get(),
                         ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get(),
+                        ModBlocks.LARGE_CACTUS_FLOWER_POT.get(),
 
                         ModBlocks.LARGE_DOUBLE_ALLIUM_POT.get(),
                         ModBlocks.LARGE_DOUBLE_AZURE_BLUET_POT.get(),
@@ -409,7 +425,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.LARGE_DOUBLE_AZALEA_POT.get(),
                         ModBlocks.LARGE_DOUBLE_SPORE_BLOSSOM_POT.get(),
                         ModBlocks.LARGE_DOUBLE_OPEN_EYEBLOSSOM_POT.get(),
-                        ModBlocks.LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT.get()
+                        ModBlocks.LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT.get(),
+                        ModBlocks.LARGE_DOUBLE_CACTUS_FLOWER_POT.get()
                 );
 
         tag(BlockTags.FLOWERS)
@@ -438,7 +455,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.PINK_PETALS_BUSH.get(),
                         ModBlocks.SPORE_BLOSSOM_BUSH.get(),
                         ModBlocks.OPEN_EYEBLOSSOM_BUSH.get(),
-                        ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get()
+                        ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(),
+                        ModBlocks.WILDFLOWERS_VINE.get(),
+                        ModBlocks.CACTUS_FLOWER_BUSH.get()
                 );
 
 

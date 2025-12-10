@@ -2,10 +2,13 @@
 
 ### Added
 
-- [Vines]: Wildflowers.
-- [Mossy Cobblestone]: Wildflowers.
-- [Bush]: Wildflowers.
-- [Mossy Stone Brick]: Wildflowers.
+- [Vines]: Wildflowers, Cactus Flower.
+- [Mossy Cobblestone]: Wildflowers, Cactus Flower.
+- [Bush]: Wildflowers, Cactus Flower.
+- [Mossy Stone Brick]: Wildflowers, Cactus Flower.
+- [Large Pot]: Cactus Flower.
+- [Large Double Pot]: Cactus Flower.
+- [Floral Basket]: Cactus Flower.
 - Datagen!
 
 ### Re-added

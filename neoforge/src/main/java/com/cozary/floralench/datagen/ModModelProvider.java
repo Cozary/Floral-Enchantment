@@ -74,6 +74,7 @@ public class ModModelProvider extends ModelProvider {
         createBushEmissive(blockModels, itemModels, ModBlocks.OPEN_EYEBLOSSOM_BUSH.get(), ModItems.OPEN_EYEBLOSSOM_BUSH_ITEM.get());
         createBush(blockModels, itemModels, ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(), ModItems.CLOSED_EYEBLOSSOM_BUSH_ITEM.get());
         createBush(blockModels, itemModels, ModBlocks.WILDFLOWERS_BUSH.get(), ModItems.WILDFLOWERS_BUSH_ITEM.get());
+        createBush(blockModels, itemModels, ModBlocks.CACTUS_FLOWER_BUSH.get(), ModItems.CACTUS_FLOWER_BUSH_ITEM.get());
 
 // Mossy Cobblestone
         createMossyCobblestoneParent(blockModels);
@@ -104,6 +105,7 @@ public class ModModelProvider extends ModelProvider {
         createMossyCobblestoneEmissive(blockModels, ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get());
         createMossyCobblestone(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get());
         createMossyCobblestone(blockModels, ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get());
+        createMossyCobblestone(blockModels, ModBlocks.CACTUS_FLOWER_MOSSY_COBBLESTONE.get());
 
 // Mossy Stone Brick
         createMossyStoneBrickParent(blockModels);
@@ -134,6 +136,7 @@ public class ModModelProvider extends ModelProvider {
         createMossyStoneBrickEmissive(blockModels, ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get());
         createMossyStoneBrick(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get());
         createMossyStoneBrick(blockModels, ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get());
+        createMossyStoneBrick(blockModels, ModBlocks.CACTUS_FLOWER_MOSSY_STONE_BRICK.get());
 
 // Vines
         createVine(blockModels, ModBlocks.ALLIUM_VINE.get(), ModItems.ALLIUM_VINE_ITEM.get());
@@ -162,6 +165,7 @@ public class ModModelProvider extends ModelProvider {
         createVineEmissive(blockModels, ModBlocks.OPEN_EYEBLOSSOM_VINE.get(), ModItems.OPEN_EYEBLOSSOM_VINE_ITEM.get());
         createVine(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_VINE.get(), ModItems.CLOSED_EYEBLOSSOM_VINE_ITEM.get());
         createVine(blockModels, ModBlocks.WILDFLOWERS_VINE.get(), ModItems.WILDFLOWERS_VINE_ITEM.get());
+        createVine(blockModels, ModBlocks.CACTUS_FLOWER_VINE.get(), ModItems.CACTUS_FLOWER_VINE_ITEM.get());
 
 // Large pots
         createLargePot(blockModels, ModBlocks.LARGE_POT.get());
@@ -236,6 +240,9 @@ public class ModModelProvider extends ModelProvider {
         createLargePotVariants(blockModels, ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get(), Blocks.CLOSED_EYEBLOSSOM);
         createLargePotDoubleVariant(blockModels, ModBlocks.LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT.get(), Blocks.CLOSED_EYEBLOSSOM);
 
+        createLargePotVariants(blockModels, ModBlocks.LARGE_CACTUS_FLOWER_POT.get(), Blocks.CACTUS_FLOWER);
+        createLargePotDoubleVariant(blockModels, ModBlocks.LARGE_DOUBLE_CACTUS_FLOWER_POT.get(), Blocks.CACTUS_FLOWER);
+
         //Baskets
         createFloralBasketCross(blockModels, ModBlocks.FLORAL_BASKET.get());
         createFloralBasket(blockModels, ModBlocks.FLORAL_BASKET.get());
@@ -259,6 +266,7 @@ public class ModModelProvider extends ModelProvider {
         createFloralBasketVariants(blockModels, ModBlocks.SPORE_BLOSSOM_BASKET.get(), Blocks.SPORE_BLOSSOM);
         createFloralBasketEmissive(blockModels, ModBlocks.OPEN_EYEBLOSSOM_BASKET.get(), Blocks.OPEN_EYEBLOSSOM);
         createFloralBasketVariants(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_BASKET.get(), Blocks.CLOSED_EYEBLOSSOM);
+        createFloralBasketVariants(blockModels, ModBlocks.CACTUS_FLOWER_BASKET.get(), Blocks.CACTUS_FLOWER);
 
     }
 
