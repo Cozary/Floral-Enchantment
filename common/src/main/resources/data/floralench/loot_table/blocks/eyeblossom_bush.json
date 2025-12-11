@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "floralench:closed_eyeblossom_bush"
+          "name": "floralench:open_eyeblossom_bush"
         }
       ],
       "rolls": 1.0
