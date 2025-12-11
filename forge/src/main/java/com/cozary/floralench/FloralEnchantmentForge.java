@@ -1,7 +1,6 @@
 package com.cozary.floralench;
 
 import com.cozary.floralench.init.ModTabs;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -11,8 +10,8 @@ import static com.cozary.floralench.FloralEnchantment.MOD_ID;
 @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class FloralEnchantmentForge {
 
-    public FloralEnchantmentForge() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public FloralEnchantmentForge(FMLJavaModLoadingContext context) {
+        var eventBus = context.getModBusGroup();
 
         FloralEnchantment.LOG.info("Hello Forge world!");
         FloralEnchantment.init();
