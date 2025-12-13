@@ -27,7 +27,7 @@ public class LargeDoubleBlueOrchidPot extends LargePotBase {
         Item item = itemstack.getItem();
         ItemStack item1 = Items.BLUE_ORCHID.getDefaultInstance();
         Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide) {
+        if (!worldIn.isClientSide()) {
             if (item == Items.AIR) {
 
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_BLUE_ORCHID_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));

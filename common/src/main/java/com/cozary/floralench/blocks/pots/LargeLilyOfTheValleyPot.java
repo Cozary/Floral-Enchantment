@@ -27,7 +27,7 @@ public class LargeLilyOfTheValleyPot extends LargePotBase {
         Item item = itemstack.getItem();
         ItemStack item1 = Items.LILY_OF_THE_VALLEY.getDefaultInstance();
         Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide) {
+        if (!worldIn.isClientSide()) {
             if (item == Items.AIR) {
 
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));

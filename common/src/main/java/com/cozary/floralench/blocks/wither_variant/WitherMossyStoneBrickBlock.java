@@ -40,7 +40,7 @@ public class WitherMossyStoneBrickBlock extends MossyStoneBrickBlock {
 
     @Override
     public void stepOn(Level worldIn, BlockPos pos, BlockState blockState, Entity entityIn) {
-        if (!worldIn.isClientSide && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
+        if (!worldIn.isClientSide() && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
             if (entityIn instanceof LivingEntity livingentity) {
                 if (!livingentity.isInvulnerableTo((ServerLevel) worldIn, worldIn.damageSources().wither())) {
                     livingentity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40));

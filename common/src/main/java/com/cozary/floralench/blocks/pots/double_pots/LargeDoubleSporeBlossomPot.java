@@ -27,7 +27,7 @@ public class LargeDoubleSporeBlossomPot extends LargePotBase {
         Item item = itemstack.getItem();
         ItemStack item1 = Items.SPORE_BLOSSOM.getDefaultInstance();
         Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide) {
+        if (!worldIn.isClientSide()) {
             if (item == Items.AIR) {
 
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_SPORE_BLOSSOM_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));

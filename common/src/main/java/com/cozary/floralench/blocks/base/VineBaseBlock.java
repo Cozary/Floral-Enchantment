@@ -16,7 +16,7 @@ public class VineBaseBlock extends VineBlock {
                         Registries.BLOCK,
                         ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
                 ))
-                .noCollission()
+                .noCollision()
                 .randomTicks()
                 .strength(0.2F)
                 .sound(SoundType.VINE)

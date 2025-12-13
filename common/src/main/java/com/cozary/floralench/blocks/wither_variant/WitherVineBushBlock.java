@@ -49,7 +49,7 @@ public class WitherVineBushBlock extends VineBushBlock {
 
     @Override
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier p_405414_) {
-        if (!level.isClientSide && level.getDifficulty() != Difficulty.PEACEFUL) {
+        if (!level.isClientSide() && level.getDifficulty() != Difficulty.PEACEFUL) {
             if (entity instanceof LivingEntity livingentity) {
                 if (!livingentity.isInvulnerableTo((ServerLevel) level, level.damageSources().wither())) {
                     livingentity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40));

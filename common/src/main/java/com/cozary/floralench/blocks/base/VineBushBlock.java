@@ -34,7 +34,7 @@ public abstract class VineBushBlock extends SweetBerryBushBlock {
                         Registries.BLOCK,
                         ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
                 ))
-                .noCollission()
+                .noCollision()
                 .randomTicks()
                 .strength(0.2F)
                 .sound(SoundType.SWEET_BERRY_BUSH)

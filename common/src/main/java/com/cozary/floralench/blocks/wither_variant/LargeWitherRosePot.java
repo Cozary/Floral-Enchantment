@@ -38,7 +38,7 @@ public class LargeWitherRosePot extends LargePotBase {
         Item item = itemstack.getItem();
         ItemStack item1 = Items.WITHER_ROSE.getDefaultInstance();
         Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide) {
+        if (!worldIn.isClientSide()) {
             if (item == Items.AIR) {
 
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));
@@ -71,7 +71,7 @@ public class LargeWitherRosePot extends LargePotBase {
 
     @Override
     public void stepOn(Level worldIn, BlockPos pos, BlockState blockState, Entity entityIn) {
-        if (!worldIn.isClientSide && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
+        if (!worldIn.isClientSide() && worldIn.getDifficulty() != Difficulty.PEACEFUL) {
             if (entityIn instanceof LivingEntity livingentity) {
                 if (!livingentity.isInvulnerableTo((ServerLevel) worldIn, worldIn.damageSources().wither())) {
                     livingentity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40));

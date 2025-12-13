@@ -81,7 +81,7 @@ public class LargePotBase extends Block {
         ItemStack itemstack = player.getMainHandItem();
         Item item = itemstack.getItem();
         Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide) {
+        if (!worldIn.isClientSide()) {
             if (item == Items.ALLIUM) {
                 if (!player.getAbilities().instabuild) {
                     itemstack.shrink(1);

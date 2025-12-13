@@ -139,7 +139,7 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
         Item item = itemstack.getItem();
         ItemStack item1 = this.type.open ? Items.OPEN_EYEBLOSSOM.getDefaultInstance() : Items.CLOSED_EYEBLOSSOM.getDefaultInstance();
         Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide) {
+        if (!worldIn.isClientSide()) {
             if (item == Items.AIR) {
 
                 worldIn.setBlockAndUpdate(pos, (this.type.open ? ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get()).defaultBlockState().setValue(LargePot.FACING, direction1));

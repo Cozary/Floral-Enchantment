@@ -37,7 +37,7 @@ public class LargeSunflowerPot extends LargePotBase {
         Item item = itemstack.getItem();
         ItemStack item1 = Items.SUNFLOWER.getDefaultInstance();
         Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide) {
+        if (!worldIn.isClientSide()) {
             if (item == Items.AIR) {
 
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));
@@ -51,7 +51,7 @@ public class LargeSunflowerPot extends LargePotBase {
     public void randomTick(BlockState state, ServerLevel worldIn, BlockPos pos, RandomSource random) {
 
         Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide) {
+        if (!worldIn.isClientSide()) {
             jukeboxPosition = findNearestRepellent(worldIn, pos);
             if (jukeboxPosition.isPresent()) {
                 jukebox = worldIn.getBlockState(jukeboxPosition.get());
