@@ -39,7 +39,7 @@ public class WitherVineBaseBlock extends VineBaseBlock {
     }
 
     @Override
-    protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier p_405414_) {
+    protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier p_405414_, boolean p_451767_) {
         if (!level.isClientSide() && level.getDifficulty() != Difficulty.PEACEFUL) {
             if (entity instanceof LivingEntity livingentity) {
                 if (!livingentity.isInvulnerableTo((ServerLevel) level, level.damageSources().wither())) {

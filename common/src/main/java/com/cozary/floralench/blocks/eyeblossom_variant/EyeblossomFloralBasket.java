@@ -111,7 +111,7 @@ public class EyeblossomFloralBasket extends FloralBasket {
     }
 
     @Override
-    protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier effectApplier) {
+    protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier p_405414_, boolean p_451767_) {
         if (!level.isClientSide() && level.getDifficulty() != Difficulty.PEACEFUL && entity instanceof Bee bee) {
             if (Bee.attractsBees(state) && !bee.hasEffect(MobEffects.POISON)) {
                 bee.addEffect(this.getBeeInteractionEffect());
