@@ -17,7 +17,7 @@ import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.level.block.Block;
@@ -275,7 +275,7 @@ public class ModModelProvider extends ModelProvider {
     /*-------VINES--------*/
     private void createVine(BlockModelGenerators blockModels, Block block, Item item) {
         String blockName = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation blockRL = this.modLocation("block/" + blockName);
+        Identifier blockRL = this.modLocation("block/" + blockName);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
@@ -323,16 +323,16 @@ public class ModModelProvider extends ModelProvider {
                                 BlockModelGenerators.variant(variant.with(VariantMutator.X_ROT.withValue(Quadrant.R270))))
         );
 
-        ResourceLocation resourcelocation = blockModels.createFlatItemModelWithBlockTexture(item, block);
+        Identifier resourcelocation = blockModels.createFlatItemModelWithBlockTexture(item, block);
         blockModels.registerSimpleItemModel(block, resourcelocation);
     }
 
     private void createVineEmissive(BlockModelGenerators blockModels, Block block, Item item) {
         String blockName = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation blockRL = this.modLocation("block/" + blockName);
+        Identifier blockRL = this.modLocation("block/" + blockName);
 
-        ResourceLocation blockTexture = this.modLocation("block/" + blockName);
-        ResourceLocation emissiveTexture = this.modLocation("block/open_eyeblossom_bush_stage2_emissive");
+        Identifier blockTexture = this.modLocation("block/" + blockName);
+        Identifier emissiveTexture = this.modLocation("block/open_eyeblossom_bush_stage2_emissive");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
@@ -400,13 +400,13 @@ public class ModModelProvider extends ModelProvider {
                                 BlockModelGenerators.variant(variant.with(VariantMutator.X_ROT.withValue(Quadrant.R270))))
         );
 
-        ResourceLocation resourcelocation = blockModels.createFlatItemModelWithBlockTexture(item, block);
+        Identifier resourcelocation = blockModels.createFlatItemModelWithBlockTexture(item, block);
         blockModels.registerSimpleItemModel(block, resourcelocation);
     }
 
     /*-------MOSSY COBBLESTONE--------*/
     private void createMossyCobblestoneParent(BlockModelGenerators blockModels) {
-        ResourceLocation modelLocation = this.modLocation("block/mossy_cobblestone");
+        Identifier modelLocation = this.modLocation("block/mossy_cobblestone");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("block/block"))
@@ -449,7 +449,7 @@ public class ModModelProvider extends ModelProvider {
 
     private void createMossyCobblestone(BlockModelGenerators blockModels, Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation blockModelLocation = this.modLocation("block/" + name);
+        Identifier blockModelLocation = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.modLocation("block/mossy_cobblestone"))
@@ -476,12 +476,12 @@ public class ModModelProvider extends ModelProvider {
 
     private void createMossyCobblestoneEmissive(BlockModelGenerators blockModels, Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation blockTexture = this.mcLocation("block/cobblestone");
-        ResourceLocation blockModelLocation = this.modLocation("block/" + name);
-        ResourceLocation emissiveTexture = this.modLocation("block/open_eyeblossom_mossy_cobblestone_emissive");
+        Identifier blockTexture = this.mcLocation("block/cobblestone");
+        Identifier blockModelLocation = this.modLocation("block/" + name);
+        Identifier emissiveTexture = this.modLocation("block/open_eyeblossom_mossy_cobblestone_emissive");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
-                .parent(ResourceLocation.parse("block/block"))
+                .parent(Identifier.parse("block/block"))
                 .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.ALL)
@@ -588,7 +588,7 @@ public class ModModelProvider extends ModelProvider {
     /*-------BUSHES--------*/
     private void createBushSmallModel(BlockModelGenerators blockModels) {
 
-        ResourceLocation plantTexture = this.modLocation("block/bush_small");
+        Identifier plantTexture = this.modLocation("block/bush_small");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("item/generated"))
@@ -645,7 +645,7 @@ public class ModModelProvider extends ModelProvider {
 
     private void createBushLargeModel(BlockModelGenerators blockModels) {
 
-        ResourceLocation plantTexture = this.modLocation("block/bush_large");
+        Identifier plantTexture = this.modLocation("block/bush_large");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("item/generated"))
@@ -703,10 +703,10 @@ public class ModModelProvider extends ModelProvider {
     private void createBush(BlockModelGenerators blockModels, ItemModelGenerators itemModels, Block block, Item item) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
 
-        ResourceLocation stage0 = this.modLocation("block/" + name + "_stage0");
-        ResourceLocation stage1 = this.modLocation("block/" + name + "_stage1");
-        ResourceLocation stage2 = this.modLocation("block/" + name + "_stage2");
-        ResourceLocation stage3 = this.modLocation("block/" + name + "_stage3");
+        Identifier stage0 = this.modLocation("block/" + name + "_stage0");
+        Identifier stage1 = this.modLocation("block/" + name + "_stage1");
+        Identifier stage2 = this.modLocation("block/" + name + "_stage2");
+        Identifier stage3 = this.modLocation("block/" + name + "_stage3");
 
         ModelTemplate crossTemplate = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("block/cross"))
@@ -777,13 +777,13 @@ public class ModModelProvider extends ModelProvider {
     private void createBushEmissive(BlockModelGenerators blockModels, ItemModelGenerators itemModels, Block block, Item item) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
 
-        ResourceLocation stage0 = this.modLocation("block/" + name + "_stage0");
-        ResourceLocation stage1 = this.modLocation("block/" + name + "_stage1");
-        ResourceLocation stage2 = this.modLocation("block/" + name + "_stage2");
-        ResourceLocation stage3 = this.modLocation("block/" + name + "_stage3");
+        Identifier stage0 = this.modLocation("block/" + name + "_stage0");
+        Identifier stage1 = this.modLocation("block/" + name + "_stage1");
+        Identifier stage2 = this.modLocation("block/" + name + "_stage2");
+        Identifier stage3 = this.modLocation("block/" + name + "_stage3");
 
-        ResourceLocation emissiveTexture_stage2 = this.modLocation("block/" + name + "_stage2_emissive");
-        ResourceLocation emissiveTexture_stage3 = this.modLocation("block/" + name + "_stage3_emissive");
+        Identifier emissiveTexture_stage2 = this.modLocation("block/" + name + "_stage2_emissive");
+        Identifier emissiveTexture_stage3 = this.modLocation("block/" + name + "_stage3_emissive");
 
         ModelTemplate crossTemplate = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("block/cross"))
@@ -911,7 +911,7 @@ public class ModModelProvider extends ModelProvider {
 
     /*-------MOSSY STONE BRICK--------*/
     private void createMossyStoneBrickParent(BlockModelGenerators blockModels) {
-        ResourceLocation modelLocation = this.modLocation("block/stone_bricks");
+        Identifier modelLocation = this.modLocation("block/stone_bricks");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("block/block"))
@@ -954,7 +954,7 @@ public class ModModelProvider extends ModelProvider {
 
     private void createMossyStoneBrick(BlockModelGenerators blockModels, Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation blockModelLocation = this.modLocation("block/" + name);
+        Identifier blockModelLocation = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.modLocation("block/stone_bricks"))
@@ -981,12 +981,12 @@ public class ModModelProvider extends ModelProvider {
 
     private void createMossyStoneBrickEmissive(BlockModelGenerators blockModels, Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation blockTexture = this.mcLocation("block/stone_bricks");
-        ResourceLocation blockModelLocation = this.modLocation("block/" + name);
-        ResourceLocation emissiveTexture = this.modLocation("block/open_eyeblossom_mossy_stone_brick_emissive");
+        Identifier blockTexture = this.mcLocation("block/stone_bricks");
+        Identifier blockModelLocation = this.modLocation("block/" + name);
+        Identifier emissiveTexture = this.modLocation("block/open_eyeblossom_mossy_stone_brick_emissive");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
-                .parent(ResourceLocation.parse("block/block"))
+                .parent(Identifier.parse("block/block"))
                 .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.ALL)
@@ -1093,9 +1093,9 @@ public class ModModelProvider extends ModelProvider {
     /*-------LARGE POT--------*/
     private void createLargePotCrossSingle(BlockModelGenerators blockModels, Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + "large_flower_pot_cross_single");
-        ResourceLocation textureDirt = this.mcLocation("block/dirt");
-        ResourceLocation texture = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + "large_flower_pot_cross_single");
+        Identifier textureDirt = this.mcLocation("block/dirt");
+        Identifier texture = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
@@ -1107,21 +1107,21 @@ public class ModModelProvider extends ModelProvider {
 
                 .element(e -> {
                     e.from(2.6F, 6F, 8F).to(13.4F, 18F, 8F);
-                    e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+                    e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
                     e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
                     e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
                 })
 
                 .element(e -> {
                     e.from(8F, 6F, 2.6F).to(8F, 18F, 13.4F);
-                    e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+                    e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
                     e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
                     e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
                 })
 
                 .element(e -> {
                     e.from(0, 0, 4).to(16, 8, 5);
-                    e.rotation(rot -> rot.origin(16, 0, 0).axis(Direction.Axis.Y).angle(0));
+                    e.rotation(rot -> rot.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
                     e.face(Direction.NORTH, f -> f.uvs(16, 8, 0, 16).texture(TextureSlot.TEXTURE));
                     e.face(Direction.EAST, f -> f.uvs(16, 8, 15, 16).texture(TextureSlot.TEXTURE).cullface(Direction.EAST));
                     e.face(Direction.SOUTH, f -> f.uvs(0, 8, 16, 16).texture(TextureSlot.TEXTURE));
@@ -1132,7 +1132,7 @@ public class ModModelProvider extends ModelProvider {
 
                 .element(e -> {
                     e.from(0, 0, 5).to(1, 8, 11);
-                    e.rotation(rot -> rot.origin(16, 0, 0).axis(Direction.Axis.Y).angle(0));
+                    e.rotation(rot -> rot.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
                     e.face(Direction.EAST, f -> f.uvs(1, 0, 7, 8).texture(TextureSlot.TEXTURE));
                     e.face(Direction.WEST, f -> f.uvs(7, 0, 1, 8).texture(TextureSlot.TEXTURE).cullface(Direction.WEST));
                     e.face(Direction.UP, f -> f.uvs(7, 0, 1, 1).texture(TextureSlot.TEXTURE).rotation(Quadrant.R90));
@@ -1155,7 +1155,7 @@ public class ModModelProvider extends ModelProvider {
 
                 .element(e -> {
                     e.from(0, 0, 11).to(16, 8, 12);
-                    e.rotation(rot -> rot.origin(0, 0, 16).axis(Direction.Axis.Y).angle(0));
+                    e.rotation(rot -> rot.origin(0, 0, 16).singleAxis(Direction.Axis.Y, 0));
                     e.face(Direction.NORTH, f -> f.uvs(16, 8, 0, 16).texture(TextureSlot.TEXTURE));
                     e.face(Direction.EAST, f -> f.uvs(1, 8, 0, 16).texture(TextureSlot.TEXTURE).cullface(Direction.EAST));
                     e.face(Direction.SOUTH, f -> f.uvs(0, 8, 16, 16).texture(TextureSlot.TEXTURE));
@@ -1187,11 +1187,11 @@ public class ModModelProvider extends ModelProvider {
 
     private void createLargePotCrossTall(BlockModelGenerators blockModels, Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + "large_flower_pot_cross_tall");
-        ResourceLocation textureDirt = this.mcLocation("block/dirt");
-        ResourceLocation texturePlantBottom = this.modLocation("block/" + name);
-        ResourceLocation texturePlantTop = this.modLocation("block/" + name);
-        ResourceLocation texturePot = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + "large_flower_pot_cross_tall");
+        Identifier textureDirt = this.mcLocation("block/dirt");
+        Identifier texturePlantBottom = this.modLocation("block/" + name);
+        Identifier texturePlantTop = this.modLocation("block/" + name);
+        Identifier texturePot = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
@@ -1206,7 +1206,7 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(0f, 6f, 8f).to(16f, 19f, 8f);
             e.shade(false);
-            e.rotation(r -> r.origin(8, 19, 8).axis(Direction.Axis.Y).angle(45));
+            e.rotation(r -> r.origin(8, 19, 8).singleAxis(Direction.Axis.Y, 45));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.BOTTOM).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.BOTTOM).uvs(0, 0, 16, 16));
         });
@@ -1214,7 +1214,7 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(0f, 19f, 8f).to(16f, 32f, 8f);
             e.shade(false);
-            e.rotation(r -> r.origin(8, 19, 8).axis(Direction.Axis.Y).angle(45));
+            e.rotation(r -> r.origin(8, 19, 8).singleAxis(Direction.Axis.Y, 45));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TOP).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TOP).uvs(0, 0, 16, 16));
         });
@@ -1222,7 +1222,7 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(0f, 6f, 8f).to(16f, 19f, 8f);
             e.shade(false);
-            e.rotation(r -> r.origin(8, 19, 8).axis(Direction.Axis.Y).angle(-45));
+            e.rotation(r -> r.origin(8, 19, 8).singleAxis(Direction.Axis.Y, -45));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.BOTTOM).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.BOTTOM).uvs(0, 0, 16, 16));
         });
@@ -1230,14 +1230,14 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(0f, 19f, 8f).to(16f, 32f, 8f);
             e.shade(false);
-            e.rotation(r -> r.origin(8, 19, 8).axis(Direction.Axis.Y).angle(-45));
+            e.rotation(r -> r.origin(8, 19, 8).singleAxis(Direction.Axis.Y, -45));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TOP).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TOP).uvs(0, 0, 16, 16));
         });
 
         builder.element(e -> {
             e.from(0f, 0f, 4f).to(16f, 8f, 5f);
-            e.rotation(r -> r.origin(16, 0, 0).axis(Direction.Axis.Y).angle(0));
+            e.rotation(r -> r.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TEXTURE).uvs(0, 8, 16, 16));
             e.face(Direction.EAST, f -> f.texture(TextureSlot.TEXTURE).uvs(16, 8, 15, 16).cullface(Direction.EAST));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TEXTURE).uvs(16, 8, 0, 16));
@@ -1248,7 +1248,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0f, 0f, 5f).to(1f, 8f, 11f);
-            e.rotation(r -> r.origin(16, 0, 0).axis(Direction.Axis.Y).angle(0));
+            e.rotation(r -> r.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
             e.face(Direction.EAST, f -> f.texture(TextureSlot.TEXTURE).uvs(1, 0, 7, 8));
             e.face(Direction.WEST, f -> f.texture(TextureSlot.TEXTURE).uvs(7, 0, 1, 8).cullface(Direction.WEST));
             e.face(Direction.UP, f -> f.texture(TextureSlot.TEXTURE).uvs(7, 0, 1, 1).rotation(Quadrant.R90));
@@ -1263,7 +1263,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0f, 0f, 11f).to(16f, 8f, 12f);
-            e.rotation(r -> r.origin(0, 0, 16).axis(Direction.Axis.Y).angle(0));
+            e.rotation(r -> r.origin(0, 0, 16).singleAxis(Direction.Axis.Y, 0));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TEXTURE).uvs(16, 8, 0, 16));
             e.face(Direction.EAST, f -> f.texture(TextureSlot.TEXTURE).uvs(1, 8, 0, 16).cullface(Direction.EAST));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TEXTURE).uvs(0, 8, 16, 16));
@@ -1305,9 +1305,9 @@ public class ModModelProvider extends ModelProvider {
 
     private void createLargePot(BlockModelGenerators blockModels, Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + name);
-        ResourceLocation texture1 = this.mcLocation("block/dirt");
-        ResourceLocation texture2 = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + name);
+        Identifier texture1 = this.mcLocation("block/dirt");
+        Identifier texture2 = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
@@ -1325,7 +1325,7 @@ public class ModModelProvider extends ModelProvider {
 
                 .element(e -> {
                     e.from(0, 0, 11).to(16, 8, 12)
-                            .rotation(rot -> rot.origin(0, 0, 16).axis(Direction.Axis.Y));
+                            .rotation(rot -> rot.origin(0, 0, 16).singleAxis(Direction.Axis.Y, 0));
                     e.face(Direction.NORTH, f -> f.uvs(16, 8, 0, 16).texture(TextureSlot.TEXTURE));
                     e.face(Direction.EAST, f -> f.uvs(1, 8, 0, 16).texture(TextureSlot.TEXTURE).cullface(Direction.EAST));
                     e.face(Direction.SOUTH, f -> f.uvs(0, 8, 16, 16).texture(TextureSlot.TEXTURE));
@@ -1336,7 +1336,7 @@ public class ModModelProvider extends ModelProvider {
 
                 .element(e -> {
                     e.from(0, 0, 4).to(16, 8, 5)
-                            .rotation(rot -> rot.origin(16, 0, 0).axis(Direction.Axis.Y));
+                            .rotation(rot -> rot.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
                     e.face(Direction.NORTH, f -> f.uvs(0, 8, 16, 16).texture(TextureSlot.TEXTURE));
                     e.face(Direction.EAST, f -> f.uvs(16, 8, 15, 16).texture(TextureSlot.TEXTURE).cullface(Direction.EAST));
                     e.face(Direction.SOUTH, f -> f.uvs(16, 8, 0, 16).texture(TextureSlot.TEXTURE));
@@ -1355,7 +1355,7 @@ public class ModModelProvider extends ModelProvider {
 
                 .element(e -> {
                     e.from(0, 0, 5).to(1, 8, 11)
-                            .rotation(rot -> rot.origin(16, 0, 0).axis(Direction.Axis.Y));
+                            .rotation(rot -> rot.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
                     e.face(Direction.EAST, f -> f.uvs(1, 0, 7, 8).texture(TextureSlot.TEXTURE));
                     e.face(Direction.WEST, f -> f.uvs(7, 0, 1, 8).texture(TextureSlot.TEXTURE).cullface(Direction.WEST));
                     e.face(Direction.UP, f -> f.uvs(7, 0, 1, 1).texture(TextureSlot.TEXTURE).rotation(Quadrant.R90));
@@ -1399,10 +1399,10 @@ public class ModModelProvider extends ModelProvider {
 
     private void createLargePotVariants(BlockModelGenerators blockModels, Block block, Block plantBlock) {
         String plantName = BuiltInRegistries.BLOCK.getKey(plantBlock).getPath();
-        ResourceLocation plantModelLocation = this.mcLocation("block/" + plantName);
+        Identifier plantModelLocation = this.mcLocation("block/" + plantName);
 
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.modLocation("block/large_flower_pot_cross_single"))
@@ -1435,10 +1435,10 @@ public class ModModelProvider extends ModelProvider {
         String blockName = BuiltInRegistries.BLOCK.getKey(block).getPath();
         String plantName = BuiltInRegistries.BLOCK.getKey(plantBlock).getPath();
 
-        ResourceLocation potTexture = this.modLocation("block/" + "large_pot");
-        ResourceLocation plantTexture = this.mcLocation("block/" + plantName);
-        ResourceLocation emissionTexture = this.mcLocation("block/" + plantName + "_emissive");
-        ResourceLocation dirtTexture = this.mcLocation("block/dirt");
+        Identifier potTexture = this.modLocation("block/" + "large_pot");
+        Identifier plantTexture = this.mcLocation("block/" + plantName);
+        Identifier emissionTexture = this.mcLocation("block/" + plantName + "_emissive");
+        Identifier dirtTexture = this.mcLocation("block/dirt");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .renderType("minecraft:cutout")
@@ -1451,7 +1451,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(2.6f, 6f, 8f).to(13.4f, 18f, 8f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1460,7 +1460,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(8f, 6f, 2.6f).to(8f, 18f, 13.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1469,21 +1469,21 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(2.6f, 6f, 8f).to(13.4f, 18f, 8f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.PLANT).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.PLANT).uvs(0, 0, 16, 16));
         });
 
         builder.element(e -> {
             e.from(8f, 6f, 2.6f).to(8f, 18f, 13.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.EAST, f -> f.texture(TextureSlot.PLANT).uvs(0, 0, 16, 16));
             e.face(Direction.WEST, f -> f.texture(TextureSlot.PLANT).uvs(0, 0, 16, 16));
         });
 
         builder.element(e -> {
             e.from(0f, 0f, 4f).to(16f, 8f, 5f);
-            e.rotation(r -> r.angle(0).axis(Direction.Axis.Y).origin(16, 0, 0));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 0).origin(16, 0, 0));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TEXTURE).uvs(0, 8, 16, 16));
             e.face(Direction.EAST, f -> f.texture(TextureSlot.TEXTURE).uvs(16, 8, 15, 16).cullface(Direction.EAST));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TEXTURE).uvs(16, 8, 0, 16));
@@ -1508,7 +1508,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0f, 0f, 11f).to(16f, 8f, 12f);
-            e.rotation(r -> r.angle(0).axis(Direction.Axis.Y).origin(0, 0, 16));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 0).origin(0, 0, 16));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TEXTURE).uvs(16, 8, 0, 16));
             e.face(Direction.EAST, f -> f.texture(TextureSlot.TEXTURE).uvs(1, 8, 0, 16).cullface(Direction.EAST));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TEXTURE).uvs(0, 8, 16, 16));
@@ -1563,10 +1563,10 @@ public class ModModelProvider extends ModelProvider {
     }
 
     private void createLargePotFromString(BlockModelGenerators blockModels, Block block, String plantName) {
-        ResourceLocation plantModelLocation = this.mcLocation("block/" + plantName);
+        Identifier plantModelLocation = this.mcLocation("block/" + plantName);
 
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.modLocation("block/large_flower_pot_cross_single"))
@@ -1596,11 +1596,11 @@ public class ModModelProvider extends ModelProvider {
     }
 
     private void createLargePotTall(BlockModelGenerators blockModels, Block block, String plantTop, String plantBottom) {
-        ResourceLocation plantModelLocationBottom = this.mcLocation("block/" + plantBottom);
-        ResourceLocation plantModelLocationTop = this.mcLocation("block/" + plantTop);
+        Identifier plantModelLocationBottom = this.mcLocation("block/" + plantBottom);
+        Identifier plantModelLocationTop = this.mcLocation("block/" + plantTop);
 
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.modLocation("block/large_flower_pot_cross_tall"))
@@ -1634,14 +1634,14 @@ public class ModModelProvider extends ModelProvider {
 
     private void createLargePotSunflower(BlockModelGenerators blockModels, Block potBlock) {
         String potName = BuiltInRegistries.BLOCK.getKey(potBlock).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + potName);
+        Identifier modelLocation = this.modLocation("block/" + potName);
 
-        ResourceLocation textPot = this.modLocation("block/large_pot");
-        ResourceLocation texDirt = this.mcLocation("block/dirt");
-        ResourceLocation texBack = this.mcLocation("block/sunflower_back");
-        ResourceLocation texFront = this.mcLocation("block/sunflower_front");
-        ResourceLocation texBottom = this.mcLocation("block/sunflower_bottom");
-        ResourceLocation texTop = this.mcLocation("block/sunflower_top");
+        Identifier textPot = this.modLocation("block/large_pot");
+        Identifier texDirt = this.mcLocation("block/dirt");
+        Identifier texBack = this.mcLocation("block/sunflower_back");
+        Identifier texFront = this.mcLocation("block/sunflower_front");
+        Identifier texBottom = this.mcLocation("block/sunflower_bottom");
+        Identifier texTop = this.mcLocation("block/sunflower_top");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
@@ -1660,7 +1660,7 @@ public class ModModelProvider extends ModelProvider {
             builder.element(e -> {
                 e.from(0, 19, 8).to(16, 32, 8);
                 e.shade(false);
-                e.rotation(rot -> rot.origin(8, 19, 8).axis(Direction.Axis.Y).angle(angle));
+                e.rotation(rot -> rot.origin(8, 19, 8).singleAxis(Direction.Axis.Y, angle));
                 e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.TOP));
                 e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.TOP));
             });
@@ -1668,7 +1668,7 @@ public class ModModelProvider extends ModelProvider {
             builder.element(e -> {
                 e.from(0, 6, 8).to(16, 19, 8);
                 e.shade(false);
-                e.rotation(rot -> rot.origin(8, 19, 8).axis(Direction.Axis.Y).angle(angle));
+                e.rotation(rot -> rot.origin(8, 19, 8).singleAxis(Direction.Axis.Y, angle));
                 e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.BOTTOM));
                 e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.BOTTOM));
             });
@@ -1719,7 +1719,7 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
                     e.from(4.75f, 22.75f, 8.5f).to(11.75f, 30.75f, 8.5f);
                     e.shade(false);
-                    e.rotation(rot -> rot.origin(8, 32, 8).axis(Direction.Axis.X).angle(22.5f));
+                    e.rotation(rot -> rot.origin(8, 32, 8).singleAxis(Direction.Axis.X, 22.5f));
                     e.face(Direction.NORTH, f -> f.uvs(4, 4, 12, 12).rotation(Quadrant.R180).texture(TextureSlot.FRONT));
                     e.face(Direction.SOUTH, f -> f.uvs(4, 4, 12, 12).texture(TextureSlot.BACK));
                 })
@@ -1763,9 +1763,9 @@ public class ModModelProvider extends ModelProvider {
     /*-------LARGE DOUBLE POT--------*/
     private void createLargePotCrossDouble(BlockModelGenerators blockModels, Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/large_flower_pot_cross_double");
-        ResourceLocation textureDirt = this.mcLocation("block/dirt");
-        ResourceLocation texturePlant = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/large_flower_pot_cross_double");
+        Identifier textureDirt = this.mcLocation("block/dirt");
+        Identifier texturePlant = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
@@ -1777,35 +1777,35 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(9.5F, 6F, 4.1F).to(9.5F, 18F, 14.9F);
-            e.rotation(r -> r.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(4.1F, 6F, 9.5F).to(14.9F, 18F, 9.5F);
-            e.rotation(r -> r.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(6.5F, 6F, 1.1F).to(6.5F, 18F, 11.9F);
-            e.rotation(r -> r.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(1.1F, 6F, 6.5F).to(11.9F, 18F, 6.5F);
-            e.rotation(r -> r.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(0F, 0F, 4F).to(16F, 8F, 5F);
-            e.rotation(r -> r.origin(16, 0, 0).axis(Direction.Axis.Y).angle(0));
+            e.rotation(r -> r.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
             e.face(Direction.NORTH, f -> f.uvs(0, 8, 16, 16).texture(TextureSlot.PARTICLE));
             e.face(Direction.EAST, f -> f.uvs(16, 8, 15, 16).texture(TextureSlot.PARTICLE).cullface(Direction.EAST));
             e.face(Direction.SOUTH, f -> f.uvs(16, 8, 0, 16).texture(TextureSlot.PARTICLE));
@@ -1816,7 +1816,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0F, 0F, 5F).to(1F, 8F, 11F);
-            e.rotation(r -> r.origin(16, 0, 0).axis(Direction.Axis.Y).angle(0));
+            e.rotation(r -> r.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
             e.face(Direction.EAST, f -> f.uvs(1, 0, 7, 8).texture(TextureSlot.PARTICLE));
             e.face(Direction.WEST, f -> f.uvs(7, 0, 1, 8).texture(TextureSlot.PARTICLE).cullface(Direction.WEST));
             e.face(Direction.UP, f -> f.uvs(7, 0, 1, 1).texture(TextureSlot.PARTICLE).rotation(Quadrant.R90));
@@ -1831,7 +1831,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0F, 0F, 11F).to(16F, 8F, 12F);
-            e.rotation(r -> r.origin(0, 0, 16).axis(Direction.Axis.Y).angle(0));
+            e.rotation(r -> r.origin(0, 0, 16).singleAxis(Direction.Axis.Y, 0));
             e.face(Direction.NORTH, f -> f.uvs(16, 8, 0, 16).texture(TextureSlot.PARTICLE));
             e.face(Direction.EAST, f -> f.uvs(1, 8, 0, 16).texture(TextureSlot.PARTICLE).cullface(Direction.EAST));
             e.face(Direction.SOUTH, f -> f.uvs(0, 8, 16, 16).texture(TextureSlot.PARTICLE));
@@ -1871,10 +1871,10 @@ public class ModModelProvider extends ModelProvider {
 
     private void createLargePotDoubleVariant(BlockModelGenerators blockModels, Block block, Block plantBlock) {
         String plantName = BuiltInRegistries.BLOCK.getKey(plantBlock).getPath();
-        ResourceLocation plantModelLocation = this.mcLocation("block/" + plantName);
+        Identifier plantModelLocation = this.mcLocation("block/" + plantName);
 
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.modLocation("block/large_flower_pot_cross_double"))
@@ -1907,10 +1907,10 @@ public class ModModelProvider extends ModelProvider {
         String blockName = BuiltInRegistries.BLOCK.getKey(block).getPath();
         String plantName = BuiltInRegistries.BLOCK.getKey(plantBlock).getPath();
 
-        ResourceLocation potTexture = this.modLocation("block/large_pot");
-        ResourceLocation plantTexture = this.mcLocation("block/" + plantName);
-        ResourceLocation emissionTexture = this.mcLocation("block/" + plantName + "_emissive");
-        ResourceLocation dirtTexture = this.mcLocation("block/dirt");
+        Identifier potTexture = this.modLocation("block/large_pot");
+        Identifier plantTexture = this.mcLocation("block/" + plantName);
+        Identifier emissionTexture = this.mcLocation("block/" + plantName + "_emissive");
+        Identifier dirtTexture = this.mcLocation("block/dirt");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .renderType("minecraft:cutout")
@@ -1923,7 +1923,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(9.5f, 6f, 4.1f).to(9.5f, 18f, 14.9f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1932,7 +1932,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(4.1f, 6f, 9.5f).to(14.9f, 18f, 9.5f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1941,7 +1941,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(6.5F, 6F, 1.1F).to(6.5F, 18F, 11.9F);
-            e.rotation(r -> r.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1950,7 +1950,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(1.1F, 6F, 6.5F).to(11.9F, 18F, 6.5F);
-            e.rotation(r -> r.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1960,35 +1960,35 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(9.5f, 6f, 4.1f).to(9.5f, 18f, 14.9f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.EAST, f -> f.texture(TextureSlot.PLANT).uvs(0, 0, 16, 16));
             e.face(Direction.WEST, f -> f.texture(TextureSlot.PLANT).uvs(0, 0, 16, 16));
         });
 
         builder.element(e -> {
             e.from(4.1f, 6f, 9.5f).to(14.9f, 18f, 9.5f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.PLANT).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.PLANT).uvs(0, 0, 16, 16));
         });
 
         builder.element(e -> {
             e.from(6.5F, 6F, 1.1F).to(6.5F, 18F, 11.9F);
-            e.rotation(r -> r.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(1.1F, 6F, 6.5F).to(11.9F, 18F, 6.5F);
-            e.rotation(r -> r.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(0f, 0f, 4f).to(16f, 8f, 5f);
-            e.rotation(r -> r.angle(0).axis(Direction.Axis.Y).origin(16, 0, 0));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 0).origin(16, 0, 0));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TEXTURE).uvs(0, 8, 16, 16));
             e.face(Direction.EAST, f -> f.texture(TextureSlot.TEXTURE).uvs(16, 8, 15, 16).cullface(Direction.EAST));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TEXTURE).uvs(16, 8, 0, 16));
@@ -2013,7 +2013,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0f, 0f, 11f).to(16f, 8f, 12f);
-            e.rotation(r -> r.angle(0).axis(Direction.Axis.Y).origin(0, 0, 16));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 0).origin(0, 0, 16));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TEXTURE).uvs(16, 8, 0, 16));
             e.face(Direction.EAST, f -> f.texture(TextureSlot.TEXTURE).uvs(1, 8, 0, 16).cullface(Direction.EAST));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TEXTURE).uvs(0, 8, 16, 16));
@@ -2068,10 +2068,10 @@ public class ModModelProvider extends ModelProvider {
     }
 
     private void createLargePotFromStringDouble(BlockModelGenerators blockModels, Block block, String plantName) {
-        ResourceLocation plantModelLocation = this.mcLocation("block/" + plantName);
+        Identifier plantModelLocation = this.mcLocation("block/" + plantName);
 
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.modLocation("block/large_flower_pot_cross_double"))
@@ -2102,14 +2102,14 @@ public class ModModelProvider extends ModelProvider {
 
     private void createDancingSunflower(BlockModelGenerators blockModels, Block potBlock) {
         String potName = BuiltInRegistries.BLOCK.getKey(potBlock).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + potName);
+        Identifier modelLocation = this.modLocation("block/" + potName);
 
-        ResourceLocation texPot = this.modLocation("block/large_pot");
-        ResourceLocation texBack = this.mcLocation("block/sunflower_back");
-        ResourceLocation texDirt = this.mcLocation("block/dirt");
-        ResourceLocation texFront = this.modLocation("block/dancing_sunflower_front");
-        ResourceLocation texBottom = this.modLocation("block/dancing_sunflower_bottom");
-        ResourceLocation texTop = this.modLocation("block/dancing_sunflower_top");
+        Identifier texPot = this.modLocation("block/large_pot");
+        Identifier texBack = this.mcLocation("block/sunflower_back");
+        Identifier texDirt = this.mcLocation("block/dirt");
+        Identifier texFront = this.modLocation("block/dancing_sunflower_front");
+        Identifier texBottom = this.modLocation("block/dancing_sunflower_bottom");
+        Identifier texTop = this.modLocation("block/dancing_sunflower_top");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
@@ -2127,7 +2127,7 @@ public class ModModelProvider extends ModelProvider {
             builder.element(e -> {
                 e.from(0, 19, 8).to(16, 32, 8);
                 e.shade(false);
-                e.rotation(rot -> rot.origin(8, 19, 8).axis(Direction.Axis.Y).angle(angle));
+                e.rotation(rot -> rot.origin(8, 19, 8).singleAxis(Direction.Axis.Y, angle));
                 e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.TOP));
                 e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.TOP));
             });
@@ -2135,7 +2135,7 @@ public class ModModelProvider extends ModelProvider {
             builder.element(e -> {
                 e.from(0, 6, 8).to(16, 19, 8);
                 e.shade(false);
-                e.rotation(rot -> rot.origin(8, 19, 8).axis(Direction.Axis.Y).angle(angle));
+                e.rotation(rot -> rot.origin(8, 19, 8).singleAxis(Direction.Axis.Y, angle));
                 e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.BOTTOM));
                 e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.BOTTOM));
             });
@@ -2183,7 +2183,7 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
                     e.from(4.75f, 22.75f, 8.5f).to(11.75f, 30.75f, 8.5f);
                     e.shade(false);
-                    e.rotation(rot -> rot.origin(8, 32, 8).axis(Direction.Axis.X).angle(22.5f));
+                    e.rotation(rot -> rot.origin(8, 32, 8).singleAxis(Direction.Axis.X, 22.5f));
                     e.face(Direction.NORTH, f -> f.uvs(4, 12, 12, 4).rotation(Quadrant.R180).texture(TextureSlot.FRONT));
                     e.face(Direction.SOUTH, f -> f.uvs(4, 4, 12, 12).texture(TextureSlot.BACK));
                 })
@@ -2226,12 +2226,12 @@ public class ModModelProvider extends ModelProvider {
     /*-------FLORAL BASKET--------*/
     private void createFloralBasketCross(BlockModelGenerators blockModels, Block block) {
         String blockName = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/floral_basket_cross");
+        Identifier modelLocation = this.modLocation("block/floral_basket_cross");
 
-        ResourceLocation textureBasket = this.modLocation("block/floral_basket");
-        ResourceLocation textureDirt = this.mcLocation("block/dirt");
-        ResourceLocation textureHayTop = this.mcLocation("block/hay_block_top");
-        ResourceLocation texturePlant = this.modLocation("block/" + blockName);
+        Identifier textureBasket = this.modLocation("block/floral_basket");
+        Identifier textureDirt = this.mcLocation("block/dirt");
+        Identifier textureHayTop = this.mcLocation("block/hay_block_top");
+        Identifier texturePlant = this.modLocation("block/" + blockName);
 
         TextureSlot BASKET = TextureSlot.create("basket");
         TextureSlot HAY_TOP = TextureSlot.create("hay_top");
@@ -2273,7 +2273,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0, 1, 13).to(16, 8, 14);
-            e.rotation(rot -> rot.origin(0, 0, 16).axis(Direction.Axis.Y).angle(0));
+            e.rotation(rot -> rot.origin(0, 0, 16).singleAxis(Direction.Axis.Y, 0));
             e.face(Direction.NORTH, f -> f.uvs(0, 8, 16, 15).texture(BASKET));
             e.face(Direction.EAST, f -> f.uvs(16, 8, 15, 15).texture(BASKET).cullface(Direction.EAST));
             e.face(Direction.SOUTH, f -> f.uvs(16, 8, 0, 15).texture(BASKET));
@@ -2284,7 +2284,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(15, 1, 3).to(16, 8, 13);
-            e.rotation(rot -> rot.origin(16, 0, 0).axis(Direction.Axis.Y).angle(0));
+            e.rotation(rot -> rot.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
             e.face(Direction.EAST, f -> f.uvs(13, 8, 3, 15).texture(BASKET).cullface(Direction.EAST));
             e.face(Direction.WEST, f -> f.uvs(3, 8, 13, 15).texture(BASKET));
             e.face(Direction.UP, f -> f.uvs(3, 8, 13, 9).texture(BASKET).rotation(Quadrant.R90));
@@ -2303,84 +2303,84 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(7, 6, -1.4F).to(7, 18, 9.4F);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(1.6F, 6, 4).to(12.4F, 18, 4);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(12, 6, 3.6F).to(12, 18, 14.4F);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(6.6F, 6, 9).to(17.4F, 18, 9);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(4.1F, 6, 6.5F).to(14.9F, 18, 6.5F);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(9.5F, 6, 1.1F).to(9.5F, 18, 11.9F);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(4, 6, 1.6F).to(4, 18, 12.4F);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(-1.4F, 6, 7).to(9.4F, 18, 7);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(3.6F, 6, 12).to(14.4F, 18, 12);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(9, 6, 6.6F).to(9, 18, 17.4F);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(6.5F, 6, 4.1F).to(6.5F, 18, 14.9F);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
 
         builder.element(e -> {
             e.from(1.1F, 6, 9.5F).to(11.9F, 18, 9.5F);
-            e.rotation(rot -> rot.origin(8, 8, 8).axis(Direction.Axis.Y).angle(45).rescale(true));
+            e.rotation(rot -> rot.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(PLANT));
         });
@@ -2411,11 +2411,11 @@ public class ModModelProvider extends ModelProvider {
 
     private void createFloralBasket(BlockModelGenerators blockModels, Block block) {
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + name);
 
-        ResourceLocation tex0 = this.modLocation("block/floral_basket");
-        ResourceLocation tex1 = this.mcLocation("block/dirt");
-        ResourceLocation tex2 = this.mcLocation("block/hay_block_top");
+        Identifier tex0 = this.modLocation("block/floral_basket");
+        Identifier tex1 = this.mcLocation("block/dirt");
+        Identifier tex2 = this.mcLocation("block/hay_block_top");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .renderType("cutout")
@@ -2449,7 +2449,7 @@ public class ModModelProvider extends ModelProvider {
                 })
                 .element(e -> {
                     e.from(0, 1, 13).to(16, 8, 14);
-                    e.rotation(rot -> rot.origin(0, 0, 16).axis(Direction.Axis.Y));
+                    e.rotation(rot -> rot.origin(0, 0, 16).singleAxis(Direction.Axis.Y, 0));
                     e.face(Direction.NORTH, f -> f.uvs(0, 8, 16, 15).texture(TextureSlot.TEXTURE));
                     e.face(Direction.EAST, f -> f.uvs(16, 8, 15, 15).texture(TextureSlot.TEXTURE).cullface(Direction.EAST));
                     e.face(Direction.SOUTH, f -> f.uvs(16, 8, 0, 15).texture(TextureSlot.TEXTURE));
@@ -2459,7 +2459,7 @@ public class ModModelProvider extends ModelProvider {
                 })
                 .element(e -> {
                     e.from(15, 1, 3).to(16, 8, 13);
-                    e.rotation(rot -> rot.origin(16, 0, 0).axis(Direction.Axis.Y));
+                    e.rotation(rot -> rot.origin(16, 0, 0).singleAxis(Direction.Axis.Y, 0));
                     e.face(Direction.EAST, f -> f.uvs(13, 8, 3, 15).texture(TextureSlot.TEXTURE).cullface(Direction.EAST));
                     e.face(Direction.WEST, f -> f.uvs(3, 8, 13, 15).texture(TextureSlot.TEXTURE));
                     e.face(Direction.UP, f -> f.uvs(3, 8, 13, 9).texture(TextureSlot.TEXTURE).rotation(Quadrant.R90));
@@ -2528,10 +2528,10 @@ public class ModModelProvider extends ModelProvider {
 
     private void createFloralBasketVariants(BlockModelGenerators blockModels, Block block, Block plantBlock) {
         String plantName = BuiltInRegistries.BLOCK.getKey(plantBlock).getPath();
-        ResourceLocation plantModelLocation = this.mcLocation("block/" + plantName);
+        Identifier plantModelLocation = this.mcLocation("block/" + plantName);
 
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.modLocation("block/floral_basket_cross"))
@@ -2561,10 +2561,10 @@ public class ModModelProvider extends ModelProvider {
     }
 
     private void createFloralBasketFromString(BlockModelGenerators blockModels, Block block, String plantName) {
-        ResourceLocation plantModelLocation = this.mcLocation("block/" + plantName);
+        Identifier plantModelLocation = this.mcLocation("block/" + plantName);
 
         String name = BuiltInRegistries.BLOCK.getKey(block).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + name);
+        Identifier modelLocation = this.modLocation("block/" + name);
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.modLocation("block/floral_basket_cross"))
@@ -2596,13 +2596,13 @@ public class ModModelProvider extends ModelProvider {
     private void createFloralBasketEmissive(BlockModelGenerators blockModels, Block block, Block plantBlock) {
         String blockPath = BuiltInRegistries.BLOCK.getKey(block).getPath();
         String plantPath = BuiltInRegistries.BLOCK.getKey(plantBlock).getPath();
-        ResourceLocation modelLocation = this.modLocation("block/" + blockPath);
+        Identifier modelLocation = this.modLocation("block/" + blockPath);
 
-        ResourceLocation textureBasket = this.modLocation("block/floral_basket");
-        ResourceLocation textureDirt = this.mcLocation("block/dirt");
-        ResourceLocation textureHayTop = this.mcLocation("block/hay_block_top");
-        ResourceLocation texturePlant = this.mcLocation("block/" + plantPath);
-        ResourceLocation textureEmission = this.mcLocation("block/open_eyeblossom_emissive");
+        Identifier textureBasket = this.modLocation("block/floral_basket");
+        Identifier textureDirt = this.mcLocation("block/dirt");
+        Identifier textureHayTop = this.mcLocation("block/hay_block_top");
+        Identifier texturePlant = this.mcLocation("block/" + plantPath);
+        Identifier textureEmission = this.mcLocation("block/open_eyeblossom_emissive");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .renderType("minecraft:cutout")
@@ -2664,91 +2664,91 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(7, 6, -1.4f).to(7, 18, 9.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(1.6f, 6, 4).to(12.4f, 18, 4);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(12, 6, 3.6f).to(12, 18, 14.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(6.6f, 6, 9).to(17.4f, 18, 9);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(4.1f, 6, 6.5f).to(14.9f, 18, 6.5f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(9.5f, 6, 1.1f).to(9.5f, 18, 11.9f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(4, 6, 1.6f).to(4, 18, 12.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(-1.4f, 6, 7).to(9.4f, 18, 7);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(3.6f, 6, 12).to(14.4f, 18, 12);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(9f, 6, 6.6f).to(9f, 18, 17.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(6.5f, 6, 4.1f).to(6.5f, 18, 14.9f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(1.1f, 6, 9.5f).to(11.9f, 18, 9.5f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.PLANT));
         });
 
         builder.element(e -> {
             e.from(7, 6, -1.4f).to(7, 18, 9.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2757,7 +2757,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(1.6f, 6, 4).to(12.4f, 18, 4);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2766,7 +2766,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(12, 6, 3.6f).to(12, 18, 14.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2775,7 +2775,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(6.6f, 6, 9).to(17.4f, 18, 9);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2784,7 +2784,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(4.1f, 6, 6.5f).to(14.9f, 18, 6.5f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2793,7 +2793,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(9.5f, 6, 1.1f).to(9.5f, 18, 11.9f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2802,7 +2802,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(4, 6, 1.6f).to(4, 18, 12.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2811,7 +2811,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(-1.4f, 6, 7).to(9.4f, 18, 7);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2820,7 +2820,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(3.6f, 6, 12).to(14.4f, 18, 12);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2829,7 +2829,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(9f, 6, 6.6f).to(9f, 18, 17.4f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2838,7 +2838,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(6.5f, 6, 4.1f).to(6.5f, 18, 14.9f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2847,7 +2847,7 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(1.1f, 6, 9.5f).to(11.9f, 18, 9.5f);
-            e.rotation(r -> r.angle(45).axis(Direction.Axis.Y).origin(8, 8, 8).rescale(true));
+            e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
             e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));

@@ -2,8 +2,8 @@ package com.cozary.floralench.blocks.base;
 
 import com.cozary.floralench.FloralEnchantment;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.VineBlock;
 import net.minecraft.world.level.material.MapColor;
@@ -14,7 +14,7 @@ public class VineBaseBlock extends VineBlock {
         super(Properties.of()
                 .setId(ResourceKey.create(
                         Registries.BLOCK,
-                        ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
+                        Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
                 ))
                 .noCollision()
                 .randomTicks()

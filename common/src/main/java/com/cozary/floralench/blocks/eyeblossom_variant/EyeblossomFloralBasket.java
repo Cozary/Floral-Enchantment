@@ -12,16 +12,19 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
+import net.minecraft.util.TriState;
 import net.minecraft.world.Difficulty;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.InsideBlockEffectApplier;
-import net.minecraft.world.entity.animal.Bee;
+import net.minecraft.world.entity.animal.bee.Bee;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.EyeblossomBlock;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -86,23 +89,20 @@ public class EyeblossomFloralBasket extends FloralBasket {
     }
 
     private boolean tryChangingState(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if (!level.dimensionType().natural()) {
-            return false;
-        } else if (level.isBrightOutside() != this.type.open) {
+        boolean flag = ((TriState)level.environmentAttributes().getValue(EnvironmentAttributes.EYEBLOSSOM_OPEN, pos)).toBoolean(this.type.open);
+        if (flag == this.type.open) {
             return false;
         } else {
-            Type type = this.type.transform();
-            BlockState newState = type.state();
-            newState = newState.setValue(HorizontalDirectionalBlock.FACING, state.getValue(HorizontalDirectionalBlock.FACING));
-            level.setBlock(pos, newState, 3);
+            EyeblossomFloralBasket.Type eyeblossomblock$type = this.type.transform();
+            level.setBlock(pos, eyeblossomblock$type.state(), 3);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
-            type.spawnTransformParticle(level, pos, random);
-            BlockPos.betweenClosed(pos.offset(-3, -2, -3), pos.offset(3, 2, 3)).forEach((blockPos2) -> {
-                BlockState blockState2 = level.getBlockState(blockPos2);
-                if (blockState2 == state) {
-                    double d = Math.sqrt(pos.distSqr(blockPos2));
-                    int i = random.nextIntBetweenInclusive((int) (d * 5.0), (int) (d * 10.0));
-                    level.scheduleTick(blockPos2, state.getBlock(), i);
+            eyeblossomblock$type.spawnTransformParticle(level, pos, random);
+            BlockPos.betweenClosed(pos.offset(-3, -2, -3), pos.offset(3, 2, 3)).forEach((p_383198_) -> {
+                BlockState blockstate = level.getBlockState(p_383198_);
+                if (blockstate == state) {
+                    double d0 = Math.sqrt(pos.distSqr(p_383198_));
+                    int i = random.nextIntBetweenInclusive((int)(d0 * 5.0), (int)(d0 * 10.0));
+                    level.scheduleTick(p_383198_, state.getBlock(), i);
                 }
 
             });

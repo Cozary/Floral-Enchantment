@@ -7,8 +7,8 @@ import com.cozary.floralench.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -35,7 +35,7 @@ public class LargePotBase extends Block {
         super(Properties.of()
                 .setId(ResourceKey.create(
                         Registries.BLOCK,
-                        ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
+                        Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
                 ))
                 .instabreak()
                 .noOcclusion()

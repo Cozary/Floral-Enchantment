@@ -2,8 +2,8 @@ package com.cozary.floralench.init;
 
 import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.core.Registry;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 
 import java.util.function.BiConsumer;
@@ -11,7 +11,7 @@ import java.util.function.BiConsumer;
 import static com.cozary.floralench.FloralEnchantment.MOD_ID;
 
 public interface ModEquipmentAssets {
-    ResourceKey<? extends Registry<EquipmentAsset>> ROOT_ID = ResourceKey.createRegistryKey(ResourceLocation.withDefaultNamespace("equipment_asset"));
+    ResourceKey<? extends Registry<EquipmentAsset>> ROOT_ID = ResourceKey.createRegistryKey(Identifier.withDefaultNamespace("equipment_asset"));
     ResourceKey<EquipmentAsset> RED = createId("red_crown");
     ResourceKey<EquipmentAsset> YELLOW = createId("yellow_crown");
     ResourceKey<EquipmentAsset> BLUE = createId("blue_crown");
@@ -21,7 +21,7 @@ public interface ModEquipmentAssets {
     ResourceKey<EquipmentAsset> TULIP = createId("tulip_crown");
 
     static ResourceKey<EquipmentAsset> createId(String name) {
-        return ResourceKey.create(ROOT_ID, ResourceLocation.fromNamespaceAndPath(MOD_ID, name));
+        return ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(MOD_ID, name));
     }
 
     public static void bootstrap(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentClientInfo> consumer) {
@@ -35,6 +35,6 @@ public interface ModEquipmentAssets {
     }
 
     private static EquipmentClientInfo onlyHumanoid(String name) {
-        return EquipmentClientInfo.builder().addHumanoidLayers(ResourceLocation.fromNamespaceAndPath(MOD_ID, name)).build();
+        return EquipmentClientInfo.builder().addHumanoidLayers(Identifier.fromNamespaceAndPath(MOD_ID, name)).build();
     }
 }

@@ -4,8 +4,8 @@ import com.cozary.floralench.FloralEnchantment;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
@@ -27,7 +27,7 @@ public class FloralBasket extends Block {
         super(Properties.of()
                 .setId(ResourceKey.create(
                         Registries.BLOCK,
-                        ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
+                        Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, name)
                 ))
                 .instabreak()
                 .noOcclusion()

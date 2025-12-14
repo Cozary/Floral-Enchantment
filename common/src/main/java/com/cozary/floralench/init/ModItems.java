@@ -6,8 +6,8 @@ import com.cozary.floralench.blocks.base.BlockItemBase;
 import com.google.common.collect.Sets;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.Item;
@@ -114,43 +114,43 @@ public class ModItems {
             .component(DataComponents.EQUIPPABLE,
                     Equippable.builder(EquipmentSlot.HEAD)
                             .build())
-            .humanoidArmor(ModArmorMaterials.RED, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "red_crown")))));
+            .humanoidArmor(ModArmorMaterials.RED, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "red_crown")))));
     public static final RegistryObject<Item> YELLOW_CROWN = registerWithTab("yellow_crown", () -> new Item(new Item.Properties()
             .component(DataComponents.EQUIPPABLE,
                     Equippable.builder(EquipmentSlot.HEAD)
                             .setEquipSound(SoundEvents.ARMOR_EQUIP_GENERIC)
-                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "yellow_crown")))
-                            .build()).humanoidArmor(ModArmorMaterials.YELLOW, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "yellow_crown")))));
+                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "yellow_crown")))
+                            .build()).humanoidArmor(ModArmorMaterials.YELLOW, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "yellow_crown")))));
     public static final RegistryObject<Item> BLUE_CROWN = registerWithTab("blue_crown", () -> new Item(new Item.Properties()
             .component(DataComponents.EQUIPPABLE,
                     Equippable.builder(EquipmentSlot.HEAD)
                             .setEquipSound(SoundEvents.ARMOR_EQUIP_GENERIC)
-                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "blue_crown")))
-                            .build()).humanoidArmor(ModArmorMaterials.BLUE, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "blue_crown")))));
+                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "blue_crown")))
+                            .build()).humanoidArmor(ModArmorMaterials.BLUE, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "blue_crown")))));
     public static final RegistryObject<Item> WHITE_CROWN = registerWithTab("white_crown", () -> new Item(new Item.Properties()
             .component(DataComponents.EQUIPPABLE,
                     Equippable.builder(EquipmentSlot.HEAD)
                             .setEquipSound(SoundEvents.ARMOR_EQUIP_GENERIC)
-                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "white_crown")))
-                            .build()).humanoidArmor(ModArmorMaterials.WHITE, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "white_crown")))));
+                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "white_crown")))
+                            .build()).humanoidArmor(ModArmorMaterials.WHITE, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "white_crown")))));
     public static final RegistryObject<Item> PINK_CROWN = registerWithTab("pink_crown", () -> new Item(new Item.Properties()
             .component(DataComponents.EQUIPPABLE,
                     Equippable.builder(EquipmentSlot.HEAD)
                             .setEquipSound(SoundEvents.ARMOR_EQUIP_GENERIC)
-                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "pink_crown")))
-                            .build()).humanoidArmor(ModArmorMaterials.PINK, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "pink_crown")))));
+                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "pink_crown")))
+                            .build()).humanoidArmor(ModArmorMaterials.PINK, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "pink_crown")))));
     public static final RegistryObject<Item> BLACK_CROWN = registerWithTab("black_crown", () -> new Item(new Item.Properties()
             .component(DataComponents.EQUIPPABLE,
                     Equippable.builder(EquipmentSlot.HEAD)
                             .setEquipSound(SoundEvents.ARMOR_EQUIP_GENERIC)
-                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "black_crown")))
-                            .build()).humanoidArmor(ModArmorMaterials.BLACK, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "black_crown")))));
+                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "black_crown")))
+                            .build()).humanoidArmor(ModArmorMaterials.BLACK, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "black_crown")))));
     public static final RegistryObject<Item> TULIPS_CROWN = registerWithTab("tulips_crown", () -> new Item(new Item.Properties()
             .component(DataComponents.EQUIPPABLE,
                     Equippable.builder(EquipmentSlot.HEAD)
                             .setEquipSound(SoundEvents.ARMOR_EQUIP_GENERIC)
-                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "tulips_crown")))
-                            .build()).humanoidArmor(ModArmorMaterials.TULIP, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "tulips_crown")))));
+                            .setAsset(ResourceKey.create(EquipmentAssets.ROOT_ID, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "tulips_crown")))
+                            .build()).humanoidArmor(ModArmorMaterials.TULIP, ArmorType.HELMET).setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FloralEnchantment.MOD_ID, "tulips_crown")))));
     //Mossy Stone Brick
     public static final RegistryObject<Item> DANDELION_MOSSY_STONE_BRICK_ITEM = registerWithTab("dandelion_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.DANDELION_MOSSY_STONE_BRICK.get(), "dandelion_mossy_stone_brick"));
     public static final RegistryObject<Item> POPPY_MOSSY_STONE_BRICK_ITEM = registerWithTab("poppy_mossy_stone_brick", () -> new BlockItemBase(ModBlocks.POPPY_MOSSY_STONE_BRICK.get(), "poppy_mossy_stone_brick"));

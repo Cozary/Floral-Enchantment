@@ -27,7 +27,7 @@ public class EquipmentInfoProvider implements DataProvider {
         Map<ResourceKey<EquipmentAsset>, EquipmentClientInfo> map = new HashMap<>();
         ModEquipmentAssets.bootstrap((key, info) -> {
             if (map.putIfAbsent(key, info) != null) {
-                throw new IllegalStateException("Duplicate equipment model for id: " + key.location().toString());
+                throw new IllegalStateException("Duplicate equipment model for id: " + key.identifier().toString());
             }
         });
         return DataProvider.saveAll(output, EquipmentClientInfo.CODEC, this.path::json, map);
