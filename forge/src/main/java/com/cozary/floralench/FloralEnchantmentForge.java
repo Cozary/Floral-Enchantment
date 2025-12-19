@@ -7,7 +7,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import static com.cozary.floralench.FloralEnchantment.MOD_ID;
 
 @Mod(MOD_ID)
-@Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class FloralEnchantmentForge {
 
     public FloralEnchantmentForge(FMLJavaModLoadingContext context) {
