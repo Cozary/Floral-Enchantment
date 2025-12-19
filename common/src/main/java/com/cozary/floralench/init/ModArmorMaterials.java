@@ -4,6 +4,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.equipment.ArmorMaterial;
@@ -26,7 +27,7 @@ public final class ModArmorMaterials {
             SoundEvents.ARMOR_EQUIP_GENERIC,
             0.0F,
             0.0F,
-            null,
+            ItemTags.REPAIRS_LEATHER_ARMOR,
             ModEquipmentAssets.RED
     );
 
@@ -41,7 +42,7 @@ public final class ModArmorMaterials {
             SoundEvents.ARMOR_EQUIP_GENERIC,
             0.0F,
             0.0F,
-            null,
+            ItemTags.REPAIRS_LEATHER_ARMOR,
             ModEquipmentAssets.YELLOW
     );
 
@@ -56,7 +57,7 @@ public final class ModArmorMaterials {
             SoundEvents.ARMOR_EQUIP_GENERIC,
             0.0F,
             0.0F,
-            null,
+            ItemTags.REPAIRS_LEATHER_ARMOR,
             ModEquipmentAssets.BLUE
     );
 
@@ -71,7 +72,7 @@ public final class ModArmorMaterials {
             SoundEvents.ARMOR_EQUIP_GENERIC,
             0.0F,
             0.0F,
-            null,
+            ItemTags.REPAIRS_LEATHER_ARMOR,
             ModEquipmentAssets.WHITE
     );
 
@@ -86,7 +87,7 @@ public final class ModArmorMaterials {
             SoundEvents.ARMOR_EQUIP_GENERIC,
             0.0F,
             0.0F,
-            null,
+            ItemTags.REPAIRS_LEATHER_ARMOR,
             ModEquipmentAssets.PINK
     );
 
@@ -101,7 +102,7 @@ public final class ModArmorMaterials {
             SoundEvents.ARMOR_EQUIP_GENERIC,
             0.0F,
             0.0F,
-            null,
+            ItemTags.REPAIRS_LEATHER_ARMOR,
             ModEquipmentAssets.BLACK
     );
 
@@ -116,7 +117,7 @@ public final class ModArmorMaterials {
             SoundEvents.ARMOR_EQUIP_GENERIC,
             0.0F,
             0.0F,
-            null,
+            ItemTags.REPAIRS_LEATHER_ARMOR,
             ModEquipmentAssets.TULIP
     );
 
