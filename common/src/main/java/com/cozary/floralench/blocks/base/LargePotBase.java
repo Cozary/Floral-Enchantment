@@ -1,27 +1,17 @@
 package com.cozary.floralench.blocks.base;
 
 import com.cozary.floralench.FloralEnchantment;
-import com.cozary.floralench.blocks.pots.*;
-import com.cozary.floralench.blocks.wither_variant.LargeWitherRosePot;
-import com.cozary.floralench.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -41,7 +31,6 @@ public class LargePotBase extends Block {
                 .noOcclusion()
         );
     }
-
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
@@ -75,121 +64,4 @@ public class LargePotBase extends Block {
     public RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
     }
-
-    @Override
-    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
-        ItemStack itemstack = player.getMainHandItem();
-        Item item = itemstack.getItem();
-        Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide()) {
-            if (item == Items.ALLIUM) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_ALLIUM_POT.get().defaultBlockState().setValue(LargeAlliumPot.FACING, direction1));
-            } else if (item == Items.AZURE_BLUET) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_AZURE_BLUET_POT.get().defaultBlockState().setValue(LargeAzureBluetPot.FACING, direction1));
-            } else if (item == Items.BLUE_ORCHID) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_BLUE_ORCHID_POT.get().defaultBlockState().setValue(LargeBlueOrchidPot.FACING, direction1));
-            } else if (item == Items.CORNFLOWER) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_CORNFLOWER_POT.get().defaultBlockState().setValue(LargeCornflowerPot.FACING, direction1));
-            } else if (item == Items.DANDELION) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_DANDELION_POT.get().defaultBlockState().setValue(LargeDandelionPot.FACING, direction1));
-            } else if (item == Items.LILAC) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_LILAC_POT.get().defaultBlockState().setValue(LargeLilacPot.FACING, direction1));
-            } else if (item == Items.LILY_OF_THE_VALLEY) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_LILY_OF_THE_VALLEY_POT.get().defaultBlockState().setValue(LargeLilyOfTheValleyPot.FACING, direction1));
-            } else if (item == Items.ORANGE_TULIP) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_ORANGE_TULIP_POT.get().defaultBlockState().setValue(LargeOrangeTulipPot.FACING, direction1));
-            } else if (item == Items.OXEYE_DAISY) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_OXEYE_DAISY_POT.get().defaultBlockState().setValue(LargeOxeyeDaisyPot.FACING, direction1));
-            } else if (item == Items.PEONY) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_PEONY_POT.get().defaultBlockState().setValue(LargePeonyPot.FACING, direction1));
-            } else if (item == Items.PINK_TULIP) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_PINK_TULIP_POT.get().defaultBlockState().setValue(LargePinkTulipPot.FACING, direction1));
-            } else if (item == Items.POPPY) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_POPPY_POT.get().defaultBlockState().setValue(LargePoppyPot.FACING, direction1));
-            } else if (item == Items.RED_TULIP) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_RED_TULIP_POT.get().defaultBlockState().setValue(LargeRedTulipPot.FACING, direction1));
-            } else if (item == Items.ROSE_BUSH) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_ROSE_BUSH_POT.get().defaultBlockState().setValue(LargeRoseBushPot.FACING, direction1));
-            } else if (item == Items.SUNFLOWER) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_SUNFLOWER_POT.get().defaultBlockState().setValue(LargeSunflowerPot.FACING, direction1));
-            } else if (item == Items.WHITE_TULIP) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_WHITE_TULIP_POT.get().defaultBlockState().setValue(LargeWhiteTulipPot.FACING, direction1));
-            } else if (item == Items.WITHER_ROSE) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_WITHER_ROSE_POT.get().defaultBlockState().setValue(LargeWitherRosePot.FACING, direction1));
-            } else if (item == Items.TORCHFLOWER) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_TORCHFLOWER_POT.get().defaultBlockState().setValue(LargeWitherRosePot.FACING, direction1));
-            } else if (item == Items.PITCHER_PLANT) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_PITCHER_PLANT_POT.get().defaultBlockState().setValue(LargeWitherRosePot.FACING, direction1));
-            } else if (item == Items.FLOWERING_AZALEA) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_AZALEA_POT.get().defaultBlockState().setValue(LargeWitherRosePot.FACING, direction1));
-            } else if (item == Items.SPORE_BLOSSOM) {
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
-                }
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_SPORE_BLOSSOM_POT.get().defaultBlockState().setValue(LargeWitherRosePot.FACING, direction1));
-            }
-        }
-        return InteractionResult.CONSUME;
-    }
-
 }

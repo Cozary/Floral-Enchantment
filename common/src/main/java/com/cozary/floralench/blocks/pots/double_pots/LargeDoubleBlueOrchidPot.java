@@ -1,39 +1,11 @@
 package com.cozary.floralench.blocks.pots.double_pots;
 
-import com.cozary.floralench.blocks.base.LargePotBase;
-import com.cozary.floralench.blocks.pots.special.LargePot;
+import com.cozary.floralench.blocks.pots.LargePottedBlock;
 import com.cozary.floralench.init.ModBlocks;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.BlockHitResult;
 
-public class LargeDoubleBlueOrchidPot extends LargePotBase {
-
+public class LargeDoubleBlueOrchidPot extends LargePottedBlock {
     public LargeDoubleBlueOrchidPot() {
-        super("large_double_blue_orchid_pot");
-    }
-
-    @Override
-    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
-        ItemStack itemstack = player.getMainHandItem();
-        Item item = itemstack.getItem();
-        ItemStack item1 = Items.BLUE_ORCHID.getDefaultInstance();
-        Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide()) {
-            if (item == Items.AIR) {
-
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_BLUE_ORCHID_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));
-                player.setItemInHand(InteractionHand.MAIN_HAND, item1);
-            }
-        }
-        return InteractionResult.CONSUME;
+        super("large_double_blue_orchid_pot", () -> Items.BLUE_ORCHID, ModBlocks.LARGE_BLUE_ORCHID_POT);
     }
 }

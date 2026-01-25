@@ -31,8 +31,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.EyeblossomBlock;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
@@ -142,12 +140,14 @@ public class LargeEyeblossomPot extends LargePotBase {
             if (item == Items.AIR) {
                 worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));
                 player.setItemInHand(InteractionHand.MAIN_HAND, item1);
+                return InteractionResult.CONSUME;
             }
             if (item == (this.type.open ? Items.OPEN_EYEBLOSSOM : Items.CLOSED_EYEBLOSSOM)) {
                 worldIn.setBlockAndUpdate(pos, (this.type.open ? ModBlocks.LARGE_DOUBLE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT.get()).defaultBlockState().setValue(LargePot.FACING, direction1));
                 if (!player.getAbilities().instabuild) {
                     itemstack.shrink(1);
                 }
+                return InteractionResult.CONSUME;
             }
         }
         return InteractionResult.CONSUME;

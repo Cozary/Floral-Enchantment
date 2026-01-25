@@ -31,7 +31,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.EyeblossomBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
@@ -48,13 +47,12 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
     private final Type type;
 
     public EyeblossomVineBushBlock(Type type) {
-        super("eyeblossom_bush");
+        super("eyeblossom_bush", () -> type.open ? Items.OPEN_EYEBLOSSOM : Items.CLOSED_EYEBLOSSOM, () -> type.open ? ModItems.OPEN_EYEBLOSSOM_VINE_ITEM.get() : ModItems.CLOSED_EYEBLOSSOM_VINE_ITEM.get());
         this.type = type;
     }
 
     public EyeblossomVineBushBlock(Boolean open) {
-        super("eyeblossom_bush");
-        this.type = Type.fromBoolean(open);
+        this(Type.fromBoolean(open));
     }
 
     public MapCodec<? extends EyeblossomVineBushBlock> codec_() {
@@ -136,31 +134,6 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
     @Override
     public ItemStack getCloneItemStack(LevelReader worldIn, BlockPos pos, BlockState state) {
         return this.type.open ? ModItems.OPEN_EYEBLOSSOM_BUSH_ITEM.get().getDefaultInstance() : ModItems.CLOSED_EYEBLOSSOM_BUSH_ITEM.get().getDefaultInstance();
-    }
-
-    //Common
-
-    @Override
-    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
-        int i = state.getValue(AGE);
-        boolean flag = i == 3;
-        if (!flag && player.getMainHandItem().getItem() == Items.BONE_MEAL) {
-            return InteractionResult.PASS;
-        } else if (i == 2) {
-            int j = 1 + worldIn.random.nextInt(4);
-            popResource(worldIn, pos, new ItemStack(this.type.open ? Items.OPEN_EYEBLOSSOM : Items.CLOSED_EYEBLOSSOM, j));
-            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
-            worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
-            return InteractionResult.SUCCESS.withoutItem();
-        } else if (i == 3) {
-            int j = 1 + worldIn.random.nextInt(3);
-            popResource(worldIn, pos, new ItemStack(this.type.open ? ModItems.OPEN_EYEBLOSSOM_VINE_ITEM.get() : ModItems.CLOSED_EYEBLOSSOM_VINE_ITEM.get(), j));
-            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
-            worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(2)), 2);
-            return InteractionResult.SUCCESS.withoutItem();
-        } else {
-            return super.useWithoutItem(state, worldIn, pos, player, hit);
-        }
     }
 
     public static enum Type {

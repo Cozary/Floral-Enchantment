@@ -1,49 +1,26 @@
 package com.cozary.floralench.blocks.pots.special;
 
-import com.cozary.floralench.blocks.base.LargePotBase;
+import com.cozary.floralench.blocks.pots.LargePottedBlock;
 import com.cozary.floralench.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.BlockHitResult;
 
 import java.util.Optional;
 
 import static net.minecraft.world.level.block.JukeboxBlock.HAS_RECORD;
 
 
-public class DancingSunflower extends LargePotBase {
+public class DancingSunflower extends LargePottedBlock {
     Optional<BlockPos> jukeboxPosition;
     BlockState jukebox;
 
     public DancingSunflower() {
-        super("dancing_sunflower");
-    }
-
-    @Override
-    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
-        ItemStack itemstack = player.getMainHandItem();
-        Item item = itemstack.getItem();
-        ItemStack item1 = Items.SUNFLOWER.getDefaultInstance();
-        Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide()) {
-            if (item == Items.AIR) {
-
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));
-                player.setItemInHand(InteractionHand.MAIN_HAND, item1);
-            }
-        }
-        return InteractionResult.CONSUME;
+        super("dancing_sunflower", () -> Items.SUNFLOWER, ModBlocks.LARGE_POT);
     }
 
     @Override
