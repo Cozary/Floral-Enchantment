@@ -1,4 +1,4 @@
-// 1.21.11	2026-01-16T17:55:52.417369	Model Definitions - floralench
+// 1.21.11	2026-02-24T17:53:22.0583529	Model Definitions - floralench
 5716fdbd3cc42f53787f682bfa90f88185c0942c assets/floralench/blockstates/allium_basket.json
 a5284f2c57d5061dabc5e2542ddc0f405cb2d24b assets/floralench/blockstates/allium_bush.json
 d76fde3f067e3988eb6f260a3e68d74712aa1390 assets/floralench/blockstates/allium_mossy_cobblestone.json
@@ -645,7 +645,7 @@ b471a34e10cdb66a0785ed6ef894cb795feb4dd3 assets/floralench/models/item/lilac_bus
 9de959a3151a33846ecdce1535241cda717e2a86 assets/floralench/models/item/lily_of_the_valley_bush.json
 7250957baa9f205ca4ccc3fa7cf52d6d220b6d83 assets/floralench/models/item/lily_of_the_valley_vine.json
 449fe23d424d4ecc3f4cdb15fed598fafa49ca0e assets/floralench/models/item/open_eyeblossom_bush.json
-3bde297fd09bed271b9ec9d4f7d45b971e391e4a assets/floralench/models/item/open_eyeblossom_vine.json
+fb6d093c0efa98b05c2ac7ae1a7a31d098be0983 assets/floralench/models/item/open_eyeblossom_vine.json
 5e1c7f50540c4eb15c1ce8be415f6f86a42df34f assets/floralench/models/item/orange_tulip_bush.json
 39421daa2cd76768a4ff274cab93ec65c09cf8f0 assets/floralench/models/item/orange_tulip_vine.json
 c98fc2a38a070df5d09676dfcec6b0307182ce8e assets/floralench/models/item/oxeye_daisy_bush.json

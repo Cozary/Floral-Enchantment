@@ -400,8 +400,15 @@ public class ModModelProvider extends ModelProvider {
                                 BlockModelGenerators.variant(variant.with(VariantMutator.X_ROT.withValue(Quadrant.R270))))
         );
 
-        Identifier resourcelocation = blockModels.createFlatItemModelWithBlockTexture(item, block);
-        blockModels.registerSimpleItemModel(block, resourcelocation);
+        Identifier itemModelLocation = ModelLocationUtils.getModelLocation(item);
+        ModelTemplates.TWO_LAYERED_ITEM.create(
+                itemModelLocation,
+                new TextureMapping()
+                        .put(TextureSlot.LAYER0, blockTexture)
+                        .put(TextureSlot.LAYER1, emissiveTexture),
+                blockModels.modelOutput
+        );
+        blockModels.registerSimpleItemModel(block, itemModelLocation);
     }
 
     /*-------MOSSY COBBLESTONE--------*/
