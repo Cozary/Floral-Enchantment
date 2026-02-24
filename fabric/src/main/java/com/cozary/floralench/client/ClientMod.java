@@ -36,6 +36,7 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.SPORE_BLOSSOM_MOSSY_STONE_BRICK.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get(), ChunkSectionLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.CACTUS_FLOWER_MOSSY_STONE_BRICK.get(), ChunkSectionLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.DANDELION_MOSSY_COBBLESTONE.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.ALLIUM_MOSSY_COBBLESTONE.get(), ChunkSectionLayer.CUTOUT);
@@ -63,6 +64,7 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.SPORE_BLOSSOM_MOSSY_COBBLESTONE.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get(), ChunkSectionLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.CACTUS_FLOWER_MOSSY_COBBLESTONE.get(), ChunkSectionLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.DANDELION_VINE.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.ALLIUM_VINE.get(), ChunkSectionLayer.CUTOUT);
@@ -90,6 +92,8 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.SPORE_BLOSSOM_VINE.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.OPEN_EYEBLOSSOM_VINE.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CLOSED_EYEBLOSSOM_VINE.get(), ChunkSectionLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.CACTUS_FLOWER_VINE.get(), ChunkSectionLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.WILDFLOWERS_VINE.get(), ChunkSectionLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.DANDELION_BUSH.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.POPPY_BUSH.get(), ChunkSectionLayer.CUTOUT);
@@ -140,6 +144,7 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.LARGE_SPORE_BLOSSOM_POT.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get(), ChunkSectionLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.LARGE_CACTUS_FLOWER_POT.get(), ChunkSectionLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.LARGE_DOUBLE_DANDELION_POT.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.LARGE_DOUBLE_POPPY_POT.get(), ChunkSectionLayer.CUTOUT);
@@ -160,6 +165,7 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.LARGE_DOUBLE_SPORE_BLOSSOM_POT.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.LARGE_DOUBLE_OPEN_EYEBLOSSOM_POT.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT.get(), ChunkSectionLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.LARGE_DOUBLE_CACTUS_FLOWER_POT.get(), ChunkSectionLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(ModBlocks.DANCING_SUNFLOWER.get(), ChunkSectionLayer.CUTOUT);
 
@@ -183,6 +189,7 @@ public class ClientMod implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(ModBlocks.SPORE_BLOSSOM_BASKET.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.OPEN_EYEBLOSSOM_BASKET.get(), ChunkSectionLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(ModBlocks.CLOSED_EYEBLOSSOM_BASKET.get(), ChunkSectionLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.CACTUS_FLOWER_BASKET.get(), ChunkSectionLayer.CUTOUT);
 
 
     }
