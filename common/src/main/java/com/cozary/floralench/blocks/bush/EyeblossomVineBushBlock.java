@@ -97,7 +97,7 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
             return false;
         } else {
             EyeblossomVineBushBlock.Type eyeblossomblock$type = this.type.transform();
-            level.setBlock(pos, eyeblossomblock$type.state(), 3);
+            level.setBlock(pos, eyeblossomblock$type.state().setValue(AGE, state.getValue(AGE)), 3);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
             eyeblossomblock$type.spawnTransformParticle(level, pos, random);
             BlockPos.betweenClosed(pos.offset(-3, -2, -3), pos.offset(3, 2, 3)).forEach((p_383198_) -> {

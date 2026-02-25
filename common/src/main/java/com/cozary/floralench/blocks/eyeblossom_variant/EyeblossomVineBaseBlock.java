@@ -25,6 +25,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.VineBlock;
 import net.minecraft.world.level.block.EyeblossomBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -101,7 +102,12 @@ public class EyeblossomVineBaseBlock extends VineBaseBlock {
             return false;
         } else {
             EyeblossomVineBaseBlock.Type eyeblossomblock$type = this.type.transform();
-            level.setBlock(pos, eyeblossomblock$type.state(), 3);
+            level.setBlock(pos, eyeblossomblock$type.state()
+                    .setValue(VineBlock.UP, state.getValue(VineBlock.UP))
+                    .setValue(VineBlock.NORTH, state.getValue(VineBlock.NORTH))
+                    .setValue(VineBlock.EAST, state.getValue(VineBlock.EAST))
+                    .setValue(VineBlock.SOUTH, state.getValue(VineBlock.SOUTH))
+                    .setValue(VineBlock.WEST, state.getValue(VineBlock.WEST)), 3);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
             eyeblossomblock$type.spawnTransformParticle(level, pos, random);
             BlockPos.betweenClosed(pos.offset(-3, -2, -3), pos.offset(3, 2, 3)).forEach((p_383198_) -> {
