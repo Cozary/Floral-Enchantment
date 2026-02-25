@@ -120,9 +120,9 @@ publishMods {
     changelog = project(":common").file("CHANGELOG.md").text
     type = STABLE
     modLoaders.add("forge")
-    displayName = "${mod_name}-forge-${minecraft_version}-${version_neoforge}"
+    displayName = "${mod_name}-forge-${minecraft_version}-${version_forge}"
     dryRun = dry_run.toBoolean()
-    version = version_neoforge
+    version = version_forge
 
     curseforge {
         accessToken = providers.environmentVariable("CURSEFORGE_API_KEY")
