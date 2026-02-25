@@ -55,7 +55,7 @@ public class WitherVineBushBlock extends VineBushBlock {
     }
 
     @Override
-    public ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
+    protected ItemStack getCloneItemStack(LevelReader p_304655_, BlockPos p_57257_, BlockState p_57258_, boolean p_388022_) {
         return new ItemStack(ModItems.WITHER_ROSE_BUSH_ITEM.get());
     }
 }

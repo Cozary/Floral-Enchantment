@@ -100,5 +100,8 @@ public abstract class VineBushBlock extends SweetBerryBushBlock {
         }
     }
 
-    public abstract ItemStack getCloneItemStack(LevelReader worldIn, BlockPos pos, BlockState state);
+    @Override
+    protected ItemStack getCloneItemStack(LevelReader p_304655_, BlockPos p_57257_, BlockState p_57258_, boolean p_388022_) {
+        return new ItemStack(this);
+    }
 }
