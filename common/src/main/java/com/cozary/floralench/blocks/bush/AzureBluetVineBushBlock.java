@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class AzureBluetVineBushBlock extends VineBushBlock {
 
     public AzureBluetVineBushBlock() {
-        super("azure_bluet_bush", () -> Items.AZURE_BLUET, ModItems.AZURE_BLUET_VINE_ITEM);
+        super("azure_bluet_bush", () -> Items.AZURE_BLUET, () -> ModItems.AZURE_BLUET_VINE_ITEM.get());
     }
 }
+

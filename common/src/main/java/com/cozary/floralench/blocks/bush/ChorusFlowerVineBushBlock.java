@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class ChorusFlowerVineBushBlock extends VineBushBlock {
 
     public ChorusFlowerVineBushBlock() {
-        super("chorus_flower_bush", () -> Items.CHORUS_FLOWER, ModItems.CHORUS_FLOWER_VINE_ITEM);
+        super("chorus_flower_bush", () -> Items.CHORUS_FLOWER, () -> ModItems.CHORUS_FLOWER_VINE_ITEM.get());
     }
 }
+

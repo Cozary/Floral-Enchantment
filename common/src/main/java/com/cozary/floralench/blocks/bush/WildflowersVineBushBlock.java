@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class WildflowersVineBushBlock extends VineBushBlock {
 
     public WildflowersVineBushBlock() {
-        super("wildflowers_bush", () -> Items.WILDFLOWERS, ModItems.WILDFLOWERS_VINE_ITEM);
+        super("wildflowers_bush", () -> Items.WILDFLOWERS, () -> ModItems.WILDFLOWERS_VINE_ITEM.get());
     }
 }
+

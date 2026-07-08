@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class BlueOrchidVineBushBlock extends VineBushBlock {
 
     public BlueOrchidVineBushBlock() {
-        super("blue_orchid_bush", () -> Items.BLUE_ORCHID, ModItems.BLUE_ORCHID_VINE_ITEM);
+        super("blue_orchid_bush", () -> Items.BLUE_ORCHID, () -> ModItems.BLUE_ORCHID_VINE_ITEM.get());
     }
 }
+

@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class LilacVineBushBlock extends VineBushBlock {
 
     public LilacVineBushBlock() {
-        super("lilac_bush", () -> Items.LILAC, ModItems.LILAC_VINE_ITEM);
+        super("lilac_bush", () -> Items.LILAC, () -> ModItems.LILAC_VINE_ITEM.get());
     }
 }
+

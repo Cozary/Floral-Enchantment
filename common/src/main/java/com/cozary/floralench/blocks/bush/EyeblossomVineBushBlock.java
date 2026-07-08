@@ -181,3 +181,4 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
     }
 
 }
+

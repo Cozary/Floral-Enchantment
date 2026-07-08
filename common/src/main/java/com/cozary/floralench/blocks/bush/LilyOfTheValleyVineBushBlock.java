@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class LilyOfTheValleyVineBushBlock extends VineBushBlock {
 
     public LilyOfTheValleyVineBushBlock() {
-        super("lily_of_the_valley_bush", () -> Items.LILY_OF_THE_VALLEY, ModItems.LILY_OF_THE_VALLEY_VINE_ITEM);
+        super("lily_of_the_valley_bush", () -> Items.LILY_OF_THE_VALLEY, () -> ModItems.LILY_OF_THE_VALLEY_VINE_ITEM.get());
     }
 }
+

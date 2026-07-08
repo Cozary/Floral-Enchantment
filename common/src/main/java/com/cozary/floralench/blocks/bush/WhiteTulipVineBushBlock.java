@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class WhiteTulipVineBushBlock extends VineBushBlock {
 
     public WhiteTulipVineBushBlock() {
-        super("white_tulip_bush", () -> Items.WHITE_TULIP, ModItems.WHITE_TULIP_VINE_ITEM);
+        super("white_tulip_bush", () -> Items.WHITE_TULIP, () -> ModItems.WHITE_TULIP_VINE_ITEM.get());
     }
 }
+

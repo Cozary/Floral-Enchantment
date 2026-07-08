@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class PinkPetalsVineBushBlock extends VineBushBlock {
 
     public PinkPetalsVineBushBlock() {
-        super("pink_petals_bush", () -> Items.PINK_PETALS, ModItems.PINK_PETALS_VINE_ITEM);
+        super("pink_petals_bush", () -> Items.PINK_PETALS, () -> ModItems.PINK_PETALS_VINE_ITEM.get());
     }
 }
+

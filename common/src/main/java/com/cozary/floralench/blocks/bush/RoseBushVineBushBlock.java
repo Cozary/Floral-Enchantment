@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class RoseBushVineBushBlock extends VineBushBlock {
 
     public RoseBushVineBushBlock() {
-        super("rose_bush_bush", () -> Items.ROSE_BUSH, ModItems.ROSE_BUSH_VINE_ITEM);
+        super("rose_bush_bush", () -> Items.ROSE_BUSH, () -> ModItems.ROSE_BUSH_VINE_ITEM.get());
     }
 }
+

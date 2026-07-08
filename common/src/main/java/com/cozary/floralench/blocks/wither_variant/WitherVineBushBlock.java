@@ -25,7 +25,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class WitherVineBushBlock extends VineBushBlock {
 
     public WitherVineBushBlock() {
-        super("wither_rose_bush", () -> Items.WITHER_ROSE, ModItems.WITHER_ROSE_VINE_ITEM);
+        super("wither_rose_bush", () -> Items.WITHER_ROSE, () -> ModItems.WITHER_ROSE_VINE_ITEM.get());
     }
 
     @Override
@@ -59,3 +59,4 @@ public class WitherVineBushBlock extends VineBushBlock {
         return new ItemStack(ModItems.WITHER_ROSE_BUSH_ITEM.get());
     }
 }
+

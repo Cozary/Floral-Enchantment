@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class RedTulipVineBushBlock extends VineBushBlock {
 
     public RedTulipVineBushBlock() {
-        super("red_tulip_bush", () -> Items.RED_TULIP, ModItems.RED_TULIP_VINE_ITEM);
+        super("red_tulip_bush", () -> Items.RED_TULIP, () -> ModItems.RED_TULIP_VINE_ITEM.get());
     }
 }
+

@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class DandelionVineBushBlock extends VineBushBlock {
 
     public DandelionVineBushBlock() {
-        super("dandelion_bush", () -> Items.DANDELION, ModItems.DANDELION_VINE_ITEM);
+        super("dandelion_bush", () -> Items.DANDELION, () -> ModItems.DANDELION_VINE_ITEM.get());
     }
 }
+

@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class TorchflowerVineBushBlock extends VineBushBlock {
 
     public TorchflowerVineBushBlock() {
-        super("torchflower_bush", () -> Items.TORCHFLOWER, ModItems.TORCHFLOWER_VINE_ITEM);
+        super("torchflower_bush", () -> Items.TORCHFLOWER, () -> ModItems.TORCHFLOWER_VINE_ITEM.get());
     }
 }
+

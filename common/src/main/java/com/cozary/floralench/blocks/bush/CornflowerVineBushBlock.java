@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class CornflowerVineBushBlock extends VineBushBlock {
 
     public CornflowerVineBushBlock() {
-        super("cornflower_bush", () -> Items.CORNFLOWER, ModItems.CORNFLOWER_VINE_ITEM);
+        super("cornflower_bush", () -> Items.CORNFLOWER, () -> ModItems.CORNFLOWER_VINE_ITEM.get());
     }
 }
+

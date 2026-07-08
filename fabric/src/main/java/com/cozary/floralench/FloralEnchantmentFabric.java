@@ -20,6 +20,7 @@ public class FloralEnchantmentFabric implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        FloralEnchantment.init();
 
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, FabricItemGroup.builder()
                 .title(Component.translatable("itemGroup.floralench"))
@@ -28,7 +29,6 @@ public class FloralEnchantmentFabric implements ModInitializer {
                 .build()
         );
 
-        FloralEnchantment.init();
     }
 
 }

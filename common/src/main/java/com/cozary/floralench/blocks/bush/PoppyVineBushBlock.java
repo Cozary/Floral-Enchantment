@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class PoppyVineBushBlock extends VineBushBlock {
 
     public PoppyVineBushBlock() {
-        super("poppy_bush", () -> Items.POPPY, ModItems.POPPY_VINE_ITEM);
+        super("poppy_bush", () -> Items.POPPY, () -> ModItems.POPPY_VINE_ITEM.get());
     }
 }
+

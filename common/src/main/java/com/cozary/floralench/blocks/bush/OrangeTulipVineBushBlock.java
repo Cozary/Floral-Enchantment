@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class OrangeTulipVineBushBlock extends VineBushBlock {
 
     public OrangeTulipVineBushBlock() {
-        super("orange_tulip_bush", () -> Items.ORANGE_TULIP, ModItems.ORANGE_TULIP_VINE_ITEM);
+        super("orange_tulip_bush", () -> Items.ORANGE_TULIP, () -> ModItems.ORANGE_TULIP_VINE_ITEM.get());
     }
 }
+

@@ -105,3 +105,4 @@ public abstract class VineBushBlock extends SweetBerryBushBlock {
         return new ItemStack(this);
     }
 }
+

@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class PeonyVineBushBlock extends VineBushBlock {
 
     public PeonyVineBushBlock() {
-        super("peony_bush", () -> Items.PEONY, ModItems.PEONY_VINE_ITEM);
+        super("peony_bush", () -> Items.PEONY, () -> ModItems.PEONY_VINE_ITEM.get());
     }
 }
+

@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class AzaleaVineBushBlock extends VineBushBlock {
 
     public AzaleaVineBushBlock() {
-        super("azalea_bush", () -> Items.FLOWERING_AZALEA, ModItems.AZALEA_VINE_ITEM);
+        super("azalea_bush", () -> Items.FLOWERING_AZALEA, () -> ModItems.AZALEA_VINE_ITEM.get());
     }
 }
+

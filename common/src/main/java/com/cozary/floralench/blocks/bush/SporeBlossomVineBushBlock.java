@@ -7,6 +7,7 @@ import net.minecraft.world.item.Items;
 public class SporeBlossomVineBushBlock extends VineBushBlock {
 
     public SporeBlossomVineBushBlock() {
-        super("spore_blossom_bush", () -> Items.SPORE_BLOSSOM, ModItems.SPORE_BLOSSOM_VINE_ITEM);
+        super("spore_blossom_bush", () -> Items.SPORE_BLOSSOM, () -> ModItems.SPORE_BLOSSOM_VINE_ITEM.get());
     }
 }
+
