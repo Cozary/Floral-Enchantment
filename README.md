@@ -1,5 +1,7 @@
 # Floral Enchantment
 
+### **[Check out the wiki!](https://cozarycore.com/wiki/floral-enchantment/)**
+
 Looking for a simple mod to decorate? This mod adds flower bushes with which you can obtain the vines of each flower.
 Also like mossy cobblestone, you can get mossy cobblestone from each flower to decorate! As well as mossy stone bricks.
 It also includes pots and long pots to place the flowers. As well as floral baskets and flower crowns.
