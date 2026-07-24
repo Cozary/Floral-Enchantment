@@ -3,7 +3,7 @@ package com.cozary.floralench;
 import com.cozary.floralench.init.ModBlocks;
 import com.cozary.floralench.init.ModItems;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -22,7 +22,7 @@ public class FloralEnchantmentFabric implements ModInitializer {
     public void onInitialize() {
         FloralEnchantment.init();
 
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, FabricItemGroup.builder()
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ITEM_GROUP, FabricCreativeModeTab.builder()
                 .title(Component.translatable("itemGroup.floralench"))
                 .icon(() -> new ItemStack(ModBlocks.ALLIUM_MOSSY_STONE_BRICK.get()))
                 .displayItems((parameters, output) -> ModItems.CREATIVE_TAB_ITEMS.forEach((item) -> output.accept(item.get())))

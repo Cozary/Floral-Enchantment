@@ -18,9 +18,7 @@
     "main": [
       "com.cozary.floralench.FloralEnchantmentFabric"
     ],
-    "client": [
-      "com.cozary.floralench.client.ClientMod"
-    ]
+    "client": []
   },
   "mixins": [
     "${mod_id}.mixins.json",
