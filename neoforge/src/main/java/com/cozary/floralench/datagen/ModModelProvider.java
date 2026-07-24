@@ -7,14 +7,14 @@ import com.mojang.math.Quadrant;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.MultiPartGenerator;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.*;
-import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.renderer.block.dispatch.VariantMutator;
-import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.client.resources.model.UnbakedModel;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -2394,7 +2394,7 @@ public class ModModelProvider extends ModelProvider {
                         .put(TextureSlot.PARTICLE, new Material(textureHayTop)),
                 blockModels.modelOutput
         );
-        
+
         MultiVariant variant = plainVariant(modelLocation);
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)

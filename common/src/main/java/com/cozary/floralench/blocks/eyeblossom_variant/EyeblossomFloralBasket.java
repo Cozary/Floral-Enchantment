@@ -24,8 +24,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.EyeblossomBlock;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
@@ -89,7 +87,7 @@ public class EyeblossomFloralBasket extends FloralBasket {
     }
 
     private boolean tryChangingState(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        boolean flag = ((TriState)level.environmentAttributes().getValue(EnvironmentAttributes.EYEBLOSSOM_OPEN, pos)).toBoolean(this.type.open);
+        boolean flag = ((TriState) level.environmentAttributes().getValue(EnvironmentAttributes.EYEBLOSSOM_OPEN, pos)).toBoolean(this.type.open);
         if (flag == this.type.open) {
             return false;
         } else {
@@ -101,7 +99,7 @@ public class EyeblossomFloralBasket extends FloralBasket {
                 BlockState blockstate = level.getBlockState(p_383198_);
                 if (blockstate == state) {
                     double d0 = Math.sqrt(pos.distSqr(p_383198_));
-                    int i = random.nextIntBetweenInclusive((int)(d0 * 5.0), (int)(d0 * 10.0));
+                    int i = random.nextIntBetweenInclusive((int) (d0 * 5.0), (int) (d0 * 10.0));
                     level.scheduleTick(p_383198_, state.getBlock(), i);
                 }
 

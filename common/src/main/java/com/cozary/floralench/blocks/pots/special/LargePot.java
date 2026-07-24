@@ -1,7 +1,6 @@
 package com.cozary.floralench.blocks.pots.special;
 
 import com.cozary.floralench.blocks.base.LargePotBase;
-import com.cozary.floralench.blocks.pots.*;
 import com.cozary.floralench.init.ModBlocks;
 import com.google.common.collect.Maps;
 import net.minecraft.core.BlockPos;
