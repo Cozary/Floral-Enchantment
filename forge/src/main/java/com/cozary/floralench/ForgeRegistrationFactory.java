@@ -20,7 +20,7 @@ public class ForgeRegistrationFactory implements RegistrationProvider.Factory {
 
     @Override
     public <T> RegistrationProvider<T> create(ResourceKey<? extends Registry<T>> resourceKey, String modId) {
-        final var containerOpt = ModList.get().getModContainerById(modId);
+        final var containerOpt = ModList.getModContainerById(modId);
         if (containerOpt.isEmpty())
             throw new NullPointerException("Cannot find mod container for id " + modId);
         final var cont = containerOpt.get();

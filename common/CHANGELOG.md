@@ -1,5 +1,3 @@
-# Changelog 1.21.11
+# Changelog
 
-### Fixed
-
-- Fixed game crashing on startup due to a class initialization cycle in Vine Bushes.
+26.1.2 Port

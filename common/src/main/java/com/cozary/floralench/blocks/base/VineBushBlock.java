@@ -84,15 +84,15 @@ public abstract class VineBushBlock extends SweetBerryBushBlock {
         if (!flag && player.getMainHandItem().getItem() == Items.BONE_MEAL) {
             return InteractionResult.PASS;
         } else if (i == 2) {
-            int j = 1 + worldIn.random.nextInt(4);
+            int j = 1 + worldIn.getRandom().nextInt(4);
             popResource(worldIn, pos, new ItemStack(flowerItem.get(), j));
-            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
+            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.getRandom().nextFloat() * 0.4F);
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(1)), 2);
             return InteractionResult.SUCCESS.withoutItem();
         } else if (i == 3) {
-            int j = 1 + worldIn.random.nextInt(3);
+            int j = 1 + worldIn.getRandom().nextInt(3);
             popResource(worldIn, pos, new ItemStack(vineItem.get(), j));
-            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.random.nextFloat() * 0.4F);
+            worldIn.playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.BLOCKS, 1.0F, 0.8F + worldIn.getRandom().nextFloat() * 0.4F);
             worldIn.setBlock(pos, state.setValue(AGE, Integer.valueOf(2)), 2);
             return InteractionResult.SUCCESS.withoutItem();
         } else {

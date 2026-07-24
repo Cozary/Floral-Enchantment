@@ -153,7 +153,7 @@ public class ModRecipeProvider extends RecipeProvider {
         }
 
         for (FloralEntry entry : FLORAL_BASKETS.get()) {
-            shapeless(RecipeCategory.DECORATIONS, new ItemStack(entry.flower, 6))
+            shapeless(RecipeCategory.DECORATIONS, entry.flower, 6)
                     .requires(entry.item)
                     .unlockedBy("has_floral_vine", has(entry.item))
                     .save(output, entry.item + "_revert");

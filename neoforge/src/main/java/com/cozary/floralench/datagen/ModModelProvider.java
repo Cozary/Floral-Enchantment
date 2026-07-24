@@ -11,8 +11,9 @@ import net.minecraft.client.data.models.blockstates.MultiPartGenerator;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.*;
-import net.minecraft.client.renderer.block.model.Variant;
-import net.minecraft.client.renderer.block.model.VariantMutator;
+import net.minecraft.client.data.models.MultiVariant;
+import net.minecraft.client.renderer.block.dispatch.VariantMutator;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.client.resources.model.UnbakedModel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -279,7 +280,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .element(element -> {
@@ -302,25 +302,25 @@ public class ModModelProvider extends ModelProvider {
         blockModelTemplate.create(
                 blockRL,
                 new TextureMapping()
-                        .put(TextureSlot.PARTICLE, blockRL)
-                        .put(TextureSlot.TEXTURE, blockRL),
+                        .put(TextureSlot.PARTICLE, new Material(blockRL))
+                        .put(TextureSlot.TEXTURE, new Material(blockRL)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(blockRL).with(VariantMutator.UV_LOCK.withValue(true));
+        MultiVariant variant = plainVariant(blockRL).with(VariantMutator.UV_LOCK.withValue(true));
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.NORTH, true),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.EAST, true),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.SOUTH, true),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.WEST, true),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.UP, true),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.X_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.X_ROT.withValue(Quadrant.R270)))
         );
 
         Identifier resourcelocation = blockModels.createFlatItemModelWithBlockTexture(item, block);
@@ -336,7 +336,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.CROSS_EMISSIVE);
@@ -377,35 +376,35 @@ public class ModModelProvider extends ModelProvider {
         blockModelTemplate.create(
                 blockRL,
                 new TextureMapping()
-                        .put(TextureSlot.PARTICLE, blockTexture)
-                        .put(TextureSlot.TEXTURE, blockTexture)
-                        .put(TextureSlot.CROSS_EMISSIVE, emissiveTexture)
+                        .put(TextureSlot.PARTICLE, new Material(blockTexture))
+                        .put(TextureSlot.TEXTURE, new Material(blockTexture))
+                        .put(TextureSlot.CROSS_EMISSIVE, new Material(emissiveTexture))
                 ,
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(blockRL).with(VariantMutator.UV_LOCK.withValue(true));
+        MultiVariant variant = plainVariant(blockRL).with(VariantMutator.UV_LOCK.withValue(true));
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.NORTH, true),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.EAST, true),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.SOUTH, true),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.WEST, true),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.UP, true),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.X_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.X_ROT.withValue(Quadrant.R270)))
         );
 
         Identifier itemModelLocation = ModelLocationUtils.getModelLocation(item);
         ModelTemplates.TWO_LAYERED_ITEM.create(
                 itemModelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.LAYER0, blockTexture)
-                        .put(TextureSlot.LAYER1, emissiveTexture),
+                        .put(TextureSlot.LAYER0, new Material(blockTexture))
+                        .put(TextureSlot.LAYER1, new Material(emissiveTexture)),
                 blockModels.modelOutput
         );
         blockModels.registerSimpleItemModel(block, itemModelLocation);
@@ -417,7 +416,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("block/block"))
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
 
@@ -448,8 +446,8 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.TEXTURE, this.mcLocation("block/cobblestone"))
-                        .put(TextureSlot.PARTICLE, this.mcLocation("block/cobblestone")),
+                        .put(TextureSlot.TEXTURE, new Material(this.mcLocation("block/cobblestone")))
+                        .put(TextureSlot.PARTICLE, new Material(this.mcLocation("block/cobblestone"))),
                 blockModels.modelOutput
         );
     }
@@ -467,16 +465,16 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 blockModelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.ALL, this.modLocation("block/" + name)),
+                        .put(TextureSlot.ALL, new Material(this.modLocation("block/" + name))),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(blockModelLocation);
+        MultiVariant variant = plainVariant(blockModelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiVariantGenerator.dispatch(
                         block,
-                        BlockModelGenerators.variant(variant)
+                        variant
                 )
         );
     }
@@ -489,7 +487,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(Identifier.parse("block/block"))
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.ALL)
                 .requiredTextureSlot(TextureSlot.CROSS_EMISSIVE)
@@ -574,20 +571,20 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 blockModelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.TEXTURE, blockTexture)
-                        .put(TextureSlot.ALL, this.modLocation("block/" + name))
-                        .put(TextureSlot.CROSS_EMISSIVE, emissiveTexture)
-                        .put(TextureSlot.PARTICLE, blockTexture),
+                        .put(TextureSlot.TEXTURE, new Material(blockTexture))
+                        .put(TextureSlot.ALL, new Material(this.modLocation("block/" + name)))
+                        .put(TextureSlot.CROSS_EMISSIVE, new Material(emissiveTexture))
+                        .put(TextureSlot.PARTICLE, new Material(blockTexture)),
                 blockModels.modelOutput
         );
 
 
-        Variant variant = new Variant(blockModelLocation);
+        MultiVariant variant = plainVariant(blockModelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiVariantGenerator.dispatch(
                         block,
-                        BlockModelGenerators.variant(variant)
+                        variant
                 )
         );
     }
@@ -599,7 +596,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("item/generated"))
-                .renderType("minecraft:cutout")
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.PLANT);
 
@@ -644,8 +640,8 @@ public class ModModelProvider extends ModelProvider {
         template.create(
                 this.modLocation("block/bush_small"),
                 new TextureMapping()
-                        .put(TextureSlot.PARTICLE, plantTexture)
-                        .put(TextureSlot.PLANT, plantTexture),
+                        .put(TextureSlot.PARTICLE, new Material(plantTexture))
+                        .put(TextureSlot.PLANT, new Material(plantTexture)),
                 blockModels.modelOutput
         );
     }
@@ -656,7 +652,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("item/generated"))
-                .renderType("minecraft:cutout")
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.PLANT);
 
@@ -701,8 +696,8 @@ public class ModModelProvider extends ModelProvider {
         template.create(
                 this.modLocation("block/bush_large"),
                 new TextureMapping()
-                        .put(TextureSlot.PARTICLE, plantTexture)
-                        .put(TextureSlot.PLANT, plantTexture),
+                        .put(TextureSlot.PARTICLE, new Material(plantTexture))
+                        .put(TextureSlot.PLANT, new Material(plantTexture)),
                 blockModels.modelOutput
         );
     }
@@ -717,14 +712,13 @@ public class ModModelProvider extends ModelProvider {
 
         ModelTemplate crossTemplate = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("block/cross"))
-                .renderType("minecraft:cutout")
                 .requiredTextureSlot(TextureSlot.CROSS)
                 .build();
 
         crossTemplate.create(
                 this.modLocation("block/" + name + "_stage0"),
                 new TextureMapping()
-                        .put(TextureSlot.CROSS, stage0),
+                        .put(TextureSlot.CROSS, new Material(stage0)),
                 blockModels.modelOutput
         );
 
@@ -737,16 +731,16 @@ public class ModModelProvider extends ModelProvider {
         bushSmallTemplate.create(
                 this.modLocation("block/" + name + "_stage1"),
                 new TextureMapping()
-                        .put(TextureSlot.PLANT, stage1)
-                        .put(TextureSlot.PARTICLE, stage1),
+                        .put(TextureSlot.PLANT, new Material(stage1))
+                        .put(TextureSlot.PARTICLE, new Material(stage1)),
                 blockModels.modelOutput
         );
 
         bushSmallTemplate.create(
                 this.modLocation("block/" + name + "_stage2"),
                 new TextureMapping()
-                        .put(TextureSlot.PLANT, stage2)
-                        .put(TextureSlot.PARTICLE, stage2),
+                        .put(TextureSlot.PLANT, new Material(stage2))
+                        .put(TextureSlot.PARTICLE, new Material(stage2)),
                 blockModels.modelOutput
         );
 
@@ -759,8 +753,8 @@ public class ModModelProvider extends ModelProvider {
         bushLargeTemplate.create(
                 this.modLocation("block/" + name + "_stage3"),
                 new TextureMapping()
-                        .put(TextureSlot.PLANT, stage3)
-                        .put(TextureSlot.PARTICLE, stage3),
+                        .put(TextureSlot.PLANT, new Material(stage3))
+                        .put(TextureSlot.PARTICLE, new Material(stage3)),
                 blockModels.modelOutput
         );
 
@@ -774,7 +768,7 @@ public class ModModelProvider extends ModelProvider {
 
         crossTemplate.create(
                 ModelLocationUtils.getModelLocation(item),
-                new TextureMapping().put(TextureSlot.CROSS, stage0),
+                new TextureMapping().put(TextureSlot.CROSS, new Material(stage0)),
                 itemModels.modelOutput
         );
 
@@ -794,13 +788,12 @@ public class ModModelProvider extends ModelProvider {
 
         ModelTemplate crossTemplate = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("block/cross"))
-                .renderType("minecraft:cutout")
                 .requiredTextureSlot(TextureSlot.CROSS)
                 .build();
 
         crossTemplate.create(
                 this.modLocation("block/" + name + "_stage0"),
-                new TextureMapping().put(TextureSlot.CROSS, stage0),
+                new TextureMapping().put(TextureSlot.CROSS, new Material(stage0)),
                 blockModels.modelOutput
         );
 
@@ -813,15 +806,14 @@ public class ModModelProvider extends ModelProvider {
         stage1Template.create(
                 this.modLocation("block/" + name + "_stage1"),
                 new TextureMapping()
-                        .put(TextureSlot.PLANT, stage1)
-                        .put(TextureSlot.PARTICLE, stage1),
+                        .put(TextureSlot.PLANT, new Material(stage1))
+                        .put(TextureSlot.PARTICLE, new Material(stage1)),
                 blockModels.modelOutput
         );
 
 
         ModelTemplate stage2Template = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("item/generated"))
-                .renderType("minecraft:cutout")
                 .requiredTextureSlot(TextureSlot.PLANT)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.CROSS_EMISSIVE)
@@ -854,15 +846,14 @@ public class ModModelProvider extends ModelProvider {
         stage2Template.create(
                 this.modLocation("block/" + name + "_stage2"),
                 new TextureMapping()
-                        .put(TextureSlot.PLANT, stage2)
-                        .put(TextureSlot.PARTICLE, stage2)
-                        .put(TextureSlot.CROSS_EMISSIVE, emissiveTexture_stage2),
+                        .put(TextureSlot.PLANT, new Material(stage2))
+                        .put(TextureSlot.PARTICLE, new Material(stage2))
+                        .put(TextureSlot.CROSS_EMISSIVE, new Material(emissiveTexture_stage2)),
                 blockModels.modelOutput
         );
 
         ModelTemplate stage3Template = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("item/generated"))
-                .renderType("minecraft:cutout")
                 .requiredTextureSlot(TextureSlot.PLANT)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.CROSS_EMISSIVE)
@@ -893,9 +884,9 @@ public class ModModelProvider extends ModelProvider {
         stage3Template.create(
                 this.modLocation("block/" + name + "_stage3"),
                 new TextureMapping()
-                        .put(TextureSlot.PLANT, stage3)
-                        .put(TextureSlot.PARTICLE, stage3)
-                        .put(TextureSlot.CROSS_EMISSIVE, emissiveTexture_stage3),
+                        .put(TextureSlot.PLANT, new Material(stage3))
+                        .put(TextureSlot.PARTICLE, new Material(stage3))
+                        .put(TextureSlot.CROSS_EMISSIVE, new Material(emissiveTexture_stage3)),
                 blockModels.modelOutput
         );
 
@@ -909,7 +900,7 @@ public class ModModelProvider extends ModelProvider {
 
         crossTemplate.create(
                 ModelLocationUtils.getModelLocation(item),
-                new TextureMapping().put(TextureSlot.CROSS, stage0),
+                new TextureMapping().put(TextureSlot.CROSS, new Material(stage0)),
                 itemModels.modelOutput
         );
 
@@ -922,7 +913,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(this.mcLocation("block/block"))
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
 
@@ -953,8 +943,8 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.TEXTURE, this.mcLocation("block/stone_bricks"))
-                        .put(TextureSlot.PARTICLE, this.mcLocation("block/stone_bricks")),
+                        .put(TextureSlot.TEXTURE, new Material(this.mcLocation("block/stone_bricks")))
+                        .put(TextureSlot.PARTICLE, new Material(this.mcLocation("block/stone_bricks"))),
                 blockModels.modelOutput
         );
     }
@@ -972,16 +962,16 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 blockModelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.ALL, this.modLocation("block/" + name)),
+                        .put(TextureSlot.ALL, new Material(this.modLocation("block/" + name))),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(blockModelLocation);
+        MultiVariant variant = plainVariant(blockModelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiVariantGenerator.dispatch(
                         block,
-                        BlockModelGenerators.variant(variant)
+                        variant
                 )
         );
     }
@@ -994,7 +984,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .parent(Identifier.parse("block/block"))
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.ALL)
                 .requiredTextureSlot(TextureSlot.CROSS_EMISSIVE)
@@ -1079,20 +1068,20 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 blockModelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.TEXTURE, blockTexture)
-                        .put(TextureSlot.ALL, this.modLocation("block/" + name))
-                        .put(TextureSlot.CROSS_EMISSIVE, emissiveTexture)
-                        .put(TextureSlot.PARTICLE, blockTexture),
+                        .put(TextureSlot.TEXTURE, new Material(blockTexture))
+                        .put(TextureSlot.ALL, new Material(this.modLocation("block/" + name)))
+                        .put(TextureSlot.CROSS_EMISSIVE, new Material(emissiveTexture))
+                        .put(TextureSlot.PARTICLE, new Material(blockTexture)),
                 blockModels.modelOutput
         );
 
 
-        Variant variant = new Variant(blockModelLocation);
+        MultiVariant variant = plainVariant(blockModelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiVariantGenerator.dispatch(
                         block,
-                        BlockModelGenerators.variant(variant)
+                        variant
                 )
         );
     }
@@ -1107,7 +1096,6 @@ public class ModModelProvider extends ModelProvider {
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
                 .guiLight(UnbakedModel.GuiLight.FRONT)
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.DIRT)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.TEXTURE)
@@ -1185,9 +1173,9 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.DIRT, textureDirt)
-                        .put(TextureSlot.PARTICLE, texture)
-                        .put(TextureSlot.TEXTURE, texture),
+                        .put(TextureSlot.DIRT, new Material(textureDirt))
+                        .put(TextureSlot.PARTICLE, new Material(texture))
+                        .put(TextureSlot.TEXTURE, new Material(texture)),
                 blockModels.modelOutput
         );
     }
@@ -1202,7 +1190,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
-                .renderType("cutout")
                 .guiLight(UnbakedModel.GuiLight.FRONT)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.TEXTURE)
@@ -1301,11 +1288,11 @@ public class ModModelProvider extends ModelProvider {
         template.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.TEXTURE, texturePot)
-                        .put(TextureSlot.DIRT, textureDirt)
-                        .put(TextureSlot.PARTICLE, texturePot)
-                        .put(TextureSlot.BOTTOM, texturePlantBottom)
-                        .put(TextureSlot.TOP, texturePlantTop),
+                        .put(TextureSlot.TEXTURE, new Material(texturePot))
+                        .put(TextureSlot.DIRT, new Material(textureDirt))
+                        .put(TextureSlot.PARTICLE, new Material(texturePot))
+                        .put(TextureSlot.BOTTOM, new Material(texturePlantBottom))
+                        .put(TextureSlot.TOP, new Material(texturePlantTop)),
                 blockModels.modelOutput
         );
     }
@@ -1319,7 +1306,6 @@ public class ModModelProvider extends ModelProvider {
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
                 .guiLight(UnbakedModel.GuiLight.FRONT)
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.DIRT)
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
@@ -1383,24 +1369,24 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.DIRT, texture1)
-                        .put(TextureSlot.TEXTURE, texture2)
-                        .put(TextureSlot.PARTICLE, texture2),
+                        .put(TextureSlot.DIRT, new Material(texture1))
+                        .put(TextureSlot.TEXTURE, new Material(texture2))
+                        .put(TextureSlot.PARTICLE, new Material(texture2)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant)
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.EAST, true),
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.SOUTH, true),
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.WEST, true),
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
         );
     }
 
@@ -1419,22 +1405,22 @@ public class ModModelProvider extends ModelProvider {
 
         modelTemplate.create(
                 modelLocation,
-                new TextureMapping().put(TextureSlot.PLANT, plantModelLocation),
+                new TextureMapping().put(TextureSlot.PLANT, new Material(plantModelLocation)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -1448,7 +1434,6 @@ public class ModModelProvider extends ModelProvider {
         Identifier dirtTexture = this.mcLocation("block/dirt");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
-                .renderType("minecraft:cutout")
                 .ambientOcclusion(false)
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
@@ -1546,26 +1531,26 @@ public class ModModelProvider extends ModelProvider {
         template.create(
                 this.modLocation("block/" + blockName),
                 new TextureMapping()
-                        .put(TextureSlot.TEXTURE, potTexture)
-                        .put(TextureSlot.DIRT, dirtTexture)
-                        .put(TextureSlot.PARTICLE, potTexture)
-                        .put(TextureSlot.PLANT, plantTexture)
-                        .put(TextureSlot.CROSS_EMISSIVE, emissionTexture),
+                        .put(TextureSlot.TEXTURE, new Material(potTexture))
+                        .put(TextureSlot.DIRT, new Material(dirtTexture))
+                        .put(TextureSlot.PARTICLE, new Material(potTexture))
+                        .put(TextureSlot.PLANT, new Material(plantTexture))
+                        .put(TextureSlot.CROSS_EMISSIVE, new Material(emissionTexture)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(this.modLocation("block/" + blockName));
+        MultiVariant variant = plainVariant(this.modLocation("block/" + blockName));
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -1583,22 +1568,22 @@ public class ModModelProvider extends ModelProvider {
 
         modelTemplate.create(
                 modelLocation,
-                new TextureMapping().put(TextureSlot.PLANT, plantModelLocation),
+                new TextureMapping().put(TextureSlot.PLANT, new Material(plantModelLocation)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -1619,23 +1604,23 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.TOP, plantModelLocationTop)
-                        .put(TextureSlot.BOTTOM, plantModelLocationBottom),
+                        .put(TextureSlot.TOP, new Material(plantModelLocationTop))
+                        .put(TextureSlot.BOTTOM, new Material(plantModelLocationBottom)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -1652,7 +1637,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.PLANT)
                 .requiredTextureSlot(TextureSlot.DIRT)
@@ -1742,28 +1726,28 @@ public class ModModelProvider extends ModelProvider {
         ModelTemplate template = builder.build();
 
         TextureMapping mapping = new TextureMapping()
-                .put(TextureSlot.PLANT, textPot)
-                .put(TextureSlot.DIRT, texDirt)
-                .put(TextureSlot.PARTICLE, textPot)
-                .put(TextureSlot.BACK, texBack)
-                .put(TextureSlot.FRONT, texFront)
-                .put(TextureSlot.BOTTOM, texBottom)
-                .put(TextureSlot.TOP, texTop);
+                .put(TextureSlot.PLANT, new Material(textPot))
+                .put(TextureSlot.DIRT, new Material(texDirt))
+                .put(TextureSlot.PARTICLE, new Material(textPot))
+                .put(TextureSlot.BACK, new Material(texBack))
+                .put(TextureSlot.FRONT, new Material(texFront))
+                .put(TextureSlot.BOTTOM, new Material(texBottom))
+                .put(TextureSlot.TOP, new Material(texTop));
 
         template.create(modelLocation, mapping, blockModels.modelOutput);
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(potBlock)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -1777,7 +1761,6 @@ public class ModModelProvider extends ModelProvider {
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
                 .guiLight(UnbakedModel.GuiLight.FRONT)
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.DIRT)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
                 .requiredTextureSlot(TextureSlot.PLANT);
@@ -1869,9 +1852,9 @@ public class ModModelProvider extends ModelProvider {
         template.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.PARTICLE, texturePlant)
-                        .put(TextureSlot.PLANT, texturePlant)
-                        .put(TextureSlot.DIRT, textureDirt),
+                        .put(TextureSlot.PARTICLE, new Material(texturePlant))
+                        .put(TextureSlot.PLANT, new Material(texturePlant))
+                        .put(TextureSlot.DIRT, new Material(textureDirt)),
                 blockModels.modelOutput
         );
     }
@@ -1891,22 +1874,22 @@ public class ModModelProvider extends ModelProvider {
 
         modelTemplate.create(
                 modelLocation,
-                new TextureMapping().put(TextureSlot.PLANT, plantModelLocation),
+                new TextureMapping().put(TextureSlot.PLANT, new Material(plantModelLocation)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -1920,7 +1903,6 @@ public class ModModelProvider extends ModelProvider {
         Identifier dirtTexture = this.mcLocation("block/dirt");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
-                .renderType("minecraft:cutout")
                 .ambientOcclusion(false)
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.PARTICLE)
@@ -2051,26 +2033,26 @@ public class ModModelProvider extends ModelProvider {
         template.create(
                 this.modLocation("block/" + blockName),
                 new TextureMapping()
-                        .put(TextureSlot.TEXTURE, potTexture)
-                        .put(TextureSlot.DIRT, dirtTexture)
-                        .put(TextureSlot.PARTICLE, potTexture)
-                        .put(TextureSlot.PLANT, plantTexture)
-                        .put(TextureSlot.CROSS_EMISSIVE, emissionTexture),
+                        .put(TextureSlot.TEXTURE, new Material(potTexture))
+                        .put(TextureSlot.DIRT, new Material(dirtTexture))
+                        .put(TextureSlot.PARTICLE, new Material(potTexture))
+                        .put(TextureSlot.PLANT, new Material(plantTexture))
+                        .put(TextureSlot.CROSS_EMISSIVE, new Material(emissionTexture)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(this.modLocation("block/" + blockName));
+        MultiVariant variant = plainVariant(this.modLocation("block/" + blockName));
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -2088,22 +2070,22 @@ public class ModModelProvider extends ModelProvider {
 
         modelTemplate.create(
                 modelLocation,
-                new TextureMapping().put(TextureSlot.PLANT, plantModelLocation),
+                new TextureMapping().put(TextureSlot.PLANT, new Material(plantModelLocation)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -2120,7 +2102,6 @@ public class ModModelProvider extends ModelProvider {
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
-                .renderType("cutout")
                 .requiredTextureSlot(TextureSlot.TEXTURE)
                 .requiredTextureSlot(TextureSlot.BACK)
                 .requiredTextureSlot(TextureSlot.DIRT)
@@ -2206,27 +2187,27 @@ public class ModModelProvider extends ModelProvider {
         ModelTemplate template = builder.build();
 
         TextureMapping mapping = new TextureMapping()
-                .put(TextureSlot.TEXTURE, texPot)
-                .put(TextureSlot.BACK, texBack)
-                .put(TextureSlot.DIRT, texDirt)
-                .put(TextureSlot.FRONT, texFront)
-                .put(TextureSlot.BOTTOM, texBottom)
-                .put(TextureSlot.TOP, texTop)
-                .put(TextureSlot.PARTICLE, texPot);
+                .put(TextureSlot.TEXTURE, new Material(texPot))
+                .put(TextureSlot.BACK, new Material(texBack))
+                .put(TextureSlot.DIRT, new Material(texDirt))
+                .put(TextureSlot.FRONT, new Material(texFront))
+                .put(TextureSlot.BOTTOM, new Material(texBottom))
+                .put(TextureSlot.TOP, new Material(texTop))
+                .put(TextureSlot.PARTICLE, new Material(texPot));
 
         template.create(modelLocation, mapping, blockModels.modelOutput);
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(potBlock)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -2247,7 +2228,6 @@ public class ModModelProvider extends ModelProvider {
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
                 .ambientOcclusion(false)
                 .guiLight(UnbakedModel.GuiLight.FRONT)
-                .renderType("cutout")
                 .requiredTextureSlot(BASKET)
                 .requiredTextureSlot(TextureSlot.DIRT)
                 .requiredTextureSlot(HAY_TOP)
@@ -2407,12 +2387,25 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(BASKET, textureBasket)
-                        .put(TextureSlot.DIRT, textureDirt)
-                        .put(HAY_TOP, textureHayTop)
-                        .put(PLANT, texturePlant)
-                        .put(TextureSlot.PARTICLE, textureHayTop),
+                        .put(BASKET, new Material(textureBasket))
+                        .put(TextureSlot.DIRT, new Material(textureDirt))
+                        .put(HAY_TOP, new Material(textureHayTop))
+                        .put(PLANT, new Material(texturePlant))
+                        .put(TextureSlot.PARTICLE, new Material(textureHayTop)),
                 blockModels.modelOutput
+        );
+        
+        MultiVariant variant = plainVariant(modelLocation);
+        blockModels.blockStateOutput.accept(
+                MultiPartGenerator.multiPart(block)
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
+                                variant)
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
         );
     }
 
@@ -2425,7 +2418,6 @@ public class ModModelProvider extends ModelProvider {
         Identifier tex2 = this.mcLocation("block/hay_block_top");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
-                .renderType("cutout")
                 .ambientOcclusion(false)
                 .guiLight(UnbakedModel.GuiLight.FRONT)
                 .requiredTextureSlot(TextureSlot.TEXTURE)
@@ -2512,24 +2504,24 @@ public class ModModelProvider extends ModelProvider {
         template.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.TEXTURE, tex0)
-                        .put(TextureSlot.DIRT, tex1)
-                        .put(TextureSlot.TOP, tex2)
-                        .put(TextureSlot.PARTICLE, tex2),
+                        .put(TextureSlot.TEXTURE, new Material(tex0))
+                        .put(TextureSlot.DIRT, new Material(tex1))
+                        .put(TextureSlot.TOP, new Material(tex2))
+                        .put(TextureSlot.PARTICLE, new Material(tex2)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
         );
     }
 
@@ -2548,22 +2540,22 @@ public class ModModelProvider extends ModelProvider {
 
         modelTemplate.create(
                 modelLocation,
-                new TextureMapping().put(TextureSlot.PLANT, plantModelLocation),
+                new TextureMapping().put(TextureSlot.PLANT, new Material(plantModelLocation)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -2581,22 +2573,22 @@ public class ModModelProvider extends ModelProvider {
 
         modelTemplate.create(
                 modelLocation,
-                new TextureMapping().put(TextureSlot.PLANT, plantModelLocation),
+                new TextureMapping().put(TextureSlot.PLANT, new Material(plantModelLocation)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 
@@ -2612,7 +2604,6 @@ public class ModModelProvider extends ModelProvider {
         Identifier textureEmission = this.mcLocation("block/open_eyeblossom_emissive");
 
         ExtendedModelTemplateBuilder builder = ExtendedModelTemplateBuilder.builder()
-                .renderType("minecraft:cutout")
                 .ambientOcclusion(false)
                 .guiLight(UnbakedModel.GuiLight.FRONT)
                 .requiredTextureSlot(TextureSlot.TEXTURE)
@@ -2876,26 +2867,26 @@ public class ModModelProvider extends ModelProvider {
         modelTemplate.create(
                 modelLocation,
                 new TextureMapping()
-                        .put(TextureSlot.TEXTURE, textureBasket)
-                        .put(TextureSlot.DIRT, textureDirt)
-                        .put(TextureSlot.PARTICLE, textureHayTop)
-                        .put(TextureSlot.PLANT, texturePlant)
-                        .put(TextureSlot.CROSS_EMISSIVE, textureEmission),
+                        .put(TextureSlot.TEXTURE, new Material(textureBasket))
+                        .put(TextureSlot.DIRT, new Material(textureDirt))
+                        .put(TextureSlot.PARTICLE, new Material(textureHayTop))
+                        .put(TextureSlot.PLANT, new Material(texturePlant))
+                        .put(TextureSlot.CROSS_EMISSIVE, new Material(textureEmission)),
                 blockModels.modelOutput
         );
 
-        Variant variant = new Variant(modelLocation);
+        MultiVariant variant = plainVariant(modelLocation);
 
         blockModels.blockStateOutput.accept(
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                BlockModelGenerators.variant(variant))
+                                variant)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                BlockModelGenerators.variant(variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90))))
+                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
         );
     }
 }
