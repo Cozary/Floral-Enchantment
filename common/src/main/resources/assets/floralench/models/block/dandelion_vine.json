@@ -31,7 +31,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "floralench:block/dandelion_vine",
     "texture": "floralench:block/dandelion_vine"

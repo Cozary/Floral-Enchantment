@@ -31,7 +31,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "floralench:block/peony_vine",
     "texture": "floralench:block/peony_vine"

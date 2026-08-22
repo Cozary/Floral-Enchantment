@@ -42,7 +42,8 @@ public class ModRecipeProvider extends RecipeProvider {
             new FloralEntry(ModItems.OPEN_EYEBLOSSOM_MOSSY_COBBLESTONE_ITEM.get(), ModItems.OPEN_EYEBLOSSOM_VINE_ITEM.get()),
             new FloralEntry(ModItems.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE_ITEM.get(), ModItems.CLOSED_EYEBLOSSOM_VINE_ITEM.get()),
             new FloralEntry(ModItems.WILDFLOWERS_MOSSY_COBBLESTONE_ITEM.get(), ModItems.WILDFLOWERS_VINE_ITEM.get()),
-            new FloralEntry(ModItems.CACTUS_FLOWER_MOSSY_COBBLESTONE_ITEM.get(), ModItems.CACTUS_FLOWER_VINE_ITEM.get())
+            new FloralEntry(ModItems.CACTUS_FLOWER_MOSSY_COBBLESTONE_ITEM.get(), ModItems.CACTUS_FLOWER_VINE_ITEM.get()),
+            new FloralEntry(ModItems.GOLDEN_DANDELION_MOSSY_COBBLESTONE_ITEM.get(), ModItems.GOLDEN_DANDELION_VINE_ITEM.get())
     );
     public static final Supplier<List<FloralEntry>> BUSHES = () -> List.of(
             new FloralEntry(ModItems.ALLIUM_BUSH_ITEM.get(), Items.ALLIUM),
@@ -71,7 +72,8 @@ public class ModRecipeProvider extends RecipeProvider {
             new FloralEntry(ModItems.OPEN_EYEBLOSSOM_BUSH_ITEM.get(), Items.OPEN_EYEBLOSSOM),
             new FloralEntry(ModItems.CLOSED_EYEBLOSSOM_BUSH_ITEM.get(), Items.CLOSED_EYEBLOSSOM),
             new FloralEntry(ModItems.WILDFLOWERS_BUSH_ITEM.get(), Items.WILDFLOWERS),
-            new FloralEntry(ModItems.CACTUS_FLOWER_BUSH_ITEM.get(), Items.CACTUS_FLOWER)
+            new FloralEntry(ModItems.CACTUS_FLOWER_BUSH_ITEM.get(), Items.CACTUS_FLOWER),
+            new FloralEntry(ModItems.GOLDEN_DANDELION_BUSH_ITEM.get(), Items.GOLDEN_DANDELION)
     );
     public static final Supplier<List<FloralEntry>> MOSSY_STONE_BRICKS = () -> List.of(
             new FloralEntry(ModItems.DANDELION_MOSSY_STONE_BRICK_ITEM.get(), ModItems.DANDELION_VINE_ITEM.get()),
@@ -100,7 +102,8 @@ public class ModRecipeProvider extends RecipeProvider {
             new FloralEntry(ModItems.OPEN_EYEBLOSSOM_MOSSY_STONE_BRICK_ITEM.get(), ModItems.OPEN_EYEBLOSSOM_VINE_ITEM.get()),
             new FloralEntry(ModItems.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK_ITEM.get(), ModItems.CLOSED_EYEBLOSSOM_VINE_ITEM.get()),
             new FloralEntry(ModItems.WILDFLOWERS_MOSSY_STONE_BRICK_ITEM.get(), ModItems.WILDFLOWERS_VINE_ITEM.get()),
-            new FloralEntry(ModItems.CACTUS_FLOWER_MOSSY_STONE_BRICK_ITEM.get(), ModItems.CACTUS_FLOWER_VINE_ITEM.get())
+            new FloralEntry(ModItems.CACTUS_FLOWER_MOSSY_STONE_BRICK_ITEM.get(), ModItems.CACTUS_FLOWER_VINE_ITEM.get()),
+            new FloralEntry(ModItems.GOLDEN_DANDELION_MOSSY_STONE_BRICK_ITEM.get(), ModItems.GOLDEN_DANDELION_VINE_ITEM.get())
     );
     public static final Supplier<List<FloralEntry>> FLORAL_BASKETS = () -> List.of(
             new FloralEntry(ModItems.DANDELION_BASKET.get(), Items.DANDELION),
@@ -122,7 +125,8 @@ public class ModRecipeProvider extends RecipeProvider {
             new FloralEntry(ModItems.SPORE_BLOSSOM_BASKET.get(), Items.SPORE_BLOSSOM),
             new FloralEntry(ModItems.OPEN_EYEBLOSSOM_BASKET.get(), Items.OPEN_EYEBLOSSOM),
             new FloralEntry(ModItems.CLOSED_EYEBLOSSOM_BASKET.get(), Items.CLOSED_EYEBLOSSOM),
-            new FloralEntry(ModItems.CACTUS_FLOWER_BASKET.get(), Items.CACTUS_FLOWER)
+            new FloralEntry(ModItems.CACTUS_FLOWER_BASKET.get(), Items.CACTUS_FLOWER),
+            new FloralEntry(ModItems.GOLDEN_DANDELION_BASKET.get(), Items.GOLDEN_DANDELION)
     );
 
 

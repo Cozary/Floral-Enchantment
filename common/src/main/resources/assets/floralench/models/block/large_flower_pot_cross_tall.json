@@ -546,7 +546,6 @@
     }
   ],
   "gui_light": "front",
-  "render_type": "minecraft:cutout",
   "textures": {
     "bottom": "floralench:block/large_pot",
     "dirt": "minecraft:block/dirt",

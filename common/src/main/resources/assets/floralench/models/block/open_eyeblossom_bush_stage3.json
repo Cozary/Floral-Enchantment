@@ -93,7 +93,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "cross_emissive": "floralench:block/open_eyeblossom_bush_stage3_emissive",
     "particle": "floralench:block/open_eyeblossom_bush_stage3",

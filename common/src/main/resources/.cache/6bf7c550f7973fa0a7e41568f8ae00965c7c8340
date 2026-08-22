@@ -1,7 +1,0 @@
-// 1.21.11	2026-02-24T17:53:22.0583529	Tags for minecraft:block mod id floralench
-fd670a15565581d59de098463b2469d56c8322e3 data/minecraft/tags/block/bee_attractive.json
-8e3cc0a0f5d4afbe5daa6a572a9524ff3262240c data/minecraft/tags/block/bee_growables.json
-3dc2320c0a89f634b0d85c2399c36a94a9e6d09c data/minecraft/tags/block/climbable.json
-f4f774d231e66356af685c5a0284f5a123221f91 data/minecraft/tags/block/flowers.json
-4f6e1a218e674ffd12cf6964630dd65d15bcf24e data/minecraft/tags/block/flower_pots.json
-5e48ef0343e20bc0e857c1c17a977bf875132984 data/minecraft/tags/block/mineable/pickaxe.json

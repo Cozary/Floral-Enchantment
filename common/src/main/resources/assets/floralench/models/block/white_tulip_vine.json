@@ -31,7 +31,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "floralench:block/white_tulip_vine",
     "texture": "floralench:block/white_tulip_vine"

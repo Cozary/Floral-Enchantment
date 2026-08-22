@@ -1,6 +1,5 @@
 {
   "parent": "minecraft:block/cross",
-  "render_type": "minecraft:cutout",
   "textures": {
     "cross": "floralench:block/azure_bluet_bush_stage0"
   }

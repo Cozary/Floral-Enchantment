@@ -31,7 +31,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "floralench:block/azure_bluet_vine",
     "texture": "floralench:block/azure_bluet_vine"

@@ -31,7 +31,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "floralench:block/oxeye_daisy_vine",
     "texture": "floralench:block/oxeye_daisy_vine"

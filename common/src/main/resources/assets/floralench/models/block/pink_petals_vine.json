@@ -31,7 +31,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "floralench:block/pink_petals_vine",
     "texture": "floralench:block/pink_petals_vine"

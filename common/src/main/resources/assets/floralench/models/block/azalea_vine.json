@@ -31,7 +31,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "floralench:block/azalea_vine",
     "texture": "floralench:block/azalea_vine"

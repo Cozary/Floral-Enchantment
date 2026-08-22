@@ -561,7 +561,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "back": "minecraft:block/sunflower_back",
     "bottom": "floralench:block/dancing_sunflower_bottom",

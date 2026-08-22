@@ -5,6 +5,11 @@
         "texture": "floralench:red_crown"
       }
     ],
+    "humanoid_baby": [
+      {
+        "texture": "floralench:red_crown"
+      }
+    ],
     "humanoid_leggings": [
       {
         "texture": "floralench:red_crown"

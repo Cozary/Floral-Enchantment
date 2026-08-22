@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "floralench:golden_dandelion_vine",
+    "minecraft:cobblestone"
+  ],
+  "result": {
+    "id": "floralench:golden_dandelion_mossy_stone_brick"
+  }
+}

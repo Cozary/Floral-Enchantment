@@ -411,7 +411,6 @@
     }
   ],
   "gui_light": "front",
-  "render_type": "minecraft:cutout",
   "textures": {
     "dirt": "minecraft:block/dirt",
     "particle": "minecraft:block/hay_block_top",

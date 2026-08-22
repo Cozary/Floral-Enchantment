@@ -100,7 +100,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "all": "floralench:block/open_eyeblossom_mossy_stone_brick",
     "cross_emissive": "floralench:block/open_eyeblossom_mossy_stone_brick_emissive",

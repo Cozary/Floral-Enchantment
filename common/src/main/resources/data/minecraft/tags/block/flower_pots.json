@@ -24,6 +24,7 @@
     "floralench:large_open_eyeblossom_pot",
     "floralench:large_closed_eyeblossom_pot",
     "floralench:large_cactus_flower_pot",
+    "floralench:large_golden_dandelion_pot",
     "floralench:large_double_allium_pot",
     "floralench:large_double_azure_bluet_pot",
     "floralench:large_double_blue_orchid_pot",
@@ -43,6 +44,7 @@
     "floralench:large_double_spore_blossom_pot",
     "floralench:large_double_open_eyeblossom_pot",
     "floralench:large_double_closed_eyeblossom_pot",
-    "floralench:large_double_cactus_flower_pot"
+    "floralench:large_double_cactus_flower_pot",
+    "floralench:large_double_golden_dandelion_pot"
   ]
 }

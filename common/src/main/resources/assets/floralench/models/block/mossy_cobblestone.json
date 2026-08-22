@@ -66,7 +66,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "minecraft:block/cobblestone",
     "texture": "minecraft:block/cobblestone"

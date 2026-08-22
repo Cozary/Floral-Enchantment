@@ -59,7 +59,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "floralench:block/bush_large",
     "plant": "floralench:block/bush_large"

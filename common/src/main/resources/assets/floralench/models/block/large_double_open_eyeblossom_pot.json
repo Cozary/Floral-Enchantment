@@ -712,7 +712,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "cross_emissive": "minecraft:block/open_eyeblossom_emissive",
     "dirt": "minecraft:block/dirt",

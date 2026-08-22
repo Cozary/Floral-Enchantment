@@ -915,7 +915,6 @@
     }
   ],
   "gui_light": "front",
-  "render_type": "minecraft:cutout",
   "textures": {
     "basket": "floralench:block/floral_basket",
     "dirt": "minecraft:block/dirt",

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "m": "minecraft:vine",
+    "x": "minecraft:golden_dandelion"
+  },
+  "pattern": [
+    "mmm",
+    "mxm",
+    "mmm"
+  ],
+  "result": {
+    "id": "floralench:golden_dandelion_bush"
+  }
+}

@@ -27,6 +27,7 @@
     "floralench:closed_eyeblossom_bush",
     "floralench:wildflowers_bush",
     "floralench:cactus_flower_bush",
+    "floralench:golden_dandelion_bush",
     "floralench:allium_vine",
     "floralench:azure_bluet_vine",
     "floralench:blue_orchid_vine",
@@ -54,6 +55,7 @@
     "floralench:closed_eyeblossom_vine",
     "floralench:wildflowers_vine",
     "floralench:cactus_flower_vine",
+    "floralench:golden_dandelion_vine",
     "floralench:allium_mossy_cobblestone",
     "floralench:azure_bluet_mossy_cobblestone",
     "floralench:blue_orchid_mossy_cobblestone",
@@ -81,6 +83,7 @@
     "floralench:closed_eyeblossom_mossy_cobblestone",
     "floralench:wildflowers_mossy_cobblestone",
     "floralench:cactus_flower_mossy_cobblestone",
+    "floralench:golden_dandelion_mossy_cobblestone",
     "floralench:allium_mossy_stone_brick",
     "floralench:azure_bluet_mossy_stone_brick",
     "floralench:blue_orchid_mossy_stone_brick",
@@ -108,6 +111,7 @@
     "floralench:closed_eyeblossom_mossy_stone_brick",
     "floralench:wildflowers_mossy_stone_brick",
     "floralench:cactus_flower_mossy_stone_brick",
+    "floralench:golden_dandelion_mossy_stone_brick",
     "floralench:large_allium_pot",
     "floralench:large_azure_bluet_pot",
     "floralench:large_blue_orchid_pot",
@@ -132,6 +136,7 @@
     "floralench:large_open_eyeblossom_pot",
     "floralench:large_closed_eyeblossom_pot",
     "floralench:large_cactus_flower_pot",
+    "floralench:large_golden_dandelion_pot",
     "floralench:large_double_allium_pot",
     "floralench:large_double_azure_bluet_pot",
     "floralench:large_double_blue_orchid_pot",
@@ -152,6 +157,7 @@
     "floralench:large_double_open_eyeblossom_pot",
     "floralench:large_double_closed_eyeblossom_pot",
     "floralench:large_double_cactus_flower_pot",
+    "floralench:large_double_golden_dandelion_pot",
     "floralench:allium_basket",
     "floralench:azure_bluet_basket",
     "floralench:blue_orchid_basket",
@@ -171,6 +177,7 @@
     "floralench:spore_blossom_basket",
     "floralench:open_eyeblossom_basket",
     "floralench:closed_eyeblossom_basket",
-    "floralench:cactus_flower_basket"
+    "floralench:cactus_flower_basket",
+    "floralench:golden_dandelion_basket"
   ]
 }

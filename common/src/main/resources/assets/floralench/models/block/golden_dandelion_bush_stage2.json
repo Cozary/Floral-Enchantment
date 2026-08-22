@@ -1,0 +1,7 @@
+{
+  "parent": "floralench:block/bush_small",
+  "textures": {
+    "particle": "floralench:block/golden_dandelion_bush_stage2",
+    "plant": "floralench:block/golden_dandelion_bush_stage2"
+  }
+}

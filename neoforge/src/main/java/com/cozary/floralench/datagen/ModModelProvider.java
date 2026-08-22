@@ -76,6 +76,7 @@ public class ModModelProvider extends ModelProvider {
         createBush(blockModels, itemModels, ModBlocks.CLOSED_EYEBLOSSOM_BUSH.get(), ModItems.CLOSED_EYEBLOSSOM_BUSH_ITEM.get());
         createBush(blockModels, itemModels, ModBlocks.WILDFLOWERS_BUSH.get(), ModItems.WILDFLOWERS_BUSH_ITEM.get());
         createBush(blockModels, itemModels, ModBlocks.CACTUS_FLOWER_BUSH.get(), ModItems.CACTUS_FLOWER_BUSH_ITEM.get());
+        createBush(blockModels, itemModels, ModBlocks.GOLDEN_DANDELION_BUSH.get(), ModItems.GOLDEN_DANDELION_BUSH_ITEM.get());
 
 // Mossy Cobblestone
         createMossyCobblestoneParent(blockModels);
@@ -107,6 +108,7 @@ public class ModModelProvider extends ModelProvider {
         createMossyCobblestone(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE.get());
         createMossyCobblestone(blockModels, ModBlocks.WILDFLOWERS_MOSSY_COBBLESTONE.get());
         createMossyCobblestone(blockModels, ModBlocks.CACTUS_FLOWER_MOSSY_COBBLESTONE.get());
+        createMossyCobblestone(blockModels, ModBlocks.GOLDEN_DANDELION_MOSSY_COBBLESTONE.get());
 
 // Mossy Stone Brick
         createMossyStoneBrickParent(blockModels);
@@ -138,6 +140,7 @@ public class ModModelProvider extends ModelProvider {
         createMossyStoneBrick(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK.get());
         createMossyStoneBrick(blockModels, ModBlocks.WILDFLOWERS_MOSSY_STONE_BRICK.get());
         createMossyStoneBrick(blockModels, ModBlocks.CACTUS_FLOWER_MOSSY_STONE_BRICK.get());
+        createMossyStoneBrick(blockModels, ModBlocks.GOLDEN_DANDELION_MOSSY_STONE_BRICK.get());
 
 // Vines
         createVine(blockModels, ModBlocks.ALLIUM_VINE.get(), ModItems.ALLIUM_VINE_ITEM.get());
@@ -167,6 +170,7 @@ public class ModModelProvider extends ModelProvider {
         createVine(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_VINE.get(), ModItems.CLOSED_EYEBLOSSOM_VINE_ITEM.get());
         createVine(blockModels, ModBlocks.WILDFLOWERS_VINE.get(), ModItems.WILDFLOWERS_VINE_ITEM.get());
         createVine(blockModels, ModBlocks.CACTUS_FLOWER_VINE.get(), ModItems.CACTUS_FLOWER_VINE_ITEM.get());
+        createVine(blockModels, ModBlocks.GOLDEN_DANDELION_VINE.get(), ModItems.GOLDEN_DANDELION_VINE_ITEM.get());
 
 // Large pots
         createLargePot(blockModels, ModBlocks.LARGE_POT.get());
@@ -244,6 +248,9 @@ public class ModModelProvider extends ModelProvider {
         createLargePotVariants(blockModels, ModBlocks.LARGE_CACTUS_FLOWER_POT.get(), Blocks.CACTUS_FLOWER);
         createLargePotDoubleVariant(blockModels, ModBlocks.LARGE_DOUBLE_CACTUS_FLOWER_POT.get(), Blocks.CACTUS_FLOWER);
 
+        createLargePotVariants(blockModels, ModBlocks.LARGE_GOLDEN_DANDELION_POT.get(), Blocks.GOLDEN_DANDELION);
+        createLargePotDoubleVariant(blockModels, ModBlocks.LARGE_DOUBLE_GOLDEN_DANDELION_POT.get(), Blocks.GOLDEN_DANDELION);
+
         //Baskets
         createFloralBasketCross(blockModels, ModBlocks.FLORAL_BASKET.get());
         createFloralBasket(blockModels, ModBlocks.FLORAL_BASKET.get());
@@ -268,6 +275,7 @@ public class ModModelProvider extends ModelProvider {
         createFloralBasketEmissive(blockModels, ModBlocks.OPEN_EYEBLOSSOM_BASKET.get(), Blocks.OPEN_EYEBLOSSOM);
         createFloralBasketVariants(blockModels, ModBlocks.CLOSED_EYEBLOSSOM_BASKET.get(), Blocks.CLOSED_EYEBLOSSOM);
         createFloralBasketVariants(blockModels, ModBlocks.CACTUS_FLOWER_BASKET.get(), Blocks.CACTUS_FLOWER);
+        createFloralBasketVariants(blockModels, ModBlocks.GOLDEN_DANDELION_BASKET.get(), Blocks.GOLDEN_DANDELION);
 
     }
 
@@ -1381,11 +1389,11 @@ public class ModModelProvider extends ModelProvider {
                 MultiPartGenerator.multiPart(block)
                         .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
                                 variant)
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.EAST, true),
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
                                 variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.SOUTH, true),
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
                                 variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.WEST, true),
+                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
                                 variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
         );
     }
@@ -2393,19 +2401,6 @@ public class ModModelProvider extends ModelProvider {
                         .put(PLANT, new Material(texturePlant))
                         .put(TextureSlot.PARTICLE, new Material(textureHayTop)),
                 blockModels.modelOutput
-        );
-
-        MultiVariant variant = plainVariant(modelLocation);
-        blockModels.blockStateOutput.accept(
-                MultiPartGenerator.multiPart(block)
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH),
-                                variant)
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.EAST),
-                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R90)))
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.SOUTH),
-                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R180)))
-                        .with(BlockModelGenerators.condition().term(BlockStateProperties.HORIZONTAL_FACING, Direction.WEST),
-                                variant.with(VariantMutator.Y_ROT.withValue(Quadrant.R270)))
         );
     }
 

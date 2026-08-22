@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "floralench:block/golden_dandelion_bush_stage0"
+  }
+}

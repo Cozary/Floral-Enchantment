@@ -51,6 +51,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CLOSED_EYEBLOSSOM_VINE = BLOCKS.register("closed_eyeblossom_vine", () -> VineBlockFactory.createEyeblossom("closed_eyeblossom_vine", EyeblossomVineBaseBlock.Type.CLOSED));
     public static final RegistryObject<Block> WILDFLOWERS_VINE = BLOCKS.register("wildflowers_vine", () -> VineBlockFactory.create("wildflowers_vine"));
     public static final RegistryObject<Block> CACTUS_FLOWER_VINE = BLOCKS.register("cactus_flower_vine", () -> VineBlockFactory.create("cactus_flower_vine"));
+    public static final RegistryObject<Block> GOLDEN_DANDELION_VINE = BLOCKS.register("golden_dandelion_vine", () -> VineBlockFactory.create("golden_dandelion_vine"));
 
 
     //Mossy Cobblestone
@@ -81,6 +82,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CLOSED_EYEBLOSSOM_MOSSY_COBBLESTONE = BLOCKS.register("closed_eyeblossom_mossy_cobblestone", () -> MossyBlockFactory.createEyeblossom("closed_eyeblossom_mossy_cobblestone", EyeblossomMossyBlock.Type.CLOSED));
     public static final RegistryObject<Block> WILDFLOWERS_MOSSY_COBBLESTONE = BLOCKS.register("wildflowers_mossy_cobblestone", () -> MossyBlockFactory.create("wildflowers_mossy_cobblestone"));
     public static final RegistryObject<Block> CACTUS_FLOWER_MOSSY_COBBLESTONE = BLOCKS.register("cactus_flower_mossy_cobblestone", () -> MossyBlockFactory.create("cactus_flower_mossy_cobblestone"));
+    public static final RegistryObject<Block> GOLDEN_DANDELION_MOSSY_COBBLESTONE = BLOCKS.register("golden_dandelion_mossy_cobblestone", () -> MossyBlockFactory.create("golden_dandelion_mossy_cobblestone"));
 
     //Bush
     public static final RegistryObject<AlliumVineBushBlock> ALLIUM_BUSH = BLOCKS.register("allium_bush", AlliumVineBushBlock::new);
@@ -110,6 +112,7 @@ public class ModBlocks {
     public static final RegistryObject<EyeblossomVineBushBlock> CLOSED_EYEBLOSSOM_BUSH = BLOCKS.register("closed_eyeblossom_bush", () -> new EyeblossomVineBushBlock(EyeblossomVineBushBlock.Type.CLOSED));
     public static final RegistryObject<WildflowersVineBushBlock> WILDFLOWERS_BUSH = BLOCKS.register("wildflowers_bush", WildflowersVineBushBlock::new);
     public static final RegistryObject<CactusFlowerVineBushBlock> CACTUS_FLOWER_BUSH = BLOCKS.register("cactus_flower_bush", CactusFlowerVineBushBlock::new);
+    public static final RegistryObject<GoldenDandelionVineBushBlock> GOLDEN_DANDELION_BUSH = BLOCKS.register("golden_dandelion_bush", GoldenDandelionVineBushBlock::new);
 
     //Mossy Stone Brick
     public static final RegistryObject<Block> DANDELION_MOSSY_STONE_BRICK = BLOCKS.register("dandelion_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.create("dandelion_mossy_stone_brick"));
@@ -139,6 +142,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CLOSED_EYEBLOSSOM_MOSSY_STONE_BRICK = BLOCKS.register("closed_eyeblossom_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.createEyeblossom("closed_eyeblossom_mossy_stone_brick", EyeblossomMossyStoneBrickBlock.Type.CLOSED));
     public static final RegistryObject<Block> WILDFLOWERS_MOSSY_STONE_BRICK = BLOCKS.register("wildflowers_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.create("wildflowers_mossy_stone_brick"));
     public static final RegistryObject<Block> CACTUS_FLOWER_MOSSY_STONE_BRICK = BLOCKS.register("cactus_flower_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.create("cactus_flower_mossy_stone_brick"));
+    public static final RegistryObject<Block> GOLDEN_DANDELION_MOSSY_STONE_BRICK = BLOCKS.register("golden_dandelion_mossy_stone_brick", () -> MossyStoneBricksBlockFactory.create("golden_dandelion_mossy_stone_brick"));
 
     //Large Pot
     public static final RegistryObject<Block> LARGE_POT = BLOCKS.register("large_pot", LargePot::new);
@@ -166,6 +170,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARGE_OPEN_EYEBLOSSOM_POT = BLOCKS.register("large_open_eyeblossom_pot", () -> new LargeEyeblossomPot(LargeEyeblossomPot.Type.OPEN));
     public static final RegistryObject<Block> LARGE_CLOSED_EYEBLOSSOM_POT = BLOCKS.register("large_closed_eyeblossom_pot", () -> new LargeEyeblossomPot(LargeEyeblossomPot.Type.CLOSED));
     public static final RegistryObject<Block> LARGE_CACTUS_FLOWER_POT = BLOCKS.register("large_cactus_flower_pot", LargeCactusFlowerPot::new);
+    public static final RegistryObject<Block> LARGE_GOLDEN_DANDELION_POT = BLOCKS.register("large_golden_dandelion_pot", LargeGoldenDandelionPot::new);
 
     //Large Double Pot
     public static final RegistryObject<Block> LARGE_DOUBLE_DANDELION_POT = BLOCKS.register("large_double_dandelion_pot", LargeDoubleDandelionPot::new);
@@ -188,6 +193,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> LARGE_DOUBLE_OPEN_EYEBLOSSOM_POT = BLOCKS.register("large_double_open_eyeblossom_pot", () -> new LargeDoubleEyeblossomPot(LargeDoubleEyeblossomPot.Type.OPEN));
     public static final RegistryObject<Block> LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT = BLOCKS.register("large_double_closed_eyeblossom_pot", () -> new LargeDoubleEyeblossomPot(LargeDoubleEyeblossomPot.Type.CLOSED));
     public static final RegistryObject<Block> LARGE_DOUBLE_CACTUS_FLOWER_POT = BLOCKS.register("large_double_cactus_flower_pot", LargeDoubleCactusFlowerPot::new);
+    public static final RegistryObject<Block> LARGE_DOUBLE_GOLDEN_DANDELION_POT = BLOCKS.register("large_double_golden_dandelion_pot", LargeDoubleGoldenDandelionPot::new);
 
     //Special
     public static final RegistryObject<Block> DANCING_SUNFLOWER = BLOCKS.register("dancing_sunflower", DancingSunflower::new);
@@ -214,6 +220,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> OPEN_EYEBLOSSOM_BASKET = BLOCKS.register("open_eyeblossom_basket", () -> FloralBasketFactory.createEyeblossom("open_eyeblossom_basket", EyeblossomFloralBasket.Type.OPEN));
     public static final RegistryObject<Block> CLOSED_EYEBLOSSOM_BASKET = BLOCKS.register("closed_eyeblossom_basket", () -> FloralBasketFactory.createEyeblossom("closed_eyeblossom_basket", EyeblossomFloralBasket.Type.CLOSED));
     public static final RegistryObject<Block> CACTUS_FLOWER_BASKET = BLOCKS.register("cactus_flower_basket", () -> FloralBasketFactory.create("cactus_flower_basket"));
+    public static final RegistryObject<Block> GOLDEN_DANDELION_BASKET = BLOCKS.register("golden_dandelion_basket", () -> FloralBasketFactory.create("golden_dandelion_basket"));
 
     public static void loadClass() {
     }

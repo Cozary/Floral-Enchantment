@@ -31,7 +31,6 @@
       ]
     }
   ],
-  "render_type": "minecraft:cutout",
   "textures": {
     "particle": "floralench:block/lily_of_the_valley_vine",
     "texture": "floralench:block/lily_of_the_valley_vine"

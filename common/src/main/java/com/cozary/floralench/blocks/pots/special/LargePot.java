@@ -47,6 +47,7 @@ public class LargePot extends LargePotBase {
         CONTENT_TO_POT.put(Items.OPEN_EYEBLOSSOM, ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT);
         CONTENT_TO_POT.put(Items.CLOSED_EYEBLOSSOM, ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT);
         CONTENT_TO_POT.put(Items.CACTUS, ModBlocks.LARGE_CACTUS_FLOWER_POT);
+        CONTENT_TO_POT.put(Items.GOLDEN_DANDELION, ModBlocks.LARGE_GOLDEN_DANDELION_POT);
     }
 
     public LargePot() {
