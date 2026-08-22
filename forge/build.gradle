@@ -72,7 +72,7 @@ sourceSets.configureEach {
 
 publishMods {
     file = jar.archiveFile
-    changelog = project(":common").file("CHANGELOG.md").text
+    changelog = getLatestChangelog()
     type = STABLE
     modLoaders.add("forge")
     displayName = "${mod_name}-forge-${minecraft_version}-${version_forge}"
