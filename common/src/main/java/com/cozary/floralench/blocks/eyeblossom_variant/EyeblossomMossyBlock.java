@@ -162,7 +162,7 @@ public class EyeblossomMossyBlock extends MossyBlock {
         }
 
         public void spawnTransformParticle(ServerLevel level, BlockPos pos, RandomSource random) {
-            Vec3 vec3 = pos.getCenter();
+            Vec3 vec3 = Vec3.atCenterOf(pos);
             double d = 0.5 + random.nextDouble();
             Vec3 vec32 = new Vec3(random.nextDouble() - 0.5, random.nextDouble() + 1.0, random.nextDouble() - 0.5);
             Vec3 vec33 = vec3.add(vec32.scale(d));

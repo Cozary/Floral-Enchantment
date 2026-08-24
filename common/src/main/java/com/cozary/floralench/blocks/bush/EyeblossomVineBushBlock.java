@@ -19,7 +19,7 @@ import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.bee.Bee;
@@ -30,6 +30,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.EyeblossomBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
@@ -120,7 +121,7 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
                 bee.addEffect(this.getBeeInteractionEffect());
             }
         }
-        if (entity instanceof LivingEntity && entity.getType() != EntityType.FOX && entity.getType() != EntityType.BEE) {
+        if (entity instanceof LivingEntity && entity.getType() != EntityTypes.FOX && entity.getType() != EntityTypes.BEE) {
             entity.makeStuckInBlock(state, new Vec3(0.9F, 0.85D, 0.9F));
         }
     }
@@ -171,7 +172,7 @@ public class EyeblossomVineBushBlock extends VineBushBlock {
         }
 
         public void spawnTransformParticle(ServerLevel level, BlockPos pos, RandomSource random) {
-            Vec3 vec3 = pos.getCenter();
+            Vec3 vec3 = Vec3.atCenterOf(pos);
             double d = 0.5 + random.nextDouble();
             Vec3 vec32 = new Vec3(random.nextDouble() - 0.5, random.nextDouble() + 1.0, random.nextDouble() - 0.5);
             Vec3 vec33 = vec3.add(vec32.scale(d));
