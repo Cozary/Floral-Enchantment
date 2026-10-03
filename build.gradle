@@ -58,7 +58,6 @@ subprojects {
         def expandProps = [
                 "version_forge"                : version_forge,
                 "version_fabric"               : version_fabric,
-                "version_neoforge"             : version_neoforge,
                 "group"                        : project.group, //Else we target the task's group.
                 "minecraft_version"            : minecraft_version,
                 "forge_version"                : forge_version,
@@ -72,8 +71,6 @@ subprojects {
                 "mod_id"                       : mod_id,
                 "license"                      : license,
                 "description"                  : project.description,
-                "neoforge_version"             : neoforge_version,
-                "neoforge_loader_version_range": neoforge_loader_version_range,
                 "credits"                      : credits
         ]
 
