@@ -9,6 +9,10 @@ It also includes pots and long pots to place the flowers. As well as floral bask
 [![Versions](https://cf.way2muchnoise.eu/versions/511569.svg)](https://www.curseforge.com/minecraft/mc-mods/floral-enchantment) [![Downloads](http://cf.way2muchnoise.eu/full_511569_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/floral-enchantment)
 ![Modrinth Downloads](https://img.shields.io/modrinth/dt/Oprx59lK?logo=modrinth)
 
+## Wiki
+
+Check out the official documentation: **[Floral Enchantment Wiki](https://cozarycore.com/wiki/floral-enchantment/)**
+
 ## Contributing
 
 If you would like to contribute to the mod, you can check out the [issues page](https://github.com/Cozary/floral-enchantment/issues). If you find a problem in the code or something that could be improved, you can open an issue or make a PR.
