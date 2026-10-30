@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoubleDandelionPot extends LargePottedBlock {
     public LargeDoubleDandelionPot() {
-        super("large_double_dandelion_pot", () -> Items.DANDELION, ModBlocks.LARGE_DANDELION_POT);
+        super("large_double_dandelion_pot", () -> Items.DANDELION, () -> ModBlocks.LARGE_DANDELION_POT.get());
     }
 }

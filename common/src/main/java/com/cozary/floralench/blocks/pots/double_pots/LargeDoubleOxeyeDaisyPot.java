@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoubleOxeyeDaisyPot extends LargePottedBlock {
     public LargeDoubleOxeyeDaisyPot() {
-        super("large_double_oxeye_daisy_pot", () -> Items.OXEYE_DAISY, ModBlocks.LARGE_OXEYE_DAISY_POT);
+        super("large_double_oxeye_daisy_pot", () -> Items.OXEYE_DAISY, () -> ModBlocks.LARGE_OXEYE_DAISY_POT.get());
     }
 }

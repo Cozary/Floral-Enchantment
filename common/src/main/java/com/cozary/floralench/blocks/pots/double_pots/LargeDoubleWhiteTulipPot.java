@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoubleWhiteTulipPot extends LargePottedBlock {
     public LargeDoubleWhiteTulipPot() {
-        super("large_double_white_tulip_pot", () -> Items.WHITE_TULIP, ModBlocks.LARGE_WHITE_TULIP_POT);
+        super("large_double_white_tulip_pot", () -> Items.WHITE_TULIP, () -> ModBlocks.LARGE_WHITE_TULIP_POT.get());
     }
 }

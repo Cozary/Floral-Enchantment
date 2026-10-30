@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoubleSporeBlossomPot extends LargePottedBlock {
     public LargeDoubleSporeBlossomPot() {
-        super("large_double_spore_blossom_pot", () -> Items.SPORE_BLOSSOM, ModBlocks.LARGE_SPORE_BLOSSOM_POT);
+        super("large_double_spore_blossom_pot", () -> Items.SPORE_BLOSSOM, () -> ModBlocks.LARGE_SPORE_BLOSSOM_POT.get());
     }
 }

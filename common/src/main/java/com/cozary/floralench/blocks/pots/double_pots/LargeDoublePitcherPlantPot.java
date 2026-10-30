@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoublePitcherPlantPot extends LargePottedBlock {
     public LargeDoublePitcherPlantPot() {
-        super("large_double_pitcher_plant_pot", () -> Items.PITCHER_PLANT, ModBlocks.LARGE_PITCHER_PLANT_POT);
+        super("large_double_pitcher_plant_pot", () -> Items.PITCHER_PLANT, () -> ModBlocks.LARGE_PITCHER_PLANT_POT.get());
     }
 }

@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoublePoppyPot extends LargePottedBlock {
     public LargeDoublePoppyPot() {
-        super("large_double_poppy_pot", () -> Items.POPPY, ModBlocks.LARGE_POPPY_POT);
+        super("large_double_poppy_pot", () -> Items.POPPY, () -> ModBlocks.LARGE_POPPY_POT.get());
     }
 }

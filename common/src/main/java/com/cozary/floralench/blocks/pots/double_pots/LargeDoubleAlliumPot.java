@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoubleAlliumPot extends LargePottedBlock {
     public LargeDoubleAlliumPot() {
-        super("large_double_allium_pot", () -> Items.ALLIUM, ModBlocks.LARGE_ALLIUM_POT);
+        super("large_double_allium_pot", () -> Items.ALLIUM, () -> ModBlocks.LARGE_ALLIUM_POT.get());
     }
 }

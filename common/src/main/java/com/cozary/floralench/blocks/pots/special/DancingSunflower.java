@@ -20,7 +20,7 @@ public class DancingSunflower extends LargePottedBlock {
     BlockState jukebox;
 
     public DancingSunflower() {
-        super("dancing_sunflower", () -> Items.SUNFLOWER, ModBlocks.LARGE_POT);
+        super("dancing_sunflower", () -> Items.SUNFLOWER, () -> ModBlocks.LARGE_POT.get());
     }
 
     @Override

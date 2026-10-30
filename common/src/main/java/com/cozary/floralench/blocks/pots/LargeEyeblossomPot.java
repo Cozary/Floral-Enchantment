@@ -131,26 +131,38 @@ public class LargeEyeblossomPot extends LargePotBase {
     }
 
     @Override
-    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
-        ItemStack itemstack = player.getMainHandItem();
-        Item item = itemstack.getItem();
-        ItemStack item1 = this.type.open ? Items.OPEN_EYEBLOSSOM.getDefaultInstance() : Items.CLOSED_EYEBLOSSOM.getDefaultInstance();
-        Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide()) {
-            if (item == Items.AIR) {
-                worldIn.setBlockAndUpdate(pos, ModBlocks.LARGE_POT.get().defaultBlockState().setValue(LargePot.FACING, direction1));
-                player.setItemInHand(InteractionHand.MAIN_HAND, item1);
-                return InteractionResult.CONSUME;
-            }
-            if (item == (this.type.open ? Items.OPEN_EYEBLOSSOM : Items.CLOSED_EYEBLOSSOM)) {
-                worldIn.setBlockAndUpdate(pos, (this.type.open ? ModBlocks.LARGE_DOUBLE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT.get()).defaultBlockState().setValue(LargePot.FACING, direction1));
-                if (!player.getAbilities().instabuild) {
-                    itemstack.shrink(1);
+    protected InteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        Item matchingItem = this.type.open ? Items.OPEN_EYEBLOSSOM : Items.CLOSED_EYEBLOSSOM;
+        if (itemStack.is(matchingItem)) {
+            Block doublePot = this.type.open ? ModBlocks.LARGE_DOUBLE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_DOUBLE_CLOSED_EYEBLOSSOM_POT.get();
+            if (doublePot != null) {
+                if (!level.isClientSide()) {
+                    Direction direction = state.getValue(FACING);
+                    level.setBlockAndUpdate(pos, doublePot.defaultBlockState().setValue(LargePotBase.FACING, direction));
+                    level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
+                    itemStack.consume(1, player);
                 }
-                return InteractionResult.CONSUME;
+                return InteractionResult.SUCCESS;
             }
         }
-        return InteractionResult.CONSUME;
+        return super.useItemOn(itemStack, state, level, pos, player, hand, hitResult);
+    }
+
+    @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (player.getItemInHand(InteractionHand.MAIN_HAND).isEmpty()) {
+            if (!level.isClientSide()) {
+                Direction direction = state.getValue(FACING);
+                level.setBlockAndUpdate(pos, ModBlocks.LARGE_POT.get().defaultBlockState().setValue(LargePotBase.FACING, direction));
+                ItemStack flowerStack = (this.type.open ? Items.OPEN_EYEBLOSSOM : Items.CLOSED_EYEBLOSSOM).getDefaultInstance();
+                if (!player.addItem(flowerStack)) {
+                    player.drop(flowerStack, false);
+                }
+                level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
+            }
+            return InteractionResult.SUCCESS;
+        }
+        return super.useWithoutItem(state, level, pos, player, hitResult);
     }
 
     public static enum Type {
