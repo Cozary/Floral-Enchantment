@@ -102,7 +102,8 @@ public class EyeblossomVineBaseBlock extends VineBaseBlock {
                     .setValue(VineBlock.NORTH, state.getValue(VineBlock.NORTH))
                     .setValue(VineBlock.EAST, state.getValue(VineBlock.EAST))
                     .setValue(VineBlock.SOUTH, state.getValue(VineBlock.SOUTH))
-                    .setValue(VineBlock.WEST, state.getValue(VineBlock.WEST)), 3);
+                    .setValue(VineBlock.WEST, state.getValue(VineBlock.WEST))
+                    .setValue(SHEARED, state.getValue(SHEARED)), 3);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
             eyeblossomblock$type.spawnTransformParticle(level, pos, random);
             BlockPos.betweenClosed(pos.offset(-3, -2, -3), pos.offset(3, 2, 3)).forEach((p_383198_) -> {
