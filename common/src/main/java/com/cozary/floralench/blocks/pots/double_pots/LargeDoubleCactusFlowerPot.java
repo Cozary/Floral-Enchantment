@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoubleCactusFlowerPot extends LargePottedBlock {
     public LargeDoubleCactusFlowerPot() {
-        super("large_double_cactus_flower_pot", () -> Items.CACTUS, ModBlocks.LARGE_CACTUS_FLOWER_POT);
+        super("large_double_cactus_flower_pot", () -> Items.CACTUS_FLOWER, () -> ModBlocks.LARGE_CACTUS_FLOWER_POT.get());
     }
 }

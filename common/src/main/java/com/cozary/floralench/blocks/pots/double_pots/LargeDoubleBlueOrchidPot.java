@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoubleBlueOrchidPot extends LargePottedBlock {
     public LargeDoubleBlueOrchidPot() {
-        super("large_double_blue_orchid_pot", () -> Items.BLUE_ORCHID, ModBlocks.LARGE_BLUE_ORCHID_POT);
+        super("large_double_blue_orchid_pot", () -> Items.BLUE_ORCHID, () -> ModBlocks.LARGE_BLUE_ORCHID_POT.get());
     }
 }

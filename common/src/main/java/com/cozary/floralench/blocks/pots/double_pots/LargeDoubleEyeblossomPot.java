@@ -132,20 +132,21 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
     }
 
     @Override
-    public InteractionResult useWithoutItem(BlockState state, Level worldIn, BlockPos pos, Player player, BlockHitResult hit) {
-        ItemStack itemstack = player.getMainHandItem();
-        Item item = itemstack.getItem();
-        ItemStack item1 = this.type.open ? Items.OPEN_EYEBLOSSOM.getDefaultInstance() : Items.CLOSED_EYEBLOSSOM.getDefaultInstance();
-        Direction direction1 = state.getValue(FACING);
-        if (!worldIn.isClientSide()) {
-            if (item == Items.AIR) {
-
-                worldIn.setBlockAndUpdate(pos, (this.type.open ? ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get()).defaultBlockState().setValue(LargePot.FACING, direction1));
-                player.setItemInHand(InteractionHand.MAIN_HAND, item1);
-                return InteractionResult.CONSUME;
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (player.getItemInHand(InteractionHand.MAIN_HAND).isEmpty()) {
+            if (!level.isClientSide()) {
+                Direction direction = state.getValue(FACING);
+                Block singlePot = this.type.open ? ModBlocks.LARGE_OPEN_EYEBLOSSOM_POT.get() : ModBlocks.LARGE_CLOSED_EYEBLOSSOM_POT.get();
+                level.setBlockAndUpdate(pos, singlePot.defaultBlockState().setValue(LargePotBase.FACING, direction));
+                ItemStack flowerStack = (this.type.open ? Items.OPEN_EYEBLOSSOM : Items.CLOSED_EYEBLOSSOM).getDefaultInstance();
+                if (!player.addItem(flowerStack)) {
+                    player.drop(flowerStack, false);
+                }
+                level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
             }
+            return InteractionResult.SUCCESS;
         }
-        return InteractionResult.CONSUME;
+        return super.useWithoutItem(state, level, pos, player, hitResult);
     }
 
 

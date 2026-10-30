@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoubleAzureBluetPot extends LargePottedBlock {
     public LargeDoubleAzureBluetPot() {
-        super("large_double_azure_bluet_pot", () -> Items.AZURE_BLUET, ModBlocks.LARGE_AZURE_BLUET_POT);
+        super("large_double_azure_bluet_pot", () -> Items.AZURE_BLUET, () -> ModBlocks.LARGE_AZURE_BLUET_POT.get());
     }
 }

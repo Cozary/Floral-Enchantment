@@ -6,6 +6,6 @@ import net.minecraft.world.item.Items;
 
 public class LargeDoubleCornflowerPot extends LargePottedBlock {
     public LargeDoubleCornflowerPot() {
-        super("large_double_cornflower_pot", () -> Items.CORNFLOWER, ModBlocks.LARGE_CORNFLOWER_POT);
+        super("large_double_cornflower_pot", () -> Items.CORNFLOWER, () -> ModBlocks.LARGE_CORNFLOWER_POT.get());
     }
 }

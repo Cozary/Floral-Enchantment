@@ -21,7 +21,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class LargeDoubleWitherRosePot extends LargePottedBlock {
 
     public LargeDoubleWitherRosePot() {
-        super("large_double_wither_rose_pot", () -> Items.WITHER_ROSE, ModBlocks.LARGE_WITHER_ROSE_POT);
+        super("large_double_wither_rose_pot", () -> Items.WITHER_ROSE, () -> ModBlocks.LARGE_WITHER_ROSE_POT.get());
     }
 
     @Override
