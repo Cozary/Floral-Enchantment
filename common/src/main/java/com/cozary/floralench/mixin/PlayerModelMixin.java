@@ -21,6 +21,20 @@ public abstract class PlayerModelMixin extends HumanoidModel<AvatarRenderState> 
         super(root);
     }
 
+    private static boolean floralench$isHoldingLargePot(AvatarRenderState renderState) {
+        if (floralench$isLargePot(renderState.getMainHandItemStack())) {
+            return true;
+        }
+
+        ItemStack offhandStack = renderState.mainArm == HumanoidArm.RIGHT ? renderState.leftHandItemStack : renderState.rightHandItemStack;
+
+        return renderState.getMainHandItemStack().isEmpty() && floralench$isLargePot(offhandStack);
+    }
+
+    private static boolean floralench$isLargePot(ItemStack itemStack) {
+        return !itemStack.isEmpty() && itemStack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof LargePotBase;
+    }
+
     @Inject(method = "setupAnim(Lnet/minecraft/client/renderer/entity/state/AvatarRenderState;)V", at = @At("TAIL"))
     private void floralench$holdLargePotStill(AvatarRenderState renderState, CallbackInfo callbackInfo) {
         if (renderState.attackTime > 0.0F) {
@@ -60,19 +74,5 @@ public abstract class PlayerModelMixin extends HumanoidModel<AvatarRenderState> 
         this.leftArm.xRot = totalPitch;
         this.leftArm.yRot = 0.0F;
         this.leftArm.zRot = 0.0F;
-    }
-
-    private static boolean floralench$isHoldingLargePot(AvatarRenderState renderState) {
-        if (floralench$isLargePot(renderState.getMainHandItemStack())) {
-            return true;
-        }
-
-        ItemStack offhandStack = renderState.mainArm == HumanoidArm.RIGHT ? renderState.leftHandItemStack : renderState.rightHandItemStack;
-
-        return renderState.getMainHandItemStack().isEmpty() && floralench$isLargePot(offhandStack);
-    }
-
-    private static boolean floralench$isLargePot(ItemStack itemStack) {
-        return !itemStack.isEmpty() && itemStack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof LargePotBase;
     }
 }

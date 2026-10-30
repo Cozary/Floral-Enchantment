@@ -1,7 +1,6 @@
 package com.cozary.floralench.blocks.pots;
 
 import com.cozary.floralench.blocks.base.LargePotBase;
-import com.cozary.floralench.blocks.pots.special.LargePot;
 import com.cozary.floralench.init.ModBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
