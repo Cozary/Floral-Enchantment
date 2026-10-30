@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:oxeye_daisy_basket_revert"
+        "recipes": "floralench:oxeye_daisy_basket_revert"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

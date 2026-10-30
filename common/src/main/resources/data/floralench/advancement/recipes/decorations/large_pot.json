@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:large_pot"
+        "recipes": "floralench:large_pot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

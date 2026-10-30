@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:dandelion_basket_revert"
+        "recipes": "floralench:dandelion_basket_revert"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -52,7 +52,7 @@ public abstract class VineBushBlock extends SweetBerryBushBlock {
                 .sound(SoundType.SWEET_BERRY_BUSH)
                 .mapColor(MapColor.PLANT)
                 .ignitedByLava()
-                .pushReaction(PushReaction.DESTROY)
+                .pushReaction(PushReaction.POPPED)
         );
         this.flowerItem = flowerItem;
         this.vineItem = vineItem;

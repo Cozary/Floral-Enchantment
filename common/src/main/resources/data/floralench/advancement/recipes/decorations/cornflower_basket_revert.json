@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:cornflower_basket_revert"
+        "recipes": "floralench:cornflower_basket_revert"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

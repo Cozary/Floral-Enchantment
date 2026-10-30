@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:pink_tulip_basket"
+        "recipes": "floralench:pink_tulip_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

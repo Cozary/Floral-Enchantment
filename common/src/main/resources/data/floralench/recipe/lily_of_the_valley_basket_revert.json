@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "floralench:lily_of_the_valley_basket"
   ],

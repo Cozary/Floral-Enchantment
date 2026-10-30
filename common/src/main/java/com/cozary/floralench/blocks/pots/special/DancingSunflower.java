@@ -39,10 +39,11 @@ public class DancingSunflower extends LargePottedBlock {
         }
     }
 
-    private Optional<BlockPos> findNearestRepellent(ServerLevel p_26665_, BlockPos pos) {
-        return BlockPos.findClosestMatch(pos, 11, 0, (block) -> {
-            return p_26665_.getBlockState(block).is(Blocks.JUKEBOX);
-        });
+    private Optional<BlockPos> findNearestRepellent(ServerLevel level, BlockPos pos) {
+        return BlockPos.betweenClosedStream(pos.offset(-11, 0, -11), pos.offset(11, 0, 11))
+                .filter(blockPos -> level.getBlockState(blockPos).is(Blocks.JUKEBOX))
+                .map(BlockPos::immutable)
+                .findFirst();
     }
 
     @Override

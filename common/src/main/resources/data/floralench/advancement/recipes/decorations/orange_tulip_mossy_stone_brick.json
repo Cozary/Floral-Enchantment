@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:orange_tulip_mossy_stone_brick"
+        "recipes": "floralench:orange_tulip_mossy_stone_brick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

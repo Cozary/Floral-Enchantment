@@ -121,7 +121,6 @@
         ],
         "rescale": true
       },
-      "shade": false,
       "to": [
         9.5,
         18,
@@ -165,7 +164,6 @@
         ],
         "rescale": true
       },
-      "shade": false,
       "to": [
         14.9,
         18,
@@ -209,7 +207,6 @@
         ],
         "rescale": true
       },
-      "shade": false,
       "to": [
         6.5,
         18,
@@ -253,7 +250,6 @@
         ],
         "rescale": true
       },
-      "shade": false,
       "to": [
         11.9,
         18,

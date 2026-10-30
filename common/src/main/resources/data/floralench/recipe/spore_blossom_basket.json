@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "#": "minecraft:spore_blossom",
     "W": "floralench:floral_basket"

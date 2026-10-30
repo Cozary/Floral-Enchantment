@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:spore_blossom_bush"
+        "recipes": "floralench:spore_blossom_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

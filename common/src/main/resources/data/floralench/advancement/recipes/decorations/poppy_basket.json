@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:poppy_basket"
+        "recipes": "floralench:poppy_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

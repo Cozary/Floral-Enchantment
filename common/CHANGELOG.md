@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [NeoForge 1.3.0 | Fabric 1.4.0 | Forge 1.7.0] - 2026-10-30
 
+- Ported to Minecraft 26.3.
+
 ### Added
 - Floral vines can now be sheared with shears to stop them from spreading.
 

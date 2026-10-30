@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:oxeye_daisy_mossy_cobblestone"
+        "recipes": "floralench:oxeye_daisy_mossy_cobblestone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

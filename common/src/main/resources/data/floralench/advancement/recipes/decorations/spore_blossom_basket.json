@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:spore_blossom_basket"
+        "recipes": "floralench:spore_blossom_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

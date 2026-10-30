@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:golden_dandelion_mossy_stone_brick"
+        "recipes": "floralench:golden_dandelion_mossy_stone_brick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

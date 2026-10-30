@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:blue_orchid_bush"
+        "recipes": "floralench:blue_orchid_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

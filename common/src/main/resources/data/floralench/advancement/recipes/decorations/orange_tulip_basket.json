@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:orange_tulip_basket"
+        "recipes": "floralench:orange_tulip_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

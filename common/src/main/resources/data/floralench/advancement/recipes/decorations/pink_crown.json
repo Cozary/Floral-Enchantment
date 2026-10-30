@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:pink_crown"
+        "recipes": "floralench:pink_crown"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

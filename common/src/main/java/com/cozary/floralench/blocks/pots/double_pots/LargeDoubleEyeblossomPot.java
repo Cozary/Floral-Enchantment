@@ -12,6 +12,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Prediction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.TriState;
 import net.minecraft.world.Difficulty;
@@ -138,7 +139,7 @@ public class LargeDoubleEyeblossomPot extends LargePotBase {
                 level.setBlockAndUpdate(pos, singlePot.defaultBlockState().setValue(LargePotBase.FACING, direction));
                 ItemStack flowerStack = (this.type.open ? Items.OPEN_EYEBLOSSOM : Items.CLOSED_EYEBLOSSOM).getDefaultInstance();
                 if (!player.addItem(flowerStack)) {
-                    player.drop(flowerStack, false);
+                    player.drop(flowerStack, false, Prediction.PREDICTED);
                 }
                 level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
             }

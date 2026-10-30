@@ -37,7 +37,7 @@ public abstract class PlayerModelMixin extends HumanoidModel<AvatarRenderState> 
 
     @Inject(method = "setupAnim(Lnet/minecraft/client/renderer/entity/state/AvatarRenderState;)V", at = @At("TAIL"))
     private void floralench$holdLargePotStill(AvatarRenderState renderState, CallbackInfo callbackInfo) {
-        if (renderState.attackTime > 0.0F) {
+        if (renderState.swingAnimation > 0.0F) {
             return;
         }
 

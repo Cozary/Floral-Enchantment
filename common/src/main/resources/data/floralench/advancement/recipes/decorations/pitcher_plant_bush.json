@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:pitcher_plant_bush"
+        "recipes": "floralench:pitcher_plant_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

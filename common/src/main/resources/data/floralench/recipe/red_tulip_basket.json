@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "#": "minecraft:red_tulip",
     "W": "floralench:floral_basket"

@@ -3,6 +3,7 @@ package com.cozary.floralench.blocks.pots;
 import com.cozary.floralench.blocks.base.LargePotBase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -59,7 +60,7 @@ public class LargePottedBlock extends LargePotBase {
                     level.setBlockAndUpdate(pos, prev.defaultBlockState().setValue(LargePotBase.FACING, direction));
                     ItemStack flowerStack = new ItemStack(this.content.get());
                     if (!player.addItem(flowerStack)) {
-                        player.drop(flowerStack, false);
+                        player.drop(flowerStack, false, Prediction.PREDICTED);
                     }
                     level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);
                 }

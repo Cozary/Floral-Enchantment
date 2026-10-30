@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:closed_eyeblossom_bush"
+        "recipes": "floralench:closed_eyeblossom_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

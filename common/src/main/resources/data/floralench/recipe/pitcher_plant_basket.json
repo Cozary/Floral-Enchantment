@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "#": "minecraft:pitcher_plant",
     "W": "floralench:floral_basket"

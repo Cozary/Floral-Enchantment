@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:chorus_flower_mossy_cobblestone"
+        "recipes": "floralench:chorus_flower_mossy_cobblestone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

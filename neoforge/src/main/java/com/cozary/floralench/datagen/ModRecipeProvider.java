@@ -1,16 +1,15 @@
 package com.cozary.floralench.datagen;
 
 import com.cozary.floralench.init.ModItems;
-import net.minecraft.core.HolderLookup;
-import net.minecraft.data.PackOutput;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Recipe;
 
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Supplier;
 
 public class ModRecipeProvider extends RecipeProvider {
@@ -130,8 +129,8 @@ public class ModRecipeProvider extends RecipeProvider {
     );
 
 
-    protected ModRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
-        super(registries, output);
+    public ModRecipeProvider(BootstrapContext<Recipe<?>> recipeOutput, BootstrapContext<Advancement> advancementOutput) {
+        super(recipeOutput, advancementOutput);
     }
 
     @Override
@@ -273,22 +272,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_brick", has(Items.BRICK))
                 .save(output);
 
-    }
-
-    public static class Runner extends RecipeProvider.Runner {
-        public Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
-            super(packOutput, provider);
-        }
-
-        @Override
-        protected RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput recipeOutput) {
-            return new ModRecipeProvider(provider, recipeOutput);
-        }
-
-        @Override
-        public String getName() {
-            return "Nameless Trinkets Recipes";
-        }
     }
 
     public record FloralEntry(Item item, Item flower) {

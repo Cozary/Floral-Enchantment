@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "#": "minecraft:wither_rose",
     "W": "floralench:floral_basket"

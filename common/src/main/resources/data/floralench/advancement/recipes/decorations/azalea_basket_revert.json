@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:azalea_basket_revert"
+        "recipes": "floralench:azalea_basket_revert"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

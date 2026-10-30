@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:closed_eyeblossom_basket"
+        "recipes": "floralench:closed_eyeblossom_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

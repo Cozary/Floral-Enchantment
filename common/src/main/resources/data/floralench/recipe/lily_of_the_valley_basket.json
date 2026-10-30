@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "#": "minecraft:lily_of_the_valley",
     "W": "floralench:floral_basket"

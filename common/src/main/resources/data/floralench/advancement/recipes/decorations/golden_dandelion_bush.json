@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:golden_dandelion_bush"
+        "recipes": "floralench:golden_dandelion_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

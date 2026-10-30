@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:blue_orchid_basket"
+        "recipes": "floralench:blue_orchid_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

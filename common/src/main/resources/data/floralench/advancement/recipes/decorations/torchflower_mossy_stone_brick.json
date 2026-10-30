@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:torchflower_mossy_stone_brick"
+        "recipes": "floralench:torchflower_mossy_stone_brick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

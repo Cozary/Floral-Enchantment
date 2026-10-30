@@ -46,7 +46,7 @@ public class VineBaseBlock extends VineBlock {
                 .mapColor(MapColor.PLANT)
                 .replaceable()
                 .ignitedByLava()
-                .pushReaction(PushReaction.DESTROY)
+                .pushReaction(PushReaction.POPPED)
         );
         this.registerDefaultState(this.defaultBlockState().setValue(SHEARED, false));
     }

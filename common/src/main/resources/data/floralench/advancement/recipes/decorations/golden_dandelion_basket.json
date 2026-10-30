@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:golden_dandelion_basket"
+        "recipes": "floralench:golden_dandelion_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:lily_of_the_valley_mossy_stone_brick"
+        "recipes": "floralench:lily_of_the_valley_mossy_stone_brick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:tulips_crown"
+        "recipes": "floralench:tulips_crown"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

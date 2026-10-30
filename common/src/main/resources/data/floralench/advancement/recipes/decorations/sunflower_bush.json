@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:sunflower_bush"
+        "recipes": "floralench:sunflower_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

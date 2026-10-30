@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:allium_basket"
+        "recipes": "floralench:allium_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

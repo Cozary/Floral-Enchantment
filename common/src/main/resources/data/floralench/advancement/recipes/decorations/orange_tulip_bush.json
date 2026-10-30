@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:orange_tulip_bush"
+        "recipes": "floralench:orange_tulip_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

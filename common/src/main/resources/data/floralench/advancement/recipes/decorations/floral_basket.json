@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:floral_basket"
+        "recipes": "floralench:floral_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

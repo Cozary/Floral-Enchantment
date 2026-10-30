@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:lily_of_the_valley_basket_revert"
+        "recipes": "floralench:lily_of_the_valley_basket_revert"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

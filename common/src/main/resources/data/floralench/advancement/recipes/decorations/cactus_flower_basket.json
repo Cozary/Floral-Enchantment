@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:cactus_flower_basket"
+        "recipes": "floralench:cactus_flower_basket"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

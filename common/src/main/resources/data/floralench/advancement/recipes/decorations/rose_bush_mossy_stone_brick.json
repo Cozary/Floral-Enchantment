@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:rose_bush_mossy_stone_brick"
+        "recipes": "floralench:rose_bush_mossy_stone_brick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

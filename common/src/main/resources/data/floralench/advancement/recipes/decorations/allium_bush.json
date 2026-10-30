@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:allium_bush"
+        "recipes": "floralench:allium_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

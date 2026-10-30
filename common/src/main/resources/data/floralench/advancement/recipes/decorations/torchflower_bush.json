@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:torchflower_bush"
+        "recipes": "floralench:torchflower_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

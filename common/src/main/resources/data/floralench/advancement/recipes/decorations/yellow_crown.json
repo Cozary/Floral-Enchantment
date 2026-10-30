@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:yellow_crown"
+        "recipes": "floralench:yellow_crown"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

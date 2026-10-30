@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:wildflowers_bush"
+        "recipes": "floralench:wildflowers_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

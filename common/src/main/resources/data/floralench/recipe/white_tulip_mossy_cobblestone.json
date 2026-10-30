@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "floralench:white_tulip_vine",
     "minecraft:cobblestone"

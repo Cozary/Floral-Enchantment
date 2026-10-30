@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:peony_mossy_stone_brick"
+        "recipes": "floralench:peony_mossy_stone_brick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

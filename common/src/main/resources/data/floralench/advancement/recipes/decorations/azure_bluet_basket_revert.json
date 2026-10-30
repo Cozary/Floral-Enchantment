@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:azure_bluet_basket_revert"
+        "recipes": "floralench:azure_bluet_basket_revert"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

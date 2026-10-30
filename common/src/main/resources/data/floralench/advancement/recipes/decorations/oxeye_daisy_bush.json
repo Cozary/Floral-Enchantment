@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:oxeye_daisy_bush"
+        "recipes": "floralench:oxeye_daisy_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

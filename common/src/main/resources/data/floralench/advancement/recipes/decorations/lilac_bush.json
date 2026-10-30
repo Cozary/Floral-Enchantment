@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:lilac_bush"
+        "recipes": "floralench:lilac_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

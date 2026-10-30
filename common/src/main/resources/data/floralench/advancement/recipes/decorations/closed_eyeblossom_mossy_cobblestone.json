@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:closed_eyeblossom_mossy_cobblestone"
+        "recipes": "floralench:closed_eyeblossom_mossy_cobblestone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

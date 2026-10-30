@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:lily_of_the_valley_bush"
+        "recipes": "floralench:lily_of_the_valley_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

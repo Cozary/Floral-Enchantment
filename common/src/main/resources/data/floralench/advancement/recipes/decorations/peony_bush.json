@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:peony_bush"
+        "recipes": "floralench:peony_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

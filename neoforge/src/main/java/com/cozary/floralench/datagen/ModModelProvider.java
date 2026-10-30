@@ -293,7 +293,6 @@ public class ModModelProvider extends ModelProvider {
                 .element(element -> {
                     element.from(0, 0, 0.8f);
                     element.to(16, 16, 0.8f);
-                    element.shade(false);
                     element.face(Direction.NORTH, face -> {
                         face.uvs(16, 0, 0, 16);
                         face.texture(TextureSlot.TEXTURE);
@@ -351,7 +350,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(element -> {
             element.from(0, 0, 0.8f);
             element.to(16, 16, 0.8f);
-            element.shade(false);
             element.face(Direction.NORTH, face -> {
                 face.uvs(16, 0, 0, 16);
                 face.texture(TextureSlot.TEXTURE);
@@ -367,7 +365,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(element -> {
             element.from(0, 0, 0.8f);
             element.to(16, 16, 0.8f);
-            element.shade(false);
             element.lightEmission(15);
 
             element.face(Direction.NORTH, face -> face.texture(TextureSlot.CROSS_EMISSIVE));
@@ -563,7 +560,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(element -> {
             element.from(0, 0, 0);
             element.to(16, 16, 16);
-            element.shade(false);
             element.lightEmission(15);
 
             element.face(Direction.NORTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE));
@@ -842,7 +838,6 @@ public class ModModelProvider extends ModelProvider {
 
                     e.from(3, 0, 3);
                     e.to(13, 10, 13);
-                    e.shade(false);
                     e.lightEmission(15);
 
                     for (Direction dir : Direction.values()) {
@@ -880,7 +875,6 @@ public class ModModelProvider extends ModelProvider {
                 .element(e -> {
                     e.from(1, 0, 1);
                     e.to(15, 14, 15);
-                    e.shade(false);
                     e.lightEmission(15);
 
                     for (Direction dir : Direction.values()) {
@@ -1060,7 +1054,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(element -> {
             element.from(0, 0, 0);
             element.to(16, 16, 16);
-            element.shade(false);
             element.lightEmission(15);
 
             element.face(Direction.NORTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE));
@@ -1207,7 +1200,6 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0f, 6f, 8f).to(16f, 19f, 8f);
-            e.shade(false);
             e.rotation(r -> r.origin(8, 19, 8).singleAxis(Direction.Axis.Y, 45));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.BOTTOM).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.BOTTOM).uvs(0, 0, 16, 16));
@@ -1215,7 +1207,6 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0f, 19f, 8f).to(16f, 32f, 8f);
-            e.shade(false);
             e.rotation(r -> r.origin(8, 19, 8).singleAxis(Direction.Axis.Y, 45));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TOP).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TOP).uvs(0, 0, 16, 16));
@@ -1223,7 +1214,6 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0f, 6f, 8f).to(16f, 19f, 8f);
-            e.shade(false);
             e.rotation(r -> r.origin(8, 19, 8).singleAxis(Direction.Axis.Y, -45));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.BOTTOM).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.BOTTOM).uvs(0, 0, 16, 16));
@@ -1231,7 +1221,6 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
             e.from(0f, 19f, 8f).to(16f, 32f, 8f);
-            e.shade(false);
             e.rotation(r -> r.origin(8, 19, 8).singleAxis(Direction.Axis.Y, -45));
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.TOP).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.TOP).uvs(0, 0, 16, 16));
@@ -1452,7 +1441,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(2.6f, 6f, 8f).to(13.4f, 18f, 8f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1461,7 +1449,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(8f, 6f, 2.6f).to(8f, 18f, 13.4f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
             e.face(Direction.WEST, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1658,7 +1645,6 @@ public class ModModelProvider extends ModelProvider {
 
             builder.element(e -> {
                 e.from(0, 19, 8).to(16, 32, 8);
-                e.shade(false);
                 e.rotation(rot -> rot.origin(8, 19, 8).singleAxis(Direction.Axis.Y, angle));
                 e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.TOP));
                 e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.TOP));
@@ -1666,7 +1652,6 @@ public class ModModelProvider extends ModelProvider {
 
             builder.element(e -> {
                 e.from(0, 6, 8).to(16, 19, 8);
-                e.shade(false);
                 e.rotation(rot -> rot.origin(8, 19, 8).singleAxis(Direction.Axis.Y, angle));
                 e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.BOTTOM));
                 e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.BOTTOM));
@@ -1717,7 +1702,6 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
                     e.from(4.75f, 22.75f, 8.5f).to(11.75f, 30.75f, 8.5f);
-                    e.shade(false);
                     e.rotation(rot -> rot.origin(8, 32, 8).singleAxis(Direction.Axis.X, 22.5f));
                     e.face(Direction.NORTH, f -> f.uvs(4, 4, 12, 12).rotation(Quadrant.R180).texture(TextureSlot.FRONT));
                     e.face(Direction.SOUTH, f -> f.uvs(4, 4, 12, 12).texture(TextureSlot.BACK));
@@ -1921,7 +1905,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(9.5f, 6f, 4.1f).to(9.5f, 18f, 14.9f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
             e.face(Direction.WEST, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1930,7 +1913,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(4.1f, 6f, 9.5f).to(14.9f, 18f, 9.5f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1939,7 +1921,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(6.5F, 6F, 1.1F).to(6.5F, 18F, 11.9F);
             e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
             e.face(Direction.WEST, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -1948,7 +1929,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(1.1F, 6F, 6.5F).to(11.9F, 18F, 6.5F);
             e.rotation(r -> r.origin(8, 8, 8).singleAxis(Direction.Axis.Y, 45).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
             e.face(Direction.SOUTH, f -> f.texture(TextureSlot.CROSS_EMISSIVE).uvs(0, 0, 16, 16));
@@ -2122,7 +2102,6 @@ public class ModModelProvider extends ModelProvider {
         for (int angle : angles) {
             builder.element(e -> {
                 e.from(0, 19, 8).to(16, 32, 8);
-                e.shade(false);
                 e.rotation(rot -> rot.origin(8, 19, 8).singleAxis(Direction.Axis.Y, angle));
                 e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.TOP));
                 e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.TOP));
@@ -2130,7 +2109,6 @@ public class ModModelProvider extends ModelProvider {
 
             builder.element(e -> {
                 e.from(0, 6, 8).to(16, 19, 8);
-                e.shade(false);
                 e.rotation(rot -> rot.origin(8, 19, 8).singleAxis(Direction.Axis.Y, angle));
                 e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.BOTTOM));
                 e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.BOTTOM));
@@ -2178,7 +2156,6 @@ public class ModModelProvider extends ModelProvider {
 
         builder.element(e -> {
                     e.from(4.75f, 22.75f, 8.5f).to(11.75f, 30.75f, 8.5f);
-                    e.shade(false);
                     e.rotation(rot -> rot.origin(8, 32, 8).singleAxis(Direction.Axis.X, 22.5f));
                     e.face(Direction.NORTH, f -> f.uvs(4, 12, 12, 4).rotation(Quadrant.R180).texture(TextureSlot.FRONT));
                     e.face(Direction.SOUTH, f -> f.uvs(4, 4, 12, 12).texture(TextureSlot.BACK));
@@ -2742,7 +2719,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(7, 6, -1.4f).to(7, 18, 9.4f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2751,7 +2727,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(1.6f, 6, 4).to(12.4f, 18, 4);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2760,7 +2735,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(12, 6, 3.6f).to(12, 18, 14.4f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2769,7 +2743,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(6.6f, 6, 9).to(17.4f, 18, 9);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2778,7 +2751,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(4.1f, 6, 6.5f).to(14.9f, 18, 6.5f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2787,7 +2759,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(9.5f, 6, 1.1f).to(9.5f, 18, 11.9f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2796,7 +2767,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(4, 6, 1.6f).to(4, 18, 12.4f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2805,7 +2775,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(-1.4f, 6, 7).to(9.4f, 18, 7);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2814,7 +2783,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(3.6f, 6, 12).to(14.4f, 18, 12);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2823,7 +2791,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(9f, 6, 6.6f).to(9f, 18, 17.4f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2832,7 +2799,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(6.5f, 6, 4.1f).to(6.5f, 18, 14.9f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.EAST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.WEST, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
@@ -2841,7 +2807,6 @@ public class ModModelProvider extends ModelProvider {
         builder.element(e -> {
             e.from(1.1f, 6, 9.5f).to(11.9f, 18, 9.5f);
             e.rotation(r -> r.singleAxis(Direction.Axis.Y, 45).origin(8, 8, 8).rescale(true));
-            e.shade(false);
             e.lightEmission(15);
             e.face(Direction.NORTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));
             e.face(Direction.SOUTH, f -> f.uvs(0, 0, 16, 16).texture(TextureSlot.CROSS_EMISSIVE));

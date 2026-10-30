@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "floralench:cactus_flower_bush"
+        "recipes": "floralench:cactus_flower_bush"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
