@@ -11,8 +11,7 @@ out
 *.ipr
 *.iws
 *.iml
-.idea/*
-!.idea/scopes
+.idea/
 
 # gradle
 build
@@ -23,6 +22,4 @@ eclipse
 run
 runs
 /common/src/main/resources/.cache/
-
-# vscode
 .vscode/

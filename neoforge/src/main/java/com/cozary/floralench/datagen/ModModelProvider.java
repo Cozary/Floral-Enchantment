@@ -1171,8 +1171,8 @@ public class ModModelProvider extends ModelProvider {
                 .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
                 .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
                 .transform(ItemDisplayContext.HEAD, t -> t.translation(0, 10.5F, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0))
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0));
 
@@ -1286,8 +1286,8 @@ public class ModModelProvider extends ModelProvider {
                 .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
                 .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
                 .transform(ItemDisplayContext.HEAD, t -> t.translation(0, 10.5F, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0))
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0));
 
@@ -1367,10 +1367,10 @@ public class ModModelProvider extends ModelProvider {
                 .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
                 .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
                 .transform(ItemDisplayContext.HEAD, t -> t.translation(0, 10.5F, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0));
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0))
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0));
 
         ModelTemplate modelTemplate = builder.build();
 
@@ -1528,10 +1528,10 @@ public class ModModelProvider extends ModelProvider {
                 .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
                 .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
                 .transform(ItemDisplayContext.HEAD, t -> t.translation(0, 10.5F, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0));
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0))
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0));
 
 
         ModelTemplate template = builder.build();
@@ -1726,8 +1726,8 @@ public class ModModelProvider extends ModelProvider {
                 .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
                 .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
                 .transform(ItemDisplayContext.HEAD, t -> t.translation(0, 10.5F, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0))
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0));
 
@@ -1850,8 +1850,8 @@ public class ModModelProvider extends ModelProvider {
                 .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
                 .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
                 .transform(ItemDisplayContext.HEAD, t -> t.translation(0, 10.5F, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0))
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0));
 
@@ -2031,8 +2031,8 @@ public class ModModelProvider extends ModelProvider {
                 .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
                 .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
                 .transform(ItemDisplayContext.HEAD, t -> t.translation(0, 10.5F, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0))
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0));
 
@@ -2187,8 +2187,8 @@ public class ModModelProvider extends ModelProvider {
                 .transform(ItemDisplayContext.GROUND, t -> t.translation(0, 3.5F, 0).scale(0.6F, 0.6F, 0.6F))
                 .transform(ItemDisplayContext.FIXED, t -> t.translation(0, 0, -3.25F))
                 .transform(ItemDisplayContext.HEAD, t -> t.translation(0, 10.5F, 0))
-                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
-                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-6, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND, t -> t.rotation(70, 0, 0).translation(-5.5F, 4.5F, 3.5F))
                 .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND, t -> t.translation(-9, 1, 0))
                 .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND, t -> t.translation(-9, 1, 0));
 
