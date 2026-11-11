@@ -6,8 +6,10 @@ It also includes pots and long pots to place the flowers. As well as floral bask
 
 # Forge - Fabric - NeoForge
 
-[![Versions](https://cf.way2muchnoise.eu/versions/511569.svg)](https://www.curseforge.com/minecraft/mc-mods/floral-enchantment) [![Downloads](http://cf.way2muchnoise.eu/full_511569_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/floral-enchantment)
-![Modrinth Downloads](https://img.shields.io/modrinth/dt/Oprx59lK?logo=modrinth)
+[![Versions](https://cf.way2muchnoise.eu/versions/511569(6C5CE7).svg)](https://www.curseforge.com/minecraft/mc-mods/floral-enchantment)
+
+[![Downloads](https://cf.way2muchnoise.eu/full_511569_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/floral-enchantment)
+[![Modrinth Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.modrinth.com%2Fv2%2Fproject%2FOprx59lK&query=%24.downloads&label=downloads&logo=modrinth&color=00AF5C)](https://modrinth.com/mod/floral-enchantment)
 
 ## Wiki
 
